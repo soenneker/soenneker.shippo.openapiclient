@@ -17910,6 +17910,7 @@ components:
             | Carrier | Constraints |
             |:---|:---|
             | FedEx | Required; Min 1, max 15 characters |
+            | USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |
         email:
           example: 'shippotle@shippo.com'
           type: string
@@ -17921,6 +17922,7 @@ components:
             | Carrier | Constraints |
             |:---|:---|
             | FedEx | Max 80 characters |
+            | USPS | Sender email required for shipments during label purchase |
         is_residential:
           example: true
           type: boolean

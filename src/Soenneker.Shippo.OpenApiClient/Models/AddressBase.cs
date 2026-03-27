@@ -39,7 +39,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Country { get; set; }
 #endif
-        /// <summary>E-mail address of the contact person, RFC3696/5321-compliant.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 80 characters |</summary>
+        /// <summary>E-mail address of the contact person, RFC3696/5321-compliant.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 80 characters || USPS | Sender email required for shipments during label purchase |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get; set; }
@@ -65,7 +65,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. Thisincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Min 1, max 15 characters |</summary>
+        /// <summary>Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. Thisincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Min 1, max 15 characters || USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Phone { get; set; }
