@@ -34,7 +34,7 @@ namespace Soenneker.Shippo.OpenApiClient.Rates.Item
         {
         }
         /// <summary>
-        /// Returns an existing rate using a rate object ID.
+        /// Returns an existing rate using a rate object ID. Rates older than 390 days are not returned.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Rate"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Shippo.OpenApiClient.Rates.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Rate>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Rate.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns an existing rate using a rate object ID.
+        /// Returns an existing rate using a rate object ID. Rates older than 390 days are not returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

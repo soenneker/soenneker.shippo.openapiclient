@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments.Item
         {
         }
         /// <summary>
-        /// Returns an existing shipment using an object ID
+        /// Returns an existing shipment using an object ID. Shipment objects older than 390 days are not returned.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Shipment"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Shipment>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Shipment.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns an existing shipment using an object ID
+        /// Returns an existing shipment using an object ID. Shipment objects older than 390 days are not returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -11365,7 +11365,7 @@ paths:
             }
   '/rates/{RateId}':
     get:
-      description: Returns an existing rate using a rate object ID.
+      description: Returns an existing rate using a rate object ID. Rates older than 390 days are not returned.
       operationId: GetRate
       parameters:
         - description: Object ID of the rate
@@ -11496,6 +11496,126 @@ paths:
                 }
             }
   /refunds:
+    get:
+      description: Returns a list all refund objects.
+      operationId: ListRefunds
+      parameters:
+        - $ref: '#/components/parameters/ShippoApiVersionHeader'
+      responses:
+        '200':
+          $ref: '#/components/responses/refundPaginatedResponse'
+        '400':
+          $ref: '#/components/responses/badRequestResponse'
+      summary: List all refunds
+      tags:
+        - Refunds
+      x-codeSamples:
+        - label: cURL
+          lang: cURL
+          source: |-
+            curl https://api.goshippo.com/refunds/ \
+                -H "Authorization: ShippoToken shippo_test_3a47d23c032ca626fce863c48d0f93d63a394396"
+        - lang: python
+          label: Python
+          source: |-
+            import shippo
+            from shippo.models import operations
+
+            s = shippo.Shippo(
+                api_key_header='ShippoToken <API_TOKEN>',
+                shippo_api_version='2018-02-08',
+            )
+
+
+            res = s.refunds.list(request=operations.ListRefundsRequest())
+
+            if res is not None:
+                # handle response
+                pass
+        - lang: typescript
+          label: Typescript
+          source: |-
+            import { Shippo } from "shippo";
+
+            const shippo = new Shippo({
+              apiKeyHeader: "ShippoToken <API_TOKEN>",
+              shippoApiVersion: "2018-02-08",
+            });
+
+            async function run() {
+              const result = await shippo.refunds.list({});
+
+              // Handle the result
+              console.log(result);
+            }
+
+            run();
+        - lang: php
+          label: PHP
+          source: |-
+            declare(strict_types=1);
+
+            require 'vendor/autoload.php';
+
+            use Shippo\API;
+
+            $sdk = API\Shippo::builder()
+                ->setSecurity(
+                    'ShippoToken <API_TOKEN>'
+                )
+                ->setShippoApiVersion('2018-02-08')
+                ->build();
+
+
+
+            $response = $sdk->refunds->list(
+                shippoApiVersion: '2018-02-08'
+            );
+
+            if ($response->refundPaginatedList !== null) {
+                // handle response
+            }
+        - lang: csharp
+          label: C#
+          source: |-
+            using Shippo;
+            using Shippo.Models.Components;
+
+            var sdk = new ShippoSDK(
+                apiKeyHeader: "ShippoToken <API_TOKEN>",
+                shippoApiVersion: "2018-02-08"
+            );
+
+            var res = await sdk.Refunds.ListAsync(shippoApiVersion: "2018-02-08");
+
+            // handle response
+        - lang: java
+          label: Java
+          source: |-
+            package hello.world;
+
+            import com.goshippo.shippo_sdk.Shippo;
+            import com.goshippo.shippo_sdk.models.operations.ListRefundsResponse;
+            import java.lang.Exception;
+
+            public class Application {
+
+                public static void main(String[] args) throws Exception {
+
+                    Shippo sdk = Shippo.builder()
+                            .apiKeyHeader("ShippoToken <API_TOKEN>")
+                            .shippoApiVersion("2018-02-08")
+                        .build();
+
+                    ListRefundsResponse res = sdk.refunds().list()
+                            .shippoApiVersion("2018-02-08")
+                            .call();
+
+                    if (res.refundPaginatedList().isPresent()) {
+                        // handle response
+                    }
+                }
+            }
     post:
       description: Creates a new refund object.
       operationId: CreateRefund
@@ -11643,127 +11763,6 @@ paths:
                             .call();
 
                     if (res.refund().isPresent()) {
-                        // handle response
-                    }
-                }
-            }
-  '/refunds/':
-    get:
-      description: Returns a list all refund objects.
-      operationId: ListRefunds
-      parameters:
-        - $ref: '#/components/parameters/ShippoApiVersionHeader'
-      responses:
-        '200':
-          $ref: '#/components/responses/refundPaginatedResponse'
-        '400':
-          $ref: '#/components/responses/badRequestResponse'
-      summary: List all refunds
-      tags:
-        - Refunds
-      x-codeSamples:
-        - label: cURL
-          lang: cURL
-          source: |-
-            curl https://api.goshippo.com/refunds/ \
-                -H "Authorization: ShippoToken shippo_test_3a47d23c032ca626fce863c48d0f93d63a394396"
-        - lang: python
-          label: Python
-          source: |-
-            import shippo
-            from shippo.models import operations
-
-            s = shippo.Shippo(
-                api_key_header='ShippoToken <API_TOKEN>',
-                shippo_api_version='2018-02-08',
-            )
-
-
-            res = s.refunds.list(request=operations.ListRefundsRequest())
-
-            if res is not None:
-                # handle response
-                pass
-        - lang: typescript
-          label: Typescript
-          source: |-
-            import { Shippo } from "shippo";
-
-            const shippo = new Shippo({
-              apiKeyHeader: "ShippoToken <API_TOKEN>",
-              shippoApiVersion: "2018-02-08",
-            });
-
-            async function run() {
-              const result = await shippo.refunds.list({});
-
-              // Handle the result
-              console.log(result);
-            }
-
-            run();
-        - lang: php
-          label: PHP
-          source: |-
-            declare(strict_types=1);
-
-            require 'vendor/autoload.php';
-
-            use Shippo\API;
-
-            $sdk = API\Shippo::builder()
-                ->setSecurity(
-                    'ShippoToken <API_TOKEN>'
-                )
-                ->setShippoApiVersion('2018-02-08')
-                ->build();
-
-
-
-            $response = $sdk->refunds->list(
-                shippoApiVersion: '2018-02-08'
-            );
-
-            if ($response->refundPaginatedList !== null) {
-                // handle response
-            }
-        - lang: csharp
-          label: C#
-          source: |-
-            using Shippo;
-            using Shippo.Models.Components;
-
-            var sdk = new ShippoSDK(
-                apiKeyHeader: "ShippoToken <API_TOKEN>",
-                shippoApiVersion: "2018-02-08"
-            );
-
-            var res = await sdk.Refunds.ListAsync(shippoApiVersion: "2018-02-08");
-
-            // handle response
-        - lang: java
-          label: Java
-          source: |-
-            package hello.world;
-
-            import com.goshippo.shippo_sdk.Shippo;
-            import com.goshippo.shippo_sdk.models.operations.ListRefundsResponse;
-            import java.lang.Exception;
-
-            public class Application {
-
-                public static void main(String[] args) throws Exception {
-
-                    Shippo sdk = Shippo.builder()
-                            .apiKeyHeader("ShippoToken <API_TOKEN>")
-                            .shippoApiVersion("2018-02-08")
-                        .build();
-
-                    ListRefundsResponse res = sdk.refunds().list()
-                            .shippoApiVersion("2018-02-08")
-                            .call();
-
-                    if (res.refundPaginatedList().isPresent()) {
                         // handle response
                     }
                 }
@@ -12650,7 +12649,6 @@ paths:
       description: |-
         Returns a list of all shipment objects.<br><br>
         In order to filter results, you must use the below path parameters. 
-        A maximum date range of 90 days is permitted. 
         Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).<br><br>
 
         Optional path parameters:<br>
@@ -12665,7 +12663,9 @@ paths:
             `2017-01-01T03:30:30Z`<br><br>
 
           Example URL:<br>
-            `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&object_created_lt=2017-04-01T00:00:30`
+            `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&object_created_lt=2017-04-01T00:00:30`<br><br>
+
+        Note: Shipment objects older than 390 days are not returned.
       operationId: ListShipments
       parameters:
         - $ref: '#/components/parameters/PageTokenQueryParam'
@@ -14192,7 +14192,7 @@ paths:
             }
   '/shipments/{ShipmentId}':
     get:
-      description: Returns an existing shipment using an object ID
+      description: Returns an existing shipment using an object ID. Shipment objects older than 390 days are not returned.
       operationId: GetShipment
       parameters:
         - description: Object ID of the shipment to update
@@ -14324,7 +14324,7 @@ paths:
             }
   '/shipments/{ShipmentId}/rates':
     get:
-      description: Returns a paginated list of rates associated with a shipment
+      description: Returns a paginated list of rates associated with a shipment. Rates for shipments older than 390 days are not returned.
       operationId: ListShipmentRates
       parameters:
         - description: Object ID of the shipment to update
@@ -14472,6 +14472,8 @@ paths:
         By default, the calculated rates will return the price in two currencies under the `amount` and `amount_local` keys, respectively. The `amount` key will contain the price of a rate expressed in the currency that is used in the country from where the parcel originates, and the `amount_local` key will contain the price expressed in the currency that is used in the country the parcel is shipped to. You can request rates with prices expressed in a different currency by adding the currency code to the end of the resource URL. The full list of supported currencies along with their codes can be viewed on <a href="http://openexchangerates.org/api/currencies.json">open exchange rates</a>.
 
         Note: re-requesting the rates with a different currency code will re-queue the shipment (i.e. set the Shipment's `status` to `QUEUED`) and the converted currency rates will only be available when the Shipment's `status` is set to `SUCCESS`.
+
+        Rates for shipments older than 390 days are not returned.
       operationId: ListShipmentRatesByCurrencyCode
       parameters:
         - description: Object ID of the shipment to update
@@ -17509,31 +17511,31 @@ components:
         type: string
   responses:
     carrierParcelTemplateListResponse:
-      description: ''
+      description: 'List of carrier parcel templates'
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/CarrierParcelTemplateList"
     userParcelTemplateListResponse:
-      description: ''
+      description: 'List of user parcel templates'
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/UserParcelTemplateList"
     trackResponse:
-      description: ''
+      description: 'Tracking status'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Track'
     serviceGroupResponse:
-      description: ''
+      description: 'Service group'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ServiceGroup'
     serviceGroupListResponse:
-      description: ''
+      description: 'List of service groups'
       content:
         application/json:
           schema:
@@ -17541,238 +17543,262 @@ components:
               $ref: '#/components/schemas/ServiceGroup'
             type: array
     defaultParcelTemplateResponse:
-      description: ''
+      description: 'Default parcel template'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/DefaultParcelTemplate'
     transactionPaginatedResponse:
-      description: ''
+      description: 'Paginated list of transactions'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/TransactionPaginatedList'
     invoiceResponse:
-      description: ''
+      description: 'Invoice'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Invoice'
     invoicePaginatedResponse:
-      description: ''
+      description: 'Paginated list of invoices'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/InvoicePaginatedList'
     invoiceItemsPaginatedResponse:
-      description: ''
+      description: 'Paginated list of invoice items'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/InvoiceItemPaginatedList'
     addressPaginatedResponse:
-      description: ''
+      description: 'Paginated list of addresses'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/AddressPaginatedList'
     customsDeclarationPaginatedResponse:
-      description: ''
+      description: 'Paginated list of customs declarations'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CustomsDeclarationPaginatedList'
     customsItemPaginatedResponse:
-      description: ''
+      description: 'Paginated list of customs items'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CustomsItemPaginatedList'
     manifestPaginatedResponse:
-      description: ''
+      description: 'Paginated list of manifests'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ManifestPaginatedList'
     refundPaginatedResponse:
-      description: ''
+      description: 'Paginated list of refunds'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/RefundPaginatedList'
     orderPaginatedResponse:
-      description: ''
+      description: 'Paginated list of orders'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/OrderPaginatedList'
     parcelPaginatedResponse:
-      description: ''
+      description: 'Paginated list of parcels'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ParcelPaginatedList'
     ratePaginatedResponse:
-      description: ''
+      description: 'Paginated list of rates'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/RatePaginatedList'
     shipmentPaginatedResponse:
-      description: ''
+      description: 'Paginated list of shipments'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ShipmentPaginatedList'
     badRequestResponse:
-      description: ''
+      description: 'Bad request'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/BadRequest'
     carrierAccountResponse:
-      description: ''
+      description: 'Carrier account'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CarrierAccount'
     carrierAccountPaginatedResponse:
-      description: ''
+      description: 'Paginated list of carrier accounts'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CarrierAccountPaginatedList'
     liveRatePaginatedResponse:
-      description: ''
+      description: 'Paginated list of live rates'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/LiveRatePaginatedList'
     addressResponse:
-      description: ''
+      description: 'Address'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Address'
     batchResponse:
-      description: ''
+      description: 'Batch'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Batch'
     carrierParcelTemplateResponse:
-      description: ''
+      description: 'Carrier parcel template'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CarrierParcelTemplate'
     customsDeclarationResponse:
-      description: ''
+      description: 'Customs declaration'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CustomsDeclaration'
     customsItemResponse:
-      description: ''
+      description: 'Customs item'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CustomsItem'
     manifestResponse:
-      description: ''
+      description: 'Manifest'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Manifest'
     orderResponse:
-      description: ''
+      description: 'Order'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Order'
     parcelResponse:
-      description: ''
+      description: 'Parcel'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Parcel'
     pickupResponse:
-      description: ''
+      description: 'Pickup'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Pickup'
     rateResponse:
-      description: ''
+      description: 'Rate'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Rate'
     refundResponse:
-      description: ''
+      description: 'Refund'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Refund'
     shipmentResponse:
-      description: ''
+      description: 'Shipment'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Shipment'
     transactionResponse:
-      description: ''
+      description: 'Transaction'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Transaction'
     transactionCreateResponse:
-      description: ''
+      description: 'Created transaction'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Transaction'
     userParcelTemplateResponse:
-      description: ''
+      description: 'User parcel template'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/UserParcelTemplate'
     shippoAccountPaginatedResponse:
-      description: ""
+      description: 'Paginated list of Shippo accounts'
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ShippoAccountPaginatedList"
     shippoAccountResponse:
-      description: ""
+      description: 'Shippo account'
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ShippoAccount"
     webhookResponse:
-      description: ""
+      description: 'Webhook'
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Webhook"
     webhookPaginatedResponse:
-      description: ""
+      description: 'Paginated list of webhooks'
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/WebhookPaginatedList"
     carrierAccountRegistrationStatusResponse:
-      description: ""
+      description: 'Carrier account registration status'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CarrierAccountRegistrationStatus'
   securitySchemes:
     APIKeyHeader:
+      type: apiKey
       in: header
       name: Authorization
-      type: apiKey
+      x-token-prefix: ShippoToken
+      x-token-format: "ShippoToken {token}"
+      description: |
+        API key authentication using the ShippoToken scheme.
+        Format: Authorization: ShippoToken <API_TOKEN>
+        Example: Authorization: ShippoToken shippo_live_abc123
+    shippoOAuth:
+      type: oauth2
+      description: |
+        OAuth2 authentication with Shippo.
+        Users will be redirected to Shippo to authorize access to their account.
+      flows:
+        clientCredentials:
+          tokenUrl: https://goshippo.com/oauth/access_token
+          scopes:
+            "*": Full access to Shippo API
+        authorizationCode:
+          # Shippo OAuth authorization endpoint
+          authorizationUrl: https://goshippo.com/oauth/authorize
+          # Shippo OAuth token endpoint (NOTE: Shippo uses /access_token not /token)
+          tokenUrl: https://goshippo.com/oauth/access_token
+          # Shippo OAuth scopes (* for full access)
+          scopes:
+            "*": Full access to Shippo API
   schemas:
     PaginatedList:
       properties:
@@ -19545,9 +19571,19 @@ components:
         - $ref: '#/components/schemas/OrderBase'
         - properties:
             from_address:
-              $ref: '#/components/schemas/AddressFromCreateRequest'
+              oneOf:
+                - $ref: '#/components/schemas/AddressFromCreateRequest'
+                - type: string
+                  example: 'd799c2679e644279b59fe661ac8fa488'
+                  description: |
+                    <a href="/shippoapi/public-api/addresses">Address</a> `object_id` of a previously created address.
             to_address:
-              $ref: '#/components/schemas/AddressToCreateRequest'
+              oneOf:
+                - $ref: '#/components/schemas/AddressToCreateRequest'
+                - type: string
+                  example: 'd799c2679e644279b59fe661ac8fa489'
+                  description: |
+                    <a href="/shippoapi/public-api/addresses">Address</a> `object_id` of a previously created address.
             line_items:
               description: |-
                 Array of <a href="/shippoapi/public-api/orders/lineitem">line item</a> objects representing the items in this order. 

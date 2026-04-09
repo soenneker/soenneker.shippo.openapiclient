@@ -12,13 +12,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     public partial class OrderCreateRequest : global::Soenneker.Shippo.OpenApiClient.Models.OrderBase, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the sender / seller. Will be returned expanded by default..</summary>
+        /// <summary>The from_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest? FromAddress { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_from_address? FromAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest FromAddress { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_from_address FromAddress { get; set; }
 #endif
         /// <summary>Array of &lt;a href=&quot;/shippoapi/public-api/orders/lineitem&quot;&gt;line item&lt;/a&gt; objects representing the items in this order. All objects will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -28,13 +28,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.LineItemCreateRequest> LineItems { get; set; }
 #endif
-        /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the recipient / buyer. Will be returned expanded by default.</summary>
+        /// <summary>The to_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest? ToAddress { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_to_address? ToAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest ToAddress { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_to_address ToAddress { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -54,9 +54,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "from_address", n => { FromAddress = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest>(global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest.CreateFromDiscriminatorValue); } },
+                { "from_address", n => { FromAddress = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_from_address>(global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_from_address.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.LineItemCreateRequest>(global::Soenneker.Shippo.OpenApiClient.Models.LineItemCreateRequest.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "to_address", n => { ToAddress = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest>(global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest.CreateFromDiscriminatorValue); } },
+                { "to_address", n => { ToAddress = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_to_address>(global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_to_address.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,9 +67,151 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest>("from_address", FromAddress);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_from_address>("from_address", FromAddress);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.LineItemCreateRequest>("line_items", LineItems);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest>("to_address", ToAddress);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_to_address>("to_address", ToAddress);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class OrderCreateRequest_from_address : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest? AddressFromCreateRequest { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest AddressFromCreateRequest { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_from_address"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_from_address CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_from_address();
+                if("AddressFromCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.AddressFromCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest();
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(AddressFromCreateRequest != null)
+                {
+                    return AddressFromCreateRequest.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(AddressFromCreateRequest != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest>(null, AddressFromCreateRequest);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class OrderCreateRequest_to_address : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest? AddressToCreateRequest { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest AddressToCreateRequest { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_to_address"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_to_address CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.Shippo.OpenApiClient.Models.OrderCreateRequest.OrderCreateRequest_to_address();
+                if("AddressToCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.AddressToCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest();
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(AddressToCreateRequest != null)
+                {
+                    return AddressToCreateRequest.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(AddressToCreateRequest != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest>(null, AddressToCreateRequest);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }
