@@ -2,7 +2,7 @@
   "descriptionHash": "91C5A2612904AE884BB17B9AA6149723C7B4C7A09DDEF84DE2FA490A373309D04F0953081EF812A2002717ABDB4B08486C0EB373FD41D47AF45499FBBAB3BE48",
   "descriptionLocation": "../../openapi.yaml",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.31.0",
+  "kiotaVersion": "1.31.1",
   "clientClassName": "ShippoOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Shippo.OpenApiClient",
