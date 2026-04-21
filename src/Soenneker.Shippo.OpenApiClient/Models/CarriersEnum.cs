@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>|Token | Carrier name||:---|:---|| airterra | Airterra || apc_postal | APC Postal|| apg | APG|| aramex | Aramex|| asendia_us | Asendia US|| australia_post | Australia Post (also used for Startrack)|| axlehire | Jitsu|| better_trucks | BetterTrucks|| borderguru | BorderGuru|| boxberry | Boxberry|| bring | Bring (also used for Posten Norge)|| canada_post | Canada Post|| cdl | CDL|| chronopost | Chronopost|| collect_plus | CollectPlus|| correios_br | CorreiosBR|| correos_espana | Correos España || colissimo | Colissimo|| deutsche_post | Deutsche Post|| dhl_benelux | DHL Benelux|| dhl_ecommerce | DHL eCommerce|| dhl_express | DHL Express|| dhl_germany_c2c | DHL Germany C2C|| dhl_germany | DHL Germany|| dpd_de | DPD GERMANY|| dpd_uk | DPD UK|| estafeta | Estafeta|| fastway_australia | Aramex|| fedex | FedEx|| globegistics | Globegistics (now Asendia)|| gls_us | GLS US|| gophr | Gophr|| gso | GSO|| hermes_germany_b2c | Hermes Germany B2C|| hermes_uk | Evri UK || hongkong_post | Hongkong Post|| lasership | LaserShip|| lso | LSO|| mondial_relay | Mondial Relay|| new_zealand_post | New Zealand Post (also used for Pace and CourierPost)|| nippon_express | Nippon Express|| ontrac | OnTrac|| parcelforce | Parcelforce|| passport | Passport|| pcf | PCF|| poste_italiane | Poste Italiane || posti | Posti|| purolator | Purolator|| royal_mail | Royal Mail|| royal_mail_sf | Royal Mail Storefeeder|| rr_donnelley | ePost Global|| russian_post | Russian Post|| skypostal | SkyPostal|| stuart | Stuart|| swyft | Swyft|| uds | UDS (United Delivery Service)|| ups | UPS|| usps | USPS|| veho | Veho |</summary>
+    /// <summary>|Token | Carrier name||:---|:---|| airterra | Airterra || apc_postal | APC Postal|| apg | APG|| aramex | Aramex|| asendia_us | Asendia US|| australia_post | Australia Post (also used for Startrack)|| axlehire | Jitsu|| better_trucks | BetterTrucks|| borderguru | BorderGuru|| boxberry | Boxberry|| bring | Bring (also used for Posten Norge)|| canada_post | Canada Post|| chronopost | Chronopost|| collect_plus | CollectPlus|| correios_br | CorreiosBR|| correos_espana | Correos España || colissimo | Colissimo|| deutsche_post | Deutsche Post|| dhl_benelux | DHL Benelux|| dhl_ecommerce | DHL eCommerce|| dhl_express | DHL Express|| dhl_germany_c2c | DHL Germany C2C|| dhl_germany | DHL Germany|| dpd_de | DPD GERMANY|| dpd_uk | DPD UK|| estafeta | Estafeta|| fastway_australia | Aramex|| fedex | FedEx|| globegistics | Globegistics (now Asendia)|| gls_us | GLS US|| gophr | Gophr|| gso | GSO|| hermes_germany_b2c | Hermes Germany B2C|| hermes_uk | Evri UK || hongkong_post | Hongkong Post|| lasership | LaserShip|| lso | LSO|| mondial_relay | Mondial Relay|| new_zealand_post | New Zealand Post (also used for Pace and CourierPost)|| nippon_express | Nippon Express|| ontrac | OnTrac|| parcelforce | Parcelforce|| passport | Passport|| pcf | PCF|| poste_italiane | Poste Italiane || posti | Posti|| purolator | Purolator|| royal_mail | Royal Mail|| royal_mail_sf | Royal Mail Storefeeder|| rr_donnelley | ePost Global|| russian_post | Russian Post|| skypostal | SkyPostal|| stuart | Stuart|| swyft | Swyft|| uds | UDS (United Delivery Service)|| ups | UPS|| usps | USPS|| veho | Veho |</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CarriersEnum
     {
@@ -54,10 +54,6 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         [EnumMember(Value = "canada_post")]
         #pragma warning disable CS1591
         Canada_post,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "cdl")]
-        #pragma warning disable CS1591
-        Cdl,
         #pragma warning restore CS1591
         [EnumMember(Value = "chronopost")]
         #pragma warning disable CS1591
