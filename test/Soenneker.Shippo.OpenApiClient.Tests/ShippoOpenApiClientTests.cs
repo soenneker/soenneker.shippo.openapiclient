@@ -1,16 +1,15 @@
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Shippo.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class ShippoOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class ShippoOpenApiClientTests : HostedUnitTest
 {
-    public ShippoOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public ShippoOpenApiClientTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
