@@ -551,7 +551,7 @@ tags:
 
       | FedEx_Box_Small_1 | FedEx® Small Box (S1) | 12.38 x 10.88 x 1.50 in|
 
-      | FedEx_Box_Small_2 | FedEx® Small Box (S2) | 11.25 x 8.75 x 4.38 in|
+      | FedEx_Box_Small_2 | FedEx® Small Box (S2) | 11.25 x 8.75 x 2.38 in|
 
       | FedEx_Envelope | FedEx® Envelope | 12.50 x 9.50 x 0.80 in|
 
@@ -19235,7 +19235,7 @@ components:
       name: Authorization
       x-token-prefix: ShippoToken
       x-token-format: ShippoToken {token}
-      x-default: ShippoToken shippo_test_d41a6f04796998570c521a50828eae8e3cccf0eb
+      x-default: 'ShippoToken '
       description: |
         API key authentication using the ShippoToken scheme.
         Format: Authorization: ShippoToken <API_TOKEN>
@@ -25981,7 +25981,7 @@ components:
 
         | FedEx_Box_Small_1 | FedEx® Small Box (S1) | 12.38 x 10.88 x 1.50 in|
 
-        | FedEx_Box_Small_2 | FedEx® Small Box (S2) | 11.25 x 8.75 x 4.38 in|
+        | FedEx_Box_Small_2 | FedEx® Small Box (S2) | 11.25 x 8.75 x 2.38 in|
 
         | FedEx_Envelope | FedEx® Envelope | 12.50 x 9.50 x 0.80 in|
 
