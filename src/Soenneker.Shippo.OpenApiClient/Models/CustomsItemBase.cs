@@ -106,6 +106,16 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
+        /// Creates a new instance of the appropriate class based on discriminator value
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemBase"/></returns>
+        /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+        public static global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemBase CreateFromDiscriminatorValue(IParseNode parseNode)
+        {
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            return new global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemBase();
+        }
+        /// <summary>
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
