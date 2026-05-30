@@ -56,7 +56,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string NetWeight { get; set; }
 #endif
-        /// <summary>Country of origin of the item. Example: `US` or `DE`. All accepted values can be found on the &lt;a href=&quot;http://www.iso.org/&quot; target=&quot;_blank&quot;&gt;Official ISO Website&lt;/a&gt;.</summary>
+        /// <summary>&quot;Country of origin of the item. Example: `US` or `DE`. All accepted values can be found on the &lt;a href=\&quot;http://www.iso.org/\&quot; target=\&quot;_blank\&quot;&gt;Official ISO Website&lt;/a&gt;.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OriginCountry { get; set; }

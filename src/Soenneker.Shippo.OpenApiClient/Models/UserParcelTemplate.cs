@@ -9,9 +9,37 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class UserParcelTemplate : global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateBase, IParsable
+    public partial class UserParcelTemplate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The measure unit used for length, width and height.</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum? DistanceUnit { get; set; }
+        /// <summary>The height of the package, in units specified by the `distance_unit` attribute. Required, but if using a preset carrier template then this field must be empty.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Height { get; set; }
+#nullable restore
+#else
+        public string Height { get; set; }
+#endif
+        /// <summary>The length of the package, in units specified by the `distance_unit` attribute. Required, but if using a preset carrier template then this field must be empty.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Length { get; set; }
+#nullable restore
+#else
+        public string Length { get; set; }
+#endif
+        /// <summary>The name of the User Parcel Template</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
         /// <summary>Date and time of User Parcel Template creation</summary>
         public DateTimeOffset? ObjectCreated { get; set; }
         /// <summary>Unique identifier of the given User Parcel Template object</summary>
@@ -40,12 +68,37 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplate Template { get; set; }
 #endif
+        /// <summary>The weight of the package, in units specified by the weight_unit attribute.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Weight { get; set; }
+#nullable restore
+#else
+        public string Weight { get; set; }
+#endif
+        /// <summary>The unit used for weight.</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? WeightUnit { get; set; }
+        /// <summary>The width of the package, in units specified by the `distance_unit` attribute. Required, but if using a preset carrier template then this field must be empty.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Width { get; set; }
+#nullable restore
+#else
+        public string Width { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate"/> and sets the default values.
+        /// </summary>
+        public UserParcelTemplate()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate();
@@ -54,30 +107,44 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "distance_unit", n => { DistanceUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum>(); } },
+                { "height", n => { Height = n.GetStringValue(); } },
+                { "length", n => { Length = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
                 { "template", n => { Template = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplate>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplate.CreateFromDiscriminatorValue); } },
+                { "weight", n => { Weight = n.GetStringValue(); } },
+                { "weight_unit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
+                { "width", n => { Width = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum>("distance_unit", DistanceUnit);
+            writer.WriteStringValue("height", Height);
+            writer.WriteStringValue("length", Length);
+            writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("object_created", ObjectCreated);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("object_owner", ObjectOwner);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplate>("template", Template);
+            writer.WriteStringValue("weight", Weight);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>("weight_unit", WeightUnit);
+            writer.WriteStringValue("width", Width);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

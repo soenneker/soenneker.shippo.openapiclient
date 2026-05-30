@@ -9,11 +9,61 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ServiceGroupUpdateRequest : global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupBase, IParsable
+    public partial class ServiceGroupUpdateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Description for the service group</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>String representation of an amount to be returned as the flat rateif 1. The service group is of type `LIVE_RATE` and no matching rateswere found; or 2. The service group is of type `FLAT_RATE`. Eitherintegers or decimals are accepted. Required unless type is`FREE_SHIPPING`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FlatRate { get; set; }
+#nullable restore
+#else
+        public string FlatRate { get; set; }
+#endif
+        /// <summary>required unless type is `FREE_SHIPPING`. (ISO 4217 currency)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FlatRateCurrency { get; set; }
+#nullable restore
+#else
+        public string FlatRateCurrency { get; set; }
+#endif
+        /// <summary>optional unless type is `FREE_SHIPPING`. (ISO 4217 currency)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FreeShippingThresholdCurrency { get; set; }
+#nullable restore
+#else
+        public string FreeShippingThresholdCurrency { get; set; }
+#endif
+        /// <summary>For service groups of type `FREE_SHIPPING`, this field must be required to configure the minimum cart total (total cost of items in the cart) for this service group to be returned for rates at checkout. Optional unless type is `FREE_SHIPPING`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FreeShippingThresholdMin { get; set; }
+#nullable restore
+#else
+        public string FreeShippingThresholdMin { get; set; }
+#endif
         /// <summary>True if the service group is enabled, false otherwise.</summary>
         public bool? IsActive { get; set; }
+        /// <summary>Name for the service group that will be shown to customers in the response</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
         /// <summary>The unique identifier of the given Service Group object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -22,6 +72,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectId { get; set; }
 #endif
+        /// <summary>The amount in percent (%) that the service group&apos;s returned rate should be adjusted. For example, if this field is set to 5 and the matched rate price is $5.00, the returned value of the service group will be $5.25. Negative integers are also accepted and will discount the rate price by the defined percentage amount.</summary>
+        public long? RateAdjustment { get; set; }
         /// <summary>The service_levels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,12 +82,21 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel> ServiceLevels { get; set; }
 #endif
+        /// <summary>The type of the service group.&lt;br&gt; `LIVE_RATE` - Shippo will make a rating request and return real-time rates for the shipping group, only falling back to the specified flat rate amount if no rates match a service level in the service group.&lt;br&gt; `FLAT_RATE` - Returns a shipping option with the specified flat rate amount.&lt;br&gt; `FREE_SHIPPING` - Returns a shipping option with a price of $0 only if the total cost of items exceeds the amount defined by `free_shipping_threshold_min`</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupTypeEnum? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupUpdateRequest"/> and sets the default values.
+        /// </summary>
+        public ServiceGroupUpdateRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupUpdateRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupUpdateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupUpdateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupUpdateRequest();
@@ -44,26 +105,42 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "flat_rate", n => { FlatRate = n.GetStringValue(); } },
+                { "flat_rate_currency", n => { FlatRateCurrency = n.GetStringValue(); } },
+                { "free_shipping_threshold_currency", n => { FreeShippingThresholdCurrency = n.GetStringValue(); } },
+                { "free_shipping_threshold_min", n => { FreeShippingThresholdMin = n.GetStringValue(); } },
                 { "is_active", n => { IsActive = n.GetBoolValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
+                { "rate_adjustment", n => { RateAdjustment = n.GetLongValue(); } },
                 { "service_levels", n => { ServiceLevels = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel>(global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupTypeEnum>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("flat_rate", FlatRate);
+            writer.WriteStringValue("flat_rate_currency", FlatRateCurrency);
+            writer.WriteStringValue("free_shipping_threshold_currency", FreeShippingThresholdCurrency);
+            writer.WriteStringValue("free_shipping_threshold_min", FreeShippingThresholdMin);
             writer.WriteBoolValue("is_active", IsActive);
+            writer.WriteStringValue("name", Name);
             writer.WriteStringValue("object_id", ObjectId);
+            writer.WriteLongValue("rate_adjustment", RateAdjustment);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel>("service_levels", ServiceLevels);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupTypeEnum>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -52,7 +52,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Items
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemPaginatedList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemPaginatedList400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemPaginatedList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Customs.Items.ItemsRequestBuilder.ItemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,7 +65,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Items
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemPaginatedList400Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemPaginatedList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemPaginatedList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Items
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsItem400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.CustomsItem?> PostAsync(global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -90,7 +90,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Items
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.CustomsItem400Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.CustomsItem>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.CustomsItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

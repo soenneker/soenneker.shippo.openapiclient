@@ -9,9 +9,35 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BatchShipmentCreateRequest : global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentBase, IParsable
+    public partial class BatchShipmentCreateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Object ID of the carrier account to be used for this shipment (will override batch default)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CarrierAccount { get; set; }
+#nullable restore
+#else
+        public string CarrierAccount { get; set; }
+#endif
+        /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
+#endif
+        /// <summary>A token that sets the shipping method for the batch, overriding the batch default. Servicelevel tokens can be found &lt;a href=&quot;/shippoapi/public-api/service-levels&quot;&gt;in this list&lt;/a&gt; or &lt;a href=&quot;/shippoapi/public-api/carrier-accounts/listcarrieraccounts&quot;&gt;at this endpoint&lt;/a&gt;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ServicelevelToken { get; set; }
+#nullable restore
+#else
+        public string ServicelevelToken { get; set; }
+#endif
         /// <summary>The shipment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,11 +47,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest Shipment { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest"/> and sets the default values.
+        /// </summary>
+        public BatchShipmentCreateRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest();
@@ -34,10 +67,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "servicelevel_token", n => { ServicelevelToken = n.GetStringValue(); } },
                 { "shipment", n => { Shipment = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.CreateFromDiscriminatorValue); } },
             };
         }
@@ -45,11 +81,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("carrier_account", CarrierAccount);
+            writer.WriteStringValue("metadata", Metadata);
+            writer.WriteStringValue("servicelevel_token", ServicelevelToken);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest>("shipment", Shipment);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

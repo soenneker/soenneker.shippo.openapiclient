@@ -99,18 +99,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountParameters"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UPSConnectExistingOwnAccountParameters"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequest_parametersMember1"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UPSConnectExistingOwnAccountParameters"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ConnectExistingOwnAccountRequest_parameters : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountParameters"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequest_parametersMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountParameters? ConnectExistingOwnAccountParameters { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequest_parametersMember1? ConnectExistingOwnAccountRequestParametersMember1 { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountParameters ConnectExistingOwnAccountParameters { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequest_parametersMember1 ConnectExistingOwnAccountRequestParametersMember1 { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -140,7 +140,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 var result = new global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequest.ConnectExistingOwnAccountRequest_parameters();
                 if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ConnectExistingOwnAccountParameters = new global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountParameters();
+                    result.ConnectExistingOwnAccountRequestParametersMember1 = new global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequest_parametersMember1();
                 }
                 else if("FedExConnectExistingOwnAccountParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
@@ -158,9 +158,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(ConnectExistingOwnAccountParameters != null)
+                if(ConnectExistingOwnAccountRequestParametersMember1 != null)
                 {
-                    return ConnectExistingOwnAccountParameters.GetFieldDeserializers();
+                    return ConnectExistingOwnAccountRequestParametersMember1.GetFieldDeserializers();
                 }
                 else if(FedExConnectExistingOwnAccountParameters != null)
                 {
@@ -179,9 +179,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ConnectExistingOwnAccountParameters != null)
+                if(ConnectExistingOwnAccountRequestParametersMember1 != null)
                 {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountParameters>(null, ConnectExistingOwnAccountParameters);
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequest_parametersMember1>(null, ConnectExistingOwnAccountRequestParametersMember1);
                 }
                 else if(FedExConnectExistingOwnAccountParameters != null)
                 {

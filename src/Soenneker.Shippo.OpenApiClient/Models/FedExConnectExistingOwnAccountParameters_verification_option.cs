@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>Determines the verification option to use for the account registration (Enum: SMS, EMAIL, CALL, INVOICE).</summary>
+    /// <summary>&quot;Determines the verification option to use for the account registration (Enum: SMS, EMAIL, CALL, INVOICE).&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum FedExConnectExistingOwnAccountParameters_verification_option
     {

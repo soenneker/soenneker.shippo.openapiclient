@@ -9,9 +9,29 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ParcelCreateFromTemplateRequest : global::Soenneker.Shippo.OpenApiClient.Models.ParcelBase, IParsable
+    public partial class ParcelCreateFromTemplateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>An object holding optional extra services to be requested for each parcel in a multi-piece shipment.The following values are supported for the `extra` field of the parcel object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra? Extra { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra Extra { get; set; }
+#endif
+        /// <summary>The unit used for weight.</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? MassUnit { get; set; }
+        /// <summary>The metadata property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
+#endif
         /// <summary>If template is passed, `length`, `width`, `height`, and `distance_unit` are not required</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,12 +40,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet Template { get; set; }
 #endif
+        /// <summary>Weight of the parcel. Up to six digits in front and four digits after the decimal separator are accepted.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Weight { get; set; }
+#nullable restore
+#else
+        public string Weight { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest"/> and sets the default values.
+        /// </summary>
+        public ParcelCreateFromTemplateRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest();
@@ -34,22 +69,30 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra.CreateFromDiscriminatorValue); } },
+                { "mass_unit", n => { MassUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "template", n => { Template = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet.CreateFromDiscriminatorValue); } },
+                { "weight", n => { Weight = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra>("extra", Extra);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>("mass_unit", MassUnit);
+            writer.WriteStringValue("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>("template", Template);
+            writer.WriteStringValue("weight", Weight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

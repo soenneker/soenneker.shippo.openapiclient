@@ -9,9 +9,19 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Order : global::Soenneker.Shippo.OpenApiClient.Models.OrderBase, IParsable
+    public partial class Order : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>**Required if total_price is provided**&lt;br&gt;Currency of the &lt;code&gt;total_price&lt;/code&gt; and &lt;code&gt;total_tax&lt;/code&gt; amounts.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Currency { get; set; }
+#nullable restore
+#else
+        public string Currency { get; set; }
+#endif
         /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the sender / seller. Will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,6 +37,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.LineItem> LineItems { get; set; }
+#endif
+        /// <summary>Custom buyer- or seller-provided notes about the order.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Notes { get; set; }
+#nullable restore
+#else
+        public string Notes { get; set; }
 #endif
         /// <summary>Unique identifier of the order object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,8 +62,58 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectOwner { get; set; }
 #endif
+        /// <summary>An alphanumeric identifier for the order used by the seller/buyer. This identifier doesn&apos;t need to be unique.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OrderNumber { get; set; }
+#nullable restore
+#else
+        public string OrderNumber { get; set; }
+#endif
+        /// <summary>Current state of the order. See the &lt;a href=&quot;https://docs.goshippo.com/docs/orders/orders/&quot;&gt;orders tutorial&lt;/a&gt; for the logic of how the status is handled.</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.OrderStatusEnum? OrderStatus { get; set; }
+        /// <summary>Date and time when the order was placed. This datetime can be different from the datetime of the order object creation on Shippo.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PlacedAt { get; set; }
+#nullable restore
+#else
+        public string PlacedAt { get; set; }
+#endif
+        /// <summary>Amount paid by the buyer for shipping. This amount can be different from the price the seller will actually pay for shipping.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShippingCost { get; set; }
+#nullable restore
+#else
+        public string ShippingCost { get; set; }
+#endif
+        /// <summary>**Required if shipping_cost is provided**&lt;br&gt;Currency of the &lt;code&gt;shipping_cost&lt;/code&gt; amount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShippingCostCurrency { get; set; }
+#nullable restore
+#else
+        public string ShippingCostCurrency { get; set; }
+#endif
+        /// <summary>Shipping method (carrier + service or other free text description) chosen by the buyer. This value can be different from the shipping method the seller will actually choose.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShippingMethod { get; set; }
+#nullable restore
+#else
+        public string ShippingMethod { get; set; }
+#endif
         /// <summary>Platform the order was created on and, if applicable, imported from. Orders created via the Shippo API or dashboard will have the value &quot;Shippo&quot;.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.OrderShopAppEnum? ShopApp { get; set; }
+        /// <summary>The subtotal_price property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SubtotalPrice { get; set; }
+#nullable restore
+#else
+        public string SubtotalPrice { get; set; }
+#endif
         /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the recipient / buyer. Will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,6 +121,22 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressTo ToAddress { get; set; }
+#endif
+        /// <summary>Total amount paid by the buyer for this order.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TotalPrice { get; set; }
+#nullable restore
+#else
+        public string TotalPrice { get; set; }
+#endif
+        /// <summary>Total tax amount paid by the buyer for this order.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TotalTax { get; set; }
+#nullable restore
+#else
+        public string TotalTax { get; set; }
 #endif
         /// <summary>Array of &lt;a href=&quot;/shippoapi/public-api/transactions&quot;&gt;transaction&lt;/a&gt; objects representing all shipping labels purchased for this order.All objects are returned expanded with a limited number of fields by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,12 +146,29 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions> Transactions { get; set; }
 #endif
+        /// <summary>Total weight of the order.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Weight { get; set; }
+#nullable restore
+#else
+        public string Weight { get; set; }
+#endif
+        /// <summary>The unit used for weight.</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? WeightUnit { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Order"/> and sets the default values.
+        /// </summary>
+        public Order()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Order"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.Order CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.Order CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.Order();
@@ -76,34 +177,60 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "currency", n => { Currency = n.GetStringValue(); } },
                 { "from_address", n => { FromAddress = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom>(global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.LineItem>(global::Soenneker.Shippo.OpenApiClient.Models.LineItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "notes", n => { Notes = n.GetStringValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
+                { "order_number", n => { OrderNumber = n.GetStringValue(); } },
+                { "order_status", n => { OrderStatus = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.OrderStatusEnum>(); } },
+                { "placed_at", n => { PlacedAt = n.GetStringValue(); } },
+                { "shipping_cost", n => { ShippingCost = n.GetStringValue(); } },
+                { "shipping_cost_currency", n => { ShippingCostCurrency = n.GetStringValue(); } },
+                { "shipping_method", n => { ShippingMethod = n.GetStringValue(); } },
                 { "shop_app", n => { ShopApp = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.OrderShopAppEnum>(); } },
+                { "subtotal_price", n => { SubtotalPrice = n.GetStringValue(); } },
                 { "to_address", n => { ToAddress = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressTo>(global::Soenneker.Shippo.OpenApiClient.Models.AddressTo.CreateFromDiscriminatorValue); } },
+                { "total_price", n => { TotalPrice = n.GetStringValue(); } },
+                { "total_tax", n => { TotalTax = n.GetStringValue(); } },
                 { "transactions", n => { Transactions = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions>(global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "weight", n => { Weight = n.GetStringValue(); } },
+                { "weight_unit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom>("from_address", FromAddress);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.LineItem>("line_items", LineItems);
+            writer.WriteStringValue("notes", Notes);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("object_owner", ObjectOwner);
+            writer.WriteStringValue("order_number", OrderNumber);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.OrderStatusEnum>("order_status", OrderStatus);
+            writer.WriteStringValue("placed_at", PlacedAt);
+            writer.WriteStringValue("shipping_cost", ShippingCost);
+            writer.WriteStringValue("shipping_cost_currency", ShippingCostCurrency);
+            writer.WriteStringValue("shipping_method", ShippingMethod);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.OrderShopAppEnum>("shop_app", ShopApp);
+            writer.WriteStringValue("subtotal_price", SubtotalPrice);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressTo>("to_address", ToAddress);
+            writer.WriteStringValue("total_price", TotalPrice);
+            writer.WriteStringValue("total_tax", TotalTax);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions>("transactions", Transactions);
+            writer.WriteStringValue("weight", Weight);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>("weight_unit", WeightUnit);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

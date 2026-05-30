@@ -9,9 +9,11 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ShipmentCreateRequest : global::Soenneker.Shippo.OpenApiClient.Models.ShipmentBase, IParsable
+    public partial class ShipmentCreateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,20 +56,51 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_customs_declaration CustomsDeclaration { get; set; }
 #endif
+        /// <summary>An object holding optional extra services to be requested.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra? Extra { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra Extra { get; set; }
+#endif
+        /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
+#endif
         /// <summary>List of parcels to be shipped.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 items |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Parcels { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_parcels>? Parcels { get; set; }
 #nullable restore
 #else
-        public List<string> Parcels { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_parcels> Parcels { get; set; }
 #endif
+        /// <summary>Date the shipment will be tendered to the carrier. Must be in the format `2014-01-18T00:35:03.463Z`. Defaults to current date and time if no value is provided. Please note that some carriers require this value tobe in the future, on a working day, or similar.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShipmentDate { get; set; }
+#nullable restore
+#else
+        public string ShipmentDate { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest"/> and sets the default values.
+        /// </summary>
+        public ShipmentCreateRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest();
@@ -76,9 +109,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "address_from", n => { AddressFrom = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_address_from>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_address_from.CreateFromDiscriminatorValue); } },
                 { "address_return", n => { AddressReturn = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_address_return>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_address_return.CreateFromDiscriminatorValue); } },
@@ -86,27 +119,33 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "async", n => { Async = n.GetBoolValue(); } },
                 { "carrier_accounts", n => { CarrierAccounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "customs_declaration", n => { CustomsDeclaration = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_customs_declaration>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_customs_declaration.CreateFromDiscriminatorValue); } },
-                { "parcels", n => { Parcels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "parcels", n => { Parcels = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_parcels>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_parcels.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "shipment_date", n => { ShipmentDate = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_address_from>("address_from", AddressFrom);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_address_return>("address_return", AddressReturn);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_address_to>("address_to", AddressTo);
             writer.WriteBoolValue("async", Async);
             writer.WriteCollectionOfPrimitiveValues<string>("carrier_accounts", CarrierAccounts);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_customs_declaration>("customs_declaration", CustomsDeclaration);
-            writer.WriteCollectionOfPrimitiveValues<string>("parcels", Parcels);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra>("extra", Extra);
+            writer.WriteStringValue("metadata", Metadata);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_parcels>("parcels", Parcels);
+            writer.WriteStringValue("shipment_date", ShipmentDate);
+            writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ShipmentCreateRequest_address_from : IComposedTypeWrapper, IParsable
@@ -119,13 +158,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
             public global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest AddressCreateRequest { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -141,9 +180,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     result.AddressCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest();
                 }
-                else if(parseNode.GetStringValue() is string stringValue)
+                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.String = stringValue;
+                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
                 }
                 return result;
             }
@@ -156,6 +195,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 if(AddressCreateRequest != null)
                 {
                     return AddressCreateRequest.GetFieldDeserializers();
+                }
+                else if(UnionBranch != null)
+                {
+                    return UnionBranch.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -170,14 +213,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest>(null, AddressCreateRequest);
                 }
-                else if(String != null)
+                else if(UnionBranch != null)
                 {
-                    writer.WriteStringValue(null, String);
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
                 }
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ShipmentCreateRequest_address_return : IComposedTypeWrapper, IParsable
@@ -190,13 +233,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
             public global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest AddressCreateRequest { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -212,9 +255,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     result.AddressCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest();
                 }
-                else if(parseNode.GetStringValue() is string stringValue)
+                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.String = stringValue;
+                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
                 }
                 return result;
             }
@@ -227,6 +270,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 if(AddressCreateRequest != null)
                 {
                     return AddressCreateRequest.GetFieldDeserializers();
+                }
+                else if(UnionBranch != null)
+                {
+                    return UnionBranch.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -241,14 +288,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest>(null, AddressCreateRequest);
                 }
-                else if(String != null)
+                else if(UnionBranch != null)
                 {
-                    writer.WriteStringValue(null, String);
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
                 }
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ShipmentCreateRequest_address_to : IComposedTypeWrapper, IParsable
@@ -261,13 +308,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
             public global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest AddressCreateRequest { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -283,9 +330,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     result.AddressCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest();
                 }
-                else if(parseNode.GetStringValue() is string stringValue)
+                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.String = stringValue;
+                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
                 }
                 return result;
             }
@@ -298,6 +345,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 if(AddressCreateRequest != null)
                 {
                     return AddressCreateRequest.GetFieldDeserializers();
+                }
+                else if(UnionBranch != null)
+                {
+                    return UnionBranch.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -312,14 +363,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest>(null, AddressCreateRequest);
                 }
-                else if(String != null)
+                else if(UnionBranch != null)
                 {
-                    writer.WriteStringValue(null, String);
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
                 }
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequest"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ShipmentCreateRequest_customs_declaration : IComposedTypeWrapper, IParsable
@@ -332,13 +383,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
             public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequest CustomsDeclarationCreateRequest { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -354,9 +405,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     result.CustomsDeclarationCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequest();
                 }
-                else if(parseNode.GetStringValue() is string stringValue)
+                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.String = stringValue;
+                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
                 }
                 return result;
             }
@@ -369,6 +420,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 if(CustomsDeclarationCreateRequest != null)
                 {
                     return CustomsDeclarationCreateRequest.GetFieldDeserializers();
+                }
+                else if(UnionBranch != null)
+                {
+                    return UnionBranch.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -383,9 +438,104 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequest>(null, CustomsDeclarationCreateRequest);
                 }
-                else if(String != null)
+                else if(UnionBranch != null)
                 {
-                    writer.WriteStringValue(null, String);
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class ShipmentCreateRequest_parcels : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest? ParcelCreateFromTemplateRequest { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest ParcelCreateFromTemplateRequest { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateRequest"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateRequest? ParcelCreateRequest { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateRequest ParcelCreateRequest { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_parcels"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_parcels CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest.ShipmentCreateRequest_parcels();
+                if("ParcelCreateFromTemplateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ParcelCreateFromTemplateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest();
+                }
+                else if("ParcelCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ParcelCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateRequest();
+                }
+                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(ParcelCreateFromTemplateRequest != null)
+                {
+                    return ParcelCreateFromTemplateRequest.GetFieldDeserializers();
+                }
+                else if(ParcelCreateRequest != null)
+                {
+                    return ParcelCreateRequest.GetFieldDeserializers();
+                }
+                else if(UnionBranch != null)
+                {
+                    return UnionBranch.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(ParcelCreateFromTemplateRequest != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateFromTemplateRequest>(null, ParcelCreateFromTemplateRequest);
+                }
+                else if(ParcelCreateRequest != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateRequest>(null, ParcelCreateRequest);
+                }
+                else if(UnionBranch != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
                 }
             }
         }

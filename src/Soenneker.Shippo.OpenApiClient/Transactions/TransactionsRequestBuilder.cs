@@ -52,7 +52,7 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,7 +65,7 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList400Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -76,21 +76,21 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.Transaction400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Shippo.OpenApiClient.Models.Transaction?> PostAsync(global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder.TransactionsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Shippo.OpenApiClient.Models.Transaction?> PostAsync(global::Soenneker.Shippo.OpenApiClient.Models.CreateTransaction body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Shippo.OpenApiClient.Models.Transaction> PostAsync(global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder.TransactionsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Shippo.OpenApiClient.Models.Transaction> PostAsync(global::Soenneker.Shippo.OpenApiClient.Models.CreateTransaction body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.Transaction400Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Transaction>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Transaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -121,11 +121,11 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder.TransactionsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Shippo.OpenApiClient.Models.CreateTransaction body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder.TransactionsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Shippo.OpenApiClient.Models.CreateTransaction body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -143,81 +143,6 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
         public global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TransactionsPostRequestBody : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest? InstantTransactionCreateRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest InstantTransactionCreateRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest? TransactionCreateRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest TransactionCreateRequest { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder.TransactionsPostRequestBody"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder.TransactionsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder.TransactionsPostRequestBody();
-                if("InstantTransactionCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.InstantTransactionCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest();
-                }
-                else if("TransactionCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.TransactionCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(InstantTransactionCreateRequest != null)
-                {
-                    return InstantTransactionCreateRequest.GetFieldDeserializers();
-                }
-                else if(TransactionCreateRequest != null)
-                {
-                    return TransactionCreateRequest.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(InstantTransactionCreateRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest>(null, InstantTransactionCreateRequest);
-                }
-                else if(TransactionCreateRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest>(null, TransactionCreateRequest);
-                }
-            }
         }
         /// <summary>
         /// Returns a list of all transaction objects.

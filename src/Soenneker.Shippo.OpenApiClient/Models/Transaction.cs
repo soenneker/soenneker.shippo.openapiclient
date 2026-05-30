@@ -25,10 +25,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The created_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.Transaction.Transaction_created_by? CreatedBy { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.Transaction.Transaction_created_by CreatedBy { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>The estimated time of arrival according to the carrier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -158,7 +158,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "commercial_invoice_url", n => { CommercialInvoiceUrl = n.GetStringValue(); } },
-                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Transaction.Transaction_created_by>(global::Soenneker.Shippo.OpenApiClient.Models.Transaction.Transaction_created_by.CreateFromDiscriminatorValue); } },
+                { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy>(global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy.CreateFromDiscriminatorValue); } },
                 { "eta", n => { Eta = n.GetStringValue(); } },
                 { "label_file_type", n => { LabelFileType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>(); } },
                 { "label_url", n => { LabelUrl = n.GetStringValue(); } },
@@ -187,7 +187,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("commercial_invoice_url", CommercialInvoiceUrl);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Transaction.Transaction_created_by>("created_by", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy>("created_by", CreatedBy);
             writer.WriteStringValue("eta", Eta);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>("label_file_type", LabelFileType);
             writer.WriteStringValue("label_url", LabelUrl);
@@ -209,64 +209,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember1"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember2"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Transaction_created_by : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember1? TransactionCreatedByMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember1 TransactionCreatedByMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember2? TransactionCreatedByMember2 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember2 TransactionCreatedByMember2 { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Transaction.Transaction_created_by"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Shippo.OpenApiClient.Models.Transaction.Transaction_created_by CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Shippo.OpenApiClient.Models.Transaction.Transaction_created_by();
-                result.TransactionCreatedByMember1 = new global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember1();
-                result.TransactionCreatedByMember2 = new global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember2();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TransactionCreatedByMember1 != null || TransactionCreatedByMember2 != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TransactionCreatedByMember1, TransactionCreatedByMember2);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Transaction_created_byMember1>(null, TransactionCreatedByMember1, TransactionCreatedByMember2);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CoreRate"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CoreRate"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Transaction_rate : IComposedTypeWrapper, IParsable
@@ -279,13 +222,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
             public global::Soenneker.Shippo.OpenApiClient.Models.CoreRate CoreRate { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -301,9 +244,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     result.CoreRate = new global::Soenneker.Shippo.OpenApiClient.Models.CoreRate();
                 }
-                else if(parseNode.GetStringValue() is string stringValue)
+                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.String = stringValue;
+                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
                 }
                 return result;
             }
@@ -316,6 +259,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 if(CoreRate != null)
                 {
                     return CoreRate.GetFieldDeserializers();
+                }
+                else if(UnionBranch != null)
+                {
+                    return UnionBranch.GetFieldDeserializers();
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -330,9 +277,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 {
                     writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CoreRate>(null, CoreRate);
                 }
-                else if(String != null)
+                else if(UnionBranch != null)
                 {
-                    writer.WriteStringValue(null, String);
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
                 }
             }
         }

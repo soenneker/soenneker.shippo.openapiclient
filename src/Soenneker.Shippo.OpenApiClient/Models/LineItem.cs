@@ -8,11 +8,33 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// &lt;p style=&quot;text-align: center; background-color: #F2F3F4;&quot;&gt;  &lt;/br&gt;Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource  in the future. Currently it&apos;s a nested object within the order resource.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;A line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.
+    /// &quot;&lt;p style=\&quot;text-align: center; background-color: #F2F3F4;\&quot;&gt;  &lt;/br&gt;Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource  in the future. Currently it&apos;s a nested object within the order resource.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;A line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class LineItem : global::Soenneker.Shippo.OpenApiClient.Models.LineItemBase, IParsable
+    public partial class LineItem : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Currency of the &lt;code&gt;total_price&lt;/code&gt; amount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Currency { get; set; }
+#nullable restore
+#else
+        public string Currency { get; set; }
+#endif
+        /// <summary>Country the item was manufactured in. In the Shippo dashboard, this value will be used ot pre-fill the customs declaration when creating a label for this order.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ManufactureCountry { get; set; }
+#nullable restore
+#else
+        public string ManufactureCountry { get; set; }
+#endif
+        /// <summary>The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer. This value is used by some platforms such as eBay to measure a seller&apos;s shipping time and performance. It will be displayed in the Shippo dashboard.</summary>
+        public DateTimeOffset? MaxDeliveryTime { get; set; }
+        /// <summary>The date and time this item needs to be fulfilled by, i.e. by when the shipping label needs to be created and handed over to the carrier. This value is used by some platforms such as eBay to measure a seller&apos;s handling time and performance. It will be displayed in the Shippo dashboard.</summary>
+        public DateTimeOffset? MaxShipTime { get; set; }
         /// <summary>Unique identifier of the line item object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,12 +43,63 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectId { get; set; }
 #endif
+        /// <summary>The quantity of this item in this order.</summary>
+        public long? Quantity { get; set; }
+        /// <summary>The stock keeping unit value of this item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Sku { get; set; }
+#nullable restore
+#else
+        public string Sku { get; set; }
+#endif
+        /// <summary>Title of the line item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
+#endif
+        /// <summary>Total price paid by the buyer for this item (or these items, if quantity &gt; 1).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TotalPrice { get; set; }
+#nullable restore
+#else
+        public string TotalPrice { get; set; }
+#endif
+        /// <summary>A variant is a specific variation of an item (e.g. `size M` or `color blue`). Variants might be exposed as a separate resource in the future too. Currently the variant title is a free text field describing the variant.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VariantTitle { get; set; }
+#nullable restore
+#else
+        public string VariantTitle { get; set; }
+#endif
+        /// <summary>Total weight of this/these item(s). Instead of specifying the weight of all items, you can also set the &lt;code&gt;total_weight&lt;/code&gt; value of the order object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Weight { get; set; }
+#nullable restore
+#else
+        public string Weight { get; set; }
+#endif
+        /// <summary>The unit used for weight.</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? WeightUnit { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.LineItem"/> and sets the default values.
+        /// </summary>
+        public LineItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.LineItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.LineItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.LineItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.LineItem();
@@ -35,22 +108,44 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "currency", n => { Currency = n.GetStringValue(); } },
+                { "manufacture_country", n => { ManufactureCountry = n.GetStringValue(); } },
+                { "max_delivery_time", n => { MaxDeliveryTime = n.GetDateTimeOffsetValue(); } },
+                { "max_ship_time", n => { MaxShipTime = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
+                { "quantity", n => { Quantity = n.GetLongValue(); } },
+                { "sku", n => { Sku = n.GetStringValue(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
+                { "total_price", n => { TotalPrice = n.GetStringValue(); } },
+                { "variant_title", n => { VariantTitle = n.GetStringValue(); } },
+                { "weight", n => { Weight = n.GetStringValue(); } },
+                { "weight_unit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("currency", Currency);
+            writer.WriteStringValue("manufacture_country", ManufactureCountry);
+            writer.WriteDateTimeOffsetValue("max_delivery_time", MaxDeliveryTime);
+            writer.WriteDateTimeOffsetValue("max_ship_time", MaxShipTime);
             writer.WriteStringValue("object_id", ObjectId);
+            writer.WriteLongValue("quantity", Quantity);
+            writer.WriteStringValue("sku", Sku);
+            writer.WriteStringValue("title", Title);
+            writer.WriteStringValue("total_price", TotalPrice);
+            writer.WriteStringValue("variant_title", VariantTitle);
+            writer.WriteStringValue("weight", Weight);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>("weight_unit", WeightUnit);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

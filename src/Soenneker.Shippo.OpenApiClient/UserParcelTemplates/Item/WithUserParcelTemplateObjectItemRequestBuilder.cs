@@ -36,24 +36,25 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates.Item
         /// <summary>
         /// Deletes a user parcel template using an object ID.
         /// </summary>
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.WithUserParcelTemplateObject400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.WithUserParcelTemplateObject400Error.CreateFromDiscriminatorValue },
             };
-            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the parcel template information for a specific user parceltemplate, identified by the object ID.
@@ -61,7 +62,7 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates.Item
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -74,7 +75,7 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate400Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -85,7 +86,7 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates.Item
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate?> PutAsync(global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -99,7 +100,7 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates.Item
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate400Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

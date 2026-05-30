@@ -9,7 +9,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// In the case of masked fields, they should be handled carefully.Fields also must consider: - Not providing a *fields* in parameters will not result in a change to any configured value - Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value - Providing *field* with null will clear the configured value - Providing *field* with any other value will change the configured value and may affect the behavior of the account.
+    /// &quot;In the case of masked fields, they should be handled carefully.Fields also must consider: - Not providing a *fields* in parameters will not result in a change to any configured value - Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value - Providing *field* with null will clear the configured value - Providing *field* with any other value will change the configured value and may affect the behavior of the account.&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FedExConnectExistingOwnAccountParameters : IAdditionalDataHolder, IParsable
@@ -108,7 +108,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string VerificationInvoiceNumber { get; set; }
 #endif
-        /// <summary>Determines the verification option to use for the account registration (Enum: SMS, EMAIL, CALL, INVOICE).</summary>
+        /// <summary>&quot;Determines the verification option to use for the account registration (Enum: SMS, EMAIL, CALL, INVOICE).&quot;</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters_verification_option? VerificationOption { get; set; }
         /// <summary>(optional) The PIN to verify the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

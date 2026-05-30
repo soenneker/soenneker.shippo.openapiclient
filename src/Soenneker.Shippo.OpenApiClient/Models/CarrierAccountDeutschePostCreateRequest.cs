@@ -15,13 +15,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The carrier property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Carrier { get; set; }
-#nullable restore
-#else
-        public string Carrier { get; set; }
-#endif
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDeutschePostCreateRequest_carrier? Carrier { get; set; }
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,7 +49,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "carrier", n => { Carrier = n.GetStringValue(); } },
+                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDeutschePostCreateRequest_carrier>(); } },
                 { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDeutschePostCreateRequest_parameters>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDeutschePostCreateRequest_parameters.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +60,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("carrier", Carrier);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDeutschePostCreateRequest_carrier>("carrier", Carrier);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDeutschePostCreateRequest_parameters>("parameters", Parameters);
             writer.WriteAdditionalData(AdditionalData);
         }

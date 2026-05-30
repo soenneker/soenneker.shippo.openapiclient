@@ -47,12 +47,12 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments
         {
         }
         /// <summary>
-        /// Returns a list of all shipment objects.&lt;br&gt;&lt;br&gt;In order to filter results, you must use the below path parameters. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).&lt;br&gt;&lt;br&gt;Optional path parameters:&lt;br&gt;  `object_created_gt`- object(s) created greater than a provided date time&lt;br&gt;  `object_created_gte` - object(s) created greater than or equal to a provided date time&lt;br&gt;  `object_created_lt` - object(s) created less than a provided date time&lt;br&gt;  `object_created_lte` - object(s) created less than or equal to a provided date time&lt;br&gt;  Date format examples:&lt;br&gt;    `2017-01-01`&lt;br&gt;    `2017-01-01T03:30:30` or `2017-01-01T03:30:30.5`&lt;br&gt;    `2017-01-01T03:30:30Z`&lt;br&gt;&lt;br&gt;  Example URL:&lt;br&gt;    `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`&lt;br&gt;&lt;br&gt;Note: Shipment objects older than 390 days are not returned.
+        /// &quot;Returns a list of all shipment objects.&lt;br&gt;&lt;br&gt;In order to filter results, you must use the below path parameters. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).&lt;br&gt;&lt;br&gt;Optional path parameters:&lt;br&gt;  `object_created_gt`- object(s) created greater than a provided date time&lt;br&gt;  `object_created_gte` - object(s) created greater than or equal to a provided date time&lt;br&gt;  `object_created_lt` - object(s) created less than a provided date time&lt;br&gt;  `object_created_lte` - object(s) created less than or equal to a provided date time&lt;br&gt;  Date format examples:&lt;br&gt;    `2017-01-01`&lt;br&gt;    `2017-01-01T03:30:30` or `2017-01-01T03:30:30.5`&lt;br&gt;    `2017-01-01T03:30:30Z`&lt;br&gt;&lt;br&gt;  Example URL:&lt;br&gt;    `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`&lt;br&gt;&lt;br&gt;Note: Shipment objects older than 390 days are not returned.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentPaginatedList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentPaginatedList400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentPaginatedList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Shipments.ShipmentsRequestBuilder.ShipmentsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,7 +65,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.ShipmentPaginatedList400Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentPaginatedList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.ShipmentPaginatedList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequest">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.Shipment400Error">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.Shipment?> PostAsync(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -90,12 +90,12 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequest.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.Shipment400Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Shipment>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Shipment.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a list of all shipment objects.&lt;br&gt;&lt;br&gt;In order to filter results, you must use the below path parameters. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).&lt;br&gt;&lt;br&gt;Optional path parameters:&lt;br&gt;  `object_created_gt`- object(s) created greater than a provided date time&lt;br&gt;  `object_created_gte` - object(s) created greater than or equal to a provided date time&lt;br&gt;  `object_created_lt` - object(s) created less than a provided date time&lt;br&gt;  `object_created_lte` - object(s) created less than or equal to a provided date time&lt;br&gt;  Date format examples:&lt;br&gt;    `2017-01-01`&lt;br&gt;    `2017-01-01T03:30:30` or `2017-01-01T03:30:30.5`&lt;br&gt;    `2017-01-01T03:30:30Z`&lt;br&gt;&lt;br&gt;  Example URL:&lt;br&gt;    `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`&lt;br&gt;&lt;br&gt;Note: Shipment objects older than 390 days are not returned.
+        /// &quot;Returns a list of all shipment objects.&lt;br&gt;&lt;br&gt;In order to filter results, you must use the below path parameters. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).&lt;br&gt;&lt;br&gt;Optional path parameters:&lt;br&gt;  `object_created_gt`- object(s) created greater than a provided date time&lt;br&gt;  `object_created_gte` - object(s) created greater than or equal to a provided date time&lt;br&gt;  `object_created_lt` - object(s) created less than a provided date time&lt;br&gt;  `object_created_lte` - object(s) created less than or equal to a provided date time&lt;br&gt;  Date format examples:&lt;br&gt;    `2017-01-01`&lt;br&gt;    `2017-01-01T03:30:30` or `2017-01-01T03:30:30.5`&lt;br&gt;    `2017-01-01T03:30:30Z`&lt;br&gt;&lt;br&gt;  Example URL:&lt;br&gt;    `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`&lt;br&gt;&lt;br&gt;Note: Shipment objects older than 390 days are not returned.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -145,7 +145,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments
             return new global::Soenneker.Shippo.OpenApiClient.Shipments.ShipmentsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a list of all shipment objects.&lt;br&gt;&lt;br&gt;In order to filter results, you must use the below path parameters. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).&lt;br&gt;&lt;br&gt;Optional path parameters:&lt;br&gt;  `object_created_gt`- object(s) created greater than a provided date time&lt;br&gt;  `object_created_gte` - object(s) created greater than or equal to a provided date time&lt;br&gt;  `object_created_lt` - object(s) created less than a provided date time&lt;br&gt;  `object_created_lte` - object(s) created less than or equal to a provided date time&lt;br&gt;  Date format examples:&lt;br&gt;    `2017-01-01`&lt;br&gt;    `2017-01-01T03:30:30` or `2017-01-01T03:30:30.5`&lt;br&gt;    `2017-01-01T03:30:30Z`&lt;br&gt;&lt;br&gt;  Example URL:&lt;br&gt;    `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`&lt;br&gt;&lt;br&gt;Note: Shipment objects older than 390 days are not returned.
+        /// &quot;Returns a list of all shipment objects.&lt;br&gt;&lt;br&gt;In order to filter results, you must use the below path parameters. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).&lt;br&gt;&lt;br&gt;Optional path parameters:&lt;br&gt;  `object_created_gt`- object(s) created greater than a provided date time&lt;br&gt;  `object_created_gte` - object(s) created greater than or equal to a provided date time&lt;br&gt;  `object_created_lt` - object(s) created less than a provided date time&lt;br&gt;  `object_created_lte` - object(s) created less than or equal to a provided date time&lt;br&gt;  Date format examples:&lt;br&gt;    `2017-01-01`&lt;br&gt;    `2017-01-01T03:30:30` or `2017-01-01T03:30:30.5`&lt;br&gt;    `2017-01-01T03:30:30Z`&lt;br&gt;&lt;br&gt;  Example URL:&lt;br&gt;    `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`&lt;br&gt;&lt;br&gt;Note: Shipment objects older than 390 days are not returned.&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ShipmentsRequestBuilderGetQueryParameters 

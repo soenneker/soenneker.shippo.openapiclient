@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>Current authentication status. Possible values: &apos;disconnected&apos; (authorization lost, reconnect needed), &apos;connected&apos; (authorized and active), &apos;authorization_pending&apos; (awaiting initial authorization flow).</summary>
+    /// <summary>&quot;Current authentication status. Possible values: &apos;disconnected&apos; (authorization lost, reconnect needed), &apos;connected&apos; (authorized and active), &apos;authorization_pending&apos; (awaiting initial authorization flow).&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CarrierAccountWithExtraInfo_object_info_authentication_status
     {

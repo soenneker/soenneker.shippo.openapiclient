@@ -37,7 +37,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateCreateRequest();
             if("UserParcelTemplateWithCarrierTemplateCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

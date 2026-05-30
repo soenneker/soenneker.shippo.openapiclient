@@ -9,9 +9,11 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Manifest : global::Soenneker.Shippo.OpenApiClient.Models.ManifestBase, IParsable
+    public partial class Manifest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the Address object that should be used as pickup address for the scan form. The USPS will validate this address before creating the scan form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -19,6 +21,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public string AddressFrom { get; set; }
+#endif
+        /// <summary>ID of carrier account</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CarrierAccount { get; set; }
+#nullable restore
+#else
+        public string CarrierAccount { get; set; }
 #endif
         /// <summary>An array containing the URLs to all returned manifest documents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,14 +66,37 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Date and time of last object update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
+        /// <summary>All shipments to be submitted on this day will be closed out. Must be in the format `2014-01-18T00:35:03.463Z` (ISO 8601 date).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShipmentDate { get; set; }
+#nullable restore
+#else
+        public string ShipmentDate { get; set; }
+#endif
         /// <summary>Indicates the status of the manifest.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.Manifest_status? Status { get; set; }
+        /// <summary>IDs transactions to use. If you set this to null or not send this parameter, Shippo will automatically assign all applicable transactions.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Transactions { get; set; }
+#nullable restore
+#else
+        public List<string> Transactions { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Manifest"/> and sets the default values.
+        /// </summary>
+        public Manifest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Manifest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.Manifest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.Manifest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.Manifest();
@@ -72,36 +105,42 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "address_from", n => { AddressFrom = n.GetStringValue(); } },
+                { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
                 { "documents", n => { Documents = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "errors", n => { Errors = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
+                { "shipment_date", n => { ShipmentDate = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Manifest_status>(); } },
+                { "transactions", n => { Transactions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteStringValue("address_from", AddressFrom);
+            writer.WriteStringValue("carrier_account", CarrierAccount);
             writer.WriteCollectionOfPrimitiveValues<string>("documents", Documents);
             writer.WriteCollectionOfPrimitiveValues<string>("errors", Errors);
             writer.WriteDateTimeOffsetValue("object_created", ObjectCreated);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("object_owner", ObjectOwner);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
+            writer.WriteStringValue("shipment_date", ShipmentDate);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Manifest_status>("status", Status);
+            writer.WriteCollectionOfPrimitiveValues<string>("transactions", Transactions);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

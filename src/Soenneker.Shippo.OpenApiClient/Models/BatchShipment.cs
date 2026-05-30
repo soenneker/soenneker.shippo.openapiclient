@@ -8,18 +8,36 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// The batch shipment object is a wrapper around a shipment object, which include shipment-specific informationfor batch processing.Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or by throughthe `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint
+    /// &quot;The batch shipment object is a wrapper around a shipment object, which include shipment-specific informationfor batch processing.Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or by throughthe `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BatchShipment : global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentBase, IParsable
+    public partial class BatchShipment : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Object ID of the carrier account to be used for this shipment (will override batch default)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CarrierAccount { get; set; }
+#nullable restore
+#else
+        public string CarrierAccount { get; set; }
+#endif
         /// <summary>List of Shipment and Transaction error messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Messages { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages>? Messages { get; set; }
 #nullable restore
 #else
-        public UntypedNode Messages { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages> Messages { get; set; }
+#endif
+        /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
 #endif
         /// <summary>Object ID of this batch shipment. Can be used in the remove_shipments endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -28,6 +46,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public string ObjectId { get; set; }
+#endif
+        /// <summary>A token that sets the shipping method for the batch, overriding the batch default. Servicelevel tokens can be found &lt;a href=&quot;/shippoapi/public-api/service-levels&quot;&gt;in this list&lt;/a&gt; or &lt;a href=&quot;/shippoapi/public-api/carrier-accounts/listcarrieraccounts&quot;&gt;at this endpoint&lt;/a&gt;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ServicelevelToken { get; set; }
+#nullable restore
+#else
+        public string ServicelevelToken { get; set; }
 #endif
         /// <summary>Object ID of the shipment object created for this batch shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,11 +74,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Transaction { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment"/> and sets the default values.
+        /// </summary>
+        public BatchShipment()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment();
@@ -61,12 +94,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
-                { "messages", n => { Messages = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
+                { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages>(global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
+                { "servicelevel_token", n => { ServicelevelToken = n.GetStringValue(); } },
                 { "shipment", n => { Shipment = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_status>(); } },
                 { "transaction", n => { Transaction = n.GetStringValue(); } },
@@ -76,15 +112,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
-            writer.WriteObjectValue<UntypedNode>("messages", Messages);
+            writer.WriteStringValue("carrier_account", CarrierAccount);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages>("messages", Messages);
+            writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("object_id", ObjectId);
+            writer.WriteStringValue("servicelevel_token", ServicelevelToken);
             writer.WriteStringValue("shipment", Shipment);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_status>("status", Status);
             writer.WriteStringValue("transaction", Transaction);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

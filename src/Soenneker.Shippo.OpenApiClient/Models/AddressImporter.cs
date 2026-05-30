@@ -31,7 +31,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Company { get; set; }
 #endif
-        /// <summary>Example: `US` or `DE`. All accepted values can be found on the &lt;a href=&quot;http://www.iso.org/&quot; target=&quot;blank&quot;&gt;Official ISO Website&lt;/a&gt;.Sending a country is always required.</summary>
+        /// <summary>&quot;Example: `US` or `DE`. All accepted values can be found on the &lt;a href=\&quot;http://www.iso.org/\&quot; target=\&quot;blank\&quot;&gt;Official ISO Website&lt;/a&gt;.Sending a country is always required.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Country { get; set; }

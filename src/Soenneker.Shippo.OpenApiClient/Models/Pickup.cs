@@ -9,9 +9,11 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Pickup : global::Soenneker.Shippo.OpenApiClient.Models.PickupBase, IParsable
+    public partial class Pickup : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The latest time to cancel a pickup. Expressed in the timezone specified in the response. To cancel a pickup, you will need to contact the carrier directly. The ability to cancel a pickup through Shippo may be released in future iterations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -19,6 +21,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public string CancelByTime { get; set; }
+#endif
+        /// <summary>The object ID of your USPS or DHL Express carrier account. You can retrieve this from your Rate requests or our &lt;a href=&quot;/shippoapi/public-api/carrier-accounts&quot;&gt;Carrier Accounts&lt;/a&gt; endpoint.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CarrierAccount { get; set; }
+#nullable restore
+#else
+        public string CarrierAccount { get; set; }
 #endif
         /// <summary>Pickup&apos;s confirmation code returned by the carrier. To edit or cancel a pickup, you will need to contact USPS or DHL Express directly and provide your `confirmation_code`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,6 +56,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Indicates whether the object has been created in test mode.</summary>
         public bool? IsTest { get; set; }
+        /// <summary>Location where the parcel(s) will be picked up.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Shippo.OpenApiClient.Models.Location? Location { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Shippo.OpenApiClient.Models.Location Location { get; set; }
+#endif
         /// <summary>An array containing strings of any messages generated during validation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,6 +71,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public List<string> Messages { get; set; }
+#endif
+        /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
 #endif
         /// <summary>Date and time of Pickup creation.</summary>
         public DateTimeOffset? ObjectCreated { get; set; }
@@ -66,6 +92,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Date and time of last Pickup update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
+        /// <summary>The latest that you requested your parcels to be available for pickup. Expressed in the timezone specified in the response.</summary>
+        public DateTimeOffset? RequestedEndTime { get; set; }
+        /// <summary>The earliest that you requested your parcels to be ready for pickup. Expressed in the timezone specified in the response.</summary>
+        public DateTimeOffset? RequestedStartTime { get; set; }
         /// <summary>Indicates the status of the pickup.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.Pickup_status? Status { get; set; }
         /// <summary>The pickup time windows will be in the time zone specified here, not UTC.</summary>
@@ -76,12 +106,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Timezone { get; set; }
 #endif
+        /// <summary>The transaction(s) object ID(s) for the parcel(s) that need to be picked up.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Transactions { get; set; }
+#nullable restore
+#else
+        public List<string> Transactions { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Pickup"/> and sets the default values.
+        /// </summary>
+        public Pickup()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Pickup"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.Pickup CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.Pickup CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.Pickup();
@@ -90,42 +135,54 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "cancel_by_time", n => { CancelByTime = n.GetStringValue(); } },
+                { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
                 { "confirmation_code", n => { ConfirmationCode = n.GetStringValue(); } },
                 { "confirmed_end_time", n => { ConfirmedEndTime = n.GetStringValue(); } },
                 { "confirmed_start_time", n => { ConfirmedStartTime = n.GetStringValue(); } },
                 { "is_test", n => { IsTest = n.GetBoolValue(); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Location>(global::Soenneker.Shippo.OpenApiClient.Models.Location.CreateFromDiscriminatorValue); } },
                 { "messages", n => { Messages = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
+                { "requested_end_time", n => { RequestedEndTime = n.GetDateTimeOffsetValue(); } },
+                { "requested_start_time", n => { RequestedStartTime = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Pickup_status>(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
+                { "transactions", n => { Transactions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteStringValue("cancel_by_time", CancelByTime);
+            writer.WriteStringValue("carrier_account", CarrierAccount);
             writer.WriteStringValue("confirmation_code", ConfirmationCode);
             writer.WriteStringValue("confirmed_end_time", ConfirmedEndTime);
             writer.WriteStringValue("confirmed_start_time", ConfirmedStartTime);
             writer.WriteBoolValue("is_test", IsTest);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Location>("location", Location);
             writer.WriteCollectionOfPrimitiveValues<string>("messages", Messages);
+            writer.WriteStringValue("metadata", Metadata);
             writer.WriteDateTimeOffsetValue("object_created", ObjectCreated);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
+            writer.WriteDateTimeOffsetValue("requested_end_time", RequestedEndTime);
+            writer.WriteDateTimeOffsetValue("requested_start_time", RequestedStartTime);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Pickup_status>("status", Status);
             writer.WriteStringValue("timezone", Timezone);
+            writer.WriteCollectionOfPrimitiveValues<string>("transactions", Transactions);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

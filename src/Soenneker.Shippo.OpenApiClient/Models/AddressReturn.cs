@@ -11,14 +11,177 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// ID of the Address object where the shipment will be sent back to if it is not delivered (Only available for UPS, USPS, and Fedex shipments). &lt;br/&gt; If this field is not set, your shipments will be returned to the address_from.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AddressReturn : global::Soenneker.Shippo.OpenApiClient.Models.Address, IParsable
+    public partial class AddressReturn : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>**required for purchase**&lt;br&gt;Name of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.Please bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a stateor a ZIP code (see below), if known, it will yield more accurate results.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Max 35 characters |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? City { get; set; }
+#nullable restore
+#else
+        public string City { get; set; }
+#endif
+        /// <summary>Company Name**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 35 characters; Either company or name required |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Company { get; set; }
+#nullable restore
+#else
+        public string Company { get; set; }
+#endif
+        /// <summary>ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like `US` or `DE`.If using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.Refer to this &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements&quot; target=&quot;_blank&quot;&gt;guide&lt;/a&gt; for a list of country codes.Sending a country is always required.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Country { get; set; }
+#nullable restore
+#else
+        public string Country { get; set; }
+#endif
+        /// <summary>E-mail address of the contact person, RFC3696/5321-compliant.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 80 characters || USPS | Sender email required for shipments during label purchase |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Email { get; set; }
+#nullable restore
+#else
+        public string Email { get; set; }
+#endif
+        /// <summary>Complete addresses contain all required values.&lt;br&gt;&lt;br&gt;Incomplete addresses have failed one or multiple validations.&lt;br&gt;Incomplete Addresses are eligible for requesting rates but lack at least one required value for purchasing labels.</summary>
+        public bool? IsComplete { get; set; }
+        /// <summary>The is_residential property</summary>
+        public bool? IsResidential { get; set; }
+        /// <summary>Latitude of address</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? Latitude { get; set; }
+#nullable restore
+#else
+        public UntypedNode Latitude { get; set; }
+#endif
+        /// <summary>Longitude of address</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? Longitude { get; set; }
+#nullable restore
+#else
+        public UntypedNode Longitude { get; set; }
+#endif
+        /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
+#endif
+        /// <summary>**required for purchase**&lt;br&gt;First and Last Name of the addressee**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>Date and time of Address creation.</summary>
+        public DateTimeOffset? ObjectCreated { get; set; }
+        /// <summary>Unique identifier of the given Address object. This ID is required to create a Shipment object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ObjectId { get; set; }
+#nullable restore
+#else
+        public string ObjectId { get; set; }
+#endif
+        /// <summary>Username of the user who created the Address object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ObjectOwner { get; set; }
+#nullable restore
+#else
+        public string ObjectOwner { get; set; }
+#endif
+        /// <summary>Date and time of last Address update. Since you cannot update Addresses after they were created, this time stamp reflects the time when the Address was changed by Shippo&apos;s systems for the last time, e.g., during the approximation of one or more values.</summary>
+        public DateTimeOffset? ObjectUpdated { get; set; }
+        /// <summary>Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. Thisincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Min 1, max 15 characters || USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Phone { get; set; }
+#nullable restore
+#else
+        public string Phone { get; set; }
+#endif
+        /// <summary>**required for purchase for some countries**&lt;br&gt;State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for somecountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriersonly accept two or three character state abbreviations.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? State { get; set; }
+#nullable restore
+#else
+        public string State { get; set; }
+#endif
+        /// <summary>**required for purchase**&lt;br&gt;First street line. Usually street number and street name (except for DHL Germany, see street_no).**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | At least one street line required; Max 35 characters per line |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Street1 { get; set; }
+#nullable restore
+#else
+        public string Street1 { get; set; }
+#endif
+        /// <summary>Second street line.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | At least one street line required; Max 35 characters per line |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Street2 { get; set; }
+#nullable restore
+#else
+        public string Street2 { get; set; }
+#endif
+        /// <summary>Third street line.Only accepted for USPS international shipments, UPS domestic and UPS international shipments.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | At least one street line required; Max 35 characters per line |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Street3 { get; set; }
+#nullable restore
+#else
+        public string Street3 { get; set; }
+#endif
+        /// <summary>Street number of the addressed building. This field can be included in street1 for all carriers except for DHL Germany.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StreetNo { get; set; }
+#nullable restore
+#else
+        public string StreetNo { get; set; }
+#endif
+        /// <summary>Indicates whether the object has been created in test mode.</summary>
+        public bool? Test { get; set; }
+        /// <summary>Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are &lt;code&gt;is_valid&lt;/code&gt;(boolean) and &lt;code&gt;messages&lt;/code&gt;(array).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResults? ValidationResults { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResults ValidationResults { get; set; }
+#endif
+        /// <summary>**required for purchase**&lt;br&gt;Postal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield moreaccurate Rates.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 10 characters |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Zip { get; set; }
+#nullable restore
+#else
+        public string Zip { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn"/> and sets the default values.
+        /// </summary>
+        public AddressReturn()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn();
@@ -27,20 +190,66 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "city", n => { City = n.GetStringValue(); } },
+                { "company", n => { Company = n.GetStringValue(); } },
+                { "country", n => { Country = n.GetStringValue(); } },
+                { "email", n => { Email = n.GetStringValue(); } },
+                { "is_complete", n => { IsComplete = n.GetBoolValue(); } },
+                { "is_residential", n => { IsResidential = n.GetBoolValue(); } },
+                { "latitude", n => { Latitude = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "longitude", n => { Longitude = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
+                { "object_id", n => { ObjectId = n.GetStringValue(); } },
+                { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
+                { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
+                { "phone", n => { Phone = n.GetStringValue(); } },
+                { "state", n => { State = n.GetStringValue(); } },
+                { "street1", n => { Street1 = n.GetStringValue(); } },
+                { "street2", n => { Street2 = n.GetStringValue(); } },
+                { "street3", n => { Street3 = n.GetStringValue(); } },
+                { "street_no", n => { StreetNo = n.GetStringValue(); } },
+                { "test", n => { Test = n.GetBoolValue(); } },
+                { "validation_results", n => { ValidationResults = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResults>(global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResults.CreateFromDiscriminatorValue); } },
+                { "zip", n => { Zip = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("city", City);
+            writer.WriteStringValue("company", Company);
+            writer.WriteStringValue("country", Country);
+            writer.WriteStringValue("email", Email);
+            writer.WriteBoolValue("is_complete", IsComplete);
+            writer.WriteBoolValue("is_residential", IsResidential);
+            writer.WriteObjectValue<UntypedNode>("latitude", Latitude);
+            writer.WriteObjectValue<UntypedNode>("longitude", Longitude);
+            writer.WriteStringValue("metadata", Metadata);
+            writer.WriteStringValue("name", Name);
+            writer.WriteDateTimeOffsetValue("object_created", ObjectCreated);
+            writer.WriteStringValue("object_id", ObjectId);
+            writer.WriteStringValue("object_owner", ObjectOwner);
+            writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
+            writer.WriteStringValue("phone", Phone);
+            writer.WriteStringValue("state", State);
+            writer.WriteStringValue("street1", Street1);
+            writer.WriteStringValue("street2", Street2);
+            writer.WriteStringValue("street3", Street3);
+            writer.WriteStringValue("street_no", StreetNo);
+            writer.WriteBoolValue("test", Test);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResults>("validation_results", ValidationResults);
+            writer.WriteStringValue("zip", Zip);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

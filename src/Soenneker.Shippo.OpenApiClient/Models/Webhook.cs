@@ -9,9 +9,23 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Webhook : global::Soenneker.Shippo.OpenApiClient.Models.WebhookBase, IParsable
+    public partial class Webhook : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Determines whether the webhook is active or not.</summary>
+        public bool? Active { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Type of event that triggers the webhook.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Event { get; set; }
+#nullable restore
+#else
+        public string Event { get; set; }
+#endif
+        /// <summary>Determines whether the webhook is a test webhook or not.</summary>
+        public bool? IsTest { get; set; }
         /// <summary>Timestamp of the creation of the webhook.</summary>
         public DateTimeOffset? ObjectCreated { get; set; }
         /// <summary>Unique identifier of the webhook. This can be used to retrieve or delete the webhook.</summary>
@@ -32,12 +46,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Timestamp of the last update of the webhook.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
+        /// <summary>URL webhook events are sent to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Url { get; set; }
+#nullable restore
+#else
+        public string Url { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Webhook"/> and sets the default values.
+        /// </summary>
+        public Webhook()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Webhook"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.Webhook CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.Webhook CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.Webhook();
@@ -46,28 +75,36 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "active", n => { Active = n.GetBoolValue(); } },
+                { "event", n => { Event = n.GetStringValue(); } },
+                { "is_test", n => { IsTest = n.GetBoolValue(); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
+                { "url", n => { Url = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteBoolValue("active", Active);
+            writer.WriteStringValue("event", Event);
+            writer.WriteBoolValue("is_test", IsTest);
             writer.WriteDateTimeOffsetValue("object_created", ObjectCreated);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("object_owner", ObjectOwner);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
+            writer.WriteStringValue("url", Url);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

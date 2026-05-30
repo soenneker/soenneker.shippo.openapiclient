@@ -9,9 +9,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Rate : global::Soenneker.Shippo.OpenApiClient.Models.RateAmountAndCurrency, IParsable
+    public partial class Rate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Final Rate price, expressed in the currency used in the sender&apos;s country.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Amount { get; set; }
+#nullable restore
+#else
+        public string Amount { get; set; }
+#endif
+        /// <summary>Final Rate price, expressed in the currency used in the recipient&apos;s country.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AmountLocal { get; set; }
+#nullable restore
+#else
+        public string AmountLocal { get; set; }
+#endif
         /// <summary>Predicted time the carrier will deliver the package in the destination&apos;s local time zone. In the format `HH:MM:SS`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -35,6 +53,22 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public string CarrierAccount { get; set; }
+#endif
+        /// <summary>Currency used in the sender&apos;s country, refers to `amount`. The &lt;a href=&quot;http://www.xe.com/iso4217.php&quot;&gt;official ISO 4217&lt;/a&gt; currency codes are used, e.g. `USD` or `EUR`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Currency { get; set; }
+#nullable restore
+#else
+        public string Currency { get; set; }
+#endif
+        /// <summary>Currency used in the recipient&apos;s country, refers to `amount_local`. The &lt;a href=&quot;http://www.xe.com/iso4217.php&quot;&gt;official ISO 4217&lt;/a&gt; currency codes are used, e.g. `USD` or &quot;EUR&quot;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CurrencyLocal { get; set; }
+#nullable restore
+#else
+        public string CurrencyLocal { get; set; }
 #endif
         /// <summary>Further clarification of the transit times. Often, this includes notes that the transit time as given in &quot;days&quot; is only an average, not a guaranteed time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -131,11 +165,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Zone { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Rate"/> and sets the default values.
+        /// </summary>
+        public Rate()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Rate"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.Rate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.Rate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.Rate();
@@ -144,13 +185,17 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "amount", n => { Amount = n.GetStringValue(); } },
+                { "amount_local", n => { AmountLocal = n.GetStringValue(); } },
                 { "arrives_by", n => { ArrivesBy = n.GetStringValue(); } },
                 { "attributes", n => { Attributes = n.GetCollectionOfEnumValues<global::Soenneker.Shippo.OpenApiClient.Models.Rate_attributes>()?.AsList(); } },
                 { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
+                { "currency", n => { Currency = n.GetStringValue(); } },
+                { "currency_local", n => { CurrencyLocal = n.GetStringValue(); } },
                 { "duration_terms", n => { DurationTerms = n.GetStringValue(); } },
                 { "estimated_days", n => { EstimatedDays = n.GetLongValue(); } },
                 { "included_insurance_price", n => { IncludedInsurancePrice = n.GetStringValue(); } },
@@ -171,13 +216,16 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("amount", Amount);
+            writer.WriteStringValue("amount_local", AmountLocal);
             writer.WriteStringValue("arrives_by", ArrivesBy);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Shippo.OpenApiClient.Models.Rate_attributes>("attributes", Attributes);
             writer.WriteStringValue("carrier_account", CarrierAccount);
+            writer.WriteStringValue("currency", Currency);
+            writer.WriteStringValue("currency_local", CurrencyLocal);
             writer.WriteStringValue("duration_terms", DurationTerms);
             writer.WriteLongValue("estimated_days", EstimatedDays);
             writer.WriteStringValue("included_insurance_price", IncludedInsurancePrice);
@@ -192,6 +240,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("shipment", Shipment);
             writer.WriteBoolValue("test", Test);
             writer.WriteStringValue("zone", Zone);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

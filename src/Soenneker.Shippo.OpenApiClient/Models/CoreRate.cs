@@ -9,9 +9,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CoreRate : global::Soenneker.Shippo.OpenApiClient.Models.RateAmountAndCurrency, IParsable
+    public partial class CoreRate : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Final Rate price, expressed in the currency used in the sender&apos;s country.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Amount { get; set; }
+#nullable restore
+#else
+        public string Amount { get; set; }
+#endif
+        /// <summary>Final Rate price, expressed in the currency used in the recipient&apos;s country.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AmountLocal { get; set; }
+#nullable restore
+#else
+        public string AmountLocal { get; set; }
+#endif
         /// <summary>Object ID of the carrier account that has been used to retrieve the rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -19,6 +37,22 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public string CarrierAccount { get; set; }
+#endif
+        /// <summary>Currency used in the sender&apos;s country, refers to `amount`. The &lt;a href=&quot;http://www.xe.com/iso4217.php&quot;&gt;official ISO 4217&lt;/a&gt; currency codes are used, e.g. `USD` or `EUR`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Currency { get; set; }
+#nullable restore
+#else
+        public string Currency { get; set; }
+#endif
+        /// <summary>Currency used in the recipient&apos;s country, refers to `amount_local`. The &lt;a href=&quot;http://www.xe.com/iso4217.php&quot;&gt;official ISO 4217&lt;/a&gt; currency codes are used, e.g. `USD` or &quot;EUR&quot;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CurrencyLocal { get; set; }
+#nullable restore
+#else
+        public string CurrencyLocal { get; set; }
 #endif
         /// <summary>Unique identifier of the Rate object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -53,11 +87,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ServicelevelToken { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CoreRate"/> and sets the default values.
+        /// </summary>
+        public CoreRate()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CoreRate"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.CoreRate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.CoreRate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.CoreRate();
@@ -66,11 +107,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "amount", n => { Amount = n.GetStringValue(); } },
+                { "amount_local", n => { AmountLocal = n.GetStringValue(); } },
                 { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
+                { "currency", n => { Currency = n.GetStringValue(); } },
+                { "currency_local", n => { CurrencyLocal = n.GetStringValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "provider", n => { Provider = n.GetStringValue(); } },
                 { "servicelevel_name", n => { ServicelevelName = n.GetStringValue(); } },
@@ -81,15 +126,19 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("amount", Amount);
+            writer.WriteStringValue("amount_local", AmountLocal);
             writer.WriteStringValue("carrier_account", CarrierAccount);
+            writer.WriteStringValue("currency", Currency);
+            writer.WriteStringValue("currency_local", CurrencyLocal);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("provider", Provider);
             writer.WriteStringValue("servicelevel_name", ServicelevelName);
             writer.WriteStringValue("servicelevel_token", ServicelevelToken);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

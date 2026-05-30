@@ -13,7 +13,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentExtra : IAdditionalDataHolder, IParsable
     {
-        /// <summary>UPS only. Adds custom accounts receivable customer account reference to UPS labels.</summary>
+        /// <summary>The accounts_receivable_customer_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? AccountsReceivableCustomerAccount { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Specify an ancillary service endorsement to provide the USPS with instructions on how to handle undeliverable-as-addressed pieces (DHL eCommerce only).</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_ancillary_endorsement? AncillaryEndorsement { get; set; }
-        /// <summary>UPS only. Adds custom appropriation number reference to UPS labels.</summary>
+        /// <summary>The appropriation_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? AppropriationNumber { get; set; }
@@ -51,7 +51,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.Billing Billing { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom bill of lading number reference to UPS labels.</summary>
+        /// <summary>The bill_of_lading_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? BillOfLadingNumber { get; set; }
@@ -81,7 +81,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.COD COD { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom COD number reference to UPS labels.</summary>
+        /// <summary>The cod_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? CodNumber { get; set; }
@@ -97,7 +97,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ContainerType { get; set; }
 #endif
-        /// <summary>Carrier arrival time to pickup packages from the fulfillment center. UTC format: `%Y-%m-%dT%H:%M:%SZ`</summary>
+        /// <summary>&quot;Carrier arrival time to pickup packages from the fulfillment center. UTC format: `%Y-%m-%dT%H:%M:%SZ`&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CriticalPullTime { get; set; }
@@ -130,8 +130,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject DangerousGoods { get; set; }
 #endif
         /// <summary>Dangerous Goods Code (DHL eCommerce only). See &lt;a href=&quot;https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods&quot;&gt;Category Codes&lt;/a&gt;</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_dangerous_goods_code? DangerousGoodsCode { get; set; }
-        /// <summary>UPS only. Adds custom dealer order number reference to UPS labels.</summary>
+        public double? DangerousGoodsCode { get; set; }
+        /// <summary>The dealer_order_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? DealerOrderNumber { get; set; }
@@ -163,7 +163,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.DryIce DryIce { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom FDA product code reference to UPS labels.</summary>
+        /// <summary>The fda_product_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? FdaProductCode { get; set; }
@@ -213,7 +213,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string LasershipDeclaredValue { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom manifest number reference to UPS labels.</summary>
+        /// <summary>The manifest_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? ManifestNumber { get; set; }
@@ -221,7 +221,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields ManifestNumber { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom model number reference to UPS labels.</summary>
+        /// <summary>The model_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? ModelNumber { get; set; }
@@ -229,7 +229,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields ModelNumber { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom part number reference to UPS labels.</summary>
+        /// <summary>The part_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? PartNumber { get; set; }
@@ -246,10 +246,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.PoNumber PoNumber { get; set; }
 #endif
         /// <summary>Required for DHL Germany Paket Sameday. Designates a desired timeframe for delivery. Format is `HHMMHHMM`</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_preferred_delivery_timeframe? PreferredDeliveryTimeframe { get; set; }
+        public double? PreferredDeliveryTimeframe { get; set; }
         /// <summary>Add premium service to a shipment (DHL Germany international shipments only).</summary>
         public bool? Premium { get; set; }
-        /// <summary>UPS only. Adds custom product code reference to UPS labels.</summary>
+        /// <summary>The production_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? ProductionCode { get; set; }
@@ -257,7 +257,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields ProductionCode { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom purchase request number reference to UPS labels.</summary>
+        /// <summary>The purchase_request_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? PurchaseRequestNumber { get; set; }
@@ -301,7 +301,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber RmaNumber { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom salesperson number reference to UPS labels.</summary>
+        /// <summary>The salesperson_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? SalespersonNumber { get; set; }
@@ -311,7 +311,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Marks shipment as to be delivered on a Saturday.</summary>
         public bool? SaturdayDelivery { get; set; }
-        /// <summary>UPS only. Adds custom serial number reference to UPS labels.</summary>
+        /// <summary>The serial_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? SerialNumber { get; set; }
@@ -321,7 +321,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Request standard or adult signature confirmation. You can alternatively request Certified Mail (USPS only) or Indirect signature (FedEx only) or Carrier Confirmation (Deutsche Post only).</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_signature_confirmation? SignatureConfirmation { get; set; }
-        /// <summary>UPS only. Adds custom store number reference to UPS labels.</summary>
+        /// <summary>The store_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? StoreNumber { get; set; }
@@ -329,7 +329,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields StoreNumber { get; set; }
 #endif
-        /// <summary>UPS only. Adds custom transaction reference number to UPS labels.</summary>
+        /// <summary>The transaction_reference_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? TransactionReferenceNumber { get; set; }
@@ -337,7 +337,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields TransactionReferenceNumber { get; set; }
 #endif
-        /// <summary>UPS only. Request USMCA (United States-Mexico-Canada Agreement) preferential tariff treatment. When enabled, it includes the USMCA eligibility declaration in customs documentation.Supported routes and value limits:- USA/Canada → Mexico: ≤ $1,000 USD- Canada/Mexico → USA: ≤ $2,500 USD  - USA/Mexico → Canada: ≤ $3,300 CADOnly for declaration-only shipments, full USMCA - FormType 04 (Certificate of Origin) is not supported.</summary>
+        /// <summary>&quot;UPS only. Request USMCA (United States-Mexico-Canada Agreement) preferential tariff treatment. When enabled, it includes the USMCA eligibility declaration in customs documentation.Supported routes and value limits:- USA/Canada → Mexico: ≤ $1,000 USD- Canada/Mexico → USA: ≤ $2,500 USD  - USA/Mexico → Canada: ≤ $3,300 CADOnly for declaration-only shipments, full USMCA - FormType 04 (Certificate of Origin) is not supported.&quot;</summary>
         public bool? UsmcaEligible { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra"/> and sets the default values.
@@ -382,7 +382,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "customer_branch", n => { CustomerBranch = n.GetStringValue(); } },
                 { "customer_reference", n => { CustomerReference = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference>(global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference.CreateFromDiscriminatorValue); } },
                 { "dangerous_goods", n => { DangerousGoods = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject>(global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject.CreateFromDiscriminatorValue); } },
-                { "dangerous_goods_code", n => { DangerousGoodsCode = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_dangerous_goods_code>(); } },
+                { "dangerous_goods_code", n => { DangerousGoodsCode = n.GetDoubleValue(); } },
                 { "dealer_order_number", n => { DealerOrderNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
                 { "delivery_instructions", n => { DeliveryInstructions = n.GetStringValue(); } },
                 { "dept_number", n => { DeptNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber>(global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber.CreateFromDiscriminatorValue); } },
@@ -398,7 +398,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "model_number", n => { ModelNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
                 { "part_number", n => { PartNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
                 { "po_number", n => { PoNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.PoNumber>(global::Soenneker.Shippo.OpenApiClient.Models.PoNumber.CreateFromDiscriminatorValue); } },
-                { "preferred_delivery_timeframe", n => { PreferredDeliveryTimeframe = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_preferred_delivery_timeframe>(); } },
+                { "preferred_delivery_timeframe", n => { PreferredDeliveryTimeframe = n.GetDoubleValue(); } },
                 { "premium", n => { Premium = n.GetBoolValue(); } },
                 { "production_code", n => { ProductionCode = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
                 { "purchase_request_number", n => { PurchaseRequestNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
@@ -442,7 +442,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("customer_branch", CustomerBranch);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference>("customer_reference", CustomerReference);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject>("dangerous_goods", DangerousGoods);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_dangerous_goods_code>("dangerous_goods_code", DangerousGoodsCode);
+            writer.WriteDoubleValue("dangerous_goods_code", DangerousGoodsCode);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("dealer_order_number", DealerOrderNumber);
             writer.WriteStringValue("delivery_instructions", DeliveryInstructions);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber>("dept_number", DeptNumber);
@@ -458,7 +458,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("model_number", ModelNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("part_number", PartNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.PoNumber>("po_number", PoNumber);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_preferred_delivery_timeframe>("preferred_delivery_timeframe", PreferredDeliveryTimeframe);
+            writer.WriteDoubleValue("preferred_delivery_timeframe", PreferredDeliveryTimeframe);
             writer.WriteBoolValue("premium", Premium);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("production_code", ProductionCode);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("purchase_request_number", PurchaseRequestNumber);
@@ -478,15 +478,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ShipmentExtra_return_service_type : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum"/></summary>
-            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum? ShipmentExtraReturnServiceTypeLasershipEnum { get; set; }
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum"/></summary>
-            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum? ShipmentExtraReturnServiceTypeUPSEnum { get; set; }
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper? ShipmentExtraReturnServiceTypeLasershipEnumWrapper { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper ShipmentExtraReturnServiceTypeLasershipEnumWrapper { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper? ShipmentExtraReturnServiceTypeUPSEnumWrapper { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper ShipmentExtraReturnServiceTypeUPSEnumWrapper { get; set; }
+#endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
@@ -497,13 +509,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type();
-                if(parseNode.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum>() is global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum shipmentExtraReturnServiceTypeLasershipEnumValue)
+                if("ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ShipmentExtraReturnServiceTypeLasershipEnum = shipmentExtraReturnServiceTypeLasershipEnumValue;
+                    result.ShipmentExtraReturnServiceTypeLasershipEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper();
                 }
-                else if(parseNode.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum>() is global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum shipmentExtraReturnServiceTypeUPSEnumValue)
+                else if("ShipmentExtraReturnServiceTypeUPSEnum_Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ShipmentExtraReturnServiceTypeUPSEnum = shipmentExtraReturnServiceTypeUPSEnumValue;
+                    result.ShipmentExtraReturnServiceTypeUPSEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper();
                 }
                 return result;
             }
@@ -513,6 +525,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
+                if(ShipmentExtraReturnServiceTypeLasershipEnumWrapper != null)
+                {
+                    return ShipmentExtraReturnServiceTypeLasershipEnumWrapper.GetFieldDeserializers();
+                }
+                else if(ShipmentExtraReturnServiceTypeUPSEnumWrapper != null)
+                {
+                    return ShipmentExtraReturnServiceTypeUPSEnumWrapper.GetFieldDeserializers();
+                }
                 return new Dictionary<string, Action<IParseNode>>();
             }
             /// <summary>
@@ -522,13 +542,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ShipmentExtraReturnServiceTypeLasershipEnum != null)
+                if(ShipmentExtraReturnServiceTypeLasershipEnumWrapper != null)
                 {
-                    writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum>(null, ShipmentExtraReturnServiceTypeLasershipEnum);
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper>(null, ShipmentExtraReturnServiceTypeLasershipEnumWrapper);
                 }
-                else if(ShipmentExtraReturnServiceTypeUPSEnum != null)
+                else if(ShipmentExtraReturnServiceTypeUPSEnumWrapper != null)
                 {
-                    writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum>(null, ShipmentExtraReturnServiceTypeUPSEnum);
+                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper>(null, ShipmentExtraReturnServiceTypeUPSEnumWrapper);
                 }
             }
         }

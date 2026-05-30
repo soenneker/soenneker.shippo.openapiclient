@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Current authentication status. Possible values: &apos;disconnected&apos; (authorization lost, reconnect needed), &apos;connected&apos; (authorized and active), &apos;authorization_pending&apos; (awaiting initial authorization flow).</summary>
+        /// <summary>&quot;Current authentication status. Possible values: &apos;disconnected&apos; (authorization lost, reconnect needed), &apos;connected&apos; (authorized and active), &apos;authorization_pending&apos; (awaiting initial authorization flow).&quot;</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo_object_info_authentication_status? Status { get; set; }
         /// <summary>Authentication method used by this account.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo_object_info_authentication_type? Type { get; set; }

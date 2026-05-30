@@ -7,12 +7,13 @@ using System.IO;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>
-    /// Shipment represents the parcel as retrieved from the database
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Shipment : global::Soenneker.Shippo.OpenApiClient.Models.ShipmentBase, IParsable
+    #pragma warning disable CS1591
+    public partial class Shipment : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the sender / seller. Will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,6 +54,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration CustomsDeclaration { get; set; }
 #endif
+        /// <summary>An object holding optional extra services to be requested.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra? Extra { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra Extra { get; set; }
+#endif
         /// <summary>The messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,6 +69,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage> Messages { get; set; }
+#endif
+        /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
 #endif
         /// <summary>Date and time of Shipment creation.</summary>
         public DateTimeOffset? ObjectCreated { get; set; }
@@ -97,16 +114,31 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.Rate> Rates { get; set; }
 #endif
+        /// <summary>Date the shipment will be tendered to the carrier. Must be in the format `2014-01-18T00:35:03.463Z`. Defaults to current date and time if no value is provided. Please note that some carriers require this value tobe in the future, on a working day, or similar.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShipmentDate { get; set; }
+#nullable restore
+#else
+        public string ShipmentDate { get; set; }
+#endif
         /// <summary>`Waiting` shipments have been successfully submitted but not yet been processed. `Queued` shipments are currently being processed. `Success` shipments have been processed successfully, meaning that rate generation has concluded. `Error` does not occur currently and is reserved for future use.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.Shipment_status? Status { get; set; }
         /// <summary>Indicates whether the object has been created in test mode.</summary>
         public bool? Test { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Shipment"/> and sets the default values.
+        /// </summary>
+        public Shipment()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Shipment"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.Shipment CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.Shipment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.Shipment();
@@ -115,22 +147,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
                 { "address_from", n => { AddressFrom = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom>(global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom.CreateFromDiscriminatorValue); } },
                 { "address_return", n => { AddressReturn = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn>(global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn.CreateFromDiscriminatorValue); } },
                 { "address_to", n => { AddressTo = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressTo>(global::Soenneker.Shippo.OpenApiClient.Models.AddressTo.CreateFromDiscriminatorValue); } },
                 { "carrier_accounts", n => { CarrierAccounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "customs_declaration", n => { CustomsDeclaration = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration>(global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration.CreateFromDiscriminatorValue); } },
+                { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.CreateFromDiscriminatorValue); } },
                 { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage>(global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
                 { "parcels", n => { Parcels = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Parcel>(global::Soenneker.Shippo.OpenApiClient.Models.Parcel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "rates", n => { Rates = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Rate>(global::Soenneker.Shippo.OpenApiClient.Models.Rate.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "shipment_date", n => { ShipmentDate = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Shipment_status>(); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
             };
@@ -139,24 +174,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom>("address_from", AddressFrom);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn>("address_return", AddressReturn);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressTo>("address_to", AddressTo);
             writer.WriteCollectionOfPrimitiveValues<string>("carrier_accounts", CarrierAccounts);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration>("customs_declaration", CustomsDeclaration);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra>("extra", Extra);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage>("messages", Messages);
+            writer.WriteStringValue("metadata", Metadata);
             writer.WriteDateTimeOffsetValue("object_created", ObjectCreated);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("object_owner", ObjectOwner);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Parcel>("parcels", Parcels);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Rate>("rates", Rates);
+            writer.WriteStringValue("shipment_date", ShipmentDate);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Shipment_status>("status", Status);
             writer.WriteBoolValue("test", Test);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
