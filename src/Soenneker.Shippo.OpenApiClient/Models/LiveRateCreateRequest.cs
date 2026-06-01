@@ -17,18 +17,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The sender address, which includes your name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_from? AddressFrom { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom? AddressFrom { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_from AddressFrom { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom AddressFrom { get; set; }
 #endif
         /// <summary>The recipient address, which includes the recipient&apos;s name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_to? AddressTo { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo? AddressTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_to AddressTo { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo AddressTo { get; set; }
 #endif
         /// <summary>Array of Line Item objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Object ID for an existing User Parcel Template OR a fully formed Parcel object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_parcel? Parcel { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel? Parcel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_parcel Parcel { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel Parcel { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address_from", n => { AddressFrom = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_from>(global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_from.CreateFromDiscriminatorValue); } },
-                { "address_to", n => { AddressTo = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_to>(global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_to.CreateFromDiscriminatorValue); } },
+                { "address_from", n => { AddressFrom = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom>(global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom.CreateFromDiscriminatorValue); } },
+                { "address_to", n => { AddressTo = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo>(global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.LineItem>(global::Soenneker.Shippo.OpenApiClient.Models.LineItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "parcel", n => { Parcel = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_parcel>(global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_parcel.CreateFromDiscriminatorValue); } },
+                { "parcel", n => { Parcel = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel>(global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,236 +84,11 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_from>("address_from", AddressFrom);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_to>("address_to", AddressTo);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom>("address_from", AddressFrom);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo>("address_to", AddressTo);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.LineItem>("line_items", LineItems);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_parcel>("parcel", Parcel);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel>("parcel", Parcel);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class LiveRateCreateRequest_address_from : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest? AddressCompleteCreateRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest AddressCompleteCreateRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_from"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_from CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_from();
-                if("AddressCompleteCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.AddressCompleteCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest();
-                }
-                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(AddressCompleteCreateRequest != null)
-                {
-                    return AddressCompleteCreateRequest.GetFieldDeserializers();
-                }
-                else if(UnionBranch != null)
-                {
-                    return UnionBranch.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(AddressCompleteCreateRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest>(null, AddressCompleteCreateRequest);
-                }
-                else if(UnionBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class LiveRateCreateRequest_address_to : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest? AddressCompleteCreateRequest { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest AddressCompleteCreateRequest { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_to"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_to CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_address_to();
-                if("AddressCompleteCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.AddressCompleteCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest();
-                }
-                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(AddressCompleteCreateRequest != null)
-                {
-                    return AddressCompleteCreateRequest.GetFieldDeserializers();
-                }
-                else if(UnionBranch != null)
-                {
-                    return UnionBranch.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(AddressCompleteCreateRequest != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest>(null, AddressCompleteCreateRequest);
-                }
-                else if(UnionBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Parcel"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class LiveRateCreateRequest_parcel : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Parcel"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.Parcel? Parcel { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.Parcel Parcel { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_parcel"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_parcel CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequest.LiveRateCreateRequest_parcel();
-                if("Parcel".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.Parcel = new global::Soenneker.Shippo.OpenApiClient.Models.Parcel();
-                }
-                else if("UnionBranch".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.UnionBranch = new global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Parcel != null)
-                {
-                    return Parcel.GetFieldDeserializers();
-                }
-                else if(UnionBranch != null)
-                {
-                    return UnionBranch.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(Parcel != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Parcel>(null, Parcel);
-                }
-                else if(UnionBranch != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UnionBranch>(null, UnionBranch);
-                }
-            }
         }
     }
 }

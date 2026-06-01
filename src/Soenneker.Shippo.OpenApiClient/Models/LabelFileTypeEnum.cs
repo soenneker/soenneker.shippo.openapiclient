@@ -9,43 +9,43 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "PNG")]
         #pragma warning disable CS1591
-        PNG,
+        Png,
         #pragma warning restore CS1591
         [EnumMember(Value = "PNG_2.3x7.5")]
         #pragma warning disable CS1591
-        PNG_23x75,
+        Png23X75,
         #pragma warning restore CS1591
         [EnumMember(Value = "PDF")]
         #pragma warning disable CS1591
-        PDF,
+        Pdf,
         #pragma warning restore CS1591
         [EnumMember(Value = "PDF_2.3x7.5")]
         #pragma warning disable CS1591
-        PDF_23x75,
+        Pdf23X75,
         #pragma warning restore CS1591
         [EnumMember(Value = "PDF_4x6")]
         #pragma warning disable CS1591
-        PDF_4x6,
+        Pdf4X6,
         #pragma warning restore CS1591
         [EnumMember(Value = "PDF_4x8")]
         #pragma warning disable CS1591
-        PDF_4x8,
+        Pdf4X8,
         #pragma warning restore CS1591
         [EnumMember(Value = "PDF_A4")]
         #pragma warning disable CS1591
-        PDF_A4,
+        PdfA4,
         #pragma warning restore CS1591
         [EnumMember(Value = "PDF_A5")]
         #pragma warning disable CS1591
-        PDF_A5,
+        PdfA5,
         #pragma warning restore CS1591
         [EnumMember(Value = "PDF_A6")]
         #pragma warning disable CS1591
-        PDF_A6,
+        PdfA6,
         #pragma warning restore CS1591
         [EnumMember(Value = "ZPLII")]
         #pragma warning disable CS1591
-        ZPLII,
+        Zplii,
         #pragma warning restore CS1591
     }
 }

@@ -26,7 +26,7 @@ namespace Soenneker.Shippo.OpenApiClient.ParcelTemplates
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("CarrierParcelTemplateToken", position);
+                urlTplParams.Add("carrierParcelTemplateToken", position);
                 return new global::Soenneker.Shippo.OpenApiClient.ParcelTemplates.Item.WithCarrierParcelTemplateTokenItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -52,7 +52,7 @@ namespace Soenneker.Shippo.OpenApiClient.ParcelTemplates
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList400Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequestResponseResponse">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.ParcelTemplates.ParcelTemplatesRequestBuilder.ParcelTemplatesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,7 +65,7 @@ namespace Soenneker.Shippo.OpenApiClient.ParcelTemplates
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList400Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequestResponseResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -115,7 +115,7 @@ namespace Soenneker.Shippo.OpenApiClient.ParcelTemplates
 #endif
             /// <summary>filter by user or enabled</summary>
             [QueryParameter("include")]
-            public global::Soenneker.Shippo.OpenApiClient.ParcelTemplates.GetIncludeQueryParameterType? Include { get; set; }
+            public global::Soenneker.Shippo.OpenApiClient.Models.ListCarrierParcelTemplatesIncludeParameter? Include { get; set; }
         }
     }
 }

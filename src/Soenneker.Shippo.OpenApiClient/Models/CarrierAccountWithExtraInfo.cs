@@ -15,10 +15,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Holds internal state relevant to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo_object_info? ObjectInfo { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo? ObjectInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo_object_info ObjectInfo { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo ObjectInfo { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,7 +38,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "object_info", n => { ObjectInfo = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo_object_info>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo_object_info.CreateFromDiscriminatorValue); } },
+                { "object_info", n => { ObjectInfo = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo_object_info>("object_info", ObjectInfo);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo>("object_info", ObjectInfo);
         }
     }
 }

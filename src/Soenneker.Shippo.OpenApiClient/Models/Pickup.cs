@@ -97,7 +97,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The earliest that you requested your parcels to be ready for pickup. Expressed in the timezone specified in the response.</summary>
         public DateTimeOffset? RequestedStartTime { get; set; }
         /// <summary>Indicates the status of the pickup.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Pickup_status? Status { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.PickupStatus? Status { get; set; }
         /// <summary>The pickup time windows will be in the time zone specified here, not UTC.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -153,7 +153,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
                 { "requested_end_time", n => { RequestedEndTime = n.GetDateTimeOffsetValue(); } },
                 { "requested_start_time", n => { RequestedStartTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Pickup_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.PickupStatus>(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
                 { "transactions", n => { Transactions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -179,7 +179,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
             writer.WriteDateTimeOffsetValue("requested_end_time", RequestedEndTime);
             writer.WriteDateTimeOffsetValue("requested_start_time", RequestedStartTime);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Pickup_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.PickupStatus>("status", Status);
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteCollectionOfPrimitiveValues<string>("transactions", Transactions);
             writer.WriteAdditionalData(AdditionalData);

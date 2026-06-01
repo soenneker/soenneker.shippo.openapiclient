@@ -35,7 +35,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Date and time of last object update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
         /// <summary>Indicates the status of the Refund.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Refund_status? Status { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.RefundStatus? Status { get; set; }
         /// <summary>Indicates whether the object has been created in test mode.</summary>
         public bool? Test { get; set; }
         /// <summary>Object ID of the Transaction to be refunded.</summary>
@@ -75,7 +75,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Refund_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.RefundStatus>(); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
                 { "transaction", n => { Transaction = n.GetStringValue(); } },
             };
@@ -91,7 +91,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("object_owner", ObjectOwner);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Refund_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.RefundStatus>("status", Status);
             writer.WriteBoolValue("test", Test);
             writer.WriteStringValue("transaction", Transaction);
             writer.WriteAdditionalData(AdditionalData);

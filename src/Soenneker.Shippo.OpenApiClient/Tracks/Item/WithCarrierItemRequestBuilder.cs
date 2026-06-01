@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Tracks.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \tracks\{Carrier}
+    /// Builds and executes requests for operations under \tracks\{carrier}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithCarrierItemRequestBuilder : BaseRequestBuilder
@@ -23,7 +23,7 @@ namespace Soenneker.Shippo.OpenApiClient.Tracks.Item
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("TrackingNumber", position);
+                urlTplParams.Add("trackingNumber", position);
                 return new global::Soenneker.Shippo.OpenApiClient.Tracks.Item.Item.WithTrackingNumberItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -32,7 +32,7 @@ namespace Soenneker.Shippo.OpenApiClient.Tracks.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCarrierItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tracks/{Carrier}", pathParameters)
+        public WithCarrierItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tracks/{carrier}", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.Tracks.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCarrierItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tracks/{Carrier}", rawUrl)
+        public WithCarrierItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/tracks/{carrier}", rawUrl)
         {
         }
     }

@@ -8,58 +8,58 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnum_Wrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDHLeCommerceEnum_Wrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDPDUKEnum_Wrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnum_Wrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUPSEnum_Wrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUSPSEnum_Wrapper"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnumWrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDhLeCommerceEnumWrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDpdukEnumWrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnumWrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUpsEnumWrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUspsEnumWrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ParcelTemplateEnumSet : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnum_Wrapper"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnumWrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnum_Wrapper? ParcelTemplateAramexAustraliaEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnumWrapper? ParcelTemplateAramexAustraliaEnumWrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnum_Wrapper ParcelTemplateAramexAustraliaEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnumWrapper ParcelTemplateAramexAustraliaEnumWrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDHLeCommerceEnum_Wrapper"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDhLeCommerceEnumWrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDHLeCommerceEnum_Wrapper? ParcelTemplateDHLeCommerceEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDhLeCommerceEnumWrapper? ParcelTemplateDhLeCommerceEnumWrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDHLeCommerceEnum_Wrapper ParcelTemplateDHLeCommerceEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDhLeCommerceEnumWrapper ParcelTemplateDhLeCommerceEnumWrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDPDUKEnum_Wrapper"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDpdukEnumWrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDPDUKEnum_Wrapper? ParcelTemplateDPDUKEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDpdukEnumWrapper? ParcelTemplateDpdukEnumWrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDPDUKEnum_Wrapper ParcelTemplateDPDUKEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDpdukEnumWrapper ParcelTemplateDpdukEnumWrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnum_Wrapper"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnumWrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnum_Wrapper? ParcelTemplateFedExEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnumWrapper? ParcelTemplateFedExEnumWrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnum_Wrapper ParcelTemplateFedExEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnumWrapper ParcelTemplateFedExEnumWrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUPSEnum_Wrapper"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUpsEnumWrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUPSEnum_Wrapper? ParcelTemplateUPSEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUpsEnumWrapper? ParcelTemplateUpsEnumWrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUPSEnum_Wrapper ParcelTemplateUPSEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUpsEnumWrapper ParcelTemplateUpsEnumWrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUSPSEnum_Wrapper"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUspsEnumWrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUSPSEnum_Wrapper? ParcelTemplateUSPSEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUspsEnumWrapper? ParcelTemplateUspsEnumWrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUSPSEnum_Wrapper ParcelTemplateUSPSEnumWrapper { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUspsEnumWrapper ParcelTemplateUspsEnumWrapper { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -69,31 +69,31 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet();
-            if("ParcelTemplateAramexAustraliaEnum".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("ParcelTemplateAramexAustraliaEnumWrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ParcelTemplateAramexAustraliaEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnum_Wrapper();
+                result.ParcelTemplateAramexAustraliaEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnumWrapper();
             }
-            else if("ParcelTemplateDHLeCommerceEnum".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ParcelTemplateDhLeCommerceEnumWrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ParcelTemplateDHLeCommerceEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDHLeCommerceEnum_Wrapper();
+                result.ParcelTemplateDhLeCommerceEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDhLeCommerceEnumWrapper();
             }
-            else if("ParcelTemplateDPDUKEnum".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ParcelTemplateDpdukEnumWrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ParcelTemplateDPDUKEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDPDUKEnum_Wrapper();
+                result.ParcelTemplateDpdukEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDpdukEnumWrapper();
             }
-            else if("ParcelTemplateFedExEnum".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ParcelTemplateFedExEnumWrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ParcelTemplateFedExEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnum_Wrapper();
+                result.ParcelTemplateFedExEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnumWrapper();
             }
-            else if("ParcelTemplateUPSEnum".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ParcelTemplateUpsEnumWrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ParcelTemplateUPSEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUPSEnum_Wrapper();
+                result.ParcelTemplateUpsEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUpsEnumWrapper();
             }
-            else if("ParcelTemplateUSPSEnum".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ParcelTemplateUspsEnumWrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ParcelTemplateUSPSEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUSPSEnum_Wrapper();
+                result.ParcelTemplateUspsEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUspsEnumWrapper();
             }
             return result;
         }
@@ -107,25 +107,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 return ParcelTemplateAramexAustraliaEnumWrapper.GetFieldDeserializers();
             }
-            else if(ParcelTemplateDHLeCommerceEnumWrapper != null)
+            else if(ParcelTemplateDhLeCommerceEnumWrapper != null)
             {
-                return ParcelTemplateDHLeCommerceEnumWrapper.GetFieldDeserializers();
+                return ParcelTemplateDhLeCommerceEnumWrapper.GetFieldDeserializers();
             }
-            else if(ParcelTemplateDPDUKEnumWrapper != null)
+            else if(ParcelTemplateDpdukEnumWrapper != null)
             {
-                return ParcelTemplateDPDUKEnumWrapper.GetFieldDeserializers();
+                return ParcelTemplateDpdukEnumWrapper.GetFieldDeserializers();
             }
             else if(ParcelTemplateFedExEnumWrapper != null)
             {
                 return ParcelTemplateFedExEnumWrapper.GetFieldDeserializers();
             }
-            else if(ParcelTemplateUPSEnumWrapper != null)
+            else if(ParcelTemplateUpsEnumWrapper != null)
             {
-                return ParcelTemplateUPSEnumWrapper.GetFieldDeserializers();
+                return ParcelTemplateUpsEnumWrapper.GetFieldDeserializers();
             }
-            else if(ParcelTemplateUSPSEnumWrapper != null)
+            else if(ParcelTemplateUspsEnumWrapper != null)
             {
-                return ParcelTemplateUSPSEnumWrapper.GetFieldDeserializers();
+                return ParcelTemplateUspsEnumWrapper.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -138,27 +138,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ParcelTemplateAramexAustraliaEnumWrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnum_Wrapper>(null, ParcelTemplateAramexAustraliaEnumWrapper);
+                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateAramexAustraliaEnumWrapper>(null, ParcelTemplateAramexAustraliaEnumWrapper);
             }
-            else if(ParcelTemplateDHLeCommerceEnumWrapper != null)
+            else if(ParcelTemplateDhLeCommerceEnumWrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDHLeCommerceEnum_Wrapper>(null, ParcelTemplateDHLeCommerceEnumWrapper);
+                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDhLeCommerceEnumWrapper>(null, ParcelTemplateDhLeCommerceEnumWrapper);
             }
-            else if(ParcelTemplateDPDUKEnumWrapper != null)
+            else if(ParcelTemplateDpdukEnumWrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDPDUKEnum_Wrapper>(null, ParcelTemplateDPDUKEnumWrapper);
+                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateDpdukEnumWrapper>(null, ParcelTemplateDpdukEnumWrapper);
             }
             else if(ParcelTemplateFedExEnumWrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnum_Wrapper>(null, ParcelTemplateFedExEnumWrapper);
+                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateFedExEnumWrapper>(null, ParcelTemplateFedExEnumWrapper);
             }
-            else if(ParcelTemplateUPSEnumWrapper != null)
+            else if(ParcelTemplateUpsEnumWrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUPSEnum_Wrapper>(null, ParcelTemplateUPSEnumWrapper);
+                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUpsEnumWrapper>(null, ParcelTemplateUpsEnumWrapper);
             }
-            else if(ParcelTemplateUSPSEnumWrapper != null)
+            else if(ParcelTemplateUspsEnumWrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUSPSEnum_Wrapper>(null, ParcelTemplateUSPSEnumWrapper);
+                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateUspsEnumWrapper>(null, ParcelTemplateUspsEnumWrapper);
             }
         }
     }

@@ -25,7 +25,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string CarrierAccount { get; set; }
 #endif
         /// <summary>The label_file_type property</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest_label_file_type? LabelFileType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequestLabelFileType? LabelFileType { get; set; }
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,7 +85,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 { "async", n => { Async = n.GetBoolValue(); } },
                 { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
-                { "label_file_type", n => { LabelFileType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest_label_file_type>(); } },
+                { "label_file_type", n => { LabelFileType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequestLabelFileType>(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "order", n => { Order = n.GetStringValue(); } },
                 { "servicelevel_token", n => { ServicelevelToken = n.GetStringValue(); } },
@@ -101,7 +101,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("async", Async);
             writer.WriteStringValue("carrier_account", CarrierAccount);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest_label_file_type>("label_file_type", LabelFileType);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequestLabelFileType>("label_file_type", LabelFileType);
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("order", Order);
             writer.WriteStringValue("servicelevel_token", ServicelevelToken);

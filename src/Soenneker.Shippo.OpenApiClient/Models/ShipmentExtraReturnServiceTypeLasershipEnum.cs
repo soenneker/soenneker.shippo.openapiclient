@@ -10,7 +10,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "NO_RETURN")]
         #pragma warning disable CS1591
-        NO_RETURN,
+        NoReturn,
         #pragma warning restore CS1591
     }
 }

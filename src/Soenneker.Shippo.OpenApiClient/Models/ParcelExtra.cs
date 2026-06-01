@@ -18,10 +18,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Specify collection on delivery details (UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.COD? COD { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Cod? COD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.COD COD { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Cod COD { get; set; }
 #endif
         /// <summary>To add insurance to your parcel, specify `amount`, `content` and `currency`. &lt;br&gt;&lt;br&gt;If you do not want to add insurance to you parcel, do not set these parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.COD>(global::Soenneker.Shippo.OpenApiClient.Models.COD.CreateFromDiscriminatorValue); } },
+                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Cod>(global::Soenneker.Shippo.OpenApiClient.Models.Cod.CreateFromDiscriminatorValue); } },
                 { "insurance", n => { Insurance = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance.CreateFromDiscriminatorValue); } },
                 { "reference_1", n => { Reference1 = n.GetStringValue(); } },
                 { "reference_2", n => { Reference2 = n.GetStringValue(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.COD>("COD", COD);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Cod>("COD", COD);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance>("insurance", Insurance);
             writer.WriteStringValue("reference_1", Reference1);
             writer.WriteStringValue("reference_2", Reference2);

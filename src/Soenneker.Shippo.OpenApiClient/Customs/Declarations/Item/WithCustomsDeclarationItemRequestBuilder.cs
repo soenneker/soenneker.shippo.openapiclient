@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Customs.Declarations.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \customs\declarations\{CustomsDeclarationId}
+    /// Builds and executes requests for operations under \customs\declarations\{customsDeclarationId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithCustomsDeclarationItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Declarations.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCustomsDeclarationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/customs/declarations/{CustomsDeclarationId}{?page*}", pathParameters)
+        public WithCustomsDeclarationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/customs/declarations/{customsDeclarationId}{?page*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Declarations.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCustomsDeclarationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/customs/declarations/{CustomsDeclarationId}{?page*}", rawUrl)
+        public WithCustomsDeclarationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/customs/declarations/{customsDeclarationId}{?page*}", rawUrl)
         {
         }
         /// <summary>
@@ -39,7 +39,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Declarations.Item
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration400Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequestResponseResponse">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Customs.Declarations.Item.WithCustomsDeclarationItemRequestBuilder.WithCustomsDeclarationItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Declarations.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration400Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequestResponseResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclaration.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

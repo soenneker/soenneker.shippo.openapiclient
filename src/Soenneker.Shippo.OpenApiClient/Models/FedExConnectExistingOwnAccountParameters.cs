@@ -109,7 +109,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string VerificationInvoiceNumber { get; set; }
 #endif
         /// <summary>&quot;Determines the verification option to use for the account registration (Enum: SMS, EMAIL, CALL, INVOICE).&quot;</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters_verification_option? VerificationOption { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParametersVerificationOption? VerificationOption { get; set; }
         /// <summary>(optional) The PIN to verify the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -156,7 +156,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "verification_invoice_currency", n => { VerificationInvoiceCurrency = n.GetStringValue(); } },
                 { "verification_invoice_date", n => { VerificationInvoiceDate = n.GetDateValue(); } },
                 { "verification_invoice_number", n => { VerificationInvoiceNumber = n.GetStringValue(); } },
-                { "verification_option", n => { VerificationOption = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters_verification_option>(); } },
+                { "verification_option", n => { VerificationOption = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParametersVerificationOption>(); } },
                 { "verification_pin", n => { VerificationPin = n.GetStringValue(); } },
             };
         }
@@ -180,7 +180,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("verification_invoice_currency", VerificationInvoiceCurrency);
             writer.WriteDateValue("verification_invoice_date", VerificationInvoiceDate);
             writer.WriteStringValue("verification_invoice_number", VerificationInvoiceNumber);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters_verification_option>("verification_option", VerificationOption);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParametersVerificationOption>("verification_option", VerificationOption);
             writer.WriteStringValue("verification_pin", VerificationPin);
             writer.WriteAdditionalData(AdditionalData);
         }

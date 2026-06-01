@@ -141,10 +141,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Array of &lt;a href=&quot;/shippoapi/public-api/transactions&quot;&gt;transaction&lt;/a&gt; objects representing all shipping labels purchased for this order.All objects are returned expanded with a limited number of fields by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions>? Transactions { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.OrderTransactionsItem>? Transactions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions> Transactions { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.OrderTransactionsItem> Transactions { get; set; }
 #endif
         /// <summary>Total weight of the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -198,7 +198,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "to_address", n => { ToAddress = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressTo>(global::Soenneker.Shippo.OpenApiClient.Models.AddressTo.CreateFromDiscriminatorValue); } },
                 { "total_price", n => { TotalPrice = n.GetStringValue(); } },
                 { "total_tax", n => { TotalTax = n.GetStringValue(); } },
-                { "transactions", n => { Transactions = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions>(global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "transactions", n => { Transactions = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.OrderTransactionsItem>(global::Soenneker.Shippo.OpenApiClient.Models.OrderTransactionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "weight", n => { Weight = n.GetStringValue(); } },
                 { "weight_unit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
             };
@@ -227,7 +227,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressTo>("to_address", ToAddress);
             writer.WriteStringValue("total_price", TotalPrice);
             writer.WriteStringValue("total_tax", TotalTax);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Order_transactions>("transactions", Transactions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.OrderTransactionsItem>("transactions", Transactions);
             writer.WriteStringValue("weight", Weight);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>("weight_unit", WeightUnit);
             writer.WriteAdditionalData(AdditionalData);

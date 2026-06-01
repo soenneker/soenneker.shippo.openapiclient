@@ -9,27 +9,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
         [EnumMember(Value = "PRE_TRANSIT")]
         #pragma warning disable CS1591
-        PRE_TRANSIT,
+        PreTransit,
         #pragma warning restore CS1591
         [EnumMember(Value = "TRANSIT")]
         #pragma warning disable CS1591
-        TRANSIT,
+        Transit,
         #pragma warning restore CS1591
         [EnumMember(Value = "DELIVERED")]
         #pragma warning disable CS1591
-        DELIVERED,
+        Delivered,
         #pragma warning restore CS1591
         [EnumMember(Value = "RETURNED")]
         #pragma warning disable CS1591
-        RETURNED,
+        Returned,
         #pragma warning restore CS1591
         [EnumMember(Value = "FAILURE")]
         #pragma warning disable CS1591
-        FAILURE,
+        Failure,
         #pragma warning restore CS1591
     }
 }

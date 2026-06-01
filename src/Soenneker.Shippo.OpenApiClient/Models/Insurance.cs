@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Currency { get; set; }
 #endif
         /// <summary>To have insurance cover provided by a carrier directly instead of Shippo&apos;s provider (XCover), set `provider` to `FEDEX`, `UPS`, or `ONTRAC`.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Insurance_provider? Provider { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.InsuranceProvider? Provider { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Insurance"/> and sets the default values.
         /// </summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetStringValue(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Insurance_provider>(); } },
+                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.InsuranceProvider>(); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("amount", Amount);
             writer.WriteStringValue("content", Content);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Insurance_provider>("provider", Provider);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.InsuranceProvider>("provider", Provider);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

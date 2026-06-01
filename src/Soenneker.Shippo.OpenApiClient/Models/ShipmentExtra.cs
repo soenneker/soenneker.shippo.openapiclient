@@ -16,10 +16,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The accounts_receivable_customer_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? AccountsReceivableCustomerAccount { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? AccountsReceivableCustomerAccount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields AccountsReceivableCustomerAccount { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields AccountsReceivableCustomerAccount { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -32,14 +32,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.Alcohol Alcohol { get; set; }
 #endif
         /// <summary>Specify an ancillary service endorsement to provide the USPS with instructions on how to handle undeliverable-as-addressed pieces (DHL eCommerce only).</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_ancillary_endorsement? AncillaryEndorsement { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraAncillaryEndorsement? AncillaryEndorsement { get; set; }
         /// <summary>The appropriation_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? AppropriationNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? AppropriationNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields AppropriationNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields AppropriationNumber { get; set; }
 #endif
         /// <summary>Request `true` to give carrier permission to leave the parcel in a safe place if no one answers the door (where supported). When set to `false`, if no one is available to receive the item, the parcel will not be left (*surcharges may be applicable).</summary>
         public bool? AuthorityToLeave { get; set; }
@@ -54,10 +54,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The bill_of_lading_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? BillOfLadingNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? BillOfLadingNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields BillOfLadingNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields BillOfLadingNumber { get; set; }
 #endif
         /// <summary>Bypasses address validation (USPS, UPS, &amp; LaserShip only).</summary>
         public bool? BypassAddressValidation { get; set; }
@@ -76,18 +76,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Specify collection on delivery details (UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.COD? COD { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Cod? COD { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.COD COD { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Cod COD { get; set; }
 #endif
         /// <summary>The cod_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? CodNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? CodNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields CodNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields CodNumber { get; set; }
 #endif
         /// <summary>Specify container type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,10 +134,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The dealer_order_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? DealerOrderNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? DealerOrderNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields DealerOrderNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields DealerOrderNumber { get; set; }
 #endif
         /// <summary>Specify delivery instructions. Up to 500 characters. (FedEx and OnTrac only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -166,10 +166,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The fda_product_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? FdaProductCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? FdaProductCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields FdaProductCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields FdaProductCode { get; set; }
 #endif
         /// <summary>The fulfilment center where the package originates from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -216,26 +216,26 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The manifest_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? ManifestNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ManifestNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields ManifestNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ManifestNumber { get; set; }
 #endif
         /// <summary>The model_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? ModelNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ModelNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields ModelNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ModelNumber { get; set; }
 #endif
         /// <summary>The part_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? PartNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? PartNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields PartNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields PartNumber { get; set; }
 #endif
         /// <summary>Specify the PO number field on the label (FedEx and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -252,18 +252,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The production_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? ProductionCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ProductionCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields ProductionCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ProductionCode { get; set; }
 #endif
         /// <summary>The purchase_request_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? PurchaseRequestNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? PurchaseRequestNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields PurchaseRequestNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields PurchaseRequestNumber { get; set; }
 #endif
         /// <summary>Request a QR code for a given transaction when creating a shipping label (USPS domestic and Evri UK only).</summary>
         public bool? QrCodeRequested { get; set; }
@@ -288,10 +288,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Request additional return option for return shipments (UPS and Lasership only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type? ReturnServiceType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType? ReturnServiceType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type ReturnServiceType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType ReturnServiceType { get; set; }
 #endif
         /// <summary>Specify the RMA number field on the label (FedEx and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -304,38 +304,38 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The salesperson_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? SalespersonNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? SalespersonNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields SalespersonNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields SalespersonNumber { get; set; }
 #endif
         /// <summary>Marks shipment as to be delivered on a Saturday.</summary>
         public bool? SaturdayDelivery { get; set; }
         /// <summary>The serial_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? SerialNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? SerialNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields SerialNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields SerialNumber { get; set; }
 #endif
         /// <summary>Request standard or adult signature confirmation. You can alternatively request Certified Mail (USPS only) or Indirect signature (FedEx only) or Carrier Confirmation (Deutsche Post only).</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_signature_confirmation? SignatureConfirmation { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraSignatureConfirmation? SignatureConfirmation { get; set; }
         /// <summary>The store_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? StoreNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? StoreNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields StoreNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields StoreNumber { get; set; }
 #endif
         /// <summary>The transaction_reference_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields? TransactionReferenceNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? TransactionReferenceNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields TransactionReferenceNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields TransactionReferenceNumber { get; set; }
 #endif
         /// <summary>&quot;UPS only. Request USMCA (United States-Mexico-Canada Agreement) preferential tariff treatment. When enabled, it includes the USMCA eligibility declaration in customs documentation.Supported routes and value limits:- USA/Canada → Mexico: ≤ $1,000 USD- Canada/Mexico → USA: ≤ $2,500 USD  - USA/Mexico → Canada: ≤ $3,300 CADOnly for declaration-only shipments, full USMCA - FormType 04 (Certificate of Origin) is not supported.&quot;</summary>
         public bool? UsmcaEligible { get; set; }
@@ -364,56 +364,56 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accounts_receivable_customer_account", n => { AccountsReceivableCustomerAccount = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "accounts_receivable_customer_account", n => { AccountsReceivableCustomerAccount = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "alcohol", n => { Alcohol = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Alcohol>(global::Soenneker.Shippo.OpenApiClient.Models.Alcohol.CreateFromDiscriminatorValue); } },
-                { "ancillary_endorsement", n => { AncillaryEndorsement = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_ancillary_endorsement>(); } },
-                { "appropriation_number", n => { AppropriationNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "ancillary_endorsement", n => { AncillaryEndorsement = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraAncillaryEndorsement>(); } },
+                { "appropriation_number", n => { AppropriationNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "authority_to_leave", n => { AuthorityToLeave = n.GetBoolValue(); } },
-                { "bill_of_lading_number", n => { BillOfLadingNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "bill_of_lading_number", n => { BillOfLadingNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "billing", n => { Billing = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Billing>(global::Soenneker.Shippo.OpenApiClient.Models.Billing.CreateFromDiscriminatorValue); } },
                 { "bypass_address_validation", n => { BypassAddressValidation = n.GetBoolValue(); } },
-                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.COD>(global::Soenneker.Shippo.OpenApiClient.Models.COD.CreateFromDiscriminatorValue); } },
+                { "COD", n => { COD = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Cod>(global::Soenneker.Shippo.OpenApiClient.Models.Cod.CreateFromDiscriminatorValue); } },
                 { "carbon_neutral", n => { CarbonNeutral = n.GetBoolValue(); } },
                 { "carrier_hub_id", n => { CarrierHubId = n.GetStringValue(); } },
                 { "carrier_hub_travel_time", n => { CarrierHubTravelTime = n.GetIntValue(); } },
-                { "cod_number", n => { CodNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "cod_number", n => { CodNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "container_type", n => { ContainerType = n.GetStringValue(); } },
                 { "critical_pull_time", n => { CriticalPullTime = n.GetStringValue(); } },
                 { "customer_branch", n => { CustomerBranch = n.GetStringValue(); } },
                 { "customer_reference", n => { CustomerReference = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference>(global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference.CreateFromDiscriminatorValue); } },
                 { "dangerous_goods", n => { DangerousGoods = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject>(global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject.CreateFromDiscriminatorValue); } },
                 { "dangerous_goods_code", n => { DangerousGoodsCode = n.GetDoubleValue(); } },
-                { "dealer_order_number", n => { DealerOrderNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "dealer_order_number", n => { DealerOrderNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "delivery_instructions", n => { DeliveryInstructions = n.GetStringValue(); } },
                 { "dept_number", n => { DeptNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber>(global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber.CreateFromDiscriminatorValue); } },
                 { "dry_ice", n => { DryIce = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DryIce>(global::Soenneker.Shippo.OpenApiClient.Models.DryIce.CreateFromDiscriminatorValue); } },
-                { "fda_product_code", n => { FdaProductCode = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "fda_product_code", n => { FdaProductCode = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "fulfillment_center", n => { FulfillmentCenter = n.GetStringValue(); } },
                 { "insurance", n => { Insurance = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Insurance>(global::Soenneker.Shippo.OpenApiClient.Models.Insurance.CreateFromDiscriminatorValue); } },
                 { "invoice_number", n => { InvoiceNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber>(global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber.CreateFromDiscriminatorValue); } },
                 { "is_return", n => { IsReturn = n.GetBoolValue(); } },
                 { "lasership_attrs", n => { LasershipAttrs = n.GetCollectionOfEnumValues<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraLasershipAttributesEnum>()?.AsList(); } },
                 { "lasership_declared_value", n => { LasershipDeclaredValue = n.GetStringValue(); } },
-                { "manifest_number", n => { ManifestNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
-                { "model_number", n => { ModelNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
-                { "part_number", n => { PartNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "manifest_number", n => { ManifestNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
+                { "model_number", n => { ModelNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
+                { "part_number", n => { PartNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "po_number", n => { PoNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.PoNumber>(global::Soenneker.Shippo.OpenApiClient.Models.PoNumber.CreateFromDiscriminatorValue); } },
                 { "preferred_delivery_timeframe", n => { PreferredDeliveryTimeframe = n.GetDoubleValue(); } },
                 { "premium", n => { Premium = n.GetBoolValue(); } },
-                { "production_code", n => { ProductionCode = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
-                { "purchase_request_number", n => { PurchaseRequestNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "production_code", n => { ProductionCode = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
+                { "purchase_request_number", n => { PurchaseRequestNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "qr_code_requested", n => { QrCodeRequested = n.GetBoolValue(); } },
                 { "reference_1", n => { Reference1 = n.GetStringValue(); } },
                 { "reference_2", n => { Reference2 = n.GetStringValue(); } },
                 { "request_retail_rates", n => { RequestRetailRates = n.GetBoolValue(); } },
-                { "return_service_type", n => { ReturnServiceType = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type.CreateFromDiscriminatorValue); } },
+                { "return_service_type", n => { ReturnServiceType = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType.CreateFromDiscriminatorValue); } },
                 { "rma_number", n => { RmaNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber>(global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber.CreateFromDiscriminatorValue); } },
-                { "salesperson_number", n => { SalespersonNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "salesperson_number", n => { SalespersonNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "saturday_delivery", n => { SaturdayDelivery = n.GetBoolValue(); } },
-                { "serial_number", n => { SerialNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
-                { "signature_confirmation", n => { SignatureConfirmation = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_signature_confirmation>(); } },
-                { "store_number", n => { StoreNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
-                { "transaction_reference_number", n => { TransactionReferenceNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields.CreateFromDiscriminatorValue); } },
+                { "serial_number", n => { SerialNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
+                { "signature_confirmation", n => { SignatureConfirmation = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraSignatureConfirmation>(); } },
+                { "store_number", n => { StoreNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
+                { "transaction_reference_number", n => { TransactionReferenceNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "usmca_eligible", n => { UsmcaEligible = n.GetBoolValue(); } },
             };
         }
@@ -424,133 +424,58 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("accounts_receivable_customer_account", AccountsReceivableCustomerAccount);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("accounts_receivable_customer_account", AccountsReceivableCustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Alcohol>("alcohol", Alcohol);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_ancillary_endorsement>("ancillary_endorsement", AncillaryEndorsement);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("appropriation_number", AppropriationNumber);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraAncillaryEndorsement>("ancillary_endorsement", AncillaryEndorsement);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("appropriation_number", AppropriationNumber);
             writer.WriteBoolValue("authority_to_leave", AuthorityToLeave);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Billing>("billing", Billing);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("bill_of_lading_number", BillOfLadingNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("bill_of_lading_number", BillOfLadingNumber);
             writer.WriteBoolValue("bypass_address_validation", BypassAddressValidation);
             writer.WriteBoolValue("carbon_neutral", CarbonNeutral);
             writer.WriteStringValue("carrier_hub_id", CarrierHubId);
             writer.WriteIntValue("carrier_hub_travel_time", CarrierHubTravelTime);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.COD>("COD", COD);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("cod_number", CodNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Cod>("COD", COD);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("cod_number", CodNumber);
             writer.WriteStringValue("container_type", ContainerType);
             writer.WriteStringValue("critical_pull_time", CriticalPullTime);
             writer.WriteStringValue("customer_branch", CustomerBranch);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference>("customer_reference", CustomerReference);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject>("dangerous_goods", DangerousGoods);
             writer.WriteDoubleValue("dangerous_goods_code", DangerousGoodsCode);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("dealer_order_number", DealerOrderNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("dealer_order_number", DealerOrderNumber);
             writer.WriteStringValue("delivery_instructions", DeliveryInstructions);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber>("dept_number", DeptNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DryIce>("dry_ice", DryIce);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("fda_product_code", FdaProductCode);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("fda_product_code", FdaProductCode);
             writer.WriteStringValue("fulfillment_center", FulfillmentCenter);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Insurance>("insurance", Insurance);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber>("invoice_number", InvoiceNumber);
             writer.WriteBoolValue("is_return", IsReturn);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraLasershipAttributesEnum>("lasership_attrs", LasershipAttrs);
             writer.WriteStringValue("lasership_declared_value", LasershipDeclaredValue);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("manifest_number", ManifestNumber);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("model_number", ModelNumber);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("part_number", PartNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("manifest_number", ManifestNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("model_number", ModelNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("part_number", PartNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.PoNumber>("po_number", PoNumber);
             writer.WriteDoubleValue("preferred_delivery_timeframe", PreferredDeliveryTimeframe);
             writer.WriteBoolValue("premium", Premium);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("production_code", ProductionCode);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("purchase_request_number", PurchaseRequestNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("production_code", ProductionCode);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("purchase_request_number", PurchaseRequestNumber);
             writer.WriteBoolValue("qr_code_requested", QrCodeRequested);
             writer.WriteStringValue("reference_1", Reference1);
             writer.WriteStringValue("reference_2", Reference2);
             writer.WriteBoolValue("request_retail_rates", RequestRetailRates);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type>("return_service_type", ReturnServiceType);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType>("return_service_type", ReturnServiceType);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber>("rma_number", RmaNumber);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("salesperson_number", SalespersonNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("salesperson_number", SalespersonNumber);
             writer.WriteBoolValue("saturday_delivery", SaturdayDelivery);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("serial_number", SerialNumber);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra_signature_confirmation>("signature_confirmation", SignatureConfirmation);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("store_number", StoreNumber);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UPSReferenceFields>("transaction_reference_number", TransactionReferenceNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("serial_number", SerialNumber);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraSignatureConfirmation>("signature_confirmation", SignatureConfirmation);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("store_number", StoreNumber);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("transaction_reference_number", TransactionReferenceNumber);
             writer.WriteBoolValue("usmca_eligible", UsmcaEligible);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ShipmentExtra_return_service_type : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper? ShipmentExtraReturnServiceTypeLasershipEnumWrapper { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper ShipmentExtraReturnServiceTypeLasershipEnumWrapper { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper? ShipmentExtraReturnServiceTypeUPSEnumWrapper { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper ShipmentExtraReturnServiceTypeUPSEnumWrapper { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.ShipmentExtra_return_service_type();
-                if("ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ShipmentExtraReturnServiceTypeLasershipEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper();
-                }
-                else if("ShipmentExtraReturnServiceTypeUPSEnum_Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.ShipmentExtraReturnServiceTypeUPSEnumWrapper = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ShipmentExtraReturnServiceTypeLasershipEnumWrapper != null)
-                {
-                    return ShipmentExtraReturnServiceTypeLasershipEnumWrapper.GetFieldDeserializers();
-                }
-                else if(ShipmentExtraReturnServiceTypeUPSEnumWrapper != null)
-                {
-                    return ShipmentExtraReturnServiceTypeUPSEnumWrapper.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(ShipmentExtraReturnServiceTypeLasershipEnumWrapper != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeLasershipEnum_Wrapper>(null, ShipmentExtraReturnServiceTypeLasershipEnumWrapper);
-                }
-                else if(ShipmentExtraReturnServiceTypeUPSEnumWrapper != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceTypeUPSEnum_Wrapper>(null, ShipmentExtraReturnServiceTypeUPSEnumWrapper);
-                }
-            }
         }
     }
 }

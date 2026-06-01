@@ -42,7 +42,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "NoRTS")]
         #pragma warning disable CS1591
-        NoRTS,
+        NoRts,
         #pragma warning restore CS1591
     }
 }

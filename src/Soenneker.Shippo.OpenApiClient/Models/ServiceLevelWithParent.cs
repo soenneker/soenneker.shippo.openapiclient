@@ -33,10 +33,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The parent_servicelevel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent_parent_servicelevel? ParentServicelevel { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel? ParentServicelevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent_parent_servicelevel ParentServicelevel { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel ParentServicelevel { get; set; }
 #endif
         /// <summary>Further clarification of the service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 { "extended_token", n => { ExtendedToken = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "parent_servicelevel", n => { ParentServicelevel = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent_parent_servicelevel>(global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent_parent_servicelevel.CreateFromDiscriminatorValue); } },
+                { "parent_servicelevel", n => { ParentServicelevel = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel>(global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel.CreateFromDiscriminatorValue); } },
                 { "terms", n => { Terms = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -95,7 +95,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("extended_token", ExtendedToken);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent_parent_servicelevel>("parent_servicelevel", ParentServicelevel);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel>("parent_servicelevel", ParentServicelevel);
             writer.WriteStringValue("terms", Terms);
             writer.WriteStringValue("token", Token);
             writer.WriteAdditionalData(AdditionalData);

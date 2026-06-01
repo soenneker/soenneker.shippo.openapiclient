@@ -24,9 +24,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest Address { get; set; }
 #endif
         /// <summary>Where your parcels will be available for pickup. &quot;Security Deck&quot; and &quot;Shipping Dock&quot; are only supported for DHL Express.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Location_building_location_type? BuildingLocationType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingLocationType? BuildingLocationType { get; set; }
         /// <summary>The type of building where the pickup is located.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Location_building_type? BuildingType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingType? BuildingType { get; set; }
         /// <summary>Pickup instructions for the courier. This is a mandatory field if the building_location_type is &quot;Other&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,8 +61,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest>(global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest.CreateFromDiscriminatorValue); } },
-                { "building_location_type", n => { BuildingLocationType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Location_building_location_type>(); } },
-                { "building_type", n => { BuildingType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Location_building_type>(); } },
+                { "building_location_type", n => { BuildingLocationType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingLocationType>(); } },
+                { "building_type", n => { BuildingType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingType>(); } },
                 { "instructions", n => { Instructions = n.GetStringValue(); } },
             };
         }
@@ -74,8 +74,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest>("address", Address);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Location_building_location_type>("building_location_type", BuildingLocationType);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Location_building_type>("building_type", BuildingType);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingLocationType>("building_location_type", BuildingLocationType);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingType>("building_type", BuildingType);
             writer.WriteStringValue("instructions", Instructions);
             writer.WriteAdditionalData(AdditionalData);
         }

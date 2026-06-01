@@ -41,10 +41,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>An array containing specific attributes of this Rate in context of the entire shipment. Attributes can be assigned `CHEAPEST`, `FASTEST`, or `BESTVALUE`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.Rate_attributes?>? Attributes { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.RateAttributesItem?>? Attributes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.Rate_attributes?> Attributes { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.RateAttributesItem?> Attributes { get; set; }
 #endif
         /// <summary>Object ID of the carrier account that has been used to retrieve the rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -192,7 +192,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetStringValue(); } },
                 { "amount_local", n => { AmountLocal = n.GetStringValue(); } },
                 { "arrives_by", n => { ArrivesBy = n.GetStringValue(); } },
-                { "attributes", n => { Attributes = n.GetCollectionOfEnumValues<global::Soenneker.Shippo.OpenApiClient.Models.Rate_attributes>()?.AsList(); } },
+                { "attributes", n => { Attributes = n.GetCollectionOfEnumValues<global::Soenneker.Shippo.OpenApiClient.Models.RateAttributesItem>()?.AsList(); } },
                 { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "currency_local", n => { CurrencyLocal = n.GetStringValue(); } },
@@ -222,7 +222,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("amount", Amount);
             writer.WriteStringValue("amount_local", AmountLocal);
             writer.WriteStringValue("arrives_by", ArrivesBy);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Shippo.OpenApiClient.Models.Rate_attributes>("attributes", Attributes);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Shippo.OpenApiClient.Models.RateAttributesItem>("attributes", Attributes);
             writer.WriteStringValue("carrier_account", CarrierAccount);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("currency_local", CurrencyLocal);

@@ -9,31 +9,31 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
         [EnumMember(Value = "AWAITPAY")]
         #pragma warning disable CS1591
-        AWAITPAY,
+        Awaitpay,
         #pragma warning restore CS1591
         [EnumMember(Value = "PAID")]
         #pragma warning disable CS1591
-        PAID,
+        Paid,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUNDED")]
         #pragma warning disable CS1591
-        REFUNDED,
+        Refunded,
         #pragma warning restore CS1591
         [EnumMember(Value = "CANCELLED")]
         #pragma warning disable CS1591
-        CANCELLED,
+        Cancelled,
         #pragma warning restore CS1591
         [EnumMember(Value = "PARTIALLY_FULFILLED")]
         #pragma warning disable CS1591
-        PARTIALLY_FULFILLED,
+        PartiallyFulfilled,
         #pragma warning restore CS1591
         [EnumMember(Value = "SHIPPED")]
         #pragma warning disable CS1591
-        SHIPPED,
+        Shipped,
         #pragma warning restore CS1591
     }
 }

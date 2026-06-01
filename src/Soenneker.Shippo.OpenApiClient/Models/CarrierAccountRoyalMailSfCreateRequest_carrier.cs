@@ -10,7 +10,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "royal_mail_sf")]
         #pragma warning disable CS1591
-        Royal_mail_sf,
+        RoyalMailSf,
         #pragma warning restore CS1591
     }
 }

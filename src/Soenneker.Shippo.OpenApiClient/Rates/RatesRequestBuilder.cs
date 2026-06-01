@@ -23,7 +23,7 @@ namespace Soenneker.Shippo.OpenApiClient.Rates
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("RateId", position);
+                urlTplParams.Add("rateId", position);
                 return new global::Soenneker.Shippo.OpenApiClient.Rates.Item.WithRateItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

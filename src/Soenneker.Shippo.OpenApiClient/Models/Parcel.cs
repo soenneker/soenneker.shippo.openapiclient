@@ -69,7 +69,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ObjectOwner { get; set; }
 #endif
         /// <summary>A Parcel will only be valid when all required values have been sent and validated successfully.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Parcel_object_state? ObjectState { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelObjectState? ObjectState { get; set; }
         /// <summary>Date and time of last Parcel update. Since you cannot update Parcels after they were created, this time stamp reflects the time when the Parcel was changed by Shippo&apos;s systems for the last time, e.g., during sorting the dimensions given.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
         /// <summary>If template is passed, `length`, `width`, `height`, and `distance_unit` are not required</summary>
@@ -132,7 +132,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
-                { "object_state", n => { ObjectState = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Parcel_object_state>(); } },
+                { "object_state", n => { ObjectState = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelObjectState>(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
                 { "template", n => { Template = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet.CreateFromDiscriminatorValue); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
@@ -156,7 +156,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("object_created", ObjectCreated);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("object_owner", ObjectOwner);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Parcel_object_state>("object_state", ObjectState);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelObjectState>("object_state", ObjectState);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>("template", Template);
             writer.WriteBoolValue("test", Test);

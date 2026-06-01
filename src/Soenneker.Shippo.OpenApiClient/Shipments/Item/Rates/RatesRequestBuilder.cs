@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Shipments.Item.Rates
 {
     /// <summary>
-    /// Builds and executes requests for operations under \shipments\{ShipmentId}\rates
+    /// Builds and executes requests for operations under \shipments\{shipmentId}\rates
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RatesRequestBuilder : BaseRequestBuilder
@@ -26,7 +26,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments.Item.Rates
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("CurrencyCode", position);
+                urlTplParams.Add("currencyCode", position);
                 return new global::Soenneker.Shippo.OpenApiClient.Shipments.Item.Rates.Item.WithCurrencyCodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -35,7 +35,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments.Item.Rates
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RatesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipments/{ShipmentId}/rates{?page*,results*}", pathParameters)
+        public RatesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipments/{shipmentId}/rates{?page*,results*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments.Item.Rates
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RatesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipments/{ShipmentId}/rates{?page*,results*}", rawUrl)
+        public RatesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipments/{shipmentId}/rates{?page*,results*}", rawUrl)
         {
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments.Item.Rates
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.RatePaginatedList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.RatePaginatedList400Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequestResponseResponse">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.RatePaginatedList?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Shipments.Item.Rates.RatesRequestBuilder.RatesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,7 +65,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments.Item.Rates
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.RatePaginatedList400Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequestResponseResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.RatePaginatedList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.RatePaginatedList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ParticipationCode { get; set; }
 #endif
         /// <summary>Party to be billed. (Leave blank for DHL Germany.)</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Billing_type? Type { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.BillingType? Type { get; set; }
         /// <summary>ZIP code of account number to be billed (required for UPS if there is a zip on the billing account).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "participation_code", n => { ParticipationCode = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Billing_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BillingType>(); } },
                 { "zip", n => { Zip = n.GetStringValue(); } },
             };
         }
@@ -91,7 +91,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("account", Account);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("participation_code", ParticipationCode);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Billing_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BillingType>("type", Type);
             writer.WriteStringValue("zip", Zip);
             writer.WriteAdditionalData(AdditionalData);
         }

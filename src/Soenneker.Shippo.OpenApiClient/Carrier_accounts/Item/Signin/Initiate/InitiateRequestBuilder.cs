@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
 {
     /// <summary>
-    /// Builds and executes requests for operations under \carrier_accounts\{CarrierAccount-id}\signin\initiate
+    /// Builds and executes requests for operations under \carrier_accounts\{carrierAccount-id}\signin\initiate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InitiateRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InitiateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{CarrierAccount%2Did}/signin/initiate?redirect_uri={redirect_uri}{&state*}", pathParameters)
+        public InitiateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccount%2Did}/signin/initiate?redirect_uri={redirect_uri}{&state*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InitiateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{CarrierAccount%2Did}/signin/initiate?redirect_uri={redirect_uri}{&state*}", rawUrl)
+        public InitiateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccount%2Did}/signin/initiate?redirect_uri={redirect_uri}{&state*}", rawUrl)
         {
         }
         /// <summary>
@@ -39,9 +39,9 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.InitiateOauth2Signin400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.InitiateOauth2Signin401">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.InitiateOauth2Signin404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin404Response">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate.InitiateRequestBuilder.InitiateRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -54,9 +54,9 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOauth2Signin400.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOauth2Signin401.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOauth2Signin404.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin401Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin404Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

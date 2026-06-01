@@ -17,7 +17,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "CSV_Import")]
         #pragma warning disable CS1591
-        CSV_Import,
+        CsvImport,
         #pragma warning restore CS1591
         [EnumMember(Value = "eBay")]
         #pragma warning disable CS1591

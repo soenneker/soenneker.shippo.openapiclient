@@ -13,7 +13,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "apc_postal")]
         #pragma warning disable CS1591
-        Apc_postal,
+        ApcPostal,
         #pragma warning restore CS1591
         [EnumMember(Value = "apg")]
         #pragma warning disable CS1591
@@ -25,11 +25,11 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "asendia_us")]
         #pragma warning disable CS1591
-        Asendia_us,
+        AsendiaUs,
         #pragma warning restore CS1591
         [EnumMember(Value = "australia_post")]
         #pragma warning disable CS1591
-        Australia_post,
+        AustraliaPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "axlehire")]
         #pragma warning disable CS1591
@@ -37,7 +37,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "better_trucks")]
         #pragma warning disable CS1591
-        Better_trucks,
+        BetterTrucks,
         #pragma warning restore CS1591
         [EnumMember(Value = "borderguru")]
         #pragma warning disable CS1591
@@ -53,7 +53,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "canada_post")]
         #pragma warning disable CS1591
-        Canada_post,
+        CanadaPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "chronopost")]
         #pragma warning disable CS1591
@@ -61,15 +61,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "collect_plus")]
         #pragma warning disable CS1591
-        Collect_plus,
+        CollectPlus,
         #pragma warning restore CS1591
         [EnumMember(Value = "correios_br")]
         #pragma warning disable CS1591
-        Correios_br,
+        CorreiosBr,
         #pragma warning restore CS1591
         [EnumMember(Value = "correos_espana")]
         #pragma warning disable CS1591
-        Correos_espana,
+        CorreosEspana,
         #pragma warning restore CS1591
         [EnumMember(Value = "colissimo")]
         #pragma warning disable CS1591
@@ -77,35 +77,35 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "deutsche_post")]
         #pragma warning disable CS1591
-        Deutsche_post,
+        DeutschePost,
         #pragma warning restore CS1591
         [EnumMember(Value = "dhl_benelux")]
         #pragma warning disable CS1591
-        Dhl_benelux,
+        DhlBenelux,
         #pragma warning restore CS1591
         [EnumMember(Value = "dhl_ecommerce")]
         #pragma warning disable CS1591
-        Dhl_ecommerce,
+        DhlEcommerce,
         #pragma warning restore CS1591
         [EnumMember(Value = "dhl_express")]
         #pragma warning disable CS1591
-        Dhl_express,
+        DhlExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "dhl_germany_c2c")]
         #pragma warning disable CS1591
-        Dhl_germany_c2c,
+        DhlGermanyC2C,
         #pragma warning restore CS1591
         [EnumMember(Value = "dhl_germany")]
         #pragma warning disable CS1591
-        Dhl_germany,
+        DhlGermany,
         #pragma warning restore CS1591
         [EnumMember(Value = "dpd_de")]
         #pragma warning disable CS1591
-        Dpd_de,
+        DpdDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "dpd_uk")]
         #pragma warning disable CS1591
-        Dpd_uk,
+        DpdUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "estafeta")]
         #pragma warning disable CS1591
@@ -113,7 +113,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "fastway_australia")]
         #pragma warning disable CS1591
-        Fastway_australia,
+        FastwayAustralia,
         #pragma warning restore CS1591
         [EnumMember(Value = "fedex")]
         #pragma warning disable CS1591
@@ -125,7 +125,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "gls_us")]
         #pragma warning disable CS1591
-        Gls_us,
+        GlsUs,
         #pragma warning restore CS1591
         [EnumMember(Value = "gophr")]
         #pragma warning disable CS1591
@@ -137,15 +137,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "hermes_germany_b2c")]
         #pragma warning disable CS1591
-        Hermes_germany_b2c,
+        HermesGermanyB2C,
         #pragma warning restore CS1591
         [EnumMember(Value = "hermes_uk")]
         #pragma warning disable CS1591
-        Hermes_uk,
+        HermesUk,
         #pragma warning restore CS1591
         [EnumMember(Value = "hongkong_post")]
         #pragma warning disable CS1591
-        Hongkong_post,
+        HongkongPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "lasership")]
         #pragma warning disable CS1591
@@ -157,15 +157,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "mondial_relay")]
         #pragma warning disable CS1591
-        Mondial_relay,
+        MondialRelay,
         #pragma warning restore CS1591
         [EnumMember(Value = "new_zealand_post")]
         #pragma warning disable CS1591
-        New_zealand_post,
+        NewZealandPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "nippon_express")]
         #pragma warning disable CS1591
-        Nippon_express,
+        NipponExpress,
         #pragma warning restore CS1591
         [EnumMember(Value = "ontrac")]
         #pragma warning disable CS1591
@@ -185,7 +185,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "poste_italiane")]
         #pragma warning disable CS1591
-        Poste_italiane,
+        PosteItaliane,
         #pragma warning restore CS1591
         [EnumMember(Value = "posti")]
         #pragma warning disable CS1591
@@ -197,19 +197,19 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "royal_mail")]
         #pragma warning disable CS1591
-        Royal_mail,
+        RoyalMail,
         #pragma warning restore CS1591
         [EnumMember(Value = "royal_mail_sf")]
         #pragma warning disable CS1591
-        Royal_mail_sf,
+        RoyalMailSf,
         #pragma warning restore CS1591
         [EnumMember(Value = "rr_donnelley")]
         #pragma warning disable CS1591
-        Rr_donnelley,
+        RrDonnelley,
         #pragma warning restore CS1591
         [EnumMember(Value = "russian_post")]
         #pragma warning disable CS1591
-        Russian_post,
+        RussianPost,
         #pragma warning restore CS1591
         [EnumMember(Value = "skypostal")]
         #pragma warning disable CS1591

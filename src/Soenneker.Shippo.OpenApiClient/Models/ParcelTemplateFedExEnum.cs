@@ -9,67 +9,67 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "FedEx_Box_10kg")]
         #pragma warning disable CS1591
-        FedEx_Box_10kg,
+        FedExBox10Kg,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_25kg")]
         #pragma warning disable CS1591
-        FedEx_Box_25kg,
+        FedExBox25Kg,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_Extra_Large_1")]
         #pragma warning disable CS1591
-        FedEx_Box_Extra_Large_1,
+        FedExBoxExtraLarge1,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_Extra_Large_2")]
         #pragma warning disable CS1591
-        FedEx_Box_Extra_Large_2,
+        FedExBoxExtraLarge2,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_Large_1")]
         #pragma warning disable CS1591
-        FedEx_Box_Large_1,
+        FedExBoxLarge1,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_Large_2")]
         #pragma warning disable CS1591
-        FedEx_Box_Large_2,
+        FedExBoxLarge2,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_Medium_1")]
         #pragma warning disable CS1591
-        FedEx_Box_Medium_1,
+        FedExBoxMedium1,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_Medium_2")]
         #pragma warning disable CS1591
-        FedEx_Box_Medium_2,
+        FedExBoxMedium2,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_Small_1")]
         #pragma warning disable CS1591
-        FedEx_Box_Small_1,
+        FedExBoxSmall1,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Box_Small_2")]
         #pragma warning disable CS1591
-        FedEx_Box_Small_2,
+        FedExBoxSmall2,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Envelope")]
         #pragma warning disable CS1591
-        FedEx_Envelope,
+        FedExEnvelope,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Padded_Pak")]
         #pragma warning disable CS1591
-        FedEx_Padded_Pak,
+        FedExPaddedPak,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Pak_1")]
         #pragma warning disable CS1591
-        FedEx_Pak_1,
+        FedExPak1,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Pak_2")]
         #pragma warning disable CS1591
-        FedEx_Pak_2,
+        FedExPak2,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_Tube")]
         #pragma warning disable CS1591
-        FedEx_Tube,
+        FedExTube,
         #pragma warning restore CS1591
         [EnumMember(Value = "FedEx_XL_Pak")]
         #pragma warning disable CS1591
-        FedEx_XL_Pak,
+        FedExXlPak,
         #pragma warning restore CS1591
     }
 }

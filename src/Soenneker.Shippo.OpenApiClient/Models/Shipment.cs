@@ -123,7 +123,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ShipmentDate { get; set; }
 #endif
         /// <summary>`Waiting` shipments have been successfully submitted but not yet been processed. `Queued` shipments are currently being processed. `Success` shipments have been processed successfully, meaning that rate generation has concluded. `Error` does not occur currently and is reserved for future use.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Shipment_status? Status { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentStatus? Status { get; set; }
         /// <summary>Indicates whether the object has been created in test mode.</summary>
         public bool? Test { get; set; }
         /// <summary>
@@ -166,7 +166,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "parcels", n => { Parcels = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Parcel>(global::Soenneker.Shippo.OpenApiClient.Models.Parcel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "rates", n => { Rates = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Rate>(global::Soenneker.Shippo.OpenApiClient.Models.Rate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shipment_date", n => { ShipmentDate = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Shipment_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentStatus>(); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
@@ -192,7 +192,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Parcel>("parcels", Parcels);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.Rate>("rates", Rates);
             writer.WriteStringValue("shipment_date", ShipmentDate);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Shipment_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentStatus>("status", Status);
             writer.WriteBoolValue("test", Test);
             writer.WriteAdditionalData(AdditionalData);
         }

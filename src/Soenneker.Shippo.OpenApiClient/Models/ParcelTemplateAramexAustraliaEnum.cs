@@ -9,19 +9,19 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "Fastway_Australia_Satchel_A2")]
         #pragma warning disable CS1591
-        Fastway_Australia_Satchel_A2,
+        FastwayAustraliaSatchelA2,
         #pragma warning restore CS1591
         [EnumMember(Value = "Fastway_Australia_Satchel_A3")]
         #pragma warning disable CS1591
-        Fastway_Australia_Satchel_A3,
+        FastwayAustraliaSatchelA3,
         #pragma warning restore CS1591
         [EnumMember(Value = "Fastway_Australia_Satchel_A4")]
         #pragma warning disable CS1591
-        Fastway_Australia_Satchel_A4,
+        FastwayAustraliaSatchelA4,
         #pragma warning restore CS1591
         [EnumMember(Value = "Fastway_Australia_Satchel_A5")]
         #pragma warning disable CS1591
-        Fastway_Australia_Satchel_A5,
+        FastwayAustraliaSatchelA5,
         #pragma warning restore CS1591
     }
 }

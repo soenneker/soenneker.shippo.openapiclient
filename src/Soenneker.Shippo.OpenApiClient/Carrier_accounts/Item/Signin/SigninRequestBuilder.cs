@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin
 {
     /// <summary>
-    /// Builds and executes requests for operations under \carrier_accounts\{CarrierAccount-id}\signin
+    /// Builds and executes requests for operations under \carrier_accounts\{carrierAccount-id}\signin
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SigninRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SigninRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{CarrierAccount%2Did}/signin", pathParameters)
+        public SigninRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccount%2Did}/signin", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SigninRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{CarrierAccount%2Did}/signin", rawUrl)
+        public SigninRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccount%2Did}/signin", rawUrl)
         {
         }
     }

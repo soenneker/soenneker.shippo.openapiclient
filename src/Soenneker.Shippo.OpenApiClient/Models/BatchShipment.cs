@@ -26,10 +26,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>List of Shipment and Transaction error messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages>? Messages { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem>? Messages { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages> Messages { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem> Messages { get; set; }
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Shipment { get; set; }
 #endif
         /// <summary>`INVALID` batch shipments cannot be purchased and will have to be removed, fixed, and added to the batch again.&lt;br&gt;`VALID` batch shipments can be purchased. &lt;br&gt;Batch shipments with the status `TRANSACTION_FAILED` were not able to be purchased and the error will be displayed on the message field&lt;br&gt; `INCOMPLETE` batch shipments have an issue with the Address and will need to be removed, fixed, and added to the batch again.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_status? Status { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus? Status { get; set; }
         /// <summary>Object ID of the transaction object created for this batch shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,12 +99,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
-                { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages>(global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem>(global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "servicelevel_token", n => { ServicelevelToken = n.GetStringValue(); } },
                 { "shipment", n => { Shipment = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus>(); } },
                 { "transaction", n => { Transaction = n.GetStringValue(); } },
             };
         }
@@ -116,12 +116,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("carrier_account", CarrierAccount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_messages>("messages", Messages);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem>("messages", Messages);
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("servicelevel_token", ServicelevelToken);
             writer.WriteStringValue("shipment", Shipment);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipment_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus>("status", Status);
             writer.WriteStringValue("transaction", Transaction);
             writer.WriteAdditionalData(AdditionalData);
         }

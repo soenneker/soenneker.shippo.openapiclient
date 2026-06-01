@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Batches.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \batches\{BatchId}
+    /// Builds and executes requests for operations under \batches\{batchId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithBatchItemRequestBuilder : BaseRequestBuilder
@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithBatchItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/batches/{BatchId}{?page*,results*}", pathParameters)
+        public WithBatchItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/batches/{batchId}{?page*,results*}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithBatchItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/batches/{BatchId}{?page*,results*}", rawUrl)
+        public WithBatchItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/batches/{batchId}{?page*,results*}", rawUrl)
         {
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Batch"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.Batch400Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.BadRequestResponseResponse">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Shippo.OpenApiClient.Models.Batch?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Batches.Item.WithBatchItemRequestBuilder.WithBatchItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -70,7 +70,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Shippo.OpenApiClient.Models.Batch400Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Shippo.OpenApiClient.Models.BadRequestResponseResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Batch>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Batch.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

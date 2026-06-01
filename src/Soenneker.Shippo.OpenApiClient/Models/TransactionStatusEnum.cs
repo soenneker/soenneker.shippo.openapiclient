@@ -9,31 +9,31 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "WAITING")]
         #pragma warning disable CS1591
-        WAITING,
+        Waiting,
         #pragma warning restore CS1591
         [EnumMember(Value = "QUEUED")]
         #pragma warning disable CS1591
-        QUEUED,
+        Queued,
         #pragma warning restore CS1591
         [EnumMember(Value = "SUCCESS")]
         #pragma warning disable CS1591
-        SUCCESS,
+        Success,
         #pragma warning restore CS1591
         [EnumMember(Value = "ERROR")]
         #pragma warning disable CS1591
-        ERROR,
+        Error,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUNDED")]
         #pragma warning disable CS1591
-        REFUNDED,
+        Refunded,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUNDPENDING")]
         #pragma warning disable CS1591
-        REFUNDPENDING,
+        Refundpending,
         #pragma warning restore CS1591
         [EnumMember(Value = "REFUNDREJECTED")]
         #pragma warning disable CS1591
-        REFUNDREJECTED,
+        Refundrejected,
         #pragma warning restore CS1591
     }
 }

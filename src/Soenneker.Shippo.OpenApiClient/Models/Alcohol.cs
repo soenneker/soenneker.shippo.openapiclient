@@ -18,7 +18,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Mandatory for Fedex and UPS. Specifies that the package contains Alcohol.</summary>
         public bool? ContainsAlcohol { get; set; }
         /// <summary>Mandatory for Fedex only. License type of the recipient of the Alcohol Package.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Alcohol_recipient_type? RecipientType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.AlcoholRecipientType? RecipientType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Alcohol"/> and sets the default values.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contains_alcohol", n => { ContainsAlcohol = n.GetBoolValue(); } },
-                { "recipient_type", n => { RecipientType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Alcohol_recipient_type>(); } },
+                { "recipient_type", n => { RecipientType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.AlcoholRecipientType>(); } },
             };
         }
         /// <summary>
@@ -56,7 +56,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("contains_alcohol", ContainsAlcohol);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Alcohol_recipient_type>("recipient_type", RecipientType);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.AlcoholRecipientType>("recipient_type", RecipientType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

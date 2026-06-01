@@ -10,7 +10,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "deutsche_post")]
         #pragma warning disable CS1591
-        Deutsche_post,
+        DeutschePost,
         #pragma warning restore CS1591
     }
 }

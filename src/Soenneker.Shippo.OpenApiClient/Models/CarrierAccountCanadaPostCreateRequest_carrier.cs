@@ -10,7 +10,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "canada_post")]
         #pragma warning disable CS1591
-        Canada_post,
+        CanadaPost,
         #pragma warning restore CS1591
     }
 }

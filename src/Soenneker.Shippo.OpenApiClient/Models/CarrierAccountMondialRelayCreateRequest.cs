@@ -19,10 +19,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest_parameters? Parameters { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequestParametersProperty? Parameters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest_parameters Parameters { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequestParametersProperty Parameters { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest_carrier>(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest_parameters>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest_parameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequestParametersProperty>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequestParametersProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest_carrier>("carrier", Carrier);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest_parameters>("parameters", Parameters);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequestParametersProperty>("parameters", Parameters);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

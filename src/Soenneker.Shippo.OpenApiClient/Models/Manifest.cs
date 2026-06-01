@@ -75,7 +75,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ShipmentDate { get; set; }
 #endif
         /// <summary>Indicates the status of the manifest.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Manifest_status? Status { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ManifestStatus? Status { get; set; }
         /// <summary>IDs transactions to use. If you set this to null or not send this parameter, Shippo will automatically assign all applicable transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,7 +118,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
                 { "shipment_date", n => { ShipmentDate = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Manifest_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ManifestStatus>(); } },
                 { "transactions", n => { Transactions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -138,7 +138,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("object_owner", ObjectOwner);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
             writer.WriteStringValue("shipment_date", ShipmentDate);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Manifest_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ManifestStatus>("status", Status);
             writer.WriteCollectionOfPrimitiveValues<string>("transactions", Transactions);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -32,7 +32,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayorAddress Address { get; set; }
 #endif
         /// <summary>Party to be billed for duties.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor_type? Type { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayorType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor"/> and sets the default values.
         /// </summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayorAddress>(global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayorAddress.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayorType>(); } },
             };
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account", Account);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayorAddress>("address", Address);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayorType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

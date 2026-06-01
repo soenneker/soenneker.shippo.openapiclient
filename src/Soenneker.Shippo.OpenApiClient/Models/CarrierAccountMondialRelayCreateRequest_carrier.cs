@@ -10,7 +10,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "mondial_relay")]
         #pragma warning disable CS1591
-        Mondial_relay,
+        MondialRelay,
         #pragma warning restore CS1591
     }
 }

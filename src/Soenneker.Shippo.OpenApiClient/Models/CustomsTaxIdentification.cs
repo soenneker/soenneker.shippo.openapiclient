@@ -24,7 +24,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Number { get; set; }
 #endif
         /// <summary>Type of tax identification.* `EIN` - Employer Identification Number, also known as a Federal Tax Identification Number.* `VAT` - Value Added Tax identification number.* `IOSS` - Import One-Stop Shop* `ARN` - Australian Taxation Office Reference Number</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification_type? Type { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentificationType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "number", n => { Number = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentificationType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("number", Number);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentificationType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

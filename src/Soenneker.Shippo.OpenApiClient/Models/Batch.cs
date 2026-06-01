@@ -83,10 +83,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>An object containing the following counts:&lt;br&gt;`creation_succeeded`&lt;br&gt;`creation_failed`&lt;br&gt;`purchase_succeeded`&lt;br&gt;`purchase_failed`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.Batch_object_results? ObjectResults { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults? ObjectResults { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.Batch_object_results ObjectResults { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults ObjectResults { get; set; }
 #endif
         /// <summary>Date and time of last update to the Batch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,7 +97,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ObjectUpdated { get; set; }
 #endif
         /// <summary>Batches that are `VALIDATING` are being created and validated&lt;br&gt;`VALID` batches can be purchased&lt;br&gt;`INVALID` batches cannot be purchased, `INVALID` BatchShipments must be removed&lt;br&gt;Batches that are in the `PURCHASING` state are being purchased&lt;br&gt;`PURCHASED` batches are finished purchasing.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.Batch_status? Status { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.BatchStatus? Status { get; set; }
         /// <summary>The test property</summary>
         public bool? Test { get; set; }
         /// <summary>
@@ -134,9 +134,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_created", n => { ObjectCreated = n.GetStringValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
-                { "object_results", n => { ObjectResults = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Batch_object_results>(global::Soenneker.Shippo.OpenApiClient.Models.Batch_object_results.CreateFromDiscriminatorValue); } },
+                { "object_results", n => { ObjectResults = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults>(global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults.CreateFromDiscriminatorValue); } },
                 { "object_updated", n => { ObjectUpdated = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Batch_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchStatus>(); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
@@ -156,9 +156,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("object_created", ObjectCreated);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("object_owner", ObjectOwner);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Batch_object_results>("object_results", ObjectResults);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults>("object_results", ObjectResults);
             writer.WriteStringValue("object_updated", ObjectUpdated);
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.Batch_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchStatus>("status", Status);
             writer.WriteBoolValue("test", Test);
             writer.WriteAdditionalData(AdditionalData);
         }

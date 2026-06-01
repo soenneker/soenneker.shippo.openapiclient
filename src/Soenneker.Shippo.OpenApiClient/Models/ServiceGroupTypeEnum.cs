@@ -9,15 +9,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         [EnumMember(Value = "LIVE_RATE")]
         #pragma warning disable CS1591
-        LIVE_RATE,
+        LiveRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "FLAT_RATE")]
         #pragma warning disable CS1591
-        FLAT_RATE,
+        FlatRate,
         #pragma warning restore CS1591
         [EnumMember(Value = "FREE_SHIPPING")]
         #pragma warning disable CS1591
-        FREE_SHIPPING,
+        FreeShipping,
         #pragma warning restore CS1591
     }
 }

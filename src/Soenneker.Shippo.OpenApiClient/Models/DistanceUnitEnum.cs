@@ -13,7 +13,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "in")]
         #pragma warning disable CS1591
-        In,
+        InValue,
         #pragma warning restore CS1591
         [EnumMember(Value = "ft")]
         #pragma warning disable CS1591
