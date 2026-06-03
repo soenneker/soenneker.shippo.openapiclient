@@ -43,10 +43,6 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 result.AddressCompleteCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest();
             }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.LiveRateCreateRequestAddressToBranch1 = new global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressToBranch1();
-            }
             return result;
         }
         /// <summary>

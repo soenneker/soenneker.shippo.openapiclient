@@ -64,6 +64,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public InstantTransactionCreateRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            Async = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

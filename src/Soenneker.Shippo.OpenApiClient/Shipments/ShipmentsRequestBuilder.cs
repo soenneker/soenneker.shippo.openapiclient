@@ -35,7 +35,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ShipmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipments{?object_created_gt*,object_created_gte*,object_created_lt*,object_created_lte*,page*,page_token*,results*}", pathParameters)
+        public ShipmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Shippo.OpenApiClient.Shipments
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ShipmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/shipments{?object_created_gt*,object_created_gte*,object_created_lt*,object_created_lte*,page*,page_token*,results*}", rawUrl)
+        public ShipmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

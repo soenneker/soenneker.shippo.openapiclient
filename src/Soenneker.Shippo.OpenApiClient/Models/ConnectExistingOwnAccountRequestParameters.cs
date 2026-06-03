@@ -47,11 +47,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters();
-            if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.ConnectExistingOwnAccountRequestParametersMember1 = new global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParametersMember1();
-            }
-            else if("FedExConnectExistingOwnAccountParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("FedExConnectExistingOwnAccountParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.FedExConnectExistingOwnAccountParameters = new global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters();
             }
