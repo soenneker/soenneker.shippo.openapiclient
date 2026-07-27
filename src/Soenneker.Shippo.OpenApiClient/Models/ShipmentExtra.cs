@@ -121,7 +121,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference CustomerReference { get; set; }
 #endif
-        /// <summary>Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contentsare provided, only certain USPS service levels will be eligible. For more information, see our&lt;a href=&quot;https://docs.goshippo.com/docs/shipments/hazmat/&quot;&gt;guide on hazardous or dangerous materials shipping&lt;/a&gt;.</summary>
+        /// <summary>Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contentsare provided, only certain USPS service levels will be eligible. For more information, see our[guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject? DangerousGoods { get; set; }
@@ -129,7 +129,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject DangerousGoods { get; set; }
 #endif
-        /// <summary>Dangerous Goods Code (DHL eCommerce only). See &lt;a href=&quot;https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods&quot;&gt;Category Codes&lt;/a&gt;</summary>
+        /// <summary>Dangerous Goods Code (DHL eCommerce only). See [Category Codes](https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods)</summary>
         public double? DangerousGoodsCode { get; set; }
         /// <summary>The dealer_order_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -179,7 +179,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string FulfillmentCenter { get; set; }
 #endif
-        /// <summary>To add 3rd party insurance powered by &lt;a href=&quot;https://docs.goshippo.com/docs/shipments/shippinginsurance/&quot;&gt;XCover&lt;/a&gt;, specify &lt;br&gt; `amount`, `content`, and `currency`. &lt;br&gt; Alternatively, you can choose carrier provided insurance by additionally specifying `provider` (UPS, FedEx and OnTrac only). &lt;br&gt;&lt;br&gt; If you do not want to add insurance to your shipment, do not set these parameters.</summary>
+        /// <summary>To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), specify `amount`, `content`, and `currency`. Alternatively, you can choose carrier provided insurance by additionally specifying `provider` (UPS, FedEx and OnTrac only).If you do not want to add insurance to your shipment, do not set these parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.Insurance? Insurance { get; set; }
@@ -195,7 +195,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber InvoiceNumber { get; set; }
 #endif
-        /// <summary>This field specifies if it is a scan-based return shipment. See the &lt;a href=&quot;https://docs.goshippo.com/docs/shipments/returns/&quot;&gt;Create a return shipment&lt;/a&gt; section for more details.</summary>
+        /// <summary>This field specifies if it is a scan-based return shipment. See the [Create a return shipment](https://docs.goshippo.com/docs/shipments/returns/) section for more details.</summary>
         public bool? IsReturn { get; set; }
         /// <summary>Specify Lasership Attributes (Lasership only). Multiple options accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

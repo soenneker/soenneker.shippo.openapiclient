@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The object ID of your USPS or DHL Express carrier account. You can retrieve this from your Rate requests or our &lt;a href=&quot;/shippoapi/public-api/carrier-accounts&quot;&gt;Carrier Accounts&lt;/a&gt; endpoint.</summary>
+        /// <summary>The object ID of your USPS or DHL Express carrier account. You can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CarrierAccount { get; set; }

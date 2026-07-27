@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>The async property</summary>
         public bool? Async { get; set; }
-        /// <summary>List of &lt;a href=&quot;/shippoapi/public-api/carrier-accounts&quot;&gt;Carrier Accounts&lt;/a&gt; `object_id`s used to filter the returned rates.  If set, only rates from these carriers will be returned.</summary>
+        /// <summary>List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) `object_id`s used to filter the returned rates.  If set, only rates from these carriers will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CarrierAccounts { get; set; }

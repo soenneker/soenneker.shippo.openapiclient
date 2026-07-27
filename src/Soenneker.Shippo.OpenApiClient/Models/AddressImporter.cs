@@ -31,7 +31,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Company { get; set; }
 #endif
-        /// <summary>&quot;Example: `US` or `DE`. All accepted values can be found on the &lt;a href=\&quot;http://www.iso.org/\&quot; target=\&quot;blank\&quot;&gt;Official ISO Website&lt;/a&gt;.Sending a country is always required.&quot;</summary>
+        /// <summary>&quot;Example: `US` or `DE`. All accepted values can be found on the [Official ISO Website](http://www.iso.org/).Sending a country is always required.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Country { get; set; }
@@ -65,7 +65,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
-        /// <summary>**required for purchase for some countries**&lt;br&gt;State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.</summary>
+        /// <summary>**required for purchase for some countries**State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }

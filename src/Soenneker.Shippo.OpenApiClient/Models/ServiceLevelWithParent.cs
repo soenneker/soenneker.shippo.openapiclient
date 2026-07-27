@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The parent_servicelevel property</summary>
+        /// <summary>Used for some Service Levels to link to the more &quot;generic&quot; version of this Service Level - for example, if this Service Level is a variation specific to shipments to Europe(&quot;ups_saver_eu&quot;), the &quot;parent&quot; is the fully generic version (&quot;ups_saver&quot;). Helpful when displaying Service Levels to users. Has the same structure of the servicelevel - &quot;name&quot;, &quot;token&quot;, &quot;terms&quot;, and &quot;extended_token&quot;, or it is otherwise null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel? ParentServicelevel { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Terms { get; set; }
 #endif
-        /// <summary>Token of the Rate&apos;s servicelevel, e.g. `usps_priority` or `fedex_ground`. See &lt;a href=&quot;/shippoapi/public-api/service-levels&quot;&gt;servicelevels&lt;/a&gt;.</summary>
+        /// <summary>Token of the Rate&apos;s servicelevel, e.g. `usps_priority` or `fedex_ground`. See [servicelevels](/shippoapi/public-api/service-levels).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }

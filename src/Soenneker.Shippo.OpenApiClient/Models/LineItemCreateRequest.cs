@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Currency of the &lt;code&gt;total_price&lt;/code&gt; amount.</summary>
+        /// <summary>Currency of the `total_price` amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Currency { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string VariantTitle { get; set; }
 #endif
-        /// <summary>Total weight of this/these item(s). Instead of specifying the weight of all items, you can also set the &lt;code&gt;total_weight&lt;/code&gt; value of the order object.</summary>
+        /// <summary>Total weight of this/these item(s). Instead of specifying the weight of all items, you can also set the `total_weight` value of the order object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Weight { get; set; }

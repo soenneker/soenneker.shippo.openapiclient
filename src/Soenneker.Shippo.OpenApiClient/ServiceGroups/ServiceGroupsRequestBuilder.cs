@@ -96,7 +96,7 @@ namespace Soenneker.Shippo.OpenApiClient.ServiceGroups
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroup>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroup.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates an existing service group object. &lt;br&gt;The object_id cannot be updated as it is the unique identifier for the object.
+        /// Updates an existing service group object. The object_id cannot be updated as it is the unique identifier for the object.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroup"/></returns>
         /// <param name="body">The request body</param>
@@ -162,7 +162,7 @@ namespace Soenneker.Shippo.OpenApiClient.ServiceGroups
             return requestInfo;
         }
         /// <summary>
-        /// Updates an existing service group object. &lt;br&gt;The object_id cannot be updated as it is the unique identifier for the object.
+        /// Updates an existing service group object. The object_id cannot be updated as it is the unique identifier for the object.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

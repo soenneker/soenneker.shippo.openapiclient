@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;&lt;p style=\&quot;text-align: center; background-color: #F2F3F4;\&quot;&gt;  &lt;/br&gt;Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource  in the future. Currently it&apos;s a nested object within the order resource.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;A line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.&quot;
+    /// Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resourcein the future. Currently it&apos;s a nested object within the order resource.A line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LineItem : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Currency of the &lt;code&gt;total_price&lt;/code&gt; amount.</summary>
+        /// <summary>Currency of the `total_price` amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Currency { get; set; }
@@ -77,7 +77,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string VariantTitle { get; set; }
 #endif
-        /// <summary>Total weight of this/these item(s). Instead of specifying the weight of all items, you can also set the &lt;code&gt;total_weight&lt;/code&gt; value of the order object.</summary>
+        /// <summary>Total weight of this/these item(s). Instead of specifying the weight of all items, you can also set the `total_weight` value of the order object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Weight { get; set; }

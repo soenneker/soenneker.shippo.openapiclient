@@ -47,7 +47,7 @@ namespace Soenneker.Shippo.OpenApiClient.Tracks
         {
         }
         /// <summary>
-        /// Registers a webhook that will send HTTP notifications to you when the status of your tracked package changes. For more details on creating a webhook, see our guides on &lt;a href=&quot;https://docs.goshippo.com/docs/tracking/webhooks/&quot;&gt;Webhooks&lt;/a&gt; and &lt;a href=&quot;https://docs.goshippo.com/docs/tracking/tracking/&quot;&gt;Tracking&lt;/a&gt;.
+        /// Registers a webhook that will send HTTP notifications to you when the status of your tracked package changes. For more details on creating a webhook, see our guides on [Webhooks](https://docs.goshippo.com/docs/tracking/webhooks/) and [Tracking](https://docs.goshippo.com/docs/tracking/tracking/).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Track"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.Shippo.OpenApiClient.Tracks
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Track>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Track.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Registers a webhook that will send HTTP notifications to you when the status of your tracked package changes. For more details on creating a webhook, see our guides on &lt;a href=&quot;https://docs.goshippo.com/docs/tracking/webhooks/&quot;&gt;Webhooks&lt;/a&gt; and &lt;a href=&quot;https://docs.goshippo.com/docs/tracking/tracking/&quot;&gt;Tracking&lt;/a&gt;.
+        /// Registers a webhook that will send HTTP notifications to you when the status of your tracked package changes. For more details on creating a webhook, see our guides on [Webhooks](https://docs.goshippo.com/docs/tracking/webhooks/) and [Tracking](https://docs.goshippo.com/docs/tracking/tracking/).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

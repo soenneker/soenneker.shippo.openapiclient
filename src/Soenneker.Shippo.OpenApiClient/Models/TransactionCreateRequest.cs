@@ -16,7 +16,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The async property</summary>
         public bool? Async { get; set; }
-        /// <summary>Print format of the &lt;a href=&quot;https://docs.goshippo.com/docs/shipments/shippinglabelsizes/&quot;&gt;label&lt;/a&gt;. If empty, will use the default format set from &lt;a href=&quot;https://apps.goshippo.com/settings/labels&quot;&gt;the Shippo dashboard.&lt;/a&gt;</summary>
+        /// <summary>Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFileType { get; set; }
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

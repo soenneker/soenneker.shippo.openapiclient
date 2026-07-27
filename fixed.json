@@ -181,7 +181,7 @@
           "Batches"
         ],
         "summary": "Retrieve a batch",
-        "description": "Returns a batch using an object ID. \u003Cbr\u003E Batch shipments are displayed 100 at a time.  You can iterate \nthrough each \u0060page\u0060 using the \u0060?page= query\u0060 parameter.  You can also filter based on batch shipment \nstatus, for example, by passing a query param like \u0060?object_results=creation_failed\u0060. \u003Cbr\u003E \nFor more details on filtering results, see our guide on \u003Ca href=\u0022https://docs.goshippo.com/docs/api_concepts/filtering/\u0022 target=\u0022blank\u0022\u003E filtering\u003C/a\u003E.",
+        "description": "Returns a batch using an object ID.\n\nBatch shipments are displayed 100 at a time. You can iterate through each page using the \u0060?page=\u0060 query parameter. You can also filter based on batch shipment status, for example, by passing a query param like \u0060?object_results=creation_failed\u0060.\n\nFor more details on filtering results, see our guide on [filtering](https://docs.goshippo.com/docs/api_concepts/filtering/).",
         "operationId": "GetBatch",
         "parameters": [
           {
@@ -335,7 +335,7 @@
           "Carrier Accounts"
         ],
         "summary": "List all carrier accounts",
-        "description": "Returns a list of all carrier accounts connected to your Shippo account. These carrier accounts include both Shippo carrier accounts and your own carrier accounts that you have connected to your Shippo account.\n\nAdditionally, you can get information about the service levels associated with each carrier account by passing in the \u0060?service_levels=true\u0060 query parameter. \u003Cbr\u003E\nUsing it appends the property \u0060service_levels\u0060 to each carrier account. \u003Cbr\u003E\nBy default, if the query parameter is omitted, the \u0060service_levels\u0060 property will not be included in the response.",
+        "description": "Returns a list of all carrier accounts connected to your Shippo account. These carrier accounts include both Shippo carrier accounts and your own carrier accounts that you have connected to your Shippo account.\n\nAdditionally, you can get information about the service levels associated with each carrier account by passing in the \u0060?service_levels=true\u0060 query parameter.\nUsing it appends the property \u0060service_levels\u0060 to each carrier account.\nBy default, if the query parameter is omitted, the \u0060service_levels\u0060 property will not be included in the response.",
         "operationId": "ListCarrierAccounts",
         "parameters": [
           {
@@ -1143,7 +1143,7 @@
           "Carrier Parcel Templates"
         ],
         "summary": "List all carrier parcel templates",
-        "description": "List all carrier parcel template objects. \u003Cbr\u003E Use the following query string params to filter the results as needed. \u003Cbr\u003E\n\u003Cul\u003E\n\u003Cli\u003E\u0060include=all\u0060 (the default). Includes templates from all carriers \u003C/li\u003E\n\u003Cli\u003E\u0060include=user\u0060. Includes templates only from carriers which the user has added (whether or not they\u0027re currently enabled) \u003C/li\u003E\n\u003Cli\u003E\u0060include=enabled\u0060. includes templates only for carriers which the user has added and enabled \u003C/li\u003E\n\u003Cli\u003E\u0060carrier=*token*\u0060. filter by specific carrier, e.g. fedex, usps \u003C/li\u003E\n\u003C/ul\u003E",
+        "description": "\u0022List all carrier parcel template objects.\n\nUse the following query string params to filter the results as needed:\n\n- \u0060include=all\u0060 (the default): includes templates from all carriers\n- \u0060include=user\u0060: includes templates only from carriers which the user has added (whether or not they\u0027re currently enabled)\n- \u0060include=enabled\u0060: includes templates only for carriers which the user has added and enabled\n- \u0060carrier=\u003Ctoken\u003E\u0060: filter by specific carrier, e.g. \u0060fedex\u0060, \u0060usps\u0060\u0022",
         "operationId": "ListCarrierParcelTemplates",
         "parameters": [
           {
@@ -1509,7 +1509,7 @@
           "Service Groups"
         ],
         "summary": "Update an existing service group",
-        "description": "Updates an existing service group object. \u003Cbr\u003EThe object_id cannot be updated as it is the unique identifier for the object.",
+        "description": "Updates an existing service group object. The object_id cannot be updated as it is the unique identifier for the object.",
         "operationId": "UpdateServiceGroup",
         "parameters": [
           {
@@ -1570,7 +1570,7 @@
           "Shipments"
         ],
         "summary": "List all shipments",
-        "description": "\u0022Returns a list of all shipment objects.\u003Cbr\u003E\u003Cbr\u003E\nIn order to filter results, you must use the below path parameters. \nProvided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).\u003Cbr\u003E\u003Cbr\u003E\n\nOptional path parameters:\u003Cbr\u003E\n  \u0060object_created_gt\u0060- object(s) created greater than a provided date time\u003Cbr\u003E\n  \u0060object_created_gte\u0060 - object(s) created greater than or equal to a provided date time\u003Cbr\u003E\n  \u0060object_created_lt\u0060 - object(s) created less than a provided date time\u003Cbr\u003E\n  \u0060object_created_lte\u0060 - object(s) created less than or equal to a provided date time\u003Cbr\u003E\n\n  Date format examples:\u003Cbr\u003E\n    \u00602017-01-01\u0060\u003Cbr\u003E\n    \u00602017-01-01T03:30:30\u0060 or \u00602017-01-01T03:30:30.5\u0060\u003Cbr\u003E\n    \u00602017-01-01T03:30:30Z\u0060\u003Cbr\u003E\u003Cbr\u003E\n\n  Example URL:\u003Cbr\u003E\n    \u0060https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30\u0026object_created_lt=2017-04-01T00:00:30\u0060\u003Cbr\u003E\u003Cbr\u003E\n\nNote: Shipment objects older than 390 days are not returned.\u0022",
+        "description": "\u0022Returns a list of all shipment objects.\n\nTo filter results, use the optional query parameters below. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).\n\n- \u0060object_created_gt\u0060: object(s) created after the provided date time\n- \u0060object_created_gte\u0060: object(s) created at or after the provided date time\n- \u0060object_created_lt\u0060: object(s) created before the provided date time\n- \u0060object_created_lte\u0060: object(s) created at or before the provided date time\n\nDate format examples: \u00602017-01-01\u0060, \u00602017-01-01T03:30:30\u0060 (or \u00602017-01-01T03:30:30.5\u0060), \u00602017-01-01T03:30:30Z\u0060\n\nExample URL: \u0060https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30\u0026object_created_lt=2017-04-01T00:00:30\u0060\n\nNote: Shipment objects older than 390 days are not returned.\u0022",
         "operationId": "ListShipments",
         "parameters": [
           {
@@ -1715,7 +1715,7 @@
           "Rates"
         ],
         "summary": "Retrieve shipment rates in currency",
-        "description": "\u0022Returns all available shipping rates for a shipment object.\n\nWhen you create a new valid shipment object, Shippo automatically calculates all available rates. Depending on your shipment data, there may be none, one or multiple rates.\n\nBy default, the calculated rates will return the price in two currencies under the \u0060amount\u0060 and \u0060amount_local\u0060 keys, respectively. The \u0060amount\u0060 key will contain the price of a rate expressed in the currency that is used in the country from where the parcel originates, and the \u0060amount_local\u0060 key will contain the price expressed in the currency that is used in the country the parcel is shipped to. You can request rates with prices expressed in a different currency by adding the currency code to the end of the resource URL. The full list of supported currencies along with their codes can be viewed on \u003Ca href=\\\u0022http://openexchangerates.org/api/currencies.json\\\u0022\u003Eopen exchange rates\u003C/a\u003E.\n\nNote: re-requesting the rates with a different currency code will re-queue the shipment (i.e. set the Shipment\u0027s \u0060status\u0060 to \u0060QUEUED\u0060) and the converted currency rates will only be available when the Shipment\u0027s \u0060status\u0060 is set to \u0060SUCCESS\u0060.\n\nRates for shipments older than 390 days are not returned.\u0022",
+        "description": "\u0022Returns all available shipping rates for a shipment object.\n\nWhen you create a new valid shipment object, Shippo automatically calculates all available rates. Depending on your shipment data, there may be none, one or multiple rates.\n\nBy default, the calculated rates will return the price in two currencies under the \u0060amount\u0060 and \u0060amount_local\u0060 keys, respectively. The \u0060amount\u0060 key will contain the price of a rate expressed in the currency that is used in the country from where the parcel originates, and the \u0060amount_local\u0060 key will contain the price expressed in the currency that is used in the country the parcel is shipped to. You can request rates with prices expressed in a different currency by adding the currency code to the end of the resource URL. The full list of supported currencies along with their codes can be viewed on [open exchange rates](http://openexchangerates.org/api/currencies.json).\n\nNote: re-requesting the rates with a different currency code will re-queue the shipment (i.e. set the Shipment\u0027s \u0060status\u0060 to \u0060QUEUED\u0060) and the converted currency rates will only be available when the Shipment\u0027s \u0060status\u0060 is set to \u0060SUCCESS\u0060.\n\nRates for shipments older than 390 days are not returned.\u0022",
         "operationId": "ListShipmentRatesByCurrencyCode",
         "parameters": [
           {
@@ -1763,7 +1763,7 @@
           "Tracking Status"
         ],
         "summary": "Register a tracking webhook",
-        "description": "Registers a webhook that will send HTTP notifications to you when the status of your tracked package changes. For more details on creating a webhook, see our guides on \u003Ca href=\u0022https://docs.goshippo.com/docs/tracking/webhooks/\u0022\u003EWebhooks\u003C/a\u003E and \u003Ca href=\u0022https://docs.goshippo.com/docs/tracking/tracking/\u0022\u003ETracking\u003C/a\u003E.",
+        "description": "Registers a webhook that will send HTTP notifications to you when the status of your tracked package changes. For more details on creating a webhook, see our guides on [Webhooks](https://docs.goshippo.com/docs/tracking/webhooks/) and [Tracking](https://docs.goshippo.com/docs/tracking/tracking/).",
         "operationId": "CreateTrack",
         "parameters": [
           {
@@ -1887,7 +1887,7 @@
           "Transactions"
         ],
         "summary": "Create a shipping label",
-        "description": "Creates a new transaction object and purchases the shipping label using a rate object that has previously been created. \u003Cbr\u003E OR \u003Cbr\u003E Creates a new transaction object and purchases the shipping label instantly using shipment details, an existing carrier account, and an existing service level token.",
+        "description": "Creates a new transaction object and purchases the shipping label using a rate object that has previously been created.\n\nAlternatively, creates a new transaction object and purchases the shipping label instantly using shipment details, an existing carrier account, and an existing service level token.",
         "operationId": "CreateTransaction",
         "parameters": [
           {
@@ -1973,7 +1973,7 @@
           "User Parcel Templates"
         ],
         "summary": "Create a new user parcel template",
-        "description": "Creates a new user parcel template. \u003Cbr\u003EYou can choose to create a\nparcel template using a preset carrier template as a starting point, or\nyou can create an entirely custom one. To use a preset carrier template,\npass in a unique template token from \u003Ca href=\u0022/shippoapi/public-api/parcel-templates\u0022\u003Ethis list\u003C/a\u003E\nplus the weight fields (**weight** and **weight_unit**). Otherwise, omit\nthe template field and pass the other fields, for the weight, length, height,\nand depth, as well as their units.\u0022",
+        "description": "Creates a new user parcel template.\n\nYou can choose to create a\nparcel template using a preset carrier template as a starting point, or\nyou can create an entirely custom one. To use a preset carrier template,\npass in a unique template token from [this list](/shippoapi/public-api/parcel-templates)\nplus the weight fields (**weight** and **weight_unit**). Otherwise, omit\nthe template field and pass the other fields, for the weight, length, height,\nand depth, as well as their units.\u0022",
         "operationId": "CreateUserParcelTemplate",
         "parameters": [
           {
@@ -2130,7 +2130,7 @@
           "Shippo Accounts"
         ],
         "summary": "Create a Shippo Account",
-        "description": "Creates a new \u003Ca href=\u0022https://docs.goshippo.com/docs/platformaccounts/platform_using_accounts/\u0022\u003EShippo Managed Account\u003C/a\u003E.",
+        "description": "Creates a new [Shippo Managed Account](https://docs.goshippo.com/docs/platformaccounts/platform_using_accounts/).",
         "operationId": "CreateShippoAccount",
         "parameters": [
           {
@@ -2364,7 +2364,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -2376,7 +2376,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -2396,24 +2396,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -2450,7 +2450,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -2462,7 +2462,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -2482,24 +2482,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -2526,7 +2526,7 @@
           },
           "is_complete": {
             "type": "boolean",
-            "description": "Complete addresses contain all required values.\u003Cbr\u003E\u003Cbr\u003EIncomplete addresses have failed one or multiple \nvalidations.\u003Cbr\u003EIncomplete Addresses are eligible for requesting rates but lack at least one required \nvalue for purchasing labels.",
+            "description": "Complete addresses contain all required values.\n\nIncomplete addresses have failed one or multiple validations. Incomplete Addresses are eligible for requesting rates but lack at least one required value for purchasing labels.",
             "example": true
           },
           "latitude": {
@@ -2579,7 +2579,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -2591,7 +2591,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -2611,24 +2611,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -2655,7 +2655,7 @@
           },
           "is_complete": {
             "type": "boolean",
-            "description": "Complete addresses contain all required values.\u003Cbr\u003E\u003Cbr\u003EIncomplete addresses have failed one or multiple \nvalidations.\u003Cbr\u003EIncomplete Addresses are eligible for requesting rates but lack at least one required \nvalue for purchasing labels.",
+            "description": "Complete addresses contain all required values.\n\nIncomplete addresses have failed one or multiple validations. Incomplete Addresses are eligible for requesting rates but lack at least one required value for purchasing labels.",
             "example": true
           },
           "latitude": {
@@ -2695,7 +2695,7 @@
             "example": false
           }
         },
-        "description": "\u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E object of the recipient / buyer. Will be returned expanded by default."
+        "description": "[Address](/shippoapi/public-api/addresses) object of the recipient / buyer. Will be returned expanded by default."
       },
       "AddressFrom": {
         "required": [
@@ -2706,7 +2706,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -2718,7 +2718,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -2738,24 +2738,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -2782,7 +2782,7 @@
           },
           "is_complete": {
             "type": "boolean",
-            "description": "Complete addresses contain all required values.\u003Cbr\u003E\u003Cbr\u003EIncomplete addresses have failed one or multiple \nvalidations.\u003Cbr\u003EIncomplete Addresses are eligible for requesting rates but lack at least one required \nvalue for purchasing labels.",
+            "description": "Complete addresses contain all required values.\n\nIncomplete addresses have failed one or multiple validations. Incomplete Addresses are eligible for requesting rates but lack at least one required value for purchasing labels.",
             "example": true
           },
           "latitude": {
@@ -2822,7 +2822,7 @@
             "example": false
           }
         },
-        "description": "\u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E object of the sender / seller. Will be returned expanded by default."
+        "description": "[Address](/shippoapi/public-api/addresses) object of the sender / seller. Will be returned expanded by default."
       },
       "AddressReturn": {
         "required": [
@@ -2833,7 +2833,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -2845,7 +2845,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -2865,24 +2865,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -2909,7 +2909,7 @@
           },
           "is_complete": {
             "type": "boolean",
-            "description": "Complete addresses contain all required values.\u003Cbr\u003E\u003Cbr\u003EIncomplete addresses have failed one or multiple \nvalidations.\u003Cbr\u003EIncomplete Addresses are eligible for requesting rates but lack at least one required \nvalue for purchasing labels.",
+            "description": "Complete addresses contain all required values.\n\nIncomplete addresses have failed one or multiple validations. Incomplete Addresses are eligible for requesting rates but lack at least one required value for purchasing labels.",
             "example": true
           },
           "latitude": {
@@ -2949,7 +2949,7 @@
             "example": false
           }
         },
-        "description": "ID of the Address object where the shipment will be sent back to if it is not delivered \n(Only available for UPS, USPS, and Fedex shipments). \u003Cbr/\u003E \nIf this field is not set, your shipments will be returned to the address_from."
+        "description": "ID of the Address object where the shipment will be sent back to if it is not delivered (Only available for UPS, USPS, and Fedex shipments).\n\nIf this field is not set, your shipments will be returned to the address_from."
       },
       "AddressCreateRequest": {
         "required": [
@@ -2960,7 +2960,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -2972,7 +2972,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -2992,24 +2992,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -3050,7 +3050,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -3062,7 +3062,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -3082,24 +3082,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -3130,7 +3130,7 @@
             "example": true
           }
         },
-        "description": "\u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E object of the sender / seller. Will be returned expanded by default.."
+        "description": "[Address](/shippoapi/public-api/addresses) object of the sender / seller. Will be returned expanded by default.."
       },
       "AddressToCreateRequest": {
         "required": [
@@ -3141,7 +3141,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -3153,7 +3153,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -3173,24 +3173,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -3221,7 +3221,7 @@
             "example": true
           }
         },
-        "description": "\u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E object of the recipient / buyer. Will be returned expanded by default."
+        "description": "[Address](/shippoapi/public-api/addresses) object of the recipient / buyer. Will be returned expanded by default."
       },
       "AddressCompleteCreateRequest": {
         "required": [
@@ -3237,7 +3237,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -3249,7 +3249,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -3269,24 +3269,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -3331,7 +3331,7 @@
           "name": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
+            "description": "**required for purchase**\n\nFirst and Last Name of the addressee\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |",
             "example": "Shwan Ippotle"
           },
           "company": {
@@ -3343,7 +3343,7 @@
           "street1": {
             "maxLength": 121,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
+            "description": "**required for purchase**\n\nFirst street line. Usually street number and street name (except for DHL Germany, see street_no).\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | At least one street line required; Max 35 characters per line |",
             "example": "215 Clayton St."
           },
           "street2": {
@@ -3363,24 +3363,24 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\u003Cbr\u003E\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": 94117
           },
           "country": {
             "type": "string",
-            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this \u003Ca href=\u0022https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements\u0022 target=\u0022_blank\u0022\u003Eguide\u003C/a\u003E for a list of country codes.\nSending a country is always required.",
+            "description": "ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like \u0060US\u0060 or \u0060DE\u0060.\nIf using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.\nRefer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.\nSending a country is always required.",
             "example": "US"
           },
           "phone": {
@@ -3469,7 +3469,7 @@
           },
           "state": {
             "type": "string",
-            "description": "**required for purchase for some countries**\u003Cbr\u003E\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some \ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers \nonly accept two or three character state abbreviations.",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some \ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers \nonly accept two or three character state abbreviations.",
             "example": "CA"
           },
           "zip": {
@@ -3479,7 +3479,7 @@
           },
           "country": {
             "type": "string",
-            "description": "\u0022Example: \u0060US\u0060 or \u0060DE\u0060. All accepted values can be found on the \n\u003Ca href=\\\u0022http://www.iso.org/\\\u0022 target=\\\u0022blank\\\u0022\u003EOfficial ISO Website\u003C/a\u003E.\nSending a country is always required.\u0022",
+            "description": "\u0022Example: \u0060US\u0060 or \u0060DE\u0060. All accepted values can be found on the \n[Official ISO Website](http://www.iso.org/).\nSending a country is always required.\u0022",
             "example": "DE"
           },
           "phone": {
@@ -3514,19 +3514,19 @@
             }
           }
         },
-        "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages \ngenerated during validation. Children keys are \u003Ccode\u003Eis_valid\u003C/code\u003E(boolean) and \u003Ccode\u003Emessages\u003C/code\u003E(array)."
+        "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages \ngenerated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array)."
       },
       "AddressValidationResultsMessage": {
         "type": "object",
         "properties": {
           "code": {
             "type": "string",
-            "description": "See \u003Ca href=\u0022/shippoapi/public-api/address-validation-codes\u0022\u003EAddress Validation Codes\u003C/a\u003E",
+            "description": "See [Address Validation Codes](/shippoapi/public-api/address-validation-codes)",
             "example": "Unknown Street"
           },
           "source": {
             "type": "string",
-            "description": "See \u003Ca href=\u0022/shippoapi/public-api/address-validation-source\u0022\u003EAddress Validation Source\u003C/a\u003E",
+            "description": "See [Address Validation Source](/shippoapi/public-api/address-validation-source)",
             "example": "Shippo Address Validator"
           },
           "text": {
@@ -3898,7 +3898,7 @@
           },
           "currency": {
             "type": "string",
-            "description": "The currency that \u0027amount\u0027 is in. The official ISO 4217 currency codes are used, e.g. \u0022USD\u0022 or \u0022EUR\u0022.\n\u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022 target=\u0022blank\u0022\u003EISO 4217 Standard\u003C/a\u003E.",
+            "description": "The currency that \u0027amount\u0027 is in. The official ISO 4217 currency codes are used, e.g. \u0022USD\u0022 or \u0022EUR\u0022.\n[ISO 4217 Standard](http://www.xe.com/iso4217.php).",
             "example": "USD"
           }
         },
@@ -3914,7 +3914,7 @@
           },
           "currency": {
             "type": "string",
-            "description": "The currency that \u0027amount\u0027 is in. The official ISO 4217 currency codes are used, e.g. \u0022USD\u0022 or \u0022EUR\u0022.\n\u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022 target=\u0022blank\u0022\u003EISO 4217 Standard\u003C/a\u003E.",
+            "description": "The currency that \u0027amount\u0027 is in. The official ISO 4217 currency codes are used, e.g. \u0022USD\u0022 or \u0022EUR\u0022.\n[ISO 4217 Standard](http://www.xe.com/iso4217.php).",
             "example": "USD"
           }
         },
@@ -3940,7 +3940,7 @@
           },
           "currency": {
             "type": "string",
-            "description": "The currency that \u0027amount\u0027 is in. The official ISO 4217 currency codes are used, e.g. \u0022USD\u0022 or \u0022EUR\u0022.\n\u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022 target=\u0022blank\u0022\u003EISO 4217 Standard\u003C/a\u003E.",
+            "description": "The currency that \u0027amount\u0027 is in. The official ISO 4217 currency codes are used, e.g. \u0022USD\u0022 or \u0022EUR\u0022.\n[ISO 4217 Standard](http://www.xe.com/iso4217.php).",
             "example": "USD"
           }
         },
@@ -3960,7 +3960,7 @@
           },
           "default_servicelevel_token": {
             "type": "string",
-            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003EServicelevel tokens can be found here.\u003C/a\u003E",
+            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
             "example": "usps_priority"
           },
           "label_filetype": {
@@ -3996,7 +3996,7 @@
           },
           "default_servicelevel_token": {
             "type": "string",
-            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003EServicelevel tokens can be found here.\u003C/a\u003E",
+            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
             "example": "usps_priority"
           },
           "label_filetype": {
@@ -4068,7 +4068,7 @@
           },
           "default_servicelevel_token": {
             "type": "string",
-            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003EServicelevel tokens can be found here.\u003C/a\u003E",
+            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
             "example": "usps_priority"
           },
           "label_filetype": {
@@ -4105,7 +4105,7 @@
           },
           "servicelevel_token": {
             "type": "string",
-            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003Ein this list\u003C/a\u003E \nor \u003Ca href=\u0022/shippoapi/public-api/carrier-accounts/listcarrieraccounts\u0022\u003Eat this endpoint\u003C/a\u003E.",
+            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) \nor [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
             "example": "fedex_ground"
           }
         }
@@ -4132,7 +4132,7 @@
           },
           "servicelevel_token": {
             "type": "string",
-            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003Ein this list\u003C/a\u003E \nor \u003Ca href=\u0022/shippoapi/public-api/carrier-accounts/listcarrieraccounts\u0022\u003Eat this endpoint\u003C/a\u003E.",
+            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) \nor [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
             "example": "fedex_ground"
           },
           "messages": {
@@ -4185,7 +4185,7 @@
           },
           "servicelevel_token": {
             "type": "string",
-            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003Ein this list\u003C/a\u003E \nor \u003Ca href=\u0022/shippoapi/public-api/carrier-accounts/listcarrieraccounts\u0022\u003Eat this endpoint\u003C/a\u003E.",
+            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) \nor [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
             "example": "fedex_ground"
           },
           "shipment": {
@@ -4380,14 +4380,14 @@
         "properties": {
           "aes_itn": {
             "type": "string",
-            "description": "**required if eel_pfc is \u0060AES_ITN\u0060**\u003Cbr\u003E\nAES / ITN reference of the shipment."
+            "description": "**required if eel_pfc is \u0060AES_ITN\u0060**\n\nAES / ITN reference of the shipment."
           },
           "b13a_filing_option": {
             "type": "string"
           },
           "b13a_number": {
             "type": "string",
-            "description": "**must be provided if and only if b13a_filing_option is provided**\u003Cbr\u003E\nRepresents:\u003Cbr\u003E the Proof of Report (POR) Number when b13a_filing_option is \u0060FILED_ELECTRONICALLY\u0060;\u003Cbr\u003E \nthe Summary ID Number when b13a_filing_option is \u0060SUMMARY_REPORTING\u0060;\u003Cbr\u003E \nor the Exemption Number when b13a_filing_option is \u0060NOT_REQUIRED\u0060."
+            "description": "**must be provided if and only if b13a_filing_option is provided**\n\nRepresents the Proof of Report (POR) Number when b13a_filing_option is \u0060FILED_ELECTRONICALLY\u0060; the Summary ID Number when b13a_filing_option is \u0060SUMMARY_REPORTING\u0060; or the Exemption Number when b13a_filing_option is \u0060NOT_REQUIRED\u0060."
           },
           "certificate": {
             "type": "string",
@@ -4408,7 +4408,7 @@
           },
           "contents_explanation": {
             "type": "string",
-            "description": "**required if contents_type is \u0060OTHER\u0060**\u003Cbr\u003E\nExplanation of the type of goods of the shipment.",
+            "description": "**required if contents_type is \u0060OTHER\u0060**\n\nExplanation of the type of goods of the shipment.",
             "example": "T-Shirt purchase"
           },
           "disclaimer": {
@@ -4469,7 +4469,7 @@
       "CustomsDeclarationB13AFilingOptionEnum": {
         "type": "string",
         "additionalProperties": false,
-        "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n\u003Ca href=\u0022https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003E More information on reporting commercial exports from Canada. \u003C/a\u003E\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-b13a-filing-option\u0022\u003Ehere\u003C/a\u003E"
+        "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)"
       },
       "AddressCompleteCreateRequestAllOf2": {
         "required": [
@@ -4491,7 +4491,7 @@
       "CustomsDeclarationContentsTypeEnum": {
         "type": "string",
         "additionalProperties": false,
-        "description": "Type of goods of the shipment.  \nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-contents-type\u0022\u003Ehere\u003C/a\u003E"
+        "description": "Type of goods of the shipment.  \nAllowed values available [here](/shippoapi/public-api/customs-declaration-contents-type)"
       },
       "AddressCreateRequestAllOf2": {
         "required": [
@@ -4509,7 +4509,7 @@
       "CustomsDeclarationEelPfcEnum": {
         "type": "string",
         "additionalProperties": false,
-        "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-eelpfc\u0022\u003Ehere\u003C/a\u003E"
+        "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)"
       },
       "AddressAllOf2": {
         "required": [
@@ -4519,7 +4519,7 @@
         "properties": {
           "is_complete": {
             "type": "boolean",
-            "description": "Complete addresses contain all required values.\u003Cbr\u003E\u003Cbr\u003EIncomplete addresses have failed one or multiple \nvalidations.\u003Cbr\u003EIncomplete Addresses are eligible for requesting rates but lack at least one required \nvalue for purchasing labels.",
+            "description": "Complete addresses contain all required values.\n\nIncomplete addresses have failed one or multiple validations. Incomplete Addresses are eligible for requesting rates but lack at least one required value for purchasing labels.",
             "example": true
           },
           "latitude": {
@@ -4563,7 +4563,7 @@
       "CustomsDeclarationIncotermEnum": {
         "type": "string",
         "additionalProperties": false,
-        "description": "The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.\neDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.\nIf expecting DAP for other carriers, please use DDU.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-incoterm\u0022\u003Ehere\u003C/a\u003E\nCarrier-specific restrictions are in the table below.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Must be one of DDP, DDU, FCA, DAP |"
+        "description": "The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.\neDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.\nIf expecting DAP for other carriers, please use DDU.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-incoterm)\nCarrier-specific restrictions are in the table below.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Must be one of DDP, DDU, FCA, DAP |"
       },
       "ServiceGroupListResponseResponse": {
         "type": "array",
@@ -4574,7 +4574,7 @@
       "CustomsDeclarationNonDeliveryOptionEnum": {
         "type": "string",
         "additionalProperties": false,
-        "description": "Indicates how the carrier should proceed in case the shipment can\u0027t be delivered.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-non-delivery-option\u0022\u003Ehere\u003C/a\u003E"
+        "description": "Indicates how the carrier should proceed in case the shipment can\u0027t be delivered.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-non-delivery-option)"
       },
       "CustomsDeclaration": {
         "title": "Customs Declaration",
@@ -4589,14 +4589,14 @@
         "properties": {
           "aes_itn": {
             "type": "string",
-            "description": "**required if eel_pfc is \u0060AES_ITN\u0060**\u003Cbr\u003E\nAES / ITN reference of the shipment."
+            "description": "**required if eel_pfc is \u0060AES_ITN\u0060**\n\nAES / ITN reference of the shipment."
           },
           "b13a_filing_option": {
             "type": "string"
           },
           "b13a_number": {
             "type": "string",
-            "description": "**must be provided if and only if b13a_filing_option is provided**\u003Cbr\u003E\nRepresents:\u003Cbr\u003E the Proof of Report (POR) Number when b13a_filing_option is \u0060FILED_ELECTRONICALLY\u0060;\u003Cbr\u003E \nthe Summary ID Number when b13a_filing_option is \u0060SUMMARY_REPORTING\u0060;\u003Cbr\u003E \nor the Exemption Number when b13a_filing_option is \u0060NOT_REQUIRED\u0060."
+            "description": "**must be provided if and only if b13a_filing_option is provided**\n\nRepresents the Proof of Report (POR) Number when b13a_filing_option is \u0060FILED_ELECTRONICALLY\u0060; the Summary ID Number when b13a_filing_option is \u0060SUMMARY_REPORTING\u0060; or the Exemption Number when b13a_filing_option is \u0060NOT_REQUIRED\u0060."
           },
           "certificate": {
             "type": "string",
@@ -4617,7 +4617,7 @@
           },
           "contents_explanation": {
             "type": "string",
-            "description": "**required if contents_type is \u0060OTHER\u0060**\u003Cbr\u003E\nExplanation of the type of goods of the shipment.",
+            "description": "**required if contents_type is \u0060OTHER\u0060**\n\nExplanation of the type of goods of the shipment.",
             "example": "T-Shirt purchase"
           },
           "disclaimer": {
@@ -4669,15 +4669,15 @@
           },
           "contents_type": {
             "type": "string",
-            "description": "Type of goods of the shipment.  \nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-contents-type\u0022\u003Ehere\u003C/a\u003E"
+            "description": "Type of goods of the shipment.  \nAllowed values available [here](/shippoapi/public-api/customs-declaration-contents-type)"
           },
           "eel_pfc": {
             "type": "string",
-            "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-eelpfc\u0022\u003Ehere\u003C/a\u003E"
+            "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)"
           },
           "incoterm": {
             "type": "string",
-            "description": "The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.\neDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.\nIf expecting DAP for other carriers, please use DDU.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-incoterm\u0022\u003Ehere\u003C/a\u003E\nCarrier-specific restrictions are in the table below.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Must be one of DDP, DDU, FCA, DAP |"
+            "description": "The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.\neDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.\nIf expecting DAP for other carriers, please use DDU.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-incoterm)\nCarrier-specific restrictions are in the table below.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Must be one of DDP, DDU, FCA, DAP |"
           },
           "invoiced_charges": {
             "$ref": "#/components/schemas/CustomsInvoicedCharges"
@@ -4691,7 +4691,7 @@
           },
           "non_delivery_option": {
             "type": "string",
-            "description": "Indicates how the carrier should proceed in case the shipment can\u0027t be delivered.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-non-delivery-option\u0022\u003Ehere\u003C/a\u003E"
+            "description": "Indicates how the carrier should proceed in case the shipment can\u0027t be delivered.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-non-delivery-option)"
           },
           "object_created": {
             "type": "string",
@@ -4740,14 +4740,14 @@
         "properties": {
           "aes_itn": {
             "type": "string",
-            "description": "**required if eel_pfc is \u0060AES_ITN\u0060**\u003Cbr\u003E\nAES / ITN reference of the shipment."
+            "description": "**required if eel_pfc is \u0060AES_ITN\u0060**\n\nAES / ITN reference of the shipment."
           },
           "b13a_filing_option": {
             "type": "string"
           },
           "b13a_number": {
             "type": "string",
-            "description": "**must be provided if and only if b13a_filing_option is provided**\u003Cbr\u003E\nRepresents:\u003Cbr\u003E the Proof of Report (POR) Number when b13a_filing_option is \u0060FILED_ELECTRONICALLY\u0060;\u003Cbr\u003E \nthe Summary ID Number when b13a_filing_option is \u0060SUMMARY_REPORTING\u0060;\u003Cbr\u003E \nor the Exemption Number when b13a_filing_option is \u0060NOT_REQUIRED\u0060."
+            "description": "**must be provided if and only if b13a_filing_option is provided**\n\nRepresents the Proof of Report (POR) Number when b13a_filing_option is \u0060FILED_ELECTRONICALLY\u0060; the Summary ID Number when b13a_filing_option is \u0060SUMMARY_REPORTING\u0060; or the Exemption Number when b13a_filing_option is \u0060NOT_REQUIRED\u0060."
           },
           "certificate": {
             "type": "string",
@@ -4768,7 +4768,7 @@
           },
           "contents_explanation": {
             "type": "string",
-            "description": "**required if contents_type is \u0060OTHER\u0060**\u003Cbr\u003E\nExplanation of the type of goods of the shipment.",
+            "description": "**required if contents_type is \u0060OTHER\u0060**\n\nExplanation of the type of goods of the shipment.",
             "example": "T-Shirt purchase"
           },
           "disclaimer": {
@@ -4864,7 +4864,7 @@
         "properties": {
           "eori_number": {
             "type": "string",
-            "description": "Economic Operators\u0027 Registration and Identification (EORI) number. Must start with a 2 character \ncountry code followed by a 6-17 character alphanumeric identifier (e.g. PL1234567890ABCDE).\n\u003Ca href=\u0022https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en\u0022\u003EMore information on EORI.\u003C/a\u003E",
+            "description": "Economic Operators\u0027 Registration and Identification (EORI) number. Must start with a 2 character \ncountry code followed by a 6-17 character alphanumeric identifier (e.g. PL1234567890ABCDE).\n[More information on EORI.](https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en)",
             "example": "PL123456790ABCDE"
           },
           "tax_id": {
@@ -4939,7 +4939,7 @@
           },
           "origin_country": {
             "type": "string",
-            "description": "\u0022Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the \u003Ca href=\\\u0022http://www.iso.org/\\\u0022 target=\\\u0022_blank\\\u0022\u003EOfficial ISO Website\u003C/a\u003E.\u0022"
+            "description": "\u0022Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/).\u0022"
           },
           "quantity": {
             "type": "integer",
@@ -4968,7 +4968,7 @@
           },
           "value_currency": {
             "type": "string",
-            "description": "Currency used for value_amount. The \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           }
         }
@@ -5010,7 +5010,7 @@
           },
           "origin_country": {
             "type": "string",
-            "description": "\u0022Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the \u003Ca href=\\\u0022http://www.iso.org/\\\u0022 target=\\\u0022_blank\\\u0022\u003EOfficial ISO Website\u003C/a\u003E.\u0022"
+            "description": "\u0022Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/).\u0022"
           },
           "quantity": {
             "type": "integer",
@@ -5039,7 +5039,7 @@
           },
           "value_currency": {
             "type": "string",
-            "description": "Currency used for value_amount. The \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "object_created": {
@@ -5112,7 +5112,7 @@
           },
           "origin_country": {
             "type": "string",
-            "description": "\u0022Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the \u003Ca href=\\\u0022http://www.iso.org/\\\u0022 target=\\\u0022_blank\\\u0022\u003EOfficial ISO Website\u003C/a\u003E.\u0022"
+            "description": "\u0022Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/).\u0022"
           },
           "quantity": {
             "type": "integer",
@@ -5141,7 +5141,7 @@
           },
           "value_currency": {
             "type": "string",
-            "description": "Currency used for value_amount. The \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           }
         },
@@ -5216,7 +5216,7 @@
             "$ref": "#/components/schemas/DangerousGoodsLithiumBatteries"
           }
         },
-        "description": "Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contents\nare provided, only certain USPS service levels will be eligible. For more information, see our\n\u003Ca href=\u0022https://docs.goshippo.com/docs/shipments/hazmat/\u0022\u003Eguide on hazardous or dangerous materials shipping\u003C/a\u003E."
+        "description": "Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contents\nare provided, only certain USPS service levels will be eligible. For more information, see our\n[guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/)."
       },
       "DefaultParcelTemplate": {
         "title": "Default Parcel Template",
@@ -5289,12 +5289,12 @@
           },
           "currency": {
             "type": "string",
-            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "currency_local": {
             "type": "string",
-            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
+            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
             "example": "USD"
           },
           "estimated_days": {
@@ -5525,7 +5525,7 @@
         "properties": {
           "currency": {
             "type": "string",
-            "description": "**Required if total_price is provided**\u003Cbr\u003E\nCurrency of the \u003Ccode\u003Etotal_price\u003C/code\u003E and \u003Ccode\u003Etotal_tax\u003C/code\u003E amounts.",
+            "description": "**Required if total_price is provided**\n\nCurrency of the \u0060total_price\u0060 and \u0060total_tax\u0060 amounts.",
             "example": "USD"
           },
           "notes": {
@@ -5553,7 +5553,7 @@
           },
           "shipping_cost_currency": {
             "type": "string",
-            "description": "**Required if shipping_cost is provided**\u003Cbr\u003E\nCurrency of the \u003Ccode\u003Eshipping_cost\u003C/code\u003E amount.",
+            "description": "**Required if shipping_cost is provided**\n\nCurrency of the \u0060shipping_cost\u0060 amount.",
             "example": "USD"
           },
           "shipping_method": {
@@ -5597,7 +5597,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Current state of the order. See the \u003Ca href=\u0022https://docs.goshippo.com/docs/orders/orders/\u0022\u003Eorders tutorial\u003C/a\u003E \nfor the logic of how the status is handled.",
+        "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) \nfor the logic of how the status is handled.",
         "example": "PAID",
         "x-ms-enum": {
           "name": "OrderStatusEnum",
@@ -5643,7 +5643,7 @@
         "properties": {
           "currency": {
             "type": "string",
-            "description": "**Required if total_price is provided**\u003Cbr\u003E\nCurrency of the \u003Ccode\u003Etotal_price\u003C/code\u003E and \u003Ccode\u003Etotal_tax\u003C/code\u003E amounts.",
+            "description": "**Required if total_price is provided**\n\nCurrency of the \u0060total_price\u0060 and \u0060total_tax\u0060 amounts.",
             "example": "USD"
           },
           "notes": {
@@ -5671,7 +5671,7 @@
           },
           "shipping_cost_currency": {
             "type": "string",
-            "description": "**Required if shipping_cost is provided**\u003Cbr\u003E\nCurrency of the \u003Ccode\u003Eshipping_cost\u003C/code\u003E amount.",
+            "description": "**Required if shipping_cost is provided**\n\nCurrency of the \u0060shipping_cost\u0060 amount.",
             "example": "USD"
           },
           "shipping_method": {
@@ -5712,7 +5712,7 @@
             "items": {
               "$ref": "#/components/schemas/LineItem"
             },
-            "description": "Array of \u003Ca href=\u0022/shippoapi/public-api/orders/lineitem\u0022\u003Eline item\u003C/a\u003E objects representing the items in this order. \nAll objects will be returned expanded by default."
+            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. \nAll objects will be returned expanded by default."
           },
           "object_id": {
             "type": "string",
@@ -5732,7 +5732,7 @@
             "items": {
               "$ref": "#/components/schemas/OrderTransactionsItem"
             },
-            "description": "Array of \u003Ca href=\u0022/shippoapi/public-api/transactions\u0022\u003Etransaction\u003C/a\u003E objects representing all shipping labels purchased for this order.\nAll objects are returned expanded with a limited number of fields by default."
+            "description": "Array of [transaction](/shippoapi/public-api/transactions) objects representing all shipping labels purchased for this order.\nAll objects are returned expanded with a limited number of fields by default."
           }
         },
         "x-tags": [
@@ -5789,7 +5789,7 @@
         "properties": {
           "currency": {
             "type": "string",
-            "description": "**Required if total_price is provided**\u003Cbr\u003E\nCurrency of the \u003Ccode\u003Etotal_price\u003C/code\u003E and \u003Ccode\u003Etotal_tax\u003C/code\u003E amounts.",
+            "description": "**Required if total_price is provided**\n\nCurrency of the \u0060total_price\u0060 and \u0060total_tax\u0060 amounts.",
             "example": "USD"
           },
           "notes": {
@@ -5817,7 +5817,7 @@
           },
           "shipping_cost_currency": {
             "type": "string",
-            "description": "**Required if shipping_cost is provided**\u003Cbr\u003E\nCurrency of the \u003Ccode\u003Eshipping_cost\u003C/code\u003E amount.",
+            "description": "**Required if shipping_cost is provided**\n\nCurrency of the \u0060shipping_cost\u0060 amount.",
             "example": "USD"
           },
           "shipping_method": {
@@ -5858,7 +5858,7 @@
             "items": {
               "$ref": "#/components/schemas/LineItemCreateRequest"
             },
-            "description": "Array of \u003Ca href=\u0022/shippoapi/public-api/orders/lineitem\u0022\u003Eline item\u003C/a\u003E objects representing the items in this order. \nAll objects will be returned expanded by default."
+            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. \nAll objects will be returned expanded by default."
           }
         }
       },
@@ -6146,7 +6146,7 @@
             "$ref": "#/components/schemas/ParcelInsuranceProvider"
           }
         },
-        "description": "To add insurance to your parcel, specify \u0060amount\u0060, \u0060content\u0060 and \u0060currency\u0060. \u003Cbr\u003E\u003Cbr\u003EIf you do not want to add insurance to you parcel, do not set these parameters."
+        "description": "To add insurance to your parcel, specify \u0060amount\u0060, \u0060content\u0060 and \u0060currency\u0060. If you do not want to add insurance to your parcel, do not set these parameters."
       },
       "PickupBase": {
         "required": [
@@ -6160,7 +6160,7 @@
         "properties": {
           "carrier_account": {
             "type": "string",
-            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our \u003Ca href=\u0022/shippoapi/public-api/carrier-accounts\u0022\u003ECarrier Accounts\u003C/a\u003E endpoint.",
+            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
             "example": "adcfdddf8ec64b84ad22772bce3ea37a"
           },
           "location": {
@@ -6201,7 +6201,7 @@
         "properties": {
           "carrier_account": {
             "type": "string",
-            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our \u003Ca href=\u0022/shippoapi/public-api/carrier-accounts\u0022\u003ECarrier Accounts\u003C/a\u003E endpoint.",
+            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
             "example": "adcfdddf8ec64b84ad22772bce3ea37a"
           },
           "location": {
@@ -6302,7 +6302,7 @@
         "properties": {
           "carrier_account": {
             "type": "string",
-            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our \u003Ca href=\u0022/shippoapi/public-api/carrier-accounts\u0022\u003ECarrier Accounts\u003C/a\u003E endpoint.",
+            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
             "example": "adcfdddf8ec64b84ad22772bce3ea37a"
           },
           "location": {
@@ -6388,12 +6388,12 @@
           },
           "currency": {
             "type": "string",
-            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "currency_local": {
             "type": "string",
-            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
+            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
             "example": "USD"
           }
         }
@@ -6427,12 +6427,12 @@
           },
           "currency": {
             "type": "string",
-            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "currency_local": {
             "type": "string",
-            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
+            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
             "example": "USD"
           },
           "arrives_by": {
@@ -6718,7 +6718,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of the service group.\u003Cbr\u003E \n\u0060LIVE_RATE\u0060 - Shippo will make a rating request and return real-time rates for the shipping group, only falling back to the specified flat rate amount if no rates match a service level in the service group.\u003Cbr\u003E \n\u0060FLAT_RATE\u0060 - Returns a shipping option with the specified flat rate amount.\u003Cbr\u003E \n\u0060FREE_SHIPPING\u0060 - Returns a shipping option with a price of $0 only if the total cost of items exceeds the amount defined by \u0060free_shipping_threshold_min\u0060",
+        "description": "\u0022The type of the service group.\n\n- \u0060LIVE_RATE\u0060: Shippo will make a rating request and return real-time rates for the shipping group, only falling back to the specified flat rate amount if no rates match a service level in the service group.\n- \u0060FLAT_RATE\u0060: returns a shipping option with the specified flat rate amount.\n- \u0060FREE_SHIPPING\u0060: returns a shipping option with a price of $0 only if the total cost of items exceeds the amount defined by \u0060free_shipping_threshold_min\u0060\u0022",
         "example": "FLAT_RATE",
         "x-ms-enum": {
           "name": "ServiceGroupTypeEnum",
@@ -6811,18 +6811,13 @@
         ]
       },
       "ServiceGroupCreateRequest": {
-        "type": "object",
-        "allOf": [
-          {
-            "required": [
-              "name",
-              "description",
-              "type",
-              "service_levels"
-            ],
-            "type": "object"
-          }
+        "required": [
+          "name",
+          "description",
+          "type",
+          "service_levels"
         ],
+        "type": "object",
         "properties": {
           "description": {
             "type": "string",
@@ -6872,20 +6867,15 @@
         }
       },
       "ServiceGroupUpdateRequest": {
-        "type": "object",
-        "allOf": [
-          {
-            "required": [
-              "name",
-              "description",
-              "type",
-              "service_levels",
-              "object_id",
-              "is_active"
-            ],
-            "type": "object"
-          }
+        "required": [
+          "name",
+          "description",
+          "type",
+          "service_levels",
+          "object_id",
+          "is_active"
         ],
+        "type": "object",
         "properties": {
           "description": {
             "type": "string",
@@ -6954,7 +6944,7 @@
           },
           "service_level_token": {
             "type": "string",
-            "description": "Service level token, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\u003Cbr\u003E\nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003EService Levels\u003C/a\u003E.",
+            "description": "Service level token, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
             "example": "ups_next_day_air_saver"
           }
         }
@@ -6973,7 +6963,7 @@
           },
           "token": {
             "type": "string",
-            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003Eservicelevels\u003C/a\u003E.",
+            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee [servicelevels](/shippoapi/public-api/service-levels).",
             "example": "usps_priority_express"
           },
           "extended_token": {
@@ -6998,7 +6988,7 @@
           },
           "token": {
             "type": "string",
-            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003Eservicelevels\u003C/a\u003E.",
+            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee [servicelevels](/shippoapi/public-api/service-levels).",
             "example": "usps_priority_express"
           },
           "extended_token": {
@@ -7117,7 +7107,7 @@
             "items": {
               "$ref": "#/components/schemas/Rate"
             },
-            "description": "An array with all available rates. If \u003Ccode\u003Easync\u003C/code\u003E has been set to \u003Ccode\u003Efalse\u003C/code\u003E in the request,\nthis will be populated with all available rates in the response. Otherwise rates will be created\nasynchronously and this array will initially be empty."
+            "description": "An array with all available rates. If \u0060async\u0060 has been set to \u0060false\u0060 in the request,\nthis will be populated with all available rates in the response. Otherwise rates will be created\nasynchronously and this array will initially be empty."
           },
           "status": {
             "$ref": "#/components/schemas/ShipmentStatus"
@@ -7173,7 +7163,7 @@
             "items": {
               "type": "string"
             },
-            "description": "List of \u003Ca href=\u0022/shippoapi/public-api/carrier-accounts\u0022\u003ECarrier Accounts\u003C/a\u003E \u0060object_id\u0060s used to filter \nthe returned rates.  If set, only rates from these carriers will be returned."
+            "description": "List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) \u0060object_id\u0060s used to filter \nthe returned rates.  If set, only rates from these carriers will be returned."
           },
           "parcels": {
             "type": "array",
@@ -7300,7 +7290,7 @@
           },
           "is_return": {
             "type": "boolean",
-            "description": "This field specifies if it is a scan-based return shipment. See the \u003Ca href=\u0022https://docs.goshippo.com/docs/shipments/returns/\u0022\u003ECreate a return shipment\u003C/a\u003E section for more details."
+            "description": "This field specifies if it is a scan-based return shipment. See the [Create a return shipment](https://docs.goshippo.com/docs/shipments/returns/) section for more details."
           },
           "lasership_attrs": {
             "type": "array",
@@ -7488,7 +7478,7 @@
       "ConnectExistingOwnAccountParameters": {
         "title": "Account parameters",
         "type": "object",
-        "description": "\u0022An array of additional parameters for the account, such as e.g. password or token. Please check our \n\u003Ca href=\\\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\\\u0022\u003Ecarrier accounts guide\u003C/a\u003E \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n\u0022"
+        "description": "\u0022An array of additional parameters for the account, such as e.g. password or token. Please check our \n[carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n\u0022"
       },
       "Insurance": {
         "type": "object",
@@ -7512,7 +7502,7 @@
             "$ref": "#/components/schemas/InsuranceProvider"
           }
         },
-        "description": "To add 3rd party insurance powered by \u003Ca href=\u0022https://docs.goshippo.com/docs/shipments/shippinginsurance/\u0022\u003EXCover\u003C/a\u003E, \nspecify \u003Cbr\u003E \u0060amount\u0060, \u0060content\u0060, and \u0060currency\u0060. \u003Cbr\u003E Alternatively, you can choose carrier provided insurance \nby additionally specifying \u0060provider\u0060 (UPS, FedEx and OnTrac only). \u003Cbr\u003E\u003Cbr\u003E If you do not want to add insurance \nto your shipment, do not set these parameters."
+        "description": "To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), \nspecify \u0060amount\u0060, \u0060content\u0060, and \u0060currency\u0060. Alternatively, you can choose carrier provided insurance \nby additionally specifying \u0060provider\u0060 (UPS, FedEx and OnTrac only).\n\nIf you do not want to add insurance \nto your shipment, do not set these parameters."
       },
       "InvoiceNumber": {
         "type": "object",
@@ -7539,7 +7529,7 @@
         "properties": {
           "currency": {
             "type": "string",
-            "description": "Currency of the \u003Ccode\u003Etotal_price\u003C/code\u003E amount.",
+            "description": "Currency of the \u0060total_price\u0060 amount.",
             "example": "USD"
           },
           "manufacture_country": {
@@ -7587,7 +7577,7 @@
           },
           "weight": {
             "type": "string",
-            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u003Ccode\u003Etotal_weight\u003C/code\u003E value of the order object.",
+            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u0060total_weight\u0060 value of the order object.",
             "example": 0.4
           },
           "weight_unit": {
@@ -7601,7 +7591,7 @@
         "properties": {
           "currency": {
             "type": "string",
-            "description": "Currency of the \u003Ccode\u003Etotal_price\u003C/code\u003E amount.",
+            "description": "Currency of the \u0060total_price\u0060 amount.",
             "example": "USD"
           },
           "manufacture_country": {
@@ -7649,7 +7639,7 @@
           },
           "weight": {
             "type": "string",
-            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u003Ccode\u003Etotal_weight\u003C/code\u003E value of the order object.",
+            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u0060total_weight\u0060 value of the order object.",
             "example": 0.4
           },
           "weight_unit": {
@@ -7661,7 +7651,7 @@
             "example": "abf7d5675d744b6ea9fdb6f796b28f28"
           }
         },
-        "description": "\u0022\u003Cp style=\\\u0022text-align: center; background-color: #F2F3F4;\\\u0022\u003E\n  \u003C/br\u003ELine Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource\n  in the future. Currently it\u0027s a nested object within the order resource.\u003C/br\u003E\u003C/br\u003E\n\u003C/p\u003E\nA line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.\u0022",
+        "description": "Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource\nin the future. Currently it\u0027s a nested object within the order resource.\n\nA line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.",
         "x-tags": [
           "Orders"
         ]
@@ -7671,7 +7661,7 @@
         "properties": {
           "currency": {
             "type": "string",
-            "description": "Currency of the \u003Ccode\u003Etotal_price\u003C/code\u003E amount.",
+            "description": "Currency of the \u0060total_price\u0060 amount.",
             "example": "USD"
           },
           "manufacture_country": {
@@ -7719,7 +7709,7 @@
           },
           "weight": {
             "type": "string",
-            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u003Ccode\u003Etotal_weight\u003C/code\u003E value of the order object.",
+            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u0060total_weight\u0060 value of the order object.",
             "example": 0.4
           },
           "weight_unit": {
@@ -7769,7 +7759,7 @@
           },
           "carrier": {
             "type": "string",
-            "description": "Name of the carrier of the shipment to track. See \u003Ca href=\u0022/shippoapi/public-api/carriers\u0022\u003ECarriers\u003C/a\u003E.",
+            "description": "Name of the carrier of the shipment to track. See [Carriers](/shippoapi/public-api/carriers).",
             "example": "usps"
           },
           "eta": {
@@ -7802,7 +7792,7 @@
             "items": {
               "$ref": "#/components/schemas/TrackingStatus"
             },
-            "description": "A list of tracking events, following the same structure as \u003Ccode\u003Etracking_status\u003C/code\u003E. \nIt contains a full history of all tracking statuses, starting with the earlier tracking event first."
+            "description": "A list of tracking events, following the same structure as \u0060tracking_status\u0060. \nIt contains a full history of all tracking statuses, starting with the earlier tracking event first."
           },
           "tracking_number": {
             "type": "string",
@@ -7814,7 +7804,7 @@
           },
           "transaction": {
             "type": "string",
-            "description": "The \u003Ccode\u003Eobject_id\u003C/code\u003E of the transaction associated with this tracking object. \nThis field is visible only to the object owner of the transaction."
+            "description": "The \u0060object_id\u0060 of the transaction associated with this tracking object. \nThis field is visible only to the object owner of the transaction."
           }
         },
         "x-tags": [
@@ -8006,12 +7996,12 @@
         "properties": {
           "code": {
             "type": "string",
-            "description": "A code that represents the substatus of the shipment. See the \u003Ca href=\u0022https://docs.goshippo.com/docs/tracking/tracking/#event-definitions\u0022\u003EEvent Definitions\u003C/a\u003E for more information.",
+            "description": "A code that represents the substatus of the shipment. See the [Event Definitions](https://docs.goshippo.com/docs/tracking/tracking/#event-definitions) for more information.",
             "example": "information_received"
           },
           "text": {
             "type": "string",
-            "description": "A human-readable description of the substatus. See the \u003Ca href=\u0022https://docs.goshippo.com/docs/tracking/tracking/#event-definitions\u0022\u003EEvent Definitions\u003C/a\u003E for more information.",
+            "description": "A human-readable description of the substatus. See the [Event Definitions](https://docs.goshippo.com/docs/tracking/tracking/#event-definitions) for more information.",
             "example": "Information about the package received."
           },
           "action_required": {
@@ -8269,12 +8259,12 @@
           },
           "currency": {
             "type": "string",
-            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "currency_local": {
             "type": "string",
-            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe \u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022\u003Eofficial ISO 4217\u003C/a\u003E currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
+            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
             "example": "USD"
           },
           "object_id": {
@@ -8294,12 +8284,12 @@
           },
           "servicelevel_name": {
             "type": "string",
-            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), \nalong with other properties.  These names vary depending on the provider.\u003Cbr\u003E\nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003EService Levels\u003C/a\u003E.",
+            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), \nalong with other properties.  These names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
             "example": "Priority Mail"
           },
           "servicelevel_token": {
             "type": "string",
-            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003Eservicelevels\u003C/a\u003E.",
+            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee [servicelevels](/shippoapi/public-api/service-levels).",
             "example": "fedex_ground"
           }
         }
@@ -8468,7 +8458,7 @@
           },
           "currency": {
             "type": "string",
-            "description": "The currency that \u0027amount\u0027 is in. The official ISO 4217 currency codes are used, e.g. \u0022USD\u0022 or \u0022EUR\u0022.\n\u003Ca href=\u0022http://www.xe.com/iso4217.php\u0022 target=\u0022blank\u0022\u003EISO 4217 Standard\u003C/a\u003E.",
+            "description": "The currency that \u0027amount\u0027 is in. The official ISO 4217 currency codes are used, e.g. \u0022USD\u0022 or \u0022EUR\u0022.\n[ISO 4217 Standard](http://www.xe.com/iso4217.php).",
             "example": "USD"
           },
           "charge_conversion": {
@@ -8502,7 +8492,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The type of the Invoice Item.\n|Type| Description|\n|:---|:---|\n| LABEL_PAYMENT | Invoice Item for the payment of a label. |\n| LABEL_SURCHARGE | Invoice Item for a surcharge of a label. See \u003Ca href=\u0022https://support.goshippo.com/hc/en-us/articles/115004734443-Understanding-Postal-Surcharges-in-Shippo\u0022\u003E here \u003C/a\u003E for more information. |\n| LABEL_REFUND | Invoice Item for a refund of a label. |\n| ONE_OFF_CREDIT | Invoice Item for credit given by Shippo. |\n| TRACK_FEE | Invoice Item for fees associated with tracking services. |\n| ADDRESS_VALIDATION_FEE | Invoice Item for fees associated with global address validation services. |\n| SUBSCRIPTION_PLAN_FEE | Invoice Item for subscription plan fees. |\n| PROMO_CODE_CREDIT | Invoice Item for promotional code related credits. |\n| PREAUTH_CAPTURE | Invoice Item for preauthorization capture. Represents a credit. See \u003Ca href=\u0022https://support.goshippo.com/hc/en-us/articles/4407966198171-Pre-Authorization-Charges-for-New-Accounts-in-Shippo\u0022\u003E here \u003C/a\u003E for more information. |\n| LABEL_PAYMENT_ADJUSTMENT | Invoice Item for adjustments on label purchases. |\n| LABEL_REFUND_ADJUSTMENT | Invoice Item for adjustments on label refunds. |\n",
+        "description": "The type of the Invoice Item.\n|Type| Description|\n|:---|:---|\n| LABEL_PAYMENT | Invoice Item for the payment of a label. |\n| LABEL_SURCHARGE | Invoice Item for a surcharge of a label. See [here](https://support.goshippo.com/hc/en-us/articles/115004734443-Understanding-Postal-Surcharges-in-Shippo) for more information. |\n| LABEL_REFUND | Invoice Item for a refund of a label. |\n| ONE_OFF_CREDIT | Invoice Item for credit given by Shippo. |\n| TRACK_FEE | Invoice Item for fees associated with tracking services. |\n| ADDRESS_VALIDATION_FEE | Invoice Item for fees associated with global address validation services. |\n| SUBSCRIPTION_PLAN_FEE | Invoice Item for subscription plan fees. |\n| PROMO_CODE_CREDIT | Invoice Item for promotional code related credits. |\n| PREAUTH_CAPTURE | Invoice Item for preauthorization capture. Represents a credit. See [here](https://support.goshippo.com/hc/en-us/articles/4407966198171-Pre-Authorization-Charges-for-New-Accounts-in-Shippo) for more information. |\n| LABEL_PAYMENT_ADJUSTMENT | Invoice Item for adjustments on label purchases. |\n| LABEL_REFUND_ADJUSTMENT | Invoice Item for adjustments on label refunds. |\n",
         "x-ms-enum": {
           "name": "InvoiceItemTypesEnum",
           "modelAsString": false,
@@ -8795,7 +8785,7 @@
             "description": "Whether the user agrees to the UPS terms and conditions or not. Error 400 will be returned if passed in as false"
           }
         },
-        "description": "\u0022An array of additional parameters for the account, such as e.g. password or token.\nPlease check the \u003Ca href=\\\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\\\u0022\u003Ecarrier accounts tutorial\u003C/a\u003E page for the parameters per carrier.\u003Cbr\u003E \nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\u0022"
+        "description": "\u0022An array of additional parameters for the account, such as e.g. password or token.\nPlease check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\u0022"
       },
       "CarrierAccountBase": {
         "required": [
@@ -8806,7 +8796,7 @@
         "properties": {
           "account_id": {
             "type": "string",
-            "description": "Unique identifier of the account. Please check the \u003Ca href=\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\u0022\u003Ecarrier accounts tutorial\u003C/a\u003E \npage for the \u0060account_id\u0060 per carrier.\u003Cbr\u003E \nTo protect account information, this field will be masked in any API response.",
+            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \npage for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
             "example": "****"
           },
           "active": {
@@ -8815,7 +8805,7 @@
           },
           "carrier": {
             "type": "string",
-            "description": "Carrier token, see \u003Ca href=\u0022/shippoapi/public-api/carriers\u0022\u003ECarriers\u003C/a\u003E\u003Cbr\u003E\nPlease check the \u003Ca href=\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\u0022\u003Ecarrier accounts tutorial\u003C/a\u003E page for all supported carriers.",
+            "description": "Carrier token, see [Carriers](/shippoapi/public-api/carriers)\nPlease check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for all supported carriers.",
             "example": "usps"
           },
           "parameters": {
@@ -8846,7 +8836,7 @@
         "properties": {
           "account_id": {
             "type": "string",
-            "description": "Unique identifier of the account. Please check the \u003Ca href=\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\u0022\u003Ecarrier accounts tutorial\u003C/a\u003E \npage for the \u0060account_id\u0060 per carrier.\u003Cbr\u003E \nTo protect account information, this field will be masked in any API response.",
+            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \npage for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
             "example": "****"
           },
           "active": {
@@ -8855,7 +8845,7 @@
           },
           "carrier": {
             "type": "string",
-            "description": "Carrier token, see \u003Ca href=\u0022/shippoapi/public-api/carriers\u0022\u003ECarriers\u003C/a\u003E\u003Cbr\u003E\nPlease check the \u003Ca href=\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\u0022\u003Ecarrier accounts tutorial\u003C/a\u003E page for all supported carriers.",
+            "description": "Carrier token, see [Carriers](/shippoapi/public-api/carriers)\nPlease check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for all supported carriers.",
             "example": "usps"
           },
           "parameters": {
@@ -8902,12 +8892,12 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. \nThese names vary depending on the provider.\u003Cbr\u003E\nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003EService Levels\u003C/a\u003E.",
+            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. \nThese names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
             "example": "Priority Mail Express"
           },
           "token": {
             "type": "string",
-            "description": "Service level token, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\u003Cbr\u003E\nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003EService Levels\u003C/a\u003E.",
+            "description": "Service level token, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
             "example": "usps_priority_express"
           },
           "supports_return_labels": {
@@ -8927,7 +8917,7 @@
         "properties": {
           "account_id": {
             "type": "string",
-            "description": "Unique identifier of the account. Please check the \u003Ca href=\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\u0022\u003Ecarrier accounts tutorial\u003C/a\u003E \npage for the \u0060account_id\u0060 per carrier.\u003Cbr\u003E \nTo protect account information, this field will be masked in any API response.",
+            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \npage for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
             "example": "****"
           },
           "active": {
@@ -8936,7 +8926,7 @@
           },
           "carrier": {
             "type": "string",
-            "description": "Carrier token, see \u003Ca href=\u0022/shippoapi/public-api/carriers\u0022\u003ECarriers\u003C/a\u003E\u003Cbr\u003E\nPlease check the \u003Ca href=\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\u0022\u003Ecarrier accounts tutorial\u003C/a\u003E page for all supported carriers.",
+            "description": "Carrier token, see [Carriers](/shippoapi/public-api/carriers)\nPlease check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for all supported carriers.",
             "example": "usps"
           },
           "parameters": {
@@ -9658,20 +9648,15 @@
         }
       },
       "UserParcelTemplateWithoutCarrierTemplateCreateRequest": {
-        "type": "object",
-        "allOf": [
-          {
-            "title": "A request to create or update a new parcel template.",
-            "required": [
-              "name",
-              "length",
-              "width",
-              "height",
-              "distance_unit"
-            ],
-            "type": "object"
-          }
+        "title": "A request to create or update a new parcel template.",
+        "required": [
+          "name",
+          "length",
+          "width",
+          "height",
+          "distance_unit"
         ],
+        "type": "object",
         "properties": {
           "distance_unit": {
             "$ref": "#/components/schemas/DistanceUnitEnum"
@@ -9707,19 +9692,14 @@
         }
       },
       "UserParcelTemplateUpdateRequest": {
-        "type": "object",
-        "allOf": [
-          {
-            "required": [
-              "name",
-              "length",
-              "width",
-              "height",
-              "distance_unit"
-            ],
-            "type": "object"
-          }
+        "required": [
+          "name",
+          "length",
+          "width",
+          "height",
+          "distance_unit"
         ],
+        "type": "object",
         "properties": {
           "distance_unit": {
             "$ref": "#/components/schemas/DistanceUnitEnum"
@@ -13099,7 +13079,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Print format of the \u003Ca href=\u0022https://docs.goshippo.com/docs/shipments/shippinglabelsizes/\u0022\u003Elabel\u003C/a\u003E. If empty, will use the default format set from \n\u003Ca href=\u0022https://apps.goshippo.com/settings/labels\u0022\u003Ethe Shippo dashboard.\u003C/a\u003E",
+        "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from \n[the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
         "example": "PDF_4x6",
         "x-ms-enum": {
           "name": "LabelFileTypeEnum",
@@ -13459,7 +13439,7 @@
             }
           }
         },
-        "description": "Array of \u003Ca href=\u0022/shippoapi/public-api/batches/batchshipment\u0022\u003EBatchShipment\u003C/a\u003E objects. \nThe response keeps the same order as in the request array."
+        "description": "Array of [BatchShipment](/shippoapi/public-api/batches/batchshipment) objects. \nThe response keeps the same order as in the request array."
       },
       "ConnectExistingOwnAccountRequestParameters": {
         "required": [
@@ -13469,7 +13449,7 @@
         "oneOf": [
           {
             "type": "object",
-            "description": "\u0022An array of additional parameters for the account, such as e.g. password or token. Please check our \n\u003Ca href=\\\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\\\u0022\u003Ecarrier accounts guide\u003C/a\u003E \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n\u0022"
+            "description": "\u0022An array of additional parameters for the account, such as e.g. password or token. Please check our \n[carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n\u0022"
           },
           {
             "$ref": "#/components/schemas/FedExConnectExistingOwnAccountParameters"
@@ -13506,19 +13486,19 @@
           },
           "b13a_filing_option": {
             "type": "string",
-            "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n\u003Ca href=\u0022https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html\u0022 target=\u0022_blank\u0022 rel=\u0022noopener noreferrer\u0022\u003E More information on reporting commercial exports from Canada. \u003C/a\u003E\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-b13a-filing-option\u0022\u003Ehere\u003C/a\u003E"
+            "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)"
           },
           "contents_type": {
             "type": "string",
-            "description": "Type of goods of the shipment.  \nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-contents-type\u0022\u003Ehere\u003C/a\u003E"
+            "description": "Type of goods of the shipment.  \nAllowed values available [here](/shippoapi/public-api/customs-declaration-contents-type)"
           },
           "eel_pfc": {
             "type": "string",
-            "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-eelpfc\u0022\u003Ehere\u003C/a\u003E"
+            "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)"
           },
           "incoterm": {
             "type": "string",
-            "description": "The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.\neDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.\nIf expecting DAP for other carriers, please use DDU.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-incoterm\u0022\u003Ehere\u003C/a\u003E\nCarrier-specific restrictions are in the table below.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Must be one of DDP, DDU, FCA, DAP |"
+            "description": "The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.\neDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.\nIf expecting DAP for other carriers, please use DDU.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-incoterm)\nCarrier-specific restrictions are in the table below.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Must be one of DDP, DDU, FCA, DAP |"
           },
           "invoiced_charges": {
             "$ref": "#/components/schemas/CustomsInvoicedCharges"
@@ -13532,7 +13512,7 @@
           },
           "non_delivery_option": {
             "type": "string",
-            "description": "Indicates how the carrier should proceed in case the shipment can\u0027t be delivered.\nAllowed values available \u003Ca href=\u0022/shippoapi/public-api/customs-declaration-non-delivery-option\u0022\u003Ehere\u003C/a\u003E"
+            "description": "Indicates how the carrier should proceed in case the shipment can\u0027t be delivered.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-non-delivery-option)"
           },
           "object_created": {
             "type": "string",
@@ -13788,7 +13768,7 @@
             "items": {
               "$ref": "#/components/schemas/LineItem"
             },
-            "description": "Array of \u003Ca href=\u0022/shippoapi/public-api/orders/lineitem\u0022\u003Eline item\u003C/a\u003E objects representing the items in this order. \nAll objects will be returned expanded by default."
+            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. \nAll objects will be returned expanded by default."
           },
           "object_id": {
             "type": "string",
@@ -13808,7 +13788,7 @@
             "items": {
               "$ref": "#/components/schemas/OrderTransactionsItem"
             },
-            "description": "Array of \u003Ca href=\u0022/shippoapi/public-api/transactions\u0022\u003Etransaction\u003C/a\u003E objects representing all shipping labels purchased for this order.\nAll objects are returned expanded with a limited number of fields by default."
+            "description": "Array of [transaction](/shippoapi/public-api/transactions) objects representing all shipping labels purchased for this order.\nAll objects are returned expanded with a limited number of fields by default."
           }
         }
       },
@@ -13829,7 +13809,7 @@
             "items": {
               "$ref": "#/components/schemas/LineItemCreateRequest"
             },
-            "description": "Array of \u003Ca href=\u0022/shippoapi/public-api/orders/lineitem\u0022\u003Eline item\u003C/a\u003E objects representing the items in this order. \nAll objects will be returned expanded by default."
+            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. \nAll objects will be returned expanded by default."
           }
         }
       },
@@ -14241,7 +14221,7 @@
             "items": {
               "$ref": "#/components/schemas/Rate"
             },
-            "description": "An array with all available rates. If \u003Ccode\u003Easync\u003C/code\u003E has been set to \u003Ccode\u003Efalse\u003C/code\u003E in the request,\nthis will be populated with all available rates in the response. Otherwise rates will be created\nasynchronously and this array will initially be empty."
+            "description": "An array with all available rates. If \u0060async\u0060 has been set to \u0060false\u0060 in the request,\nthis will be populated with all available rates in the response. Otherwise rates will be created\nasynchronously and this array will initially be empty."
           },
           "status": {
             "$ref": "#/components/schemas/ShipmentStatus"
@@ -14281,7 +14261,7 @@
             "items": {
               "type": "string"
             },
-            "description": "List of \u003Ca href=\u0022/shippoapi/public-api/carrier-accounts\u0022\u003ECarrier Accounts\u003C/a\u003E \u0060object_id\u0060s used to filter \nthe returned rates.  If set, only rates from these carriers will be returned."
+            "description": "List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) \u0060object_id\u0060s used to filter \nthe returned rates.  If set, only rates from these carriers will be returned."
           },
           "parcels": {
             "type": "array",
@@ -14455,7 +14435,7 @@
             "description": "Union discriminator"
           }
         },
-        "description": "ID of the Rate object for which a Label has to be obtained.  \nIf you purchase a label by calling the transaction endpoint without a rate (instalabel), \nthis field will be a simplified Rate object in the Transaction model returned from the POST request.\n\u003C/br\u003ENote, only rates less than 7 days old can be purchased to ensure up-to-date pricing.",
+        "description": "ID of the Rate object for which a Label has to be obtained.  \nIf you purchase a label by calling the transaction endpoint without a rate (instalabel), \nthis field will be a simplified Rate object in the Transaction model returned from the POST request.\nNote, only rates less than 7 days old can be purchased to ensure up-to-date pricing.",
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -14484,12 +14464,12 @@
           },
           "servicelevel_name": {
             "type": "string",
-            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), \nalong with other properties.  These names vary depending on the provider.\u003Cbr\u003E\nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003EService Levels\u003C/a\u003E.",
+            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), \nalong with other properties.  These names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
             "example": "Priority Mail"
           },
           "servicelevel_token": {
             "type": "string",
-            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003Eservicelevels\u003C/a\u003E.",
+            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee [servicelevels](/shippoapi/public-api/service-levels).",
             "example": "fedex_ground"
           }
         }
@@ -14535,7 +14515,7 @@
         "oneOf": [
           {
             "type": "object",
-            "description": "\u0022An array of additional parameters for the account, such as e.g. password or token. Please check our \n\u003Ca href=\\\u0022https://docs.goshippo.com/docs/carriers/carrieraccounts/\\\u0022\u003Ecarrier accounts guide\u003C/a\u003E \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n\u0022"
+            "description": "\u0022An array of additional parameters for the account, such as e.g. password or token. Please check our \n[carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n\u0022"
           },
           {
             "$ref": "#/components/schemas/FedExConnectExistingOwnAccountParameters"
@@ -14761,12 +14741,6 @@
       },
       "ServiceLevelWithParentAllOf2ParentServicelevel": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "Used for some Service Levels to link to the more \u0022generic\u0022 version of this Service Level - for example, \nif this Service Level is a variation specific to shipments to Europe(\u0022ups_saver_eu\u0022), the \u0022parent\u0022 is \nthe fully generic version (\u0022ups_saver\u0022). Helpful when displaying Service Levels to users. Has the same \nstructure of the servicelevel - \u0022name\u0022, \u0022token\u0022, \u0022terms\u0022, and \u0022extended_token\u0022, or it is otherwise null."
-          }
-        ],
         "properties": {
           "name": {
             "type": "string",
@@ -14779,14 +14753,15 @@
           },
           "token": {
             "type": "string",
-            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee \u003Ca href=\u0022/shippoapi/public-api/service-levels\u0022\u003Eservicelevels\u003C/a\u003E.",
+            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee [servicelevels](/shippoapi/public-api/service-levels).",
             "example": "usps_priority_express"
           },
           "extended_token": {
             "type": "string",
             "description": "Unique, extended version of the Service Level \u0022token\u0022. \nGuaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes."
           }
-        }
+        },
+        "description": "Used for some Service Levels to link to the more \u0022generic\u0022 version of this Service Level - for example, \nif this Service Level is a variation specific to shipments to Europe(\u0022ups_saver_eu\u0022), the \u0022parent\u0022 is \nthe fully generic version (\u0022ups_saver\u0022). Helpful when displaying Service Levels to users. Has the same \nstructure of the servicelevel - \u0022name\u0022, \u0022token\u0022, \u0022terms\u0022, and \u0022extended_token\u0022, or it is otherwise null."
       },
       "ShipmentCreateRequestAllOf2AddressFrom": {
         "required": [
@@ -15025,7 +15000,7 @@
             "example": 0
           }
         },
-        "description": "An object containing the following counts:\u003Cbr\u003E\u0060creation_succeeded\u0060\u003Cbr\u003E\u0060creation_failed\u0060\u003Cbr\u003E\u0060purchase_succeeded\u0060\u003Cbr\u003E\u0060purchase_failed\u0060"
+        "description": "\u0022An object containing the following counts: \u0060creation_succeeded\u0060, \u0060creation_failed\u0060, \u0060purchase_succeeded\u0060, \u0060purchase_failed\u0060\u0022"
       },
       "OrderAllOf2TransactionsItem": {
         "type": "object"
@@ -15822,7 +15797,7 @@
         "properties": {
           "value": {
             "type": "string",
-            "description": "Object ID for an existing \u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E"
+            "description": "Object ID for an existing [Address](/shippoapi/public-api/addresses)"
           }
         }
       },
@@ -15834,7 +15809,7 @@
         "properties": {
           "value": {
             "type": "string",
-            "description": "Object ID for an existing \u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E"
+            "description": "Object ID for an existing [Address](/shippoapi/public-api/addresses)"
           }
         }
       },
@@ -15882,7 +15857,7 @@
         "properties": {
           "value": {
             "type": "string",
-            "description": "\u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E \u0060object_id\u0060 of a previously created address.",
+            "description": "[Address](/shippoapi/public-api/addresses) \u0060object_id\u0060 of a previously created address.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           }
         }
@@ -15895,7 +15870,7 @@
         "properties": {
           "value": {
             "type": "string",
-            "description": "\u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E \u0060object_id\u0060 of a previously created address.",
+            "description": "[Address](/shippoapi/public-api/addresses) \u0060object_id\u0060 of a previously created address.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           }
         }
@@ -15908,7 +15883,7 @@
         "properties": {
           "value": {
             "type": "string",
-            "description": "\u003Ca href=\u0022/shippoapi/public-api/addresses\u0022\u003EAddress\u003C/a\u003E \u0060object_id\u0060 of a previously created address.",
+            "description": "[Address](/shippoapi/public-api/addresses) \u0060object_id\u0060 of a previously created address.",
             "example": "d799c2679e644279b59fe661ac8fa489"
           }
         }
@@ -15921,7 +15896,7 @@
         "properties": {
           "value": {
             "type": "string",
-            "description": "\u003Ca href=\u0022/shippoapi/public-api/customs-declarations\u0022\u003ECustoms Declaration\u003C/a\u003E \u0060object_id\u0060 of a previously\ncreated customs declaration.",
+            "description": "[Customs Declaration](/shippoapi/public-api/customs-declarations) \u0060object_id\u0060 of a previously\ncreated customs declaration.",
             "example": "adcfdddf8ec64b84ad22772bce3ea37a"
           }
         }
@@ -15934,7 +15909,7 @@
         "properties": {
           "value": {
             "type": "string",
-            "description": "\u003Ca href=\u0022/shippoapi/public-api/parcels\u0022\u003EParcel\u003C/a\u003E \u0060object_id\u0060 of a previously created parcel."
+            "description": "[Parcel](/shippoapi/public-api/parcels) \u0060object_id\u0060 of a previously created parcel."
           }
         }
       },
@@ -15976,7 +15951,7 @@
       },
       "CarrierAccountCarrierName": {
         "type": "object",
-        "description": "Carrier name, see \u003Ca href=\u0022/shippoapi/public-api/carriers\u0022\u003ECarriers\u003C/a\u003E\u003Cbr\u003E",
+        "description": "Carrier name, see [Carriers](/shippoapi/public-api/carriers)",
         "example": "USPS"
       },
       "CarrierAccountChronopostCreateRequestParametersProperty": {
@@ -16014,7 +15989,7 @@
       },
       "CarrierAccountAllOf2CarrierName": {
         "type": "object",
-        "description": "Carrier name, see \u003Ca href=\u0022/shippoapi/public-api/carriers\u0022\u003ECarriers\u003C/a\u003E\u003Cbr\u003E",
+        "description": "Carrier name, see [Carriers](/shippoapi/public-api/carriers)",
         "example": "USPS"
       },
       "AlcoholRecipientType": {
@@ -16050,7 +16025,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Batches that are \u0060VALIDATING\u0060 are being created and validated\u003Cbr\u003E\n\u0060VALID\u0060 batches can be purchased\u003Cbr\u003E\n\u0060INVALID\u0060 batches cannot be purchased, \u0060INVALID\u0060 BatchShipments must be removed\u003Cbr\u003E\nBatches that are in the \u0060PURCHASING\u0060 state are being purchased\u003Cbr\u003E\n\u0060PURCHASED\u0060 batches are finished purchasing.",
+        "description": "\u0022- \u0060VALIDATING\u0060: the batch is being created and validated\n- \u0060VALID\u0060: the batch can be purchased\n- \u0060INVALID\u0060: the batch cannot be purchased; \u0060INVALID\u0060 BatchShipments must be removed\n- \u0060PURCHASING\u0060: the batch is being purchased\n- \u0060PURCHASED\u0060: the batch is finished purchasing\u0022",
         "example": "VALID",
         "x-ms-enum": {
           "name": "BatchStatus",
@@ -16088,7 +16063,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "\u0060INVALID\u0060 batch shipments cannot be purchased and will have to be removed, fixed, and added to the batch again.\u003Cbr\u003E\n\u0060VALID\u0060 batch shipments can be purchased. \u003Cbr\u003E\nBatch shipments with the status \u0060TRANSACTION_FAILED\u0060 were not able to be purchased and the error will be displayed on the message field\u003Cbr\u003E \n\u0060INCOMPLETE\u0060 batch shipments have an issue with the Address and will need to be removed, fixed, and added to the batch again.",
+        "description": "\u0022- \u0060INVALID\u0060: the batch shipment cannot be purchased and will have to be removed, fixed, and added to the batch again\n- \u0060VALID\u0060: the batch shipment can be purchased\n- \u0060TRANSACTION_FAILED\u0060: the batch shipment was not able to be purchased and the error will be displayed on the message field\n- \u0060INCOMPLETE\u0060: the batch shipment has an issue with the Address and will need to be removed, fixed, and added to the batch again\u0022",
         "example": "INVALID",
         "x-ms-enum": {
           "name": "BatchShipmentStatus",
@@ -16159,7 +16134,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Secured funds include money orders, certified cheques and others (see \n\u003Ca href=\u0022https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html\u0022\u003EUPS\u003C/a\u003E for details). \nIf no payment_method inputted the value defaults to \u0022ANY\u0022.)",
+        "description": "Secured funds include money orders, certified cheques and others (see \n[UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details). \nIf no payment_method inputted the value defaults to \u0022ANY\u0022.)",
         "example": "CASH",
         "x-ms-enum": {
           "name": "CodPaymentMethod",
@@ -16563,7 +16538,7 @@
         ],
         "type": "number",
         "additionalProperties": false,
-        "description": "Dangerous Goods Code (DHL eCommerce only). See \u003Ca href=\u0022https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods\u0022\u003ECategory Codes\u003C/a\u003E"
+        "description": "Dangerous Goods Code (DHL eCommerce only). See [Category Codes](https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods)"
       },
       "ShipmentExtraPreferredDeliveryTimeframe": {
         "enum": [
@@ -17539,7 +17514,7 @@
       "ShippoApiVersionHeader": {
         "name": "SHIPPO-API-VERSION",
         "in": "header",
-        "description": "Optional string used to pick a non-default API version to use. See our \u003Ca href=\u0022https://docs.goshippo.com/docs/api_concepts/apiversioning/\u0022\u003EAPI version\u003C/a\u003E guide.",
+        "description": "Optional string used to pick a non-default API version to use. See our [API version](https://docs.goshippo.com/docs/api_concepts/apiversioning/) guide.",
         "schema": {
           "type": "string",
           "default": "2018-02-08",
@@ -17634,7 +17609,7 @@
   "tags": [
     {
       "name": "Overview",
-      "description": "\u003Cp style=\u0022text-align: center; background-color: #F2F3F4; padding: 16px 24px; border-radius: 4px;\u0022\u003E\n  First-time users and those looking for specific integration tutorials,\n  \u003Ca href=\u0022/shippoapi/public-api/overview\u0022\u003Esee our full API documentation and guides.\u003C/a\u003E\u003Cbr\u003E\n  Download the \u003Ca href=\u0022/spec/shippoapi/public-api.yaml\u0022\u003EAPI Specification yaml file\u003C/a\u003E\n\u003C/p\u003E\n\n\u003Ch3\u003EAPI Resources\u003C/h3\u003E\nAll API URLs listed in this documentation are relative to \u003Cb\u003Ehttps://api.goshippo.com/\u003C/b\u003E.\n\nFor example, the \u0060/addresses/\u0060 resource is reachable at \u0060https://api.goshippo.com/addresses/\u0060.\n\n\n\u003Ch3\u003EAuthentication\u003C/h3\u003E\nThe API requires Shippo\u0027s token HTTP Authentication with your Shippo token (live or test). \n\nIn order to authenticate properly, please put \u0060Authorization: ShippoToken \u003Ctoken\u003E\u0060 in your header. You can find your token on the \n\u003Ca href=\u0022https://goshippo.com/user/apikeys/\u0022\u003EShippo API settings page\u003C/a\u003E.\n\n\n\nFor more information about authentication and test mode, \n\u003Ca href=\u0022https://docs.goshippo.com/docs/guides_general/authentication/\u0022\u003Eplease visit our Authentication guide\u003C/a\u003E.\n\nThe API is available via Secure Socket Layer (SSL) only. All requests to the Shippo API must use TLS version 1.2 or higher.\n\n\u003Ch3\u003ERequest \u0026 Response Data\u003C/h3\u003E\nRequest data is passed to the API by \u003Cb\u003EPOSTing JSON objects\u003C/b\u003E with the appropriate key/value-pairs to the respective \nresource. The documentation for each API resource contains more details on the values accepted by a given resource.\n\nResponse data also formatted as JSON object. You can specify how many results per page are to be returned. For instance, \n\u0060/rates/?results=25\u0060 will return up to 25 results.\n\n\u003Ch3\u003EREST \u0026 Disposable Objects\u003C/h3\u003E\nThe Shippo API is built around \u003Ca href=\u0022http://en.wikipedia.org/wiki/Representational_State_Transfer\u0022\u003EREST principles\u003C/a\u003E. \nUse POST requests to create objects, GET requests to retrieve objects, and PUT requests to update objects.\n\nOnly the Carrier Accounts object can be updated via PUT requests. All other objects such as Addresses, Parcels, \nShipments, Rates, Transactions, Refunds, Customs Items, and Customs Declarations are disposable. This means that \nonce you have created an object, you cannot change it. Instead, create a new one with the desired values.\n\n\u003Ch3\u003EAPI Version\u003C/h3\u003E\n\nThis reference guide supports the Shippo API version: \u00602018-02-08\u0060 . \n\nTo see reference guides for older API versions, see our \u003Ca href=\u0022https://docs.goshippo.com/docs/guides_general/legacy_reference/\u0022\u003Elegacy reference guide\u003C/a\u003E. \nFor more information about Shippo API versions, see our \u003Ca href=\u0022https://docs.goshippo.com/docs/api_concepts/apiversioning/\u0022\u003EAPI versions guide\u003C/a\u003E."
+      "description": "\u003Cp style=\u0022text-align: center; background-color: #F2F3F4; padding: 16px 24px; border-radius: 4px;\u0022\u003E\n  First-time users and those looking for specific integration tutorials,\n  [see our full API documentation and guides.](/shippoapi/public-api/overview)\u003Cbr\u003E\n  Download the [API Specification yaml file](/spec/shippoapi/public-api.yaml)\n\u003C/p\u003E\n\n\u003Ch3\u003EAPI Resources\u003C/h3\u003E\nAll API URLs listed in this documentation are relative to \u003Cb\u003Ehttps://api.goshippo.com/\u003C/b\u003E.\n\nFor example, the \u0060/addresses/\u0060 resource is reachable at \u0060https://api.goshippo.com/addresses/\u0060.\n\n\n\u003Ch3\u003EAuthentication\u003C/h3\u003E\nThe API requires Shippo\u0027s token HTTP Authentication with your Shippo token (live or test). \n\nIn order to authenticate properly, please put \u0060Authorization: ShippoToken \u003Ctoken\u003E\u0060 in your header. You can find your token on the \n[Shippo API settings page](https://goshippo.com/user/apikeys/).\n\n\n\nFor more information about authentication and test mode, \n[please visit our Authentication guide](https://docs.goshippo.com/docs/guides_general/authentication/).\n\nThe API is available via Secure Socket Layer (SSL) only. All requests to the Shippo API must use TLS version 1.2 or higher.\n\n\u003Ch3\u003ERequest \u0026 Response Data\u003C/h3\u003E\nRequest data is passed to the API by \u003Cb\u003EPOSTing JSON objects\u003C/b\u003E with the appropriate key/value-pairs to the respective \nresource. The documentation for each API resource contains more details on the values accepted by a given resource.\n\nResponse data also formatted as JSON object. You can specify how many results per page are to be returned. For instance, \n\u0060/rates/?results=25\u0060 will return up to 25 results.\n\n\u003Ch3\u003EREST \u0026 Disposable Objects\u003C/h3\u003E\nThe Shippo API is built around [REST principles](http://en.wikipedia.org/wiki/Representational_State_Transfer). \nUse POST requests to create objects, GET requests to retrieve objects, and PUT requests to update objects.\n\nOnly the Carrier Accounts object can be updated via PUT requests. All other objects such as Addresses, Parcels, \nShipments, Rates, Transactions, Refunds, Customs Items, and Customs Declarations are disposable. This means that \nonce you have created an object, you cannot change it. Instead, create a new one with the desired values.\n\n\u003Ch3\u003EAPI Version\u003C/h3\u003E\n\nThis reference guide supports the Shippo API version: \u00602018-02-08\u0060 . \n\nTo see reference guides for older API versions, see our [legacy reference guide](https://docs.goshippo.com/docs/guides_general/legacy_reference/). \nFor more information about Shippo API versions, see our [API versions guide](https://docs.goshippo.com/docs/api_concepts/apiversioning/)."
     },
     {
       "name": "Addresses",
@@ -17683,7 +17658,7 @@
     },
     {
       "name": "Tracking Status",
-      "description": "\u003Cp style=\u0022text-align: center; background-color: #F2F3F4;\u0022\u003E\u003C/br\u003E\nIf you purchased your shipping label through Shippo, you can also get all the tracking details of your Shipment \nfrom the \u003Ca href=\u0022/shippoapi/public-api/transactions\u0022\u003ETransaction\u003C/a\u003E object.\n\u003C/br\u003E\u003C/br\u003E\u003C/p\u003E\nA tracking status of a package is an indication of current location of a package in the supply chain. For example,  sorting, warehousing, or out for delivery. Use the tracking status object to track the location of your shipments.\n\nWhen using your \u003Ca href=\u0022https://docs.goshippo.com/docs/guides_general/authentication/\u0022\u003ETest\u003C/a\u003E token for tracking, you need to use Shippo\u0027s \npredefined tokens for testing different tracking statuses. You can find more information in our \n\u003Ca href=\u0022https://docs.goshippo.com/docs/tracking/tracking/\u0022\u003ETracking tutorial\u003C/a\u003E on how to do this, and what the \npayloads look like.      "
+      "description": "\u003Cp style=\u0022text-align: center; background-color: #F2F3F4;\u0022\u003E\u003Cbr\u003E\nIf you purchased your shipping label through Shippo, you can also get all the tracking details of your Shipment \nfrom the [Transaction](/shippoapi/public-api/transactions) object.\n\u003Cbr\u003E\u003Cbr\u003E\u003C/p\u003E\nA tracking status of a package is an indication of current location of a package in the supply chain. For example,  sorting, warehousing, or out for delivery. Use the tracking status object to track the location of your shipments.\n\nWhen using your [Test](https://docs.goshippo.com/docs/guides_general/authentication/) token for tracking, you need to use Shippo\u0027s \npredefined tokens for testing different tracking statuses. You can find more information in our \n[Tracking tutorial](https://docs.goshippo.com/docs/tracking/tracking/) on how to do this, and what the \npayloads look like.      "
     },
     {
       "name": "Batches",
@@ -17712,7 +17687,7 @@
     },
     {
       "name": "Rates at Checkout",
-      "description": "Rates at checkout is a tool for merchants to display up-to-date shipping estimates based on what\u0027s in their customers cart and where they\u2019re shipping to.\nMerchants set up curated shipping options for customers in the checkout flow based on data in the shopping cart. The request must include the **to** address and item information. Optional fields are the **from** address and package information. If the optional fields are not included, the service will use the default address and/or package configured for rates at checkout. The response is a list of shipping options based on the Service Group configuration.\n(see \u003Ca href=\u0022/shippoapi/public-api/service-groups\u0022\u003EService Group configuration\u003C/a\u003E for details).\n\n\n\n# Default Parcel Template\nAssign one of your user parcel templates to be the default used when generating Live Rates. This template will be used by default when generating Live Rates, unless you explicitly provide a parcel in the Live Rates request."
+      "description": "Rates at checkout is a tool for merchants to display up-to-date shipping estimates based on what\u0027s in their customers cart and where they\u2019re shipping to.\nMerchants set up curated shipping options for customers in the checkout flow based on data in the shopping cart. The request must include the **to** address and item information. Optional fields are the **from** address and package information. If the optional fields are not included, the service will use the default address and/or package configured for rates at checkout. The response is a list of shipping options based on the Service Group configuration.\n(see [Service Group configuration](/shippoapi/public-api/service-groups) for details).\n\n\n\n# Default Parcel Template\nAssign one of your user parcel templates to be the default used when generating Live Rates. This template will be used by default when generating Live Rates, unless you explicitly provide a parcel in the Live Rates request."
     },
     {
       "name": "Carriers",
@@ -17728,11 +17703,11 @@
     },
     {
       "name": "Shippo Accounts",
-      "description": "Shippo Accounts are used by Shippo Platform Accounts to create and manage Managed Shippo Accounts. \nManaged Shippo Accounts are headless accounts that represent your customers. They are opaque to your end customers, meaning customers do not need to create their own Shippo login or have a billing relationship with Shippo. \nThey can be used by marketplaces, e-commerce platforms, and third-party logistics providers who want to offer, seamless, built-in shipping functionality to their customers. See our \u003Ca href=\u0022https://docs.goshippo.com/docs/platformaccounts/platform_accounts/\u0022\u003Eguide\u003C/a\u003E for more details."
+      "description": "Shippo Accounts are used by Shippo Platform Accounts to create and manage Managed Shippo Accounts. \nManaged Shippo Accounts are headless accounts that represent your customers. They are opaque to your end customers, meaning customers do not need to create their own Shippo login or have a billing relationship with Shippo. \nThey can be used by marketplaces, e-commerce platforms, and third-party logistics providers who want to offer, seamless, built-in shipping functionality to their customers. See our [guide](https://docs.goshippo.com/docs/platformaccounts/platform_accounts/) for more details."
     },
     {
       "name": "Customs Declaration B13A Filing Option",
-      "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \nMore information on \u003Ca href=\u0022https://www.cbsa-asfc.gc.ca/export/guide-eng.html\u0022\u003Ereporting commercial exports from Canada\u003C/a\u003E.\n\n**Allowed values:**\n- \u0060FILED_ELECTRONICALLY\u0060\n- \u0060SUMMARY_REPORTING\u0060\n- \u0060NOT_REQUIRED\u0060\n"
+      "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \nMore information on [reporting commercial exports from Canada](https://www.cbsa-asfc.gc.ca/export/guide-eng.html).\n\n**Allowed values:**\n- \u0060FILED_ELECTRONICALLY\u0060\n- \u0060SUMMARY_REPORTING\u0060\n- \u0060NOT_REQUIRED\u0060\n"
     },
     {
       "name": "Customs Declaration Contents Type",

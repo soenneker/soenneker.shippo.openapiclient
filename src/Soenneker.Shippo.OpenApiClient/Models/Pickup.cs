@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string CancelByTime { get; set; }
 #endif
-        /// <summary>The object ID of your USPS or DHL Express carrier account. You can retrieve this from your Rate requests or our &lt;a href=&quot;/shippoapi/public-api/carrier-accounts&quot;&gt;Carrier Accounts&lt;/a&gt; endpoint.</summary>
+        /// <summary>The object ID of your USPS or DHL Express carrier account. You can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CarrierAccount { get; set; }

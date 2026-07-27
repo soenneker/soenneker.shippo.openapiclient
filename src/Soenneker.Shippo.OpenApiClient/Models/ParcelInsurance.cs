@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// To add insurance to your parcel, specify `amount`, `content` and `currency`. &lt;br&gt;&lt;br&gt;If you do not want to add insurance to you parcel, do not set these parameters.
+    /// To add insurance to your parcel, specify `amount`, `content` and `currency`. If you do not want to add insurance to your parcel, do not set these parameters.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ParcelInsurance : IAdditionalDataHolder, IParsable

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are &lt;code&gt;is_valid&lt;/code&gt;(boolean) and &lt;code&gt;messages&lt;/code&gt;(array).
+    /// Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are `is_valid`(boolean) and `messages`(array).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddressValidationResults : IAdditionalDataHolder, IParsable

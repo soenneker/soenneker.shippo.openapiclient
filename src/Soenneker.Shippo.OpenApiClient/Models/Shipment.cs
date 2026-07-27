@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the sender / seller. Will be returned expanded by default.</summary>
+        /// <summary>[Address](/shippoapi/public-api/addresses) object of the sender / seller. Will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom? AddressFrom { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom AddressFrom { get; set; }
 #endif
-        /// <summary>ID of the Address object where the shipment will be sent back to if it is not delivered (Only available for UPS, USPS, and Fedex shipments). &lt;br/&gt; If this field is not set, your shipments will be returned to the address_from.</summary>
+        /// <summary>ID of the Address object where the shipment will be sent back to if it is not delivered (Only available for UPS, USPS, and Fedex shipments).If this field is not set, your shipments will be returned to the address_from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn? AddressReturn { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressReturn AddressReturn { get; set; }
 #endif
-        /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the recipient / buyer. Will be returned expanded by default.</summary>
+        /// <summary>[Address](/shippoapi/public-api/addresses) object of the recipient / buyer. Will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressTo? AddressTo { get; set; }
@@ -106,7 +106,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.Parcel> Parcels { get; set; }
 #endif
-        /// <summary>An array with all available rates. If &lt;code&gt;async&lt;/code&gt; has been set to &lt;code&gt;false&lt;/code&gt; in the request,this will be populated with all available rates in the response. Otherwise rates will be createdasynchronously and this array will initially be empty.</summary>
+        /// <summary>An array with all available rates. If `async` has been set to `false` in the request,this will be populated with all available rates in the response. Otherwise rates will be createdasynchronously and this array will initially be empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Shippo.OpenApiClient.Models.Rate>? Rates { get; set; }

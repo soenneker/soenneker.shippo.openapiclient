@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>**Required if total_price is provided**&lt;br&gt;Currency of the &lt;code&gt;total_price&lt;/code&gt; and &lt;code&gt;total_tax&lt;/code&gt; amounts.</summary>
+        /// <summary>**Required if total_price is provided**Currency of the `total_price` and `total_tax` amounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Currency { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the sender / seller. Will be returned expanded by default..</summary>
+        /// <summary>[Address](/shippoapi/public-api/addresses) object of the sender / seller. Will be returned expanded by default..</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest? FromAddress { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressFromCreateRequest FromAddress { get; set; }
 #endif
-        /// <summary>Array of &lt;a href=&quot;/shippoapi/public-api/orders/lineitem&quot;&gt;line item&lt;/a&gt; objects representing the items in this order. All objects will be returned expanded by default.</summary>
+        /// <summary>Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. All objects will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Shippo.OpenApiClient.Models.LineItemCreateRequest>? LineItems { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string OrderNumber { get; set; }
 #endif
-        /// <summary>Current state of the order. See the &lt;a href=&quot;https://docs.goshippo.com/docs/orders/orders/&quot;&gt;orders tutorial&lt;/a&gt; for the logic of how the status is handled.</summary>
+        /// <summary>Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) for the logic of how the status is handled.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.OrderStatusEnum? OrderStatus { get; set; }
         /// <summary>Date and time when the order was placed. This datetime can be different from the datetime of the order object creation on Shippo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ShippingCost { get; set; }
 #endif
-        /// <summary>**Required if shipping_cost is provided**&lt;br&gt;Currency of the &lt;code&gt;shipping_cost&lt;/code&gt; amount.</summary>
+        /// <summary>**Required if shipping_cost is provided**Currency of the `shipping_cost` amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShippingCostCurrency { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string SubtotalPrice { get; set; }
 #endif
-        /// <summary>&lt;a href=&quot;/shippoapi/public-api/addresses&quot;&gt;Address&lt;/a&gt; object of the recipient / buyer. Will be returned expanded by default.</summary>
+        /// <summary>[Address](/shippoapi/public-api/addresses) object of the recipient / buyer. Will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressToCreateRequest? ToAddress { get; set; }

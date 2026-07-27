@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Carrier name, see &lt;a href=&quot;/shippoapi/public-api/carriers&quot;&gt;Carriers&lt;/a&gt;&lt;br&gt;
+    /// Carrier name, see [Carriers](/shippoapi/public-api/carriers)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CarrierAccountCarrierName : IAdditionalDataHolder, IParsable

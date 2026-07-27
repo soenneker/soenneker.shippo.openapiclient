@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string DefaultCarrierAccount { get; set; }
 #endif
-        /// <summary>Token of the service level to use as the default for all shipments in this Batch. The servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. &lt;a href=&quot;/shippoapi/public-api/service-levels&quot;&gt;Servicelevel tokens can be found here.&lt;/a&gt;</summary>
+        /// <summary>Token of the service level to use as the default for all shipments in this Batch. The servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultServicelevelToken { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string DefaultServicelevelToken { get; set; }
 #endif
-        /// <summary>Print format of the &lt;a href=&quot;https://docs.goshippo.com/docs/shipments/shippinglabelsizes/&quot;&gt;label&lt;/a&gt;. If empty, will use the default format set from &lt;a href=&quot;https://apps.goshippo.com/settings/labels&quot;&gt;the Shippo dashboard.&lt;/a&gt;</summary>
+        /// <summary>Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFiletype { get; set; }
         /// <summary>An array of URLs each pointing to a merged file of 100 labels each</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectOwner { get; set; }
 #endif
-        /// <summary>An object containing the following counts:&lt;br&gt;`creation_succeeded`&lt;br&gt;`creation_failed`&lt;br&gt;`purchase_succeeded`&lt;br&gt;`purchase_failed`</summary>
+        /// <summary>&quot;An object containing the following counts: `creation_succeeded`, `creation_failed`, `purchase_succeeded`, `purchase_failed`&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults? ObjectResults { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectUpdated { get; set; }
 #endif
-        /// <summary>Batches that are `VALIDATING` are being created and validated&lt;br&gt;`VALID` batches can be purchased&lt;br&gt;`INVALID` batches cannot be purchased, `INVALID` BatchShipments must be removed&lt;br&gt;Batches that are in the `PURCHASING` state are being purchased&lt;br&gt;`PURCHASED` batches are finished purchasing.</summary>
+        /// <summary>&quot;- `VALIDATING`: the batch is being created and validated- `VALID`: the batch can be purchased- `INVALID`: the batch cannot be purchased; `INVALID` BatchShipments must be removed- `PURCHASING`: the batch is being purchased- `PURCHASED`: the batch is finished purchasing&quot;</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.BatchStatus? Status { get; set; }
         /// <summary>The test property</summary>
         public bool? Test { get; set; }

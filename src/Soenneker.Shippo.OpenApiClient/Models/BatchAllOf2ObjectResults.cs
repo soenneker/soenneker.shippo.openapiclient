@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// An object containing the following counts:&lt;br&gt;`creation_succeeded`&lt;br&gt;`creation_failed`&lt;br&gt;`purchase_succeeded`&lt;br&gt;`purchase_failed`
+    /// &quot;An object containing the following counts: `creation_succeeded`, `creation_failed`, `purchase_succeeded`, `purchase_failed`&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchAllOf2ObjectResults : IAdditionalDataHolder, IParsable

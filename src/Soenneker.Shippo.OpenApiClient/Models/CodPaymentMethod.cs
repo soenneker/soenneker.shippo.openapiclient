@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>Secured funds include money orders, certified cheques and others (see &lt;a href=&quot;https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html&quot;&gt;UPS&lt;/a&gt; for details). If no payment_method inputted the value defaults to &quot;ANY&quot;.)</summary>
+    /// <summary>Secured funds include money orders, certified cheques and others (see [UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details). If no payment_method inputted the value defaults to &quot;ANY&quot;.)</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CodPaymentMethod
     {

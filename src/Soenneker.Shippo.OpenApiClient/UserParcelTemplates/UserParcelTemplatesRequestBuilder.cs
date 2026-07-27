@@ -70,7 +70,7 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new user parcel template. &lt;br&gt;You can choose to create aparcel template using a preset carrier template as a starting point, oryou can create an entirely custom one. To use a preset carrier template,pass in a unique template token from &lt;a href=&quot;/shippoapi/public-api/parcel-templates&quot;&gt;this list&lt;/a&gt;plus the weight fields (**weight** and **weight_unit**). Otherwise, omitthe template field and pass the other fields, for the weight, length, height,and depth, as well as their units.&quot;
+        /// Creates a new user parcel template.You can choose to create aparcel template using a preset carrier template as a starting point, oryou can create an entirely custom one. To use a preset carrier template,pass in a unique template token from [this list](/shippoapi/public-api/parcel-templates)plus the weight fields (**weight** and **weight_unit**). Otherwise, omitthe template field and pass the other fields, for the weight, length, height,and depth, as well as their units.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate"/></returns>
         /// <param name="body">The request body</param>
@@ -114,7 +114,7 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new user parcel template. &lt;br&gt;You can choose to create aparcel template using a preset carrier template as a starting point, oryou can create an entirely custom one. To use a preset carrier template,pass in a unique template token from &lt;a href=&quot;/shippoapi/public-api/parcel-templates&quot;&gt;this list&lt;/a&gt;plus the weight fields (**weight** and **weight_unit**). Otherwise, omitthe template field and pass the other fields, for the weight, length, height,and depth, as well as their units.&quot;
+        /// Creates a new user parcel template.You can choose to create aparcel template using a preset carrier template as a starting point, oryou can create an entirely custom one. To use a preset carrier template,pass in a unique template token from [this list](/shippoapi/public-api/parcel-templates)plus the weight fields (**weight** and **weight_unit**). Otherwise, omitthe template field and pass the other fields, for the weight, length, height,and depth, as well as their units.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

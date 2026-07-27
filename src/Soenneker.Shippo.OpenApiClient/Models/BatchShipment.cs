@@ -47,7 +47,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectId { get; set; }
 #endif
-        /// <summary>A token that sets the shipping method for the batch, overriding the batch default. Servicelevel tokens can be found &lt;a href=&quot;/shippoapi/public-api/service-levels&quot;&gt;in this list&lt;/a&gt; or &lt;a href=&quot;/shippoapi/public-api/carrier-accounts/listcarrieraccounts&quot;&gt;at this endpoint&lt;/a&gt;.</summary>
+        /// <summary>A token that sets the shipping method for the batch, overriding the batch default. Servicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServicelevelToken { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Shipment { get; set; }
 #endif
-        /// <summary>`INVALID` batch shipments cannot be purchased and will have to be removed, fixed, and added to the batch again.&lt;br&gt;`VALID` batch shipments can be purchased. &lt;br&gt;Batch shipments with the status `TRANSACTION_FAILED` were not able to be purchased and the error will be displayed on the message field&lt;br&gt; `INCOMPLETE` batch shipments have an issue with the Address and will need to be removed, fixed, and added to the batch again.</summary>
+        /// <summary>&quot;- `INVALID`: the batch shipment cannot be purchased and will have to be removed, fixed, and added to the batch again- `VALID`: the batch shipment can be purchased- `TRANSACTION_FAILED`: the batch shipment was not able to be purchased and the error will be displayed on the message field- `INCOMPLETE`: the batch shipment has an issue with the Address and will need to be removed, fixed, and added to the batch again&quot;</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus? Status { get; set; }
         /// <summary>Object ID of the transaction object created for this batch shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

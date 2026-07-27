@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>Current state of the order. See the &lt;a href=&quot;https://docs.goshippo.com/docs/orders/orders/&quot;&gt;orders tutorial&lt;/a&gt; for the logic of how the status is handled.</summary>
+    /// <summary>Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) for the logic of how the status is handled.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OrderStatusEnum
     {

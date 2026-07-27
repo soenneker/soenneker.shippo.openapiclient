@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string DefaultCarrierAccount { get; set; }
 #endif
-        /// <summary>Token of the service level to use as the default for all shipments in this Batch. The servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. &lt;a href=&quot;/shippoapi/public-api/service-levels&quot;&gt;Servicelevel tokens can be found here.&lt;/a&gt;</summary>
+        /// <summary>Token of the service level to use as the default for all shipments in this Batch. The servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultServicelevelToken { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string DefaultServicelevelToken { get; set; }
 #endif
-        /// <summary>Print format of the &lt;a href=&quot;https://docs.goshippo.com/docs/shipments/shippinglabelsizes/&quot;&gt;label&lt;/a&gt;. If empty, will use the default format set from &lt;a href=&quot;https://apps.goshippo.com/settings/labels&quot;&gt;the Shippo dashboard.&lt;/a&gt;</summary>
+        /// <summary>Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFiletype { get; set; }
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

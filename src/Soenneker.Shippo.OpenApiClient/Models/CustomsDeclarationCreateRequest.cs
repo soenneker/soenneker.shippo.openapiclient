@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressImporter AddressImporter { get; set; }
 #endif
-        /// <summary>**required if eel_pfc is `AES_ITN`**&lt;br&gt;AES / ITN reference of the shipment.</summary>
+        /// <summary>**required if eel_pfc is `AES_ITN`**AES / ITN reference of the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AesItn { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string B13aFilingOption { get; set; }
 #endif
-        /// <summary>**must be provided if and only if b13a_filing_option is provided**&lt;br&gt;Represents:&lt;br&gt; the Proof of Report (POR) Number when b13a_filing_option is `FILED_ELECTRONICALLY`;&lt;br&gt; the Summary ID Number when b13a_filing_option is `SUMMARY_REPORTING`;&lt;br&gt; or the Exemption Number when b13a_filing_option is `NOT_REQUIRED`.</summary>
+        /// <summary>**must be provided if and only if b13a_filing_option is provided**Represents the Proof of Report (POR) Number when b13a_filing_option is `FILED_ELECTRONICALLY`; the Summary ID Number when b13a_filing_option is `SUMMARY_REPORTING`; or the Exemption Number when b13a_filing_option is `NOT_REQUIRED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? B13aNumber { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>The commercial_invoice property</summary>
         public bool? CommercialInvoice { get; set; }
-        /// <summary>**required if contents_type is `OTHER`**&lt;br&gt;Explanation of the type of goods of the shipment.</summary>
+        /// <summary>**required if contents_type is `OTHER`**Explanation of the type of goods of the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContentsExplanation { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ContentsExplanation { get; set; }
 #endif
-        /// <summary>Type of goods of the shipment.  Allowed values available &lt;a href=&quot;/shippoapi/public-api/customs-declaration-contents-type&quot;&gt;here&lt;/a&gt;</summary>
+        /// <summary>Type of goods of the shipment.  Allowed values available [here](/shippoapi/public-api/customs-declaration-contents-type)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ContentsType { get; set; }
@@ -98,7 +98,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor DutiesPayor { get; set; }
 #endif
-        /// <summary>EEL / PFC type of the shipment. For most shipments from the US to CA, `NOEEI_30_36` is applicable; for most other shipments from the US, `NOEEI_30_37_a` is applicable.Allowed values available &lt;a href=&quot;/shippoapi/public-api/customs-declaration-eelpfc&quot;&gt;here&lt;/a&gt;</summary>
+        /// <summary>EEL / PFC type of the shipment. For most shipments from the US to CA, `NOEEI_30_36` is applicable; for most other shipments from the US, `NOEEI_30_37_a` is applicable.Allowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EelPfc { get; set; }
@@ -130,7 +130,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ImporterReference { get; set; }
 #endif
-        /// <summary>The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.eDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.If expecting DAP for other carriers, please use DDU.Allowed values available &lt;a href=&quot;/shippoapi/public-api/customs-declaration-incoterm&quot;&gt;here&lt;/a&gt;Carrier-specific restrictions are in the table below.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Must be one of DDP, DDU, FCA, DAP |</summary>
+        /// <summary>The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.eDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.If expecting DAP for other carriers, please use DDU.Allowed values available [here](/shippoapi/public-api/customs-declaration-incoterm)Carrier-specific restrictions are in the table below.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Must be one of DDP, DDU, FCA, DAP |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Incoterm { get; set; }
@@ -172,7 +172,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Metadata { get; set; }
 #endif
-        /// <summary>Indicates how the carrier should proceed in case the shipment can&apos;t be delivered.Allowed values available &lt;a href=&quot;/shippoapi/public-api/customs-declaration-non-delivery-option&quot;&gt;here&lt;/a&gt;</summary>
+        /// <summary>Indicates how the carrier should proceed in case the shipment can&apos;t be delivered.Allowed values available [here](/shippoapi/public-api/customs-declaration-non-delivery-option)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NonDeliveryOption { get; set; }

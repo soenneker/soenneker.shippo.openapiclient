@@ -78,7 +78,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum? ObjectState { get; set; }
         /// <summary>Date and time of last object update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
-        /// <summary>&quot;Country of origin of the item. Example: `US` or `DE`. All accepted values can be found on the &lt;a href=\&quot;http://www.iso.org/\&quot; target=\&quot;_blank\&quot;&gt;Official ISO Website&lt;/a&gt;.&quot;</summary>
+        /// <summary>&quot;Country of origin of the item. Example: `US` or `DE`. All accepted values can be found on the [Official ISO Website](http://www.iso.org/).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OriginCountry { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ValueAmount { get; set; }
 #endif
-        /// <summary>Currency used for value_amount. The &lt;a href=&quot;http://www.xe.com/iso4217.php&quot;&gt;official ISO 4217&lt;/a&gt; currency codes are used, e.g.  `USD` or `EUR`.</summary>
+        /// <summary>Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g.  `USD` or `EUR`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ValueCurrency { get; set; }

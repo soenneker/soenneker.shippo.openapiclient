@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contentsare provided, only certain USPS service levels will be eligible. For more information, see our&lt;a href=&quot;https://docs.goshippo.com/docs/shipments/hazmat/&quot;&gt;guide on hazardous or dangerous materials shipping&lt;/a&gt;.
+    /// Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contentsare provided, only certain USPS service levels will be eligible. For more information, see our[guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DangerousGoodsObject : IAdditionalDataHolder, IParsable

@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Service level token, e.g. `usps_priority` or `fedex_ground`.&lt;br&gt;See &lt;a href=&quot;/shippoapi/public-api/service-levels&quot;&gt;Service Levels&lt;/a&gt;.</summary>
+        /// <summary>Service level token, e.g. `usps_priority` or `fedex_ground`.See [Service Levels](/shippoapi/public-api/service-levels).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServiceLevelToken { get; set; }

@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// ID of the Address object where the shipment will be sent back to if it is not delivered (Only available for UPS, USPS, and Fedex shipments). &lt;br/&gt; If this field is not set, your shipments will be returned to the address_from.
+    /// ID of the Address object where the shipment will be sent back to if it is not delivered (Only available for UPS, USPS, and Fedex shipments).If this field is not set, your shipments will be returned to the address_from.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddressReturn : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>**required for purchase**&lt;br&gt;Name of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.Please bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a stateor a ZIP code (see below), if known, it will yield more accurate results.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Max 35 characters |</summary>
+        /// <summary>**required for purchase**Name of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.Please bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a stateor a ZIP code (see below), if known, it will yield more accurate results.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Max 35 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? City { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Company { get; set; }
 #endif
-        /// <summary>ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like `US` or `DE`.If using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.Refer to this &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements&quot; target=&quot;_blank&quot;&gt;guide&lt;/a&gt; for a list of country codes.Sending a country is always required.</summary>
+        /// <summary>ISO 3166-1 alpha-2 country codes and country names can be used. For most consistent results, we recommend using country codes like `US` or `DE`.If using country names, please ensure they are spelled correctly and in English. Country names are converted to country codes.Refer to this [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) for a list of country codes.Sending a country is always required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Country { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Email { get; set; }
 #endif
-        /// <summary>Complete addresses contain all required values.&lt;br&gt;&lt;br&gt;Incomplete addresses have failed one or multiple validations.&lt;br&gt;Incomplete Addresses are eligible for requesting rates but lack at least one required value for purchasing labels.</summary>
+        /// <summary>Complete addresses contain all required values.Incomplete addresses have failed one or multiple validations. Incomplete Addresses are eligible for requesting rates but lack at least one required value for purchasing labels.</summary>
         public bool? IsComplete { get; set; }
         /// <summary>The is_residential property</summary>
         public bool? IsResidential { get; set; }
@@ -75,7 +75,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Metadata { get; set; }
 #endif
-        /// <summary>**required for purchase**&lt;br&gt;First and Last Name of the addressee**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |</summary>
+        /// <summary>**required for purchase**First and Last Name of the addressee**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Either company or name required; No length validation (first 35 chars printed on label) |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
-        /// <summary>**required for purchase for some countries**&lt;br&gt;State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for somecountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriersonly accept two or three character state abbreviations.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |</summary>
+        /// <summary>**required for purchase for some countries**State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for somecountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriersonly accept two or three character state abbreviations.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }
@@ -119,7 +119,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string State { get; set; }
 #endif
-        /// <summary>**required for purchase**&lt;br&gt;First street line. Usually street number and street name (except for DHL Germany, see street_no).**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | At least one street line required; Max 35 characters per line |</summary>
+        /// <summary>**required for purchase**First street line. Usually street number and street name (except for DHL Germany, see street_no).**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | At least one street line required; Max 35 characters per line |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Street1 { get; set; }
@@ -153,7 +153,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Indicates whether the object has been created in test mode.</summary>
         public bool? Test { get; set; }
-        /// <summary>Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are &lt;code&gt;is_valid&lt;/code&gt;(boolean) and &lt;code&gt;messages&lt;/code&gt;(array).</summary>
+        /// <summary>Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are `is_valid`(boolean) and `messages`(array).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResults? ValidationResults { get; set; }
@@ -161,7 +161,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResults ValidationResults { get; set; }
 #endif
-        /// <summary>**required for purchase**&lt;br&gt;Postal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield moreaccurate Rates.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 10 characters |</summary>
+        /// <summary>**required for purchase**Postal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield moreaccurate Rates.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 10 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Zip { get; set; }

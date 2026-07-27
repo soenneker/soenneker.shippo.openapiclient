@@ -12,7 +12,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     public partial class CarrierAccount : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Unique identifier of the account. Please check the &lt;a href=&quot;https://docs.goshippo.com/docs/carriers/carrieraccounts/&quot;&gt;carrier accounts tutorial&lt;/a&gt; page for the `account_id` per carrier.&lt;br&gt; To protect account information, this field will be masked in any API response.</summary>
+        /// <summary>Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the `account_id` per carrier.To protect account information, this field will be masked in any API response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountId { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Carrier token, see &lt;a href=&quot;/shippoapi/public-api/carriers&quot;&gt;Carriers&lt;/a&gt;&lt;br&gt;Please check the &lt;a href=&quot;https://docs.goshippo.com/docs/carriers/carrieraccounts/&quot;&gt;carrier accounts tutorial&lt;/a&gt; page for all supported carriers.</summary>
+        /// <summary>Carrier token, see [Carriers](/shippoapi/public-api/carriers)Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for all supported carriers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Carrier { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Carrier { get; set; }
 #endif
-        /// <summary>Carrier name, see &lt;a href=&quot;/shippoapi/public-api/carriers&quot;&gt;Carriers&lt;/a&gt;&lt;br&gt;</summary>
+        /// <summary>Carrier name, see [Carriers](/shippoapi/public-api/carriers)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountCarrierName? CarrierName { get; set; }

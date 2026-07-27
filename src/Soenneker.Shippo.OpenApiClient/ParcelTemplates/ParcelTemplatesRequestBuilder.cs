@@ -47,7 +47,7 @@ namespace Soenneker.Shippo.OpenApiClient.ParcelTemplates
         {
         }
         /// <summary>
-        /// List all carrier parcel template objects. &lt;br&gt; Use the following query string params to filter the results as needed. &lt;br&gt;&lt;ul&gt;&lt;li&gt;`include=all` (the default). Includes templates from all carriers &lt;/li&gt;&lt;li&gt;`include=user`. Includes templates only from carriers which the user has added (whether or not they&apos;re currently enabled) &lt;/li&gt;&lt;li&gt;`include=enabled`. includes templates only for carriers which the user has added and enabled &lt;/li&gt;&lt;li&gt;`carrier=*token*`. filter by specific carrier, e.g. fedex, usps &lt;/li&gt;&lt;/ul&gt;
+        /// &quot;List all carrier parcel template objects.Use the following query string params to filter the results as needed:- `include=all` (the default): includes templates from all carriers- `include=user`: includes templates only from carriers which the user has added (whether or not they&apos;re currently enabled)- `include=enabled`: includes templates only for carriers which the user has added and enabled- `carrier=&lt;token&gt;`: filter by specific carrier, e.g. `fedex`, `usps`&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -70,7 +70,7 @@ namespace Soenneker.Shippo.OpenApiClient.ParcelTemplates
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.CarrierParcelTemplateList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List all carrier parcel template objects. &lt;br&gt; Use the following query string params to filter the results as needed. &lt;br&gt;&lt;ul&gt;&lt;li&gt;`include=all` (the default). Includes templates from all carriers &lt;/li&gt;&lt;li&gt;`include=user`. Includes templates only from carriers which the user has added (whether or not they&apos;re currently enabled) &lt;/li&gt;&lt;li&gt;`include=enabled`. includes templates only for carriers which the user has added and enabled &lt;/li&gt;&lt;li&gt;`carrier=*token*`. filter by specific carrier, e.g. fedex, usps &lt;/li&gt;&lt;/ul&gt;
+        /// &quot;List all carrier parcel template objects.Use the following query string params to filter the results as needed:- `include=all` (the default): includes templates from all carriers- `include=user`: includes templates only from carriers which the user has added (whether or not they&apos;re currently enabled)- `include=enabled`: includes templates only for carriers which the user has added and enabled- `carrier=&lt;token&gt;`: filter by specific carrier, e.g. `fedex`, `usps`&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Shippo.OpenApiClient.ParcelTemplates
             return new global::Soenneker.Shippo.OpenApiClient.ParcelTemplates.ParcelTemplatesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List all carrier parcel template objects. &lt;br&gt; Use the following query string params to filter the results as needed. &lt;br&gt;&lt;ul&gt;&lt;li&gt;`include=all` (the default). Includes templates from all carriers &lt;/li&gt;&lt;li&gt;`include=user`. Includes templates only from carriers which the user has added (whether or not they&apos;re currently enabled) &lt;/li&gt;&lt;li&gt;`include=enabled`. includes templates only for carriers which the user has added and enabled &lt;/li&gt;&lt;li&gt;`carrier=*token*`. filter by specific carrier, e.g. fedex, usps &lt;/li&gt;&lt;/ul&gt;
+        /// &quot;List all carrier parcel template objects.Use the following query string params to filter the results as needed:- `include=all` (the default): includes templates from all carriers- `include=user`: includes templates only from carriers which the user has added (whether or not they&apos;re currently enabled)- `include=enabled`: includes templates only for carriers which the user has added and enabled- `carrier=&lt;token&gt;`: filter by specific carrier, e.g. `fedex`, `usps`&quot;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ParcelTemplatesRequestBuilderGetQueryParameters 

@@ -23,7 +23,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.Cod COD { get; set; }
 #endif
-        /// <summary>To add insurance to your parcel, specify `amount`, `content` and `currency`. &lt;br&gt;&lt;br&gt;If you do not want to add insurance to you parcel, do not set these parameters.</summary>
+        /// <summary>To add insurance to your parcel, specify `amount`, `content` and `currency`. If you do not want to add insurance to your parcel, do not set these parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance? Insurance { get; set; }

@@ -70,7 +70,7 @@ namespace Soenneker.Shippo.OpenApiClient.ShippoAccounts
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.ShippoAccountPaginatedList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.ShippoAccountPaginatedList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new &lt;a href=&quot;https://docs.goshippo.com/docs/platformaccounts/platform_using_accounts/&quot;&gt;Shippo Managed Account&lt;/a&gt;.
+        /// Creates a new [Shippo Managed Account](https://docs.goshippo.com/docs/platformaccounts/platform_using_accounts/).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShippoAccount"/></returns>
         /// <param name="body">The request body</param>
@@ -114,7 +114,7 @@ namespace Soenneker.Shippo.OpenApiClient.ShippoAccounts
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new &lt;a href=&quot;https://docs.goshippo.com/docs/platformaccounts/platform_using_accounts/&quot;&gt;Shippo Managed Account&lt;/a&gt;.
+        /// Creates a new [Shippo Managed Account](https://docs.goshippo.com/docs/platformaccounts/platform_using_accounts/).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

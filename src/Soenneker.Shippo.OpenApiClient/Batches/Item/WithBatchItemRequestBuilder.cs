@@ -52,7 +52,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item
         {
         }
         /// <summary>
-        /// Returns a batch using an object ID. &lt;br&gt; Batch shipments are displayed 100 at a time.  You can iterate through each `page` using the `?page= query` parameter.  You can also filter based on batch shipment status, for example, by passing a query param like `?object_results=creation_failed`. &lt;br&gt; For more details on filtering results, see our guide on &lt;a href=&quot;https://docs.goshippo.com/docs/api_concepts/filtering/&quot; target=&quot;blank&quot;&gt; filtering&lt;/a&gt;.
+        /// Returns a batch using an object ID.Batch shipments are displayed 100 at a time. You can iterate through each page using the `?page=` query parameter. You can also filter based on batch shipment status, for example, by passing a query param like `?object_results=creation_failed`.For more details on filtering results, see our guide on [filtering](https://docs.goshippo.com/docs/api_concepts/filtering/).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Batch"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -75,7 +75,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Batch>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Batch.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a batch using an object ID. &lt;br&gt; Batch shipments are displayed 100 at a time.  You can iterate through each `page` using the `?page= query` parameter.  You can also filter based on batch shipment status, for example, by passing a query param like `?object_results=creation_failed`. &lt;br&gt; For more details on filtering results, see our guide on &lt;a href=&quot;https://docs.goshippo.com/docs/api_concepts/filtering/&quot; target=&quot;blank&quot;&gt; filtering&lt;/a&gt;.
+        /// Returns a batch using an object ID.Batch shipments are displayed 100 at a time. You can iterate through each page using the `?page=` query parameter. You can also filter based on batch shipment status, for example, by passing a query param like `?object_results=creation_failed`.For more details on filtering results, see our guide on [filtering](https://docs.goshippo.com/docs/api_concepts/filtering/).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -103,7 +103,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item
             return new global::Soenneker.Shippo.OpenApiClient.Batches.Item.WithBatchItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a batch using an object ID. &lt;br&gt; Batch shipments are displayed 100 at a time.  You can iterate through each `page` using the `?page= query` parameter.  You can also filter based on batch shipment status, for example, by passing a query param like `?object_results=creation_failed`. &lt;br&gt; For more details on filtering results, see our guide on &lt;a href=&quot;https://docs.goshippo.com/docs/api_concepts/filtering/&quot; target=&quot;blank&quot;&gt; filtering&lt;/a&gt;.
+        /// Returns a batch using an object ID.Batch shipments are displayed 100 at a time. You can iterate through each page using the `?page=` query parameter. You can also filter based on batch shipment status, for example, by passing a query param like `?object_results=creation_failed`.For more details on filtering results, see our guide on [filtering](https://docs.goshippo.com/docs/api_concepts/filtering/).
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithBatchItemRequestBuilderGetQueryParameters 

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>Batches that are `VALIDATING` are being created and validated&lt;br&gt;`VALID` batches can be purchased&lt;br&gt;`INVALID` batches cannot be purchased, `INVALID` BatchShipments must be removed&lt;br&gt;Batches that are in the `PURCHASING` state are being purchased&lt;br&gt;`PURCHASED` batches are finished purchasing.</summary>
+    /// <summary>&quot;- `VALIDATING`: the batch is being created and validated- `VALID`: the batch can be purchased- `INVALID`: the batch cannot be purchased; `INVALID` BatchShipments must be removed- `PURCHASING`: the batch is being purchased- `PURCHASED`: the batch is finished purchasing&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BatchStatus
     {

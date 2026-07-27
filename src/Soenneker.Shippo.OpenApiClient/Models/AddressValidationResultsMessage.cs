@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>See &lt;a href=&quot;/shippoapi/public-api/address-validation-codes&quot;&gt;Address Validation Codes&lt;/a&gt;</summary>
+        /// <summary>See [Address Validation Codes](/shippoapi/public-api/address-validation-codes)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>See &lt;a href=&quot;/shippoapi/public-api/address-validation-source&quot;&gt;Address Validation Source&lt;/a&gt;</summary>
+        /// <summary>See [Address Validation Source](/shippoapi/public-api/address-validation-source)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Source { get; set; }

@@ -31,7 +31,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>Secured funds include money orders, certified cheques and others (see &lt;a href=&quot;https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html&quot;&gt;UPS&lt;/a&gt; for details). If no payment_method inputted the value defaults to &quot;ANY&quot;.)</summary>
+        /// <summary>Secured funds include money orders, certified cheques and others (see [UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details). If no payment_method inputted the value defaults to &quot;ANY&quot;.)</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.CodPaymentMethod? PaymentMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Cod"/> and sets the default values.

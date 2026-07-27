@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>`INVALID` batch shipments cannot be purchased and will have to be removed, fixed, and added to the batch again.&lt;br&gt;`VALID` batch shipments can be purchased. &lt;br&gt;Batch shipments with the status `TRANSACTION_FAILED` were not able to be purchased and the error will be displayed on the message field&lt;br&gt; `INCOMPLETE` batch shipments have an issue with the Address and will need to be removed, fixed, and added to the batch again.</summary>
+    /// <summary>&quot;- `INVALID`: the batch shipment cannot be purchased and will have to be removed, fixed, and added to the batch again- `VALID`: the batch shipment can be purchased- `TRANSACTION_FAILED`: the batch shipment was not able to be purchased and the error will be displayed on the message field- `INCOMPLETE`: the batch shipment has an issue with the Address and will need to be removed, fixed, and added to the batch again&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BatchShipmentStatus
     {

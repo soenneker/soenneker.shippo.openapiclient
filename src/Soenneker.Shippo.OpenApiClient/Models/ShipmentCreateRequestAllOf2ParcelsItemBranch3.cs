@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&lt;a href=&quot;/shippoapi/public-api/parcels&quot;&gt;Parcel&lt;/a&gt; `object_id` of a previously created parcel.</summary>
+        /// <summary>[Parcel](/shippoapi/public-api/parcels) `object_id` of a previously created parcel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

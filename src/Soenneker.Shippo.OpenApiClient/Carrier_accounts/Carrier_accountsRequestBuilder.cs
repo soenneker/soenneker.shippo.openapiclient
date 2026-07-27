@@ -59,7 +59,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts
         {
         }
         /// <summary>
-        /// Returns a list of all carrier accounts connected to your Shippo account. These carrier accounts include both Shippo carrier accounts and your own carrier accounts that you have connected to your Shippo account.Additionally, you can get information about the service levels associated with each carrier account by passing in the `?service_levels=true` query parameter. &lt;br&gt;Using it appends the property `service_levels` to each carrier account. &lt;br&gt;By default, if the query parameter is omitted, the `service_levels` property will not be included in the response.
+        /// Returns a list of all carrier accounts connected to your Shippo account. These carrier accounts include both Shippo carrier accounts and your own carrier accounts that you have connected to your Shippo account.Additionally, you can get information about the service levels associated with each carrier account by passing in the `?service_levels=true` query parameter.Using it appends the property `service_levels` to each carrier account.By default, if the query parameter is omitted, the `service_levels` property will not be included in the response.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountPaginatedList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -107,7 +107,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccount>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccount.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a list of all carrier accounts connected to your Shippo account. These carrier accounts include both Shippo carrier accounts and your own carrier accounts that you have connected to your Shippo account.Additionally, you can get information about the service levels associated with each carrier account by passing in the `?service_levels=true` query parameter. &lt;br&gt;Using it appends the property `service_levels` to each carrier account. &lt;br&gt;By default, if the query parameter is omitted, the `service_levels` property will not be included in the response.
+        /// Returns a list of all carrier accounts connected to your Shippo account. These carrier accounts include both Shippo carrier accounts and your own carrier accounts that you have connected to your Shippo account.Additionally, you can get information about the service levels associated with each carrier account by passing in the `?service_levels=true` query parameter.Using it appends the property `service_levels` to each carrier account.By default, if the query parameter is omitted, the `service_levels` property will not be included in the response.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -157,7 +157,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts
             return new global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Carrier_accountsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a list of all carrier accounts connected to your Shippo account. These carrier accounts include both Shippo carrier accounts and your own carrier accounts that you have connected to your Shippo account.Additionally, you can get information about the service levels associated with each carrier account by passing in the `?service_levels=true` query parameter. &lt;br&gt;Using it appends the property `service_levels` to each carrier account. &lt;br&gt;By default, if the query parameter is omitted, the `service_levels` property will not be included in the response.
+        /// Returns a list of all carrier accounts connected to your Shippo account. These carrier accounts include both Shippo carrier accounts and your own carrier accounts that you have connected to your Shippo account.Additionally, you can get information about the service levels associated with each carrier account by passing in the `?service_levels=true` query parameter.Using it appends the property `service_levels` to each carrier account.By default, if the query parameter is omitted, the `service_levels` property will not be included in the response.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Carrier_accountsRequestBuilderGetQueryParameters 

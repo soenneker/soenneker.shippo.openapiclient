@@ -17,7 +17,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public bool? ActionRequired { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A code that represents the substatus of the shipment. See the &lt;a href=&quot;https://docs.goshippo.com/docs/tracking/tracking/#event-definitions&quot;&gt;Event Definitions&lt;/a&gt; for more information.</summary>
+        /// <summary>A code that represents the substatus of the shipment. See the [Event Definitions](https://docs.goshippo.com/docs/tracking/tracking/#event-definitions) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }
@@ -25,7 +25,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>A human-readable description of the substatus. See the &lt;a href=&quot;https://docs.goshippo.com/docs/tracking/tracking/#event-definitions&quot;&gt;Event Definitions&lt;/a&gt; for more information.</summary>
+        /// <summary>A human-readable description of the substatus. See the [Event Definitions](https://docs.goshippo.com/docs/tracking/tracking/#event-definitions) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }

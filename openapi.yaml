@@ -18,8 +18,8 @@ tags:
       <p style="text-align: center; background-color: #F2F3F4; padding: 16px
       24px; border-radius: 4px;">
         First-time users and those looking for specific integration tutorials,
-        <a href="/shippoapi/public-api/overview">see our full API documentation and guides.</a><br>
-        Download the <a href="/spec/shippoapi/public-api.yaml">API Specification yaml file</a>
+        [see our full API documentation and guides.](/shippoapi/public-api/overview)<br>
+        Download the [API Specification yaml file](/spec/shippoapi/public-api.yaml)
       </p>
 
 
@@ -43,16 +43,15 @@ tags:
       In order to authenticate properly, please put `Authorization: ShippoToken
       <token>` in your header. You can find your token on the 
 
-      <a href="https://goshippo.com/user/apikeys/">Shippo API settings page</a>.
+      [Shippo API settings page](https://goshippo.com/user/apikeys/).
 
 
 
 
       For more information about authentication and test mode, 
 
-      <a
-      href="https://docs.goshippo.com/docs/guides_general/authentication/">please
-      visit our Authentication guide</a>.
+      [please visit our Authentication
+      guide](https://docs.goshippo.com/docs/guides_general/authentication/).
 
 
       The API is available via Secure Socket Layer (SSL) only. All requests to
@@ -76,9 +75,8 @@ tags:
 
       <h3>REST & Disposable Objects</h3>
 
-      The Shippo API is built around <a
-      href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST
-      principles</a>. 
+      The Shippo API is built around [REST
+      principles](http://en.wikipedia.org/wiki/Representational_State_Transfer). 
 
       Use POST requests to create objects, GET requests to retrieve objects, and
       PUT requests to update objects.
@@ -100,13 +98,11 @@ tags:
       This reference guide supports the Shippo API version: `2018-02-08` . 
 
 
-      To see reference guides for older API versions, see our <a
-      href="https://docs.goshippo.com/docs/guides_general/legacy_reference/">legacy
-      reference guide</a>. 
+      To see reference guides for older API versions, see our [legacy reference
+      guide](https://docs.goshippo.com/docs/guides_general/legacy_reference/). 
 
-      For more information about Shippo API versions, see our <a
-      href="https://docs.goshippo.com/docs/api_concepts/apiversioning/">API
-      versions guide</a>.
+      For more information about Shippo API versions, see our [API versions
+      guide](https://docs.goshippo.com/docs/api_concepts/apiversioning/).
   - name: Addresses
     description: >-
       Addresses are the locations a parcel is being shipped **from** and **to**.
@@ -170,15 +166,14 @@ tags:
       your application, such as sending an email or updating a database.
   - name: Tracking Status
     description: >-
-      <p style="text-align: center; background-color: #F2F3F4;"></br>
+      <p style="text-align: center; background-color: #F2F3F4;"><br>
 
       If you purchased your shipping label through Shippo, you can also get all
       the tracking details of your Shipment 
 
-      from the <a href="/shippoapi/public-api/transactions">Transaction</a>
-      object.
+      from the [Transaction](/shippoapi/public-api/transactions) object.
 
-      </br></br></p>
+      <br><br></p>
 
       A tracking status of a package is an indication of current location of a
       package in the supply chain. For example,  sorting, warehousing, or out
@@ -186,15 +181,15 @@ tags:
       shipments.
 
 
-      When using your <a
-      href="https://docs.goshippo.com/docs/guides_general/authentication/">Test</a>
+      When using your
+      [Test](https://docs.goshippo.com/docs/guides_general/authentication/)
       token for tracking, you need to use Shippo's 
 
       predefined tokens for testing different tracking statuses. You can find
       more information in our 
 
-      <a href="https://docs.goshippo.com/docs/tracking/tracking/">Tracking
-      tutorial</a> on how to do this, and what the 
+      [Tracking tutorial](https://docs.goshippo.com/docs/tracking/tracking/) on
+      how to do this, and what the 
 
       payloads look like.      
   - name: Batches
@@ -269,8 +264,8 @@ tags:
       rates at checkout. The response is a list of shipping options based on the
       Service Group configuration.
 
-      (see <a href="/shippoapi/public-api/service-groups">Service Group
-      configuration</a> for details).
+      (see [Service Group configuration](/shippoapi/public-api/service-groups)
+      for details).
 
 
 
@@ -669,17 +664,16 @@ tags:
 
       They can be used by marketplaces, e-commerce platforms, and third-party
       logistics providers who want to offer, seamless, built-in shipping
-      functionality to their customers. See our <a
-      href="https://docs.goshippo.com/docs/platformaccounts/platform_accounts/">guide</a>
+      functionality to their customers. See our
+      [guide](https://docs.goshippo.com/docs/platformaccounts/platform_accounts/)
       for more details.
   - name: Customs Declaration B13A Filing Option
     description: >
       B13A Option details are obtained by filing a B13A Canada Export
       Declaration via the Canadian Export Reporting System (CERS). 
 
-      More information on <a
-      href="https://www.cbsa-asfc.gc.ca/export/guide-eng.html">reporting
-      commercial exports from Canada</a>.
+      More information on [reporting commercial exports from
+      Canada](https://www.cbsa-asfc.gc.ca/export/guide-eng.html).
 
 
       **Allowed values:**
@@ -3244,18 +3238,17 @@ paths:
   /batches/{BatchId}:
     get:
       description: >-
-        Returns a batch using an object ID. <br> Batch shipments are displayed
-        100 at a time.  You can iterate 
+        Returns a batch using an object ID.
 
-        through each `page` using the `?page= query` parameter.  You can also
-        filter based on batch shipment 
 
-        status, for example, by passing a query param like
-        `?object_results=creation_failed`. <br> 
+        Batch shipments are displayed 100 at a time. You can iterate through
+        each page using the `?page=` query parameter. You can also filter based
+        on batch shipment status, for example, by passing a query param like
+        `?object_results=creation_failed`.
 
-        For more details on filtering results, see our guide on <a
-        href="https://docs.goshippo.com/docs/api_concepts/filtering/"
-        target="blank"> filtering</a>.
+
+        For more details on filtering results, see our guide on
+        [filtering](https://docs.goshippo.com/docs/api_concepts/filtering/).
       operationId: GetBatch
       parameters:
         - description: Object ID of the batch
@@ -6070,10 +6063,9 @@ paths:
 
         Additionally, you can get information about the service levels
         associated with each carrier account by passing in the
-        `?service_levels=true` query parameter. <br>
+        `?service_levels=true` query parameter.
 
         Using it appends the property `service_levels` to each carrier account.
-        <br>
 
         By default, if the query parameter is omitted, the `service_levels`
         property will not be included in the response.
@@ -11174,24 +11166,21 @@ paths:
   /parcel-templates:
     get:
       description: >-
-        List all carrier parcel template objects. <br> Use the following query
-        string params to filter the results as needed. <br>
+        List all carrier parcel template objects.
 
-        <ul>
 
-        <li>`include=all` (the default). Includes templates from all carriers
-        </li>
+        Use the following query string params to filter the results as needed:
 
-        <li>`include=user`. Includes templates only from carriers which the user
-        has added (whether or not they're currently enabled) </li>
 
-        <li>`include=enabled`. includes templates only for carriers which the
-        user has added and enabled </li>
+        - `include=all` (the default): includes templates from all carriers
 
-        <li>`carrier=*token*`. filter by specific carrier, e.g. fedex, usps
-        </li>
+        - `include=user`: includes templates only from carriers which the user
+        has added (whether or not they're currently enabled)
 
-        </ul>
+        - `include=enabled`: includes templates only for carriers which the user
+        has added and enabled
+
+        - `carrier=<token>`: filter by specific carrier, e.g. `fedex`, `usps`
       operationId: ListCarrierParcelTemplates
       parameters:
         - name: include
@@ -13316,7 +13305,7 @@ paths:
             }
     put:
       description: >-
-        Updates an existing service group object. <br>The object_id cannot be
+        Updates an existing service group object. The object_id cannot be
         updated as it is the unique identifier for the object.
       operationId: UpdateServiceGroup
       parameters:
@@ -13743,27 +13732,32 @@ paths:
   /shipments:
     get:
       description: >-
-        Returns a list of all shipment objects.<br><br>
-
-        In order to filter results, you must use the below path parameters. 
-
-        Provided dates should be ISO 8601 UTC dates (timezone offsets are
-        currently not supported).<br><br>
+        Returns a list of all shipment objects.
 
 
-        Optional path parameters:<br>
-          `object_created_gt`- object(s) created greater than a provided date time<br>
-          `object_created_gte` - object(s) created greater than or equal to a provided date time<br>
-          `object_created_lt` - object(s) created less than a provided date time<br>
-          `object_created_lte` - object(s) created less than or equal to a provided date time<br>
+        To filter results, use the optional query parameters below. Provided
+        dates should be ISO 8601 UTC dates (timezone offsets are currently not
+        supported).
 
-          Date format examples:<br>
-            `2017-01-01`<br>
-            `2017-01-01T03:30:30` or `2017-01-01T03:30:30.5`<br>
-            `2017-01-01T03:30:30Z`<br><br>
 
-          Example URL:<br>
-            `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&object_created_lt=2017-04-01T00:00:30`<br><br>
+        - `object_created_gt`: object(s) created after the provided date time
+
+        - `object_created_gte`: object(s) created at or after the provided date
+        time
+
+        - `object_created_lt`: object(s) created before the provided date time
+
+        - `object_created_lte`: object(s) created at or before the provided date
+        time
+
+
+        Date format examples: `2017-01-01`, `2017-01-01T03:30:30` (or
+        `2017-01-01T03:30:30.5`), `2017-01-01T03:30:30Z`
+
+
+        Example URL:
+        `https://api.goshippo.com/shipments/?object_created_gte=2017-01-01T00:00:30&object_created_lt=2017-04-01T00:00:30`
+
 
         Note: Shipment objects older than 390 days are not returned.
       operationId: ListShipments
@@ -15666,9 +15660,8 @@ paths:
         is used in the country the parcel is shipped to. You can request rates
         with prices expressed in a different currency by adding the currency
         code to the end of the resource URL. The full list of supported
-        currencies along with their codes can be viewed on <a
-        href="http://openexchangerates.org/api/currencies.json">open exchange
-        rates</a>.
+        currencies along with their codes can be viewed on [open exchange
+        rates](http://openexchangerates.org/api/currencies.json).
 
 
         Note: re-requesting the rates with a different currency code will
@@ -15853,10 +15846,9 @@ paths:
       description: >-
         Registers a webhook that will send HTTP notifications to you when the
         status of your tracked package changes. For more details on creating a
-        webhook, see our guides on <a
-        href="https://docs.goshippo.com/docs/tracking/webhooks/">Webhooks</a>
-        and <a
-        href="https://docs.goshippo.com/docs/tracking/tracking/">Tracking</a>.
+        webhook, see our guides on
+        [Webhooks](https://docs.goshippo.com/docs/tracking/webhooks/) and
+        [Tracking](https://docs.goshippo.com/docs/tracking/tracking/).
       operationId: CreateTrack
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
@@ -16346,10 +16338,12 @@ paths:
     post:
       description: >-
         Creates a new transaction object and purchases the shipping label using
-        a rate object that has previously been created. <br> OR <br> Creates a
-        new transaction object and purchases the shipping label instantly using
-        shipment details, an existing carrier account, and an existing service
-        level token.
+        a rate object that has previously been created.
+
+
+        Alternatively, creates a new transaction object and purchases the
+        shipping label instantly using shipment details, an existing carrier
+        account, and an existing service level token.
       operationId: CreateTransaction
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
@@ -16892,14 +16886,17 @@ paths:
             }
     post:
       description: >-
-        Creates a new user parcel template. <br>You can choose to create a
+        Creates a new user parcel template.
+
+
+        You can choose to create a
 
         parcel template using a preset carrier template as a starting point, or
 
         you can create an entirely custom one. To use a preset carrier template,
 
-        pass in a unique template token from <a
-        href="/shippoapi/public-api/parcel-templates">this list</a>
+        pass in a unique template token from [this
+        list](/shippoapi/public-api/parcel-templates)
 
         plus the weight fields (**weight** and **weight_unit**). Otherwise, omit
 
@@ -17716,9 +17713,8 @@ paths:
             }
     post:
       description: >-
-        Creates a new <a
-        href="https://docs.goshippo.com/docs/platformaccounts/platform_using_accounts/">Shippo
-        Managed Account</a>.
+        Creates a new [Shippo Managed
+        Account](https://docs.goshippo.com/docs/platformaccounts/platform_using_accounts/).
       operationId: CreateShippoAccount
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
@@ -18922,8 +18918,9 @@ components:
     ShippoApiVersionHeader:
       description: >-
         Optional string used to pick a non-default API version to use. See our
-        <a href="https://docs.goshippo.com/docs/api_concepts/apiversioning/">API
-        version</a> guide.
+        [API
+        version](https://docs.goshippo.com/docs/api_concepts/apiversioning/)
+        guide.
       in: header
       name: SHIPPO-API-VERSION
       schema:
@@ -19270,7 +19267,8 @@ components:
       properties:
         name:
           description: >-
-            **required for purchase**<br>
+            **required for purchase**
+
 
             First and Last Name of the addressee
 
@@ -19299,7 +19297,8 @@ components:
             | FedEx | Max 35 characters; Either company or name required |
         street1:
           description: >-
-            **required for purchase**<br>
+            **required for purchase**
+
 
             First street line. Usually street number and street name (except for
             DHL Germany, see street_no).
@@ -19360,7 +19359,8 @@ components:
             DHL Germany.
         city:
           description: >-
-            **required for purchase**<br>
+            **required for purchase**
+
 
             Name of a city. When creating a Quote Address, sending a city is
             optional but will yield more accurate Rates.
@@ -19384,7 +19384,8 @@ components:
           maxLength: 100
         state:
           description: >-
-            **required for purchase for some countries**<br>
+            **required for purchase for some countries**
+
 
             State/Province values are required for shipments from/to the US, AU,
             and CA. UPS requires province for some
@@ -19408,7 +19409,8 @@ components:
           maxLength: 100
         zip:
           description: >-
-            **required for purchase**<br>
+            **required for purchase**
+
 
             Postal code of an Address. When creating a Quote Addresses, sending
             a ZIP is optional but will yield more
@@ -19437,9 +19439,9 @@ components:
             If using country names, please ensure they are spelled correctly and
             in English. Country names are converted to country codes.
 
-            Refer to this <a
-            href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements"
-            target="_blank">guide</a> for a list of country codes.
+            Refer to this
+            [guide](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+            for a list of country codes.
 
             Sending a country is always required.
         phone:
@@ -19499,13 +19501,12 @@ components:
               example: true
               type: boolean
               description: >-
-                Complete addresses contain all required
-                values.<br><br>Incomplete addresses have failed one or multiple 
+                Complete addresses contain all required values.
 
-                validations.<br>Incomplete Addresses are eligible for requesting
-                rates but lack at least one required 
 
-                value for purchasing labels.
+                Incomplete addresses have failed one or multiple validations.
+                Incomplete Addresses are eligible for requesting rates but lack
+                at least one required value for purchasing labels.
             latitude:
               description: Latitude of address
               type:
@@ -19555,22 +19556,21 @@ components:
       allOf:
         - $ref: '#/components/schemas/Address'
       description: >-
-        <a href="/shippoapi/public-api/addresses">Address</a> object of the
-        recipient / buyer. Will be returned expanded by default.
+        [Address](/shippoapi/public-api/addresses) object of the recipient /
+        buyer. Will be returned expanded by default.
     AddressFrom:
       allOf:
         - $ref: '#/components/schemas/Address'
       description: >-
-        <a href="/shippoapi/public-api/addresses">Address</a> object of the
-        sender / seller. Will be returned expanded by default.
+        [Address](/shippoapi/public-api/addresses) object of the sender /
+        seller. Will be returned expanded by default.
     AddressReturn:
       allOf:
         - $ref: '#/components/schemas/Address'
       description: >-
         ID of the Address object where the shipment will be sent back to if it
-        is not delivered 
+        is not delivered (Only available for UPS, USPS, and Fedex shipments).
 
-        (Only available for UPS, USPS, and Fedex shipments). <br/> 
 
         If this field is not set, your shipments will be returned to the
         address_from.
@@ -19588,14 +19588,14 @@ components:
       allOf:
         - $ref: '#/components/schemas/AddressCreateRequest'
       description: >-
-        <a href="/shippoapi/public-api/addresses">Address</a> object of the
-        sender / seller. Will be returned expanded by default..
+        [Address](/shippoapi/public-api/addresses) object of the sender /
+        seller. Will be returned expanded by default..
     AddressToCreateRequest:
       allOf:
         - $ref: '#/components/schemas/AddressCreateRequest'
       description: >-
-        <a href="/shippoapi/public-api/addresses">Address</a> object of the
-        recipient / buyer. Will be returned expanded by default.
+        [Address](/shippoapi/public-api/addresses) object of the recipient /
+        buyer. Will be returned expanded by default.
     AddressCompleteCreateRequest:
       allOf:
         - $ref: '#/components/schemas/AddressBase'
@@ -19672,7 +19672,8 @@ components:
           type: string
         state:
           description: >-
-            **required for purchase for some countries**<br>
+            **required for purchase for some countries**
+
 
             State/Province values are required for shipments from/to the US, AU,
             and CA. UPS requires province for some 
@@ -19690,12 +19691,9 @@ components:
         country:
           example: DE
           type: string
-          description: >-
+          description: |-
             Example: `US` or `DE`. All accepted values can be found on the 
-
-            <a href="http://www.iso.org/" target="blank">Official ISO
-            Website</a>.
-
+            [Official ISO Website](http://www.iso.org/).
             Sending a country is always required.
         phone:
           example: '80331'
@@ -19721,8 +19719,8 @@ components:
         Object that contains information regarding if an address had been
         validated or not. Also contains any messages 
 
-        generated during validation. Children keys are
-        <code>is_valid</code>(boolean) and <code>messages</code>(array).
+        generated during validation. Children keys are `is_valid`(boolean) and
+        `messages`(array).
       properties:
         is_valid:
           example: false
@@ -19738,15 +19736,14 @@ components:
           type: string
           example: Unknown Street
           description: >-
-            See <a href="/shippoapi/public-api/address-validation-codes">Address
-            Validation Codes</a>
+            See [Address Validation
+            Codes](/shippoapi/public-api/address-validation-codes)
         source:
           type: string
           example: Shippo Address Validator
           description: >-
-            See <a
-            href="/shippoapi/public-api/address-validation-source">Address
-            Validation Source</a>
+            See [Address Validation
+            Source](/shippoapi/public-api/address-validation-source)
         text:
           example: >-
             City, State and ZIP Code are valid, but street address is not a
@@ -19856,8 +19853,7 @@ components:
             The currency that 'amount' is in. The official ISO 4217 currency
             codes are used, e.g. "USD" or "EUR".
 
-            <a href="http://www.xe.com/iso4217.php" target="blank">ISO 4217
-            Standard</a>.
+            [ISO 4217 Standard](http://www.xe.com/iso4217.php).
           example: USD
           type: string
       type: object
@@ -19873,8 +19869,7 @@ components:
             The currency that 'amount' is in. The official ISO 4217 currency
             codes are used, e.g. "USD" or "EUR".
 
-            <a href="http://www.xe.com/iso4217.php" target="blank">ISO 4217
-            Standard</a>.
+            [ISO 4217 Standard](http://www.xe.com/iso4217.php).
           example: USD
           type: string
       type: object
@@ -19900,8 +19895,7 @@ components:
             The currency that 'amount' is in. The official ISO 4217 currency
             codes are used, e.g. "USD" or "EUR".
 
-            <a href="http://www.xe.com/iso4217.php" target="blank">ISO 4217
-            Standard</a>.
+            [ISO 4217 Standard](http://www.xe.com/iso4217.php).
           example: USD
           type: string
       type: object
@@ -19926,9 +19920,8 @@ components:
             The servicelevel can be changed on a per-shipment basis by changing
             the servicelevel_token in the 
 
-            corresponding BatchShipment object. <a
-            href="/shippoapi/public-api/service-levels">Servicelevel tokens can
-            be found here.</a>
+            corresponding BatchShipment object. [Servicelevel tokens can be
+            found here.](/shippoapi/public-api/service-levels)
           example: usps_priority
           type: string
         label_filetype:
@@ -19973,8 +19966,8 @@ components:
               type: string
             object_results:
               description: >-
-                An object containing the following
-                counts:<br>`creation_succeeded`<br>`creation_failed`<br>`purchase_succeeded`<br>`purchase_failed`
+                An object containing the following counts: `creation_succeeded`,
+                `creation_failed`, `purchase_succeeded`, `purchase_failed`
               properties:
                 creation_failed:
                   example: 3
@@ -20004,18 +19997,16 @@ components:
               type: string
             status:
               description: >-
-                Batches that are `VALIDATING` are being created and
-                validated<br>
+                - `VALIDATING`: the batch is being created and validated
 
-                `VALID` batches can be purchased<br>
+                - `VALID`: the batch can be purchased
 
-                `INVALID` batches cannot be purchased, `INVALID` BatchShipments
-                must be removed<br>
+                - `INVALID`: the batch cannot be purchased; `INVALID`
+                BatchShipments must be removed
 
-                Batches that are in the `PURCHASING` state are being
-                purchased<br>
+                - `PURCHASING`: the batch is being purchased
 
-                `PURCHASED` batches are finished purchasing.
+                - `PURCHASED`: the batch is finished purchasing
               enum:
                 - VALIDATING
                 - VALID
@@ -20071,12 +20062,11 @@ components:
             A token that sets the shipping method for the batch, overriding the
             batch default. 
 
-            Servicelevel tokens can be found <a
-            href="/shippoapi/public-api/service-levels">in this list</a> 
+            Servicelevel tokens can be found [in this
+            list](/shippoapi/public-api/service-levels) 
 
-            or <a
-            href="/shippoapi/public-api/carrier-accounts/listcarrieraccounts">at
-            this endpoint</a>.
+            or [at this
+            endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).
           example: fedex_ground
           type: string
       type: object
@@ -20116,17 +20106,16 @@ components:
               type: string
             status:
               description: >-
-                `INVALID` batch shipments cannot be purchased and will have to
-                be removed, fixed, and added to the batch again.<br>
+                - `INVALID`: the batch shipment cannot be purchased and will
+                have to be removed, fixed, and added to the batch again
 
-                `VALID` batch shipments can be purchased. <br>
+                - `VALID`: the batch shipment can be purchased
 
-                Batch shipments with the status `TRANSACTION_FAILED` were not
-                able to be purchased and the error will be displayed on the
-                message field<br> 
+                - `TRANSACTION_FAILED`: the batch shipment was not able to be
+                purchased and the error will be displayed on the message field
 
-                `INCOMPLETE` batch shipments have an issue with the Address and
-                will need to be removed, fixed, and added to the batch again.
+                - `INCOMPLETE`: the batch shipment has an issue with the Address
+                and will need to be removed, fixed, and added to the batch again
               enum:
                 - INVALID
                 - VALID
@@ -20157,8 +20146,8 @@ components:
       allOf:
         - $ref: '#/components/schemas/PaginatedList'
         - description: >-
-            Array of <a
-            href="/shippoapi/public-api/batches/batchshipment">BatchShipment</a>
+            Array of
+            [BatchShipment](/shippoapi/public-api/batches/batchshipment)
             objects. 
 
             The response keeps the same order as in the request array.
@@ -20218,8 +20207,7 @@ components:
             Secured funds include money orders, certified cheques and others
             (see 
 
-            <a
-            href="https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html">UPS</a>
+            [UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html)
             for details). 
 
             If no payment_method inputted the value defaults to "ANY".)
@@ -20353,23 +20341,21 @@ components:
       properties:
         aes_itn:
           description: |-
-            **required if eel_pfc is `AES_ITN`**<br>
+            **required if eel_pfc is `AES_ITN`**
+
             AES / ITN reference of the shipment.
           type: string
         b13a_filing_option:
           type: string
         b13a_number:
           description: >-
-            **must be provided if and only if b13a_filing_option is
-            provided**<br>
+            **must be provided if and only if b13a_filing_option is provided**
 
-            Represents:<br> the Proof of Report (POR) Number when
-            b13a_filing_option is `FILED_ELECTRONICALLY`;<br> 
 
-            the Summary ID Number when b13a_filing_option is
-            `SUMMARY_REPORTING`;<br> 
-
-            or the Exemption Number when b13a_filing_option is `NOT_REQUIRED`.
+            Represents the Proof of Report (POR) Number when b13a_filing_option
+            is `FILED_ELECTRONICALLY`; the Summary ID Number when
+            b13a_filing_option is `SUMMARY_REPORTING`; or the Exemption Number
+            when b13a_filing_option is `NOT_REQUIRED`.
           type: string
         certificate:
           type: string
@@ -20392,7 +20378,8 @@ components:
           type: boolean
         contents_explanation:
           description: |-
-            **required if contents_type is `OTHER`**<br>
+            **required if contents_type is `OTHER`**
+
             Explanation of the type of goods of the shipment.
           example: T-Shirt purchase
           type: string
@@ -20488,12 +20475,11 @@ components:
         B13A Option details are obtained by filing a B13A Canada Export
         Declaration via the Canadian Export Reporting System (CERS). 
 
-        <a href="https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html"
-        target="_blank" rel="noopener noreferrer"> More information on reporting
-        commercial exports from Canada. </a>
+        [More information on reporting commercial exports from
+        Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)
 
-        Allowed values available <a
-        href="/shippoapi/public-api/customs-declaration-b13a-filing-option">here</a>
+        Allowed values available
+        [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)
     CustomsDeclarationB13AFilingOptionEnum:
       allOf:
         - $ref: '#/components/schemas/CustomsDeclarationB13AFilingOption'
@@ -20506,8 +20492,8 @@ components:
       description: >-
         Type of goods of the shipment.  
 
-        Allowed values available <a
-        href="/shippoapi/public-api/customs-declaration-contents-type">here</a>
+        Allowed values available
+        [here](/shippoapi/public-api/customs-declaration-contents-type)
       example: MERCHANDISE
     CustomsDeclarationContentsTypeEnum:
       allOf:
@@ -20528,8 +20514,8 @@ components:
 
         other shipments from the US, `NOEEI_30_37_a` is applicable.
 
-        Allowed values available <a
-        href="/shippoapi/public-api/customs-declaration-eelpfc">here</a>
+        Allowed values available
+        [here](/shippoapi/public-api/customs-declaration-eelpfc)
       example: NOEEI_30_37_a
     CustomsDeclarationEelPfcEnum:
       allOf:
@@ -20551,8 +20537,8 @@ components:
 
         If expecting DAP for other carriers, please use DDU.
 
-        Allowed values available <a
-        href="/shippoapi/public-api/customs-declaration-incoterm">here</a>
+        Allowed values available
+        [here](/shippoapi/public-api/customs-declaration-incoterm)
 
         Carrier-specific restrictions are in the table below.
 
@@ -20580,8 +20566,8 @@ components:
         Indicates how the carrier should proceed in case the shipment can't be
         delivered.
 
-        Allowed values available <a
-        href="/shippoapi/public-api/customs-declaration-non-delivery-option">here</a>
+        Allowed values available
+        [here](/shippoapi/public-api/customs-declaration-non-delivery-option)
       example: RETURN
     CustomsDeclarationNonDeliveryOptionEnum:
       allOf:
@@ -20693,9 +20679,8 @@ components:
             country code followed by a 6-17 character alphanumeric identifier
             (e.g. PL1234567890ABCDE).
 
-            <a
-            href="https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en">More
-            information on EORI.</a>
+            [More information on
+            EORI.](https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en)
         tax_id:
           $ref: '#/components/schemas/CustomsTaxIdentification'
       type: object
@@ -20755,8 +20740,8 @@ components:
           description: >-
             Country of origin of the item. Example: `US` or `DE`. 
 
-            All accepted values can be found on the <a
-            href="http://www.iso.org/" target="_blank">Official ISO Website</a>.
+            All accepted values can be found on the [Official ISO
+            Website](http://www.iso.org/).
         quantity:
           example: 20
           format: int64
@@ -20790,8 +20775,8 @@ components:
           example: USD
           type: string
           description: >-
-            Currency used for value_amount. The <a
-            href="http://www.xe.com/iso4217.php">official ISO 4217</a> 
+            Currency used for value_amount. The [official ISO
+            4217](http://www.xe.com/iso4217.php) 
 
             currency codes are used, e.g.  `USD` or `EUR`.
       required:
@@ -20899,8 +20884,8 @@ components:
         are provided, only certain USPS service levels will be eligible. For
         more information, see our
 
-        <a href="https://docs.goshippo.com/docs/shipments/hazmat/">guide on
-        hazardous or dangerous materials shipping</a>.
+        [guide on hazardous or dangerous materials
+        shipping](https://docs.goshippo.com/docs/shipments/hazmat/).
       properties:
         contains:
           type: boolean
@@ -21170,11 +21155,10 @@ components:
     OrderBase:
       properties:
         currency:
-          description: >-
-            **Required if total_price is provided**<br>
+          description: |-
+            **Required if total_price is provided**
 
-            Currency of the <code>total_price</code> and <code>total_tax</code>
-            amounts.
+            Currency of the `total_price` and `total_tax` amounts.
           example: USD
           type: string
         notes:
@@ -21203,8 +21187,9 @@ components:
           type: string
         shipping_cost_currency:
           description: |-
-            **Required if shipping_cost is provided**<br>
-            Currency of the <code>shipping_cost</code> amount.
+            **Required if shipping_cost is provided**
+
+            Currency of the `shipping_cost` amount.
           example: USD
           type: string
         shipping_method:
@@ -21239,9 +21224,8 @@ components:
     OrderStatusEnum:
       type: string
       description: >-
-        Current state of the order. See the <a
-        href="https://docs.goshippo.com/docs/orders/orders/">orders
-        tutorial</a> 
+        Current state of the order. See the [orders
+        tutorial](https://docs.goshippo.com/docs/orders/orders/) 
 
         for the logic of how the status is handled.
       enum:
@@ -21265,8 +21249,8 @@ components:
               $ref: '#/components/schemas/AddressTo'
             line_items:
               description: >-
-                Array of <a href="/shippoapi/public-api/orders/lineitem">line
-                item</a> objects representing the items in this order. 
+                Array of [line item](/shippoapi/public-api/orders/lineitem)
+                objects representing the items in this order. 
 
                 All objects will be returned expanded by default.
               items:
@@ -21287,8 +21271,7 @@ components:
                 type: object
               type: array
               description: >-
-                Array of <a
-                href="/shippoapi/public-api/transactions">transaction</a>
+                Array of [transaction](/shippoapi/public-api/transactions)
                 objects representing all shipping labels purchased for this
                 order.
 
@@ -21330,8 +21313,8 @@ components:
               $ref: '#/components/schemas/AddressToCreateRequest'
             line_items:
               description: >-
-                Array of <a href="/shippoapi/public-api/orders/lineitem">line
-                item</a> objects representing the items in this order. 
+                Array of [line item](/shippoapi/public-api/orders/lineitem)
+                objects representing the items in this order. 
 
                 All objects will be returned expanded by default.
               items:
@@ -21520,8 +21503,8 @@ components:
     ParcelInsurance:
       description: >-
         To add insurance to your parcel, specify `amount`, `content` and
-        `currency`. <br><br>If you do not want to add insurance to you parcel,
-        do not set these parameters.
+        `currency`. If you do not want to add insurance to your parcel, do not
+        set these parameters.
       properties:
         amount:
           description: Declared value of the goods you want to insure.
@@ -21557,9 +21540,8 @@ components:
           description: >-
             The object ID of your USPS or DHL Express carrier account. 
 
-            You can retrieve this from your Rate requests or our <a
-            href="/shippoapi/public-api/carrier-accounts">Carrier Accounts</a>
-            endpoint.
+            You can retrieve this from your Rate requests or our [Carrier
+            Accounts](/shippoapi/public-api/carrier-accounts) endpoint.
         location:
           $ref: '#/components/schemas/Location'
         metadata:
@@ -21756,16 +21738,16 @@ components:
           description: >-
             Currency used in the sender's country, refers to `amount`. 
 
-            The <a href="http://www.xe.com/iso4217.php">official ISO 4217</a>
-            currency codes are used, e.g. `USD` or `EUR`.
+            The [official ISO 4217](http://www.xe.com/iso4217.php) currency
+            codes are used, e.g. `USD` or `EUR`.
         currency_local:
           example: USD
           type: string
           description: >-
             Currency used in the recipient's country, refers to `amount_local`. 
 
-            The <a href="http://www.xe.com/iso4217.php">official ISO 4217</a>
-            currency codes are used, e.g. `USD` or "EUR".
+            The [official ISO 4217](http://www.xe.com/iso4217.php) currency
+            codes are used, e.g. `USD` or "EUR".
     Rate:
       x-tags:
         - Rates
@@ -22075,16 +22057,17 @@ components:
       type: object
     ServiceGroupTypeEnum:
       description: >-
-        The type of the service group.<br> 
+        The type of the service group.
 
-        `LIVE_RATE` - Shippo will make a rating request and return real-time
+
+        - `LIVE_RATE`: Shippo will make a rating request and return real-time
         rates for the shipping group, only falling back to the specified flat
-        rate amount if no rates match a service level in the service group.<br> 
+        rate amount if no rates match a service level in the service group.
 
-        `FLAT_RATE` - Returns a shipping option with the specified flat rate
-        amount.<br> 
+        - `FLAT_RATE`: returns a shipping option with the specified flat rate
+        amount.
 
-        `FREE_SHIPPING` - Returns a shipping option with a price of $0 only if
+        - `FREE_SHIPPING`: returns a shipping option with a price of $0 only if
         the total cost of items exceeds the amount defined by
         `free_shipping_threshold_min`
       enum:
@@ -22163,11 +22146,9 @@ components:
         service_level_token:
           example: ups_next_day_air_saver
           type: string
-          description: >-
-            Service level token, e.g. `usps_priority` or `fedex_ground`.<br>
-
-            See <a href="/shippoapi/public-api/service-levels">Service
-            Levels</a>.
+          description: |-
+            Service level token, e.g. `usps_priority` or `fedex_ground`.
+            See [Service Levels](/shippoapi/public-api/service-levels).
       type: object
     ServiceLevel:
       description: Contains details regarding the service level for the given rate.
@@ -22193,8 +22174,7 @@ components:
             Token of the Rate's servicelevel, e.g. `usps_priority` or
             `fedex_ground`. 
 
-            See <a
-            href="/shippoapi/public-api/service-levels">servicelevels</a>.
+            See [servicelevels](/shippoapi/public-api/service-levels).
         extended_token:
           type: string
           description: >-
@@ -22301,8 +22281,8 @@ components:
                 $ref: '#/components/schemas/Rate'
               type: array
               description: >-
-                An array with all available rates. If <code>async</code> has
-                been set to <code>false</code> in the request,
+                An array with all available rates. If `async` has been set to
+                `false` in the request,
 
                 this will be populated with all available rates in the response.
                 Otherwise rates will be created
@@ -22352,32 +22332,33 @@ components:
                 - type: string
                   example: d799c2679e644279b59fe661ac8fa488
                   description: >-
-                    <a href="/shippoapi/public-api/addresses">Address</a>
-                    `object_id` of a previously created address.
+                    [Address](/shippoapi/public-api/addresses) `object_id` of a
+                    previously created address.
             address_return:
               oneOf:
                 - $ref: '#/components/schemas/AddressCreateRequest'
                 - type: string
                   example: d799c2679e644279b59fe661ac8fa488
                   description: >-
-                    <a href="/shippoapi/public-api/addresses">Address</a>
-                    `object_id` of a previously created address.
+                    [Address](/shippoapi/public-api/addresses) `object_id` of a
+                    previously created address.
             address_to:
               oneOf:
                 - $ref: '#/components/schemas/AddressCreateRequest'
                 - type: string
                   example: d799c2679e644279b59fe661ac8fa489
                   description: >-
-                    <a href="/shippoapi/public-api/addresses">Address</a>
-                    `object_id` of a previously created address.
+                    [Address](/shippoapi/public-api/addresses) `object_id` of a
+                    previously created address.
             customs_declaration:
               oneOf:
                 - $ref: '#/components/schemas/CustomsDeclarationCreateRequest'
                 - type: string
                   example: adcfdddf8ec64b84ad22772bce3ea37a
                   description: >-
-                    <a href="/shippoapi/public-api/customs-declarations">Customs
-                    Declaration</a> `object_id` of a previously
+                    [Customs
+                    Declaration](/shippoapi/public-api/customs-declarations)
+                    `object_id` of a previously
 
                     created customs declaration.
             async:
@@ -22387,8 +22368,9 @@ components:
                 type: string
               type: array
               description: >-
-                List of <a href="/shippoapi/public-api/carrier-accounts">Carrier
-                Accounts</a> `object_id`s used to filter 
+                List of [Carrier
+                Accounts](/shippoapi/public-api/carrier-accounts) `object_id`s
+                used to filter 
 
                 the returned rates.  If set, only rates from these carriers will
                 be returned.
@@ -22410,8 +22392,8 @@ components:
                   - $ref: '#/components/schemas/ParcelCreateFromTemplateRequest'
                   - type: string
                     description: >-
-                      <a href="/shippoapi/public-api/parcels">Parcel</a>
-                      `object_id` of a previously created parcel.
+                      [Parcel](/shippoapi/public-api/parcels) `object_id` of a
+                      previously created parcel.
           required:
             - address_to
             - address_from
@@ -22511,9 +22493,8 @@ components:
             - '08'
             - '09'
           description: >-
-            Dangerous Goods Code (DHL eCommerce only). See <a
-            href="https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods">Category
-            Codes</a>
+            Dangerous Goods Code (DHL eCommerce only). See [Category
+            Codes](https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods)
         dealer_order_number:
           description: UPS only. Adds custom dealer order number reference to UPS labels.
           $ref: '#/components/schemas/UPSReferenceFields'
@@ -22540,8 +22521,9 @@ components:
           type: boolean
           description: >-
             This field specifies if it is a scan-based return shipment. See the
-            <a href="https://docs.goshippo.com/docs/shipments/returns/">Create a
-            return shipment</a> section for more details.
+            [Create a return
+            shipment](https://docs.goshippo.com/docs/shipments/returns/) section
+            for more details.
         lasership_attrs:
           description: >-
             Specify Lasership Attributes (Lasership only). Multiple options
@@ -22736,9 +22718,8 @@ components:
         An array of additional parameters for the account, such as e.g. password
         or token. Please check our 
 
-        <a
-        href="https://docs.goshippo.com/docs/carriers/carrieraccounts/">carrier
-        accounts guide</a> 
+        [carrier accounts
+        guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) 
 
         for the parameters per carrier.
 
@@ -22763,14 +22744,16 @@ components:
       additionalProperties: true
     Insurance:
       description: >-
-        To add 3rd party insurance powered by <a
-        href="https://docs.goshippo.com/docs/shipments/shippinginsurance/">XCover</a>, 
+        To add 3rd party insurance powered by
+        [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), 
 
-        specify <br> `amount`, `content`, and `currency`. <br> Alternatively,
-        you can choose carrier provided insurance 
+        specify `amount`, `content`, and `currency`. Alternatively, you can
+        choose carrier provided insurance 
 
         by additionally specifying `provider` (UPS, FedEx and OnTrac only).
-        <br><br> If you do not want to add insurance 
+
+
+        If you do not want to add insurance 
 
         to your shipment, do not set these parameters.
       properties:
@@ -22841,7 +22824,7 @@ components:
     LineItemBase:
       properties:
         currency:
-          description: Currency of the <code>total_price</code> amount.
+          description: Currency of the `total_price` amount.
           example: USD
           type: string
         manufacture_country:
@@ -22911,8 +22894,7 @@ components:
             Total weight of this/these item(s). Instead of specifying the weight
             of all items, 
 
-            you can also set the <code>total_weight</code> value of the order
-            object.
+            you can also set the `total_weight` value of the order object.
           example: '0.4'
           type: string
         weight_unit:
@@ -22923,10 +22905,11 @@ components:
       x-tags:
         - Orders
       description: >-
-        <p style="text-align: center; background-color: #F2F3F4;">
-          </br>Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource
-          in the future. Currently it's a nested object within the order resource.</br></br>
-        </p>
+        Line Items, and their corresponding abstract Products and Variants,
+        might be exposed as a separate resource
+
+        in the future. Currently it's a nested object within the order resource.
+
 
         A line item is an individual object in an order. For example, if your
         order contains a t-shirt, shorts, and a jacket, each item is represented
@@ -22947,8 +22930,8 @@ components:
           oneOf:
             - type: string
               description: >-
-                Object ID for an existing <a
-                href="/shippoapi/public-api/addresses">Address</a>
+                Object ID for an existing
+                [Address](/shippoapi/public-api/addresses)
             - $ref: '#/components/schemas/AddressCompleteCreateRequest'
           description: >-
             The sender address, which includes your name, company name, street
@@ -22962,8 +22945,8 @@ components:
           oneOf:
             - type: string
               description: >-
-                Object ID for an existing <a
-                href="/shippoapi/public-api/addresses">Address</a>
+                Object ID for an existing
+                [Address](/shippoapi/public-api/addresses)
             - $ref: '#/components/schemas/AddressCompleteCreateRequest'
           description: >-
             The recipient address, which includes the recipient's name, company
@@ -23003,8 +22986,8 @@ components:
           example: usps
           type: string
           description: >-
-            Name of the carrier of the shipment to track. See <a
-            href="/shippoapi/public-api/carriers">Carriers</a>.
+            Name of the carrier of the shipment to track. See
+            [Carriers](/shippoapi/public-api/carriers).
         eta:
           format: date-time
           type: string
@@ -23036,7 +23019,7 @@ components:
           type: array
           description: >-
             A list of tracking events, following the same structure as
-            <code>tracking_status</code>. 
+            `tracking_status`. 
 
             It contains a full history of all tracking statuses, starting with
             the earlier tracking event first.
@@ -23049,8 +23032,8 @@ components:
         transaction:
           type: string
           description: >-
-            The <code>object_id</code> of the transaction associated with this
-            tracking object. 
+            The `object_id` of the transaction associated with this tracking
+            object. 
 
             This field is visible only to the object owner of the transaction.
       required:
@@ -23141,16 +23124,16 @@ components:
           example: information_received
           type: string
           description: >-
-            A code that represents the substatus of the shipment. See the <a
-            href="https://docs.goshippo.com/docs/tracking/tracking/#event-definitions">Event
-            Definitions</a> for more information.
+            A code that represents the substatus of the shipment. See the [Event
+            Definitions](https://docs.goshippo.com/docs/tracking/tracking/#event-definitions)
+            for more information.
         text:
           example: Information about the package received.
           type: string
           description: >-
-            A human-readable description of the substatus. See the <a
-            href="https://docs.goshippo.com/docs/tracking/tracking/#event-definitions">Event
-            Definitions</a> for more information.
+            A human-readable description of the substatus. See the [Event
+            Definitions](https://docs.goshippo.com/docs/tracking/tracking/#event-definitions)
+            for more information.
         action_required:
           type: boolean
           description: >-
@@ -23286,8 +23269,8 @@ components:
             this field will be a simplified Rate object in the Transaction model
             returned from the POST request.
 
-            </br>Note, only rates less than 7 days old can be purchased to
-            ensure up-to-date pricing.
+            Note, only rates less than 7 days old can be purchased to ensure
+            up-to-date pricing.
         status:
           $ref: '#/components/schemas/TransactionStatusEnum'
         test:
@@ -23412,10 +23395,9 @@ components:
                 (e.g., Express vs. Standard), 
 
                 along with other properties.  These names vary depending on the
-                provider.<br>
+                provider.
 
-                See <a href="/shippoapi/public-api/service-levels">Service
-                Levels</a>.
+                See [Service Levels](/shippoapi/public-api/service-levels).
               example: Priority Mail
               type: string
             servicelevel_token:
@@ -23423,8 +23405,7 @@ components:
                 Token of the Rate's servicelevel, e.g. `usps_priority` or
                 `fedex_ground`.
 
-                See <a
-                href="/shippoapi/public-api/service-levels">servicelevels</a>.
+                See [servicelevels](/shippoapi/public-api/service-levels).
               example: fedex_ground
               type: string
       type: object
@@ -23537,8 +23518,7 @@ components:
             The currency that 'amount' is in. The official ISO 4217 currency
             codes are used, e.g. "USD" or "EUR".
 
-            <a href="http://www.xe.com/iso4217.php" target="blank">ISO 4217
-            Standard</a>.
+            [ISO 4217 Standard](http://www.xe.com/iso4217.php).
         charge_conversion:
           $ref: '#/components/schemas/ConversionAmount'
         invoice:
@@ -23575,9 +23555,9 @@ components:
 
         | LABEL_PAYMENT | Invoice Item for the payment of a label. |
 
-        | LABEL_SURCHARGE | Invoice Item for a surcharge of a label. See <a
-        href="https://support.goshippo.com/hc/en-us/articles/115004734443-Understanding-Postal-Surcharges-in-Shippo">
-        here </a> for more information. |
+        | LABEL_SURCHARGE | Invoice Item for a surcharge of a label. See
+        [here](https://support.goshippo.com/hc/en-us/articles/115004734443-Understanding-Postal-Surcharges-in-Shippo)
+        for more information. |
 
         | LABEL_REFUND | Invoice Item for a refund of a label. |
 
@@ -23594,9 +23574,9 @@ components:
         |
 
         | PREAUTH_CAPTURE | Invoice Item for preauthorization capture.
-        Represents a credit. See <a
-        href="https://support.goshippo.com/hc/en-us/articles/4407966198171-Pre-Authorization-Charges-for-New-Accounts-in-Shippo">
-        here </a> for more information. |
+        Represents a credit. See
+        [here](https://support.goshippo.com/hc/en-us/articles/4407966198171-Pre-Authorization-Charges-for-New-Accounts-in-Shippo)
+        for more information. |
 
         | LABEL_PAYMENT_ADJUSTMENT | Invoice Item for adjustments on label
         purchases. |
@@ -23712,9 +23692,9 @@ components:
         An array of additional parameters for the account, such as e.g. password
         or token.
 
-        Please check the <a
-        href="https://docs.goshippo.com/docs/carriers/carrieraccounts/">carrier
-        accounts tutorial</a> page for the parameters per carrier.<br> 
+        Please check the [carrier accounts
+        tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page
+        for the parameters per carrier.
 
         To protect account information, this field will be masked in any API
         response.
@@ -23865,11 +23845,10 @@ components:
       properties:
         account_id:
           description: >-
-            Unique identifier of the account. Please check the <a
-            href="https://docs.goshippo.com/docs/carriers/carrieraccounts/">carrier
-            accounts tutorial</a> 
+            Unique identifier of the account. Please check the [carrier accounts
+            tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) 
 
-            page for the `account_id` per carrier.<br> 
+            page for the `account_id` per carrier.
 
             To protect account information, this field will be masked in any API
             response.
@@ -23887,12 +23866,11 @@ components:
           example: usps
           type: string
           description: >-
-            Carrier token, see <a
-            href="/shippoapi/public-api/carriers">Carriers</a><br>
+            Carrier token, see [Carriers](/shippoapi/public-api/carriers)
 
-            Please check the <a
-            href="https://docs.goshippo.com/docs/carriers/carrieraccounts/">carrier
-            accounts tutorial</a> page for all supported carriers.
+            Please check the [carrier accounts
+            tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/)
+            page for all supported carriers.
         parameters:
           oneOf:
             - $ref: '#/components/schemas/ConnectExistingOwnAccountParameters'
@@ -23951,9 +23929,7 @@ components:
         - properties:
             carrier_name:
               example: USPS
-              description: >-
-                Carrier name, see <a
-                href="/shippoapi/public-api/carriers">Carriers</a><br>
+              description: Carrier name, see [Carriers](/shippoapi/public-api/carriers)
             is_shippo_account:
               example: false
               type: boolean
@@ -23987,18 +23963,15 @@ components:
             A service level commonly defines the transit time of a Shipment
             (e.g., Express vs. Standard), along with other properties. 
 
-            These names vary depending on the provider.<br>
+            These names vary depending on the provider.
 
-            See <a href="/shippoapi/public-api/service-levels">Service
-            Levels</a>.
+            See [Service Levels](/shippoapi/public-api/service-levels).
         token:
           example: usps_priority_express
           type: string
-          description: >-
-            Service level token, e.g. `usps_priority` or `fedex_ground`.<br>
-
-            See <a href="/shippoapi/public-api/service-levels">Service
-            Levels</a>.
+          description: |-
+            Service level token, e.g. `usps_priority` or `fedex_ground`.
+            See [Service Levels](/shippoapi/public-api/service-levels).
         supports_return_labels:
           example: true
           type: boolean
@@ -26232,12 +26205,11 @@ components:
       x-speakeasy-include: true
     LabelFileTypeEnum:
       description: >-
-        Print format of the <a
-        href="https://docs.goshippo.com/docs/shipments/shippinglabelsizes/">label</a>.
+        Print format of the
+        [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/).
         If empty, will use the default format set from 
 
-        <a href="https://apps.goshippo.com/settings/labels">the Shippo
-        dashboard.</a>
+        [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)
       enum:
         - PNG
         - PNG_2.3x7.5

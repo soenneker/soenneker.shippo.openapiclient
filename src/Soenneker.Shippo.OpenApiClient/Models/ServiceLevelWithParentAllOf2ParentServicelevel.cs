@@ -39,7 +39,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Terms { get; set; }
 #endif
-        /// <summary>Token of the Rate&apos;s servicelevel, e.g. `usps_priority` or `fedex_ground`. See &lt;a href=&quot;/shippoapi/public-api/service-levels&quot;&gt;servicelevels&lt;/a&gt;.</summary>
+        /// <summary>Token of the Rate&apos;s servicelevel, e.g. `usps_priority` or `fedex_ground`. See [servicelevels](/shippoapi/public-api/service-levels).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }

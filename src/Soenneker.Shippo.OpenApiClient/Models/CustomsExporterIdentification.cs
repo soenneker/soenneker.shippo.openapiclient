@@ -15,7 +15,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Economic Operators&apos; Registration and Identification (EORI) number. Must start with a 2 character country code followed by a 6-17 character alphanumeric identifier (e.g. PL1234567890ABCDE).&lt;a href=&quot;https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en&quot;&gt;More information on EORI.&lt;/a&gt;</summary>
+        /// <summary>Economic Operators&apos; Registration and Identification (EORI) number. Must start with a 2 character country code followed by a 6-17 character alphanumeric identifier (e.g. PL1234567890ABCDE).[More information on EORI.](https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EoriNumber { get; set; }

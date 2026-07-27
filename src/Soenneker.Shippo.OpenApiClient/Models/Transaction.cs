@@ -38,7 +38,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Eta { get; set; }
 #endif
-        /// <summary>Print format of the &lt;a href=&quot;https://docs.goshippo.com/docs/shipments/shippinglabelsizes/&quot;&gt;label&lt;/a&gt;. If empty, will use the default format set from &lt;a href=&quot;https://apps.goshippo.com/settings/labels&quot;&gt;the Shippo dashboard.&lt;/a&gt;</summary>
+        /// <summary>Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFileType { get; set; }
         /// <summary>A URL pointing directly to the label in the format you&apos;ve set in your settings. A value will only be returned if the Transactions has been processed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,7 +102,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string QrCodeUrl { get; set; }
 #endif
-        /// <summary>ID of the Rate object for which a Label has to be obtained.  If you purchase a label by calling the transaction endpoint without a rate (instalabel), this field will be a simplified Rate object in the Transaction model returned from the POST request.&lt;/br&gt;Note, only rates less than 7 days old can be purchased to ensure up-to-date pricing.</summary>
+        /// <summary>ID of the Rate object for which a Label has to be obtained.  If you purchase a label by calling the transaction endpoint without a rate (instalabel), this field will be a simplified Rate object in the Transaction model returned from the POST request.Note, only rates less than 7 days old can be purchased to ensure up-to-date pricing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate? Rate { get; set; }

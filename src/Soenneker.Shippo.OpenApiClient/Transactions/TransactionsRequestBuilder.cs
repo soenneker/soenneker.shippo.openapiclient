@@ -70,7 +70,7 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new transaction object and purchases the shipping label using a rate object that has previously been created. &lt;br&gt; OR &lt;br&gt; Creates a new transaction object and purchases the shipping label instantly using shipment details, an existing carrier account, and an existing service level token.
+        /// Creates a new transaction object and purchases the shipping label using a rate object that has previously been created.Alternatively, creates a new transaction object and purchases the shipping label instantly using shipment details, an existing carrier account, and an existing service level token.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Transaction"/></returns>
         /// <param name="body">The request body</param>
@@ -114,7 +114,7 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new transaction object and purchases the shipping label using a rate object that has previously been created. &lt;br&gt; OR &lt;br&gt; Creates a new transaction object and purchases the shipping label instantly using shipment details, an existing carrier account, and an existing service level token.
+        /// Creates a new transaction object and purchases the shipping label using a rate object that has previously been created.Alternatively, creates a new transaction object and purchases the shipping label instantly using shipment details, an existing carrier account, and an existing service level token.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
