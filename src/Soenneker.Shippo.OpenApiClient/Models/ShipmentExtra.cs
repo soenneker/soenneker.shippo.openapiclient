@@ -97,7 +97,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ContainerType { get; set; }
 #endif
-        /// <summary>&quot;Carrier arrival time to pickup packages from the fulfillment center. UTC format: `%Y-%m-%dT%H:%M:%SZ`&quot;</summary>
+        /// <summary>Carrier arrival time to pickup packages from the fulfillment center. UTC format: `%Y-%m-%dT%H:%M:%SZ`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CriticalPullTime { get; set; }
@@ -130,7 +130,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject DangerousGoods { get; set; }
 #endif
         /// <summary>Dangerous Goods Code (DHL eCommerce only). See [Category Codes](https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods)</summary>
-        public double? DangerousGoodsCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraDangerousGoodsCode? DangerousGoodsCode { get; set; }
         /// <summary>The dealer_order_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -246,7 +246,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.PoNumber PoNumber { get; set; }
 #endif
         /// <summary>Required for DHL Germany Paket Sameday. Designates a desired timeframe for delivery. Format is `HHMMHHMM`</summary>
-        public double? PreferredDeliveryTimeframe { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraPreferredDeliveryTimeframe? PreferredDeliveryTimeframe { get; set; }
         /// <summary>Add premium service to a shipment (DHL Germany international shipments only).</summary>
         public bool? Premium { get; set; }
         /// <summary>The production_code property</summary>
@@ -337,7 +337,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields TransactionReferenceNumber { get; set; }
 #endif
-        /// <summary>&quot;UPS only. Request USMCA (United States-Mexico-Canada Agreement) preferential tariff treatment. When enabled, it includes the USMCA eligibility declaration in customs documentation.Supported routes and value limits:- USA/Canada → Mexico: ≤ $1,000 USD- Canada/Mexico → USA: ≤ $2,500 USD  - USA/Mexico → Canada: ≤ $3,300 CADOnly for declaration-only shipments, full USMCA - FormType 04 (Certificate of Origin) is not supported.&quot;</summary>
+        /// <summary>UPS only. Request USMCA (United States-Mexico-Canada Agreement) preferential tariff treatment. When enabled, it includes the USMCA eligibility declaration in customs documentation.Supported routes and value limits:- USA/Canada → Mexico: ≤ $1,000 USD- Canada/Mexico → USA: ≤ $2,500 USD  - USA/Mexico → Canada: ≤ $3,300 CADOnly for declaration-only shipments, full USMCA - FormType 04 (Certificate of Origin) is not supported.</summary>
         public bool? UsmcaEligible { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra"/> and sets the default values.
@@ -382,7 +382,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "customer_branch", n => { CustomerBranch = n.GetStringValue(); } },
                 { "customer_reference", n => { CustomerReference = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference>(global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference.CreateFromDiscriminatorValue); } },
                 { "dangerous_goods", n => { DangerousGoods = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject>(global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject.CreateFromDiscriminatorValue); } },
-                { "dangerous_goods_code", n => { DangerousGoodsCode = n.GetDoubleValue(); } },
+                { "dangerous_goods_code", n => { DangerousGoodsCode = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraDangerousGoodsCode>(); } },
                 { "dealer_order_number", n => { DealerOrderNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "delivery_instructions", n => { DeliveryInstructions = n.GetStringValue(); } },
                 { "dept_number", n => { DeptNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber>(global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber.CreateFromDiscriminatorValue); } },
@@ -398,7 +398,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "model_number", n => { ModelNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "part_number", n => { PartNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "po_number", n => { PoNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.PoNumber>(global::Soenneker.Shippo.OpenApiClient.Models.PoNumber.CreateFromDiscriminatorValue); } },
-                { "preferred_delivery_timeframe", n => { PreferredDeliveryTimeframe = n.GetDoubleValue(); } },
+                { "preferred_delivery_timeframe", n => { PreferredDeliveryTimeframe = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraPreferredDeliveryTimeframe>(); } },
                 { "premium", n => { Premium = n.GetBoolValue(); } },
                 { "production_code", n => { ProductionCode = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "purchase_request_number", n => { PurchaseRequestNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
@@ -442,7 +442,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("customer_branch", CustomerBranch);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference>("customer_reference", CustomerReference);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject>("dangerous_goods", DangerousGoods);
-            writer.WriteDoubleValue("dangerous_goods_code", DangerousGoodsCode);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraDangerousGoodsCode>("dangerous_goods_code", DangerousGoodsCode);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("dealer_order_number", DealerOrderNumber);
             writer.WriteStringValue("delivery_instructions", DeliveryInstructions);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber>("dept_number", DeptNumber);
@@ -458,7 +458,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("model_number", ModelNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("part_number", PartNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.PoNumber>("po_number", PoNumber);
-            writer.WriteDoubleValue("preferred_delivery_timeframe", PreferredDeliveryTimeframe);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraPreferredDeliveryTimeframe>("preferred_delivery_timeframe", PreferredDeliveryTimeframe);
             writer.WriteBoolValue("premium", Premium);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("production_code", ProductionCode);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("purchase_request_number", PurchaseRequestNumber);

@@ -35,7 +35,7 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TransactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/transactions{?object_status*,page*,rate*,results*,tracking_status*}", pathParameters)
+        public TransactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/transactions{?object_created_gt*,object_created_gte*,object_created_lt*,object_created_lte*,object_status*,page*,rate*,results*,tracking_status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,11 +43,11 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TransactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/transactions{?object_status*,page*,rate*,results*,tracking_status*}", rawUrl)
+        public TransactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/transactions{?object_created_gt*,object_created_gte*,object_created_lt*,object_created_lte*,object_status*,page*,rate*,results*,tracking_status*}", rawUrl)
         {
         }
         /// <summary>
-        /// Returns a list of all transaction objects.
+        /// Returns a list of all transaction objects.To filter results by creation date, use the optional query parameters below. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).- `object_created_gt`: object(s) created after the provided date time- `object_created_gte`: object(s) created at or after the provided date time- `object_created_lt`: object(s) created before the provided date time- `object_created_lte`: object(s) created at or before the provided date timeProvide at most one lower bound (`object_created_gt` or `object_created_gte`) and at most one upper bound (`object_created_lt` or `object_created_lte`) per request. Lower bounds must not be in the future.Date format examples: `2017-01-01`, `2017-01-01T03:30:30` (or `2017-01-01T03:30:30.5`), `2017-01-01T03:30:30Z`Example URL: `https://api.goshippo.com/transactions/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.TransactionPaginatedList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -95,7 +95,7 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Transaction>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Transaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a list of all transaction objects.
+        /// Returns a list of all transaction objects.To filter results by creation date, use the optional query parameters below. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).- `object_created_gt`: object(s) created after the provided date time- `object_created_gte`: object(s) created at or after the provided date time- `object_created_lt`: object(s) created before the provided date time- `object_created_lte`: object(s) created at or before the provided date timeProvide at most one lower bound (`object_created_gt` or `object_created_gte`) and at most one upper bound (`object_created_lt` or `object_created_lte`) per request. Lower bounds must not be in the future.Date format examples: `2017-01-01`, `2017-01-01T03:30:30` (or `2017-01-01T03:30:30.5`), `2017-01-01T03:30:30Z`Example URL: `https://api.goshippo.com/transactions/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -145,11 +145,51 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions
             return new global::Soenneker.Shippo.OpenApiClient.Transactions.TransactionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a list of all transaction objects.
+        /// Returns a list of all transaction objects.To filter results by creation date, use the optional query parameters below. Provided dates should be ISO 8601 UTC dates (timezone offsets are currently not supported).- `object_created_gt`: object(s) created after the provided date time- `object_created_gte`: object(s) created at or after the provided date time- `object_created_lt`: object(s) created before the provided date time- `object_created_lte`: object(s) created at or before the provided date timeProvide at most one lower bound (`object_created_gt` or `object_created_gte`) and at most one upper bound (`object_created_lt` or `object_created_lte`) per request. Lower bounds must not be in the future.Date format examples: `2017-01-01`, `2017-01-01T03:30:30` (or `2017-01-01T03:30:30.5`), `2017-01-01T03:30:30Z`Example URL: `https://api.goshippo.com/transactions/?object_created_gte=2017-01-01T00:00:30&amp;object_created_lt=2017-04-01T00:00:30`
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TransactionsRequestBuilderGetQueryParameters 
         {
+            /// <summary>Object(s) created greater than a provided date and time.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("object_created_gt")]
+            public string? ObjectCreatedGt { get; set; }
+#nullable restore
+#else
+            [QueryParameter("object_created_gt")]
+            public string ObjectCreatedGt { get; set; }
+#endif
+            /// <summary>Object(s) created greater than or equal to a provided date and time.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("object_created_gte")]
+            public string? ObjectCreatedGte { get; set; }
+#nullable restore
+#else
+            [QueryParameter("object_created_gte")]
+            public string ObjectCreatedGte { get; set; }
+#endif
+            /// <summary>Object(s) created lesser than a provided date and time.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("object_created_lt")]
+            public string? ObjectCreatedLt { get; set; }
+#nullable restore
+#else
+            [QueryParameter("object_created_lt")]
+            public string ObjectCreatedLt { get; set; }
+#endif
+            /// <summary>Object(s) created lesser than or equal to a provided date and time.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("object_created_lte")]
+            public string? ObjectCreatedLte { get; set; }
+#nullable restore
+#else
+            [QueryParameter("object_created_lte")]
+            public string ObjectCreatedLte { get; set; }
+#endif
             /// <summary>Filter by object status</summary>
             [QueryParameter("object_status")]
             public global::Soenneker.Shippo.OpenApiClient.Models.TransactionStatusEnum? ObjectStatus { get; set; }

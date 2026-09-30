@@ -37,11 +37,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom();
             if("AddressCompleteCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.AddressCompleteCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressCompleteCreateRequest();
+            }
+            else if("LiveRateCreateRequestAddressFromBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.LiveRateCreateRequestAddressFromBranch1 = new global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFromBranch1();
             }
             return result;
         }

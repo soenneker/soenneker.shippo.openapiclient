@@ -45,7 +45,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2ParcelsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2ParcelsItem();
             if("ParcelCreateFromTemplateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
@@ -55,7 +55,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 result.ParcelCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.ParcelCreateRequest();
             }
-            else if("ShipmentCreateRequestAllOf2ParcelsItem_3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ShipmentCreateRequestAllOf2ParcelsItemBranch3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ShipmentCreateRequestAllOf2ParcelsItemBranch3 = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2ParcelsItemBranch3();
             }

@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
+    /// <summary>
+    /// An object with details about the user who created the Transaction (purchased the label).A value will be returned only for Transactions that can be associated with a specific user, e.g. when a logged-inuser purchases a label via the Shippo Web application; but not for Transactions purchased e.g. via the API using a ShippoToken,which is associated with the account but not any specific user.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class TransactionCreatedBy : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -29,14 +30,6 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public string LastName { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
 #endif
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +66,6 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
                 { "last_name", n => { LastName = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
         }
@@ -86,7 +78,6 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteStringValue("last_name", LastName);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);
         }

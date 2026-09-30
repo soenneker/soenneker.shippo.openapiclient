@@ -31,7 +31,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Further clarification of the service.</summary>
+        /// <summary>Further clarification of the service. For FedEx, a value of `ONERATE` indicates thisrate is a FedEx One Rate variant of the same service level — it shares the same`token` as the standard-rate object but is a separate rate with its own `amount`.Standard (non-One Rate) rates have an empty string here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Terms { get; set; }

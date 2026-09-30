@@ -36,7 +36,6 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
         /// <summary>
         /// Used by client applications to setup or reconnect an existing carrier account with carriers that support OAuth 2.0
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin400Response">When receiving a 400 status code</exception>
@@ -44,11 +43,11 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
         /// <exception cref="global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin404Response">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate.InitiateRequestBuilder.InitiateRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate.InitiateRequestBuilder.InitiateRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate.InitiateRequestBuilder.InitiateRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task GetAsync(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate.InitiateRequestBuilder.InitiateRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -58,7 +57,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
                 { "401", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin401Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin404Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Used by client applications to setup or reconnect an existing carrier account with carriers that support OAuth 2.0

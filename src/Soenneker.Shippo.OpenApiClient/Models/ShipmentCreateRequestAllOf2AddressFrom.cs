@@ -37,11 +37,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFrom CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFrom();
             if("AddressCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.AddressCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.AddressCreateRequest();
+            }
+            else if("ShipmentCreateRequestAllOf2AddressFromBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ShipmentCreateRequestAllOf2AddressFromBranch2 = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFromBranch2();
             }
             return result;
         }

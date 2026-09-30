@@ -5,12 +5,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum CarrierAccountUspsCreateRequest_carrier
+    public enum CanadaPostCarrier
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "usps")]
+        [EnumMember(Value = "canada_post")]
         #pragma warning disable CS1591
-        Usps,
+        CanadaPost,
         #pragma warning restore CS1591
     }
 }

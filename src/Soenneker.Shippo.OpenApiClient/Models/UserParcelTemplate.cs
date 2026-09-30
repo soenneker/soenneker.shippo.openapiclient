@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The measure unit used for length, width and height.</summary>
+        /// <summary>The measure unit used for length, width and height. Required, but if using a preset carrier template then this field must be empty.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum? DistanceUnit { get; set; }
         /// <summary>The height of the package, in units specified by the `distance_unit` attribute. Required, but if using a preset carrier template then this field must be empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

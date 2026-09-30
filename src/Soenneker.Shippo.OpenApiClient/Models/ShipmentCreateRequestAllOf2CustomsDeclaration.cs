@@ -37,11 +37,15 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration();
             if("CustomsDeclarationCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CustomsDeclarationCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequest();
+            }
+            else if("ShipmentCreateRequestAllOf2CustomsDeclarationBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.ShipmentCreateRequestAllOf2CustomsDeclarationBranch2 = new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclarationBranch2();
             }
             return result;
         }

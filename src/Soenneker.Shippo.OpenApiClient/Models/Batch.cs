@@ -80,7 +80,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectOwner { get; set; }
 #endif
-        /// <summary>&quot;An object containing the following counts: `creation_succeeded`, `creation_failed`, `purchase_succeeded`, `purchase_failed`&quot;</summary>
+        /// <summary>An object containing the following counts: `creation_succeeded`, `creation_failed`, `purchase_succeeded`, `purchase_failed`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults? ObjectResults { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectUpdated { get; set; }
 #endif
-        /// <summary>&quot;- `VALIDATING`: the batch is being created and validated- `VALID`: the batch can be purchased- `INVALID`: the batch cannot be purchased; `INVALID` BatchShipments must be removed- `PURCHASING`: the batch is being purchased- `PURCHASED`: the batch is finished purchasing&quot;</summary>
+        /// <summary>- `VALIDATING`: the batch is being created and validated- `VALID`: the batch can be purchased- `INVALID`: the batch cannot be purchased; `INVALID` BatchShipments must be removed- `PURCHASING`: the batch is being purchased- `PURCHASED`: the batch is finished purchasing</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.BatchStatus? Status { get; set; }
         /// <summary>The test property</summary>
         public bool? Test { get; set; }

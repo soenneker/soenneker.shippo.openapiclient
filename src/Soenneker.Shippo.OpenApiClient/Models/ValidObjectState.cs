@@ -3,14 +3,13 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
+    /// <summary>A Parcel will only be valid when all required values have been sent and validated successfully.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public enum CarrierAccountChronopostCreateRequest_carrier
-    #pragma warning restore CS1591
+    public enum ValidObjectState
     {
-        [EnumMember(Value = "chronopost")]
+        [EnumMember(Value = "VALID")]
         #pragma warning disable CS1591
-        Chronopost,
+        Valid,
         #pragma warning restore CS1591
     }
 }

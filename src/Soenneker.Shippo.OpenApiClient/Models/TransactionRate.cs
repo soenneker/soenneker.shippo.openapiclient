@@ -37,13 +37,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate();
             if("CoreRate".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CoreRate = new global::Soenneker.Shippo.OpenApiClient.Models.CoreRate();
             }
-            else if("TransactionRate_2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("TransactionRateBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.TransactionRateBranch2 = new global::Soenneker.Shippo.OpenApiClient.Models.TransactionRateBranch2();
             }

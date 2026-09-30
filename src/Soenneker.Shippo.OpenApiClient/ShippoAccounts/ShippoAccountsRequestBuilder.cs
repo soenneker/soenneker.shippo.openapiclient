@@ -19,7 +19,7 @@ namespace Soenneker.Shippo.OpenApiClient.ShippoAccounts
     public partial class ShippoAccountsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Shippo.OpenApiClient.shippoAccounts.item collection</summary>
-        /// <param name="position">Object ID of the ShippoAccount</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.ShippoAccounts.Item.WithShippoAccountItemRequestBuilder"/></returns>
         public global::Soenneker.Shippo.OpenApiClient.ShippoAccounts.Item.WithShippoAccountItemRequestBuilder this[string position]
         {

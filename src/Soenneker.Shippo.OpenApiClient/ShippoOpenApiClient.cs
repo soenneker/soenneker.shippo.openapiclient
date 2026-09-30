@@ -10,6 +10,7 @@ using Soenneker.Shippo.OpenApiClient.Addresses;
 using Soenneker.Shippo.OpenApiClient.Batches;
 using Soenneker.Shippo.OpenApiClient.Carrier_accounts;
 using Soenneker.Shippo.OpenApiClient.Customs;
+using Soenneker.Shippo.OpenApiClient.Embedded;
 using Soenneker.Shippo.OpenApiClient.LiveRates;
 using Soenneker.Shippo.OpenApiClient.Manifests;
 using Soenneker.Shippo.OpenApiClient.Orders;
@@ -56,6 +57,11 @@ namespace Soenneker.Shippo.OpenApiClient
         public global::Soenneker.Shippo.OpenApiClient.Customs.CustomsRequestBuilder Customs
         {
             get => new global::Soenneker.Shippo.OpenApiClient.Customs.CustomsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The embedded property</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Embedded.EmbeddedRequestBuilder Embedded
+        {
+            get => new global::Soenneker.Shippo.OpenApiClient.Embedded.EmbeddedRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The liveRates property</summary>
         public global::Soenneker.Shippo.OpenApiClient.LiveRates.LiveRatesRequestBuilder LiveRates

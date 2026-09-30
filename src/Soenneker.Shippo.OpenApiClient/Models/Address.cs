@@ -53,18 +53,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Latitude of address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Latitude { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_latitude? Latitude { get; set; }
 #nullable restore
 #else
-        public UntypedNode Latitude { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_latitude Latitude { get; set; }
 #endif
         /// <summary>Longitude of address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Longitude { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_longitude? Longitude { get; set; }
 #nullable restore
 #else
-        public UntypedNode Longitude { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_longitude Longitude { get; set; }
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -199,8 +199,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "is_complete", n => { IsComplete = n.GetBoolValue(); } },
                 { "is_residential", n => { IsResidential = n.GetBoolValue(); } },
-                { "latitude", n => { Latitude = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "longitude", n => { Longitude = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "latitude", n => { Latitude = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_latitude>(global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_latitude.CreateFromDiscriminatorValue); } },
+                { "longitude", n => { Longitude = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_longitude>(global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_longitude.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
@@ -231,8 +231,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteBoolValue("is_complete", IsComplete);
             writer.WriteBoolValue("is_residential", IsResidential);
-            writer.WriteObjectValue<UntypedNode>("latitude", Latitude);
-            writer.WriteObjectValue<UntypedNode>("longitude", Longitude);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_latitude>("latitude", Latitude);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_longitude>("longitude", Longitude);
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("object_created", ObjectCreated);
@@ -249,6 +249,126 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResults>("validation_results", ValidationResults);
             writer.WriteStringValue("zip", Zip);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Address_latitude : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_latitude"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_latitude CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_latitude();
+                if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Address_longitude : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_longitude"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_longitude CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Shippo.OpenApiClient.Models.Address.Address_longitude();
+                if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

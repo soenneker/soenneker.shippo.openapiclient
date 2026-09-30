@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string CommercialInvoiceUrl { get; set; }
 #endif
-        /// <summary>The created_by property</summary>
+        /// <summary>An object with details about the user who created the Transaction (purchased the label).A value will be returned only for Transactions that can be associated with a specific user, e.g. when a logged-inuser purchases a label via the Shippo Web application; but not for Transactions purchased e.g. via the API using a ShippoToken,which is associated with the account but not any specific user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy? CreatedBy { get; set; }

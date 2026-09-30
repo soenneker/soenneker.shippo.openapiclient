@@ -3,13 +3,14 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>A Parcel will only be valid when all required values have been sent and validated successfully.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum ParcelObjectState
+    #pragma warning disable CS1591
+    public enum DhlExpressCarrier
+    #pragma warning restore CS1591
     {
-        [EnumMember(Value = "VALID")]
+        [EnumMember(Value = "dhl_express")]
         #pragma warning disable CS1591
-        Valid,
+        DhlExpress,
         #pragma warning restore CS1591
     }
 }

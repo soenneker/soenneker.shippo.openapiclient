@@ -78,7 +78,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum? ObjectState { get; set; }
         /// <summary>Date and time of last object update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
-        /// <summary>&quot;Country of origin of the item. Example: `US` or `DE`. All accepted values can be found on the [Official ISO Website](http://www.iso.org/).&quot;</summary>
+        /// <summary>Country of origin of the item. Example: `US` or `DE`. All accepted values can be found on the [Official ISO Website](http://www.iso.org/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OriginCountry { get; set; }

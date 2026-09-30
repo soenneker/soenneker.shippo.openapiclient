@@ -37,9 +37,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel();
-            if("LiveRateCreateRequestParcel_1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("LiveRateCreateRequestParcelBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.LiveRateCreateRequestParcelBranch1 = new global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcelBranch1();
             }

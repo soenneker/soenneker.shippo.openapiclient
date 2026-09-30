@@ -5,12 +5,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum CarrierAccountMondialRelayCreateRequest_carrier
+    public enum DeutschePostCarrier
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "mondial_relay")]
+        [EnumMember(Value = "deutsche_post")]
         #pragma warning disable CS1591
-        MondialRelay,
+        DeutschePost,
         #pragma warning restore CS1591
     }
 }

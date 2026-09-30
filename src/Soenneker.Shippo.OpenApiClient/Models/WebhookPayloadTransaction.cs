@@ -9,37 +9,39 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CarrierAccountUpsCreateRequest : IAdditionalDataHolder, IParsable
+    public partial class WebhookPayloadTransaction : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The carrier property</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsCarrier? Carrier { get; set; }
-        /// <summary>The parameters property</summary>
+        /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters? Parameters { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Transaction? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters Parameters { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Transaction Data { get; set; }
 #endif
+        /// <summary>Type of event that triggered the webhook.</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.WebhookEventTypeEnum? Event { get; set; }
+        /// <summary>Determines whether the webhook is a test webhook or not.</summary>
+        public bool? Test { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.WebhookPayloadTransaction"/> and sets the default values.
         /// </summary>
-        public CarrierAccountUpsCreateRequest()
+        public WebhookPayloadTransaction()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.WebhookPayloadTransaction"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.WebhookPayloadTransaction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequest();
+            return new global::Soenneker.Shippo.OpenApiClient.Models.WebhookPayloadTransaction();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +51,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsCarrier>(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Transaction>(global::Soenneker.Shippo.OpenApiClient.Models.Transaction.CreateFromDiscriminatorValue); } },
+                { "event", n => { Event = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WebhookEventTypeEnum>(); } },
+                { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -60,8 +63,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsCarrier>("carrier", Carrier);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters>("parameters", Parameters);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Transaction>("data", Data);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WebhookEventTypeEnum>("event", Event);
+            writer.WriteBoolValue("test", Test);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

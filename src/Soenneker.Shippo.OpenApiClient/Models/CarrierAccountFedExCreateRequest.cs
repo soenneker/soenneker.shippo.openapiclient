@@ -15,7 +15,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The carrier property</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountFedExCreateRequest_carrier? Carrier { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.FedexCarrier? Carrier { get; set; }
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountFedExCreateRequest_carrier>(); } },
+                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.FedexCarrier>(); } },
                 { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountFedExCreateRequestParametersProperty>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountFedExCreateRequestParametersProperty.CreateFromDiscriminatorValue); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountFedExCreateRequest_carrier>("carrier", Carrier);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.FedexCarrier>("carrier", Carrier);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountFedExCreateRequestParametersProperty>("parameters", Parameters);
             writer.WriteAdditionalData(AdditionalData);
         }

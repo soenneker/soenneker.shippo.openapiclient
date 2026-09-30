@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The batch shipment object is a wrapper around a shipment object, which include shipment-specific informationfor batch processing.Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or by throughthe `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint&quot;
+    /// The batch shipment object is a wrapper around a shipment object, which include shipment-specific informationfor batch processing.Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or by throughthe `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchShipment : IAdditionalDataHolder, IParsable
@@ -63,7 +63,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Shipment { get; set; }
 #endif
-        /// <summary>&quot;- `INVALID`: the batch shipment cannot be purchased and will have to be removed, fixed, and added to the batch again- `VALID`: the batch shipment can be purchased- `TRANSACTION_FAILED`: the batch shipment was not able to be purchased and the error will be displayed on the message field- `INCOMPLETE`: the batch shipment has an issue with the Address and will need to be removed, fixed, and added to the batch again&quot;</summary>
+        /// <summary>- `INVALID`: the batch shipment cannot be purchased and will have to be removed, fixed, and added to the batch again- `VALID`: the batch shipment can be purchased- `TRANSACTION_FAILED`: the batch shipment was not able to be purchased and the error will be displayed on the message field- `INCOMPLETE`: the batch shipment has an issue with the Address and will need to be removed, fixed, and added to the batch again</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus? Status { get; set; }
         /// <summary>Object ID of the transaction object created for this batch shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
