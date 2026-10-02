@@ -18879,6 +18879,14 @@ components:
         notes:
           type: string
           description: Additional notes to be included in the customs declaration.
+        recipient_is_business:
+          type: boolean
+          default: false
+          description: |-
+            Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created 
+            declarations default to false when the field is not provided; declarations created before 
+            the field existed return null, which is treated as false. When true, EU product 
+            identifiers are not required on the customs items.
       required:
         - certify_signer
         - certify
@@ -19100,6 +19108,27 @@ components:
         eccn_ear99:
           type: string
           description: Export Control Classification Number, required on some exports from the United States.
+        eu_exempt_category:
+          type: boolean
+          default: false
+          description: |-
+            Marks the item as belonging to an EU-exempt product category. Exempt items do not need
+            product identifiers on shipments that meet the EU product identifier conditions
+            (EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).
+        manufacturer_code:
+          example: 'ACME-TS-001'
+          type: string
+          description: |-
+            Product identifier assigned by the manufacturer. Up to 100 characters; some carriers
+            accept fewer and reject longer values at label purchase. Required together with
+            `sku_code` on every non-exempt item when the shipment meets the EU product
+            identifier conditions.
+        manufacturer_standard_code:
+          example: '00012345678905'
+          type: string
+          description: |-
+            Standardized product identifier such as a GTIN. Up to 100 characters. Never required,
+            but recommended for EU-bound shipments when one exists.
         mass_unit:
           $ref: '#/components/schemas/WeightUnitEnum'
         metadata:
@@ -19123,7 +19152,11 @@ components:
           type: integer
           description: Quantity of this item in the shipment you send.  Must be greater than 0.
         sku_code:
-          description: SKU code of the item, which is required by some carriers.
+          description: |-
+            SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers
+            accept fewer and reject longer values at label purchase. Required together with
+            `manufacturer_code` on every non-exempt item when the shipment meets the EU product
+            identifier conditions; some carriers also use it outside the EU.
           example: 'HM-123'
           type: string
         hs_code:

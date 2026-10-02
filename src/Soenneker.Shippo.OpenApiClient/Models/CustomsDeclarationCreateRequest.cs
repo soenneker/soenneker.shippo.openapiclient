@@ -188,6 +188,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Notes { get; set; }
 #endif
+        /// <summary>Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created declarations default to false when the field is not provided; declarations created before the field existed return null, which is treated as false. When true, EU product identifiers are not required on the customs items.</summary>
+        public bool? RecipientIsBusiness { get; set; }
         /// <summary>The test property</summary>
         public bool? Test { get; set; }
         /// <summary>
@@ -196,6 +198,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public CustomsDeclarationCreateRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            RecipientIsBusiness = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -239,6 +242,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "non_delivery_option", n => { NonDeliveryOption = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
+                { "recipient_is_business", n => { RecipientIsBusiness = n.GetBoolValue(); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
@@ -273,6 +277,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("non_delivery_option", NonDeliveryOption);
             writer.WriteStringValue("notes", Notes);
+            writer.WriteBoolValue("recipient_is_business", RecipientIsBusiness);
             writer.WriteBoolValue("test", Test);
             writer.WriteAdditionalData(AdditionalData);
         }

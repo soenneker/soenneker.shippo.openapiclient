@@ -7261,6 +7261,11 @@
           "notes": {
             "type": "string",
             "description": "Additional notes to be included in the customs declaration."
+          },
+          "recipient_is_business": {
+            "type": "boolean",
+            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created \ndeclarations default to false when the field is not provided; declarations created before \nthe field existed return null, which is treated as false. When true, EU product \nidentifiers are not required on the customs items.",
+            "default": false
           }
         }
       },
@@ -7400,6 +7405,11 @@
           "notes": {
             "type": "string",
             "description": "Additional notes to be included in the customs declaration."
+          },
+          "recipient_is_business": {
+            "type": "boolean",
+            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created \ndeclarations default to false when the field is not provided; declarations created before \nthe field existed return null, which is treated as false. When true, EU product \nidentifiers are not required on the customs items.",
+            "default": false
           },
           "address_importer": {
             "type": "string",
@@ -7555,6 +7565,11 @@
             "type": "string",
             "description": "Additional notes to be included in the customs declaration."
           },
+          "recipient_is_business": {
+            "type": "boolean",
+            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created \ndeclarations default to false when the field is not provided; declarations created before \nthe field existed return null, which is treated as false. When true, EU product \nidentifiers are not required on the customs items.",
+            "default": false
+          },
           "address_importer": {
             "description": "Object that represents the address of the importer",
             "$ref": "#/components/schemas/AddressImporter"
@@ -7668,6 +7683,21 @@
             "type": "string",
             "description": "Export Control Classification Number, required on some exports from the United States."
           },
+          "eu_exempt_category": {
+            "type": "boolean",
+            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need\nproduct identifiers on shipments that meet the EU product identifier conditions\n(EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
+            "default": false
+          },
+          "manufacturer_code": {
+            "type": "string",
+            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions.",
+            "example": "ACME-TS-001"
+          },
+          "manufacturer_standard_code": {
+            "type": "string",
+            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required,\nbut recommended for EU-bound shipments when one exists.",
+            "example": "00012345678905"
+          },
           "mass_unit": {
             "description": "The unit used for weight.",
             "$ref": "#/components/schemas/WeightUnitEnum"
@@ -7694,7 +7724,7 @@
           },
           "sku_code": {
             "type": "string",
-            "description": "SKU code of the item, which is required by some carriers.",
+            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions; some carriers also use it outside the EU.",
             "example": "HM-123"
           },
           "hs_code": {
@@ -7740,6 +7770,21 @@
             "type": "string",
             "description": "Export Control Classification Number, required on some exports from the United States."
           },
+          "eu_exempt_category": {
+            "type": "boolean",
+            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need\nproduct identifiers on shipments that meet the EU product identifier conditions\n(EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
+            "default": false
+          },
+          "manufacturer_code": {
+            "type": "string",
+            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions.",
+            "example": "ACME-TS-001"
+          },
+          "manufacturer_standard_code": {
+            "type": "string",
+            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required,\nbut recommended for EU-bound shipments when one exists.",
+            "example": "00012345678905"
+          },
           "mass_unit": {
             "description": "The unit used for weight.",
             "$ref": "#/components/schemas/WeightUnitEnum"
@@ -7766,7 +7811,7 @@
           },
           "sku_code": {
             "type": "string",
-            "description": "SKU code of the item, which is required by some carriers.",
+            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions; some carriers also use it outside the EU.",
             "example": "HM-123"
           },
           "hs_code": {
@@ -7844,6 +7889,21 @@
             "type": "string",
             "description": "Export Control Classification Number, required on some exports from the United States."
           },
+          "eu_exempt_category": {
+            "type": "boolean",
+            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need\nproduct identifiers on shipments that meet the EU product identifier conditions\n(EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
+            "default": false
+          },
+          "manufacturer_code": {
+            "type": "string",
+            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions.",
+            "example": "ACME-TS-001"
+          },
+          "manufacturer_standard_code": {
+            "type": "string",
+            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required,\nbut recommended for EU-bound shipments when one exists.",
+            "example": "00012345678905"
+          },
           "mass_unit": {
             "description": "The unit used for weight.",
             "$ref": "#/components/schemas/WeightUnitEnum"
@@ -7870,7 +7930,7 @@
           },
           "sku_code": {
             "type": "string",
-            "description": "SKU code of the item, which is required by some carriers.",
+            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions; some carriers also use it outside the EU.",
             "example": "HM-123"
           },
           "hs_code": {
@@ -18573,6 +18633,11 @@
           "notes": {
             "type": "string",
             "description": "Additional notes to be included in the customs declaration."
+          },
+          "recipient_is_business": {
+            "type": "boolean",
+            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created \ndeclarations default to false when the field is not provided; declarations created before \nthe field existed return null, which is treated as false. When true, EU product \nidentifiers are not required on the customs items.",
+            "default": false
           },
           "address_importer": {
             "description": "Object that represents the address of the importer",

@@ -30,6 +30,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string EccnEar99 { get; set; }
 #endif
+        /// <summary>Marks the item as belonging to an EU-exempt product category. Exempt items do not needproduct identifiers on shipments that meet the EU product identifier conditions(EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).</summary>
+        public bool? EuExemptCategory { get; set; }
         /// <summary>HS code of the item, which is required by some carriers. If `tariff_number` is not provided, `hs_code` will be used.  If both `hs_code` and `tariff_number` are provided, `tariff_number` will be used. 50 character limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +39,22 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public string HsCode { get; set; }
+#endif
+        /// <summary>Product identifier assigned by the manufacturer. Up to 100 characters; some carriersaccept fewer and reject longer values at label purchase. Required together with`sku_code` on every non-exempt item when the shipment meets the EU productidentifier conditions.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ManufacturerCode { get; set; }
+#nullable restore
+#else
+        public string ManufacturerCode { get; set; }
+#endif
+        /// <summary>Standardized product identifier such as a GTIN. Up to 100 characters. Never required,but recommended for EU-bound shipments when one exists.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ManufacturerStandardCode { get; set; }
+#nullable restore
+#else
+        public string ManufacturerStandardCode { get; set; }
 #endif
         /// <summary>The unit used for weight.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? MassUnit { get; set; }
@@ -66,7 +84,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Quantity of this item in the shipment you send.  Must be greater than 0.</summary>
         public long? Quantity { get; set; }
-        /// <summary>SKU code of the item, which is required by some carriers.</summary>
+        /// <summary>SKU or merchant-assigned product code of the item. Up to 100 characters; some carriersaccept fewer and reject longer values at label purchase. Required together with`manufacturer_code` on every non-exempt item when the shipment meets the EU productidentifier conditions; some carriers also use it outside the EU.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SkuCode { get; set; }
@@ -104,6 +122,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public CustomsItemCreateRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            EuExemptCategory = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -125,7 +144,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "eccn_ear99", n => { EccnEar99 = n.GetStringValue(); } },
+                { "eu_exempt_category", n => { EuExemptCategory = n.GetBoolValue(); } },
                 { "hs_code", n => { HsCode = n.GetStringValue(); } },
+                { "manufacturer_code", n => { ManufacturerCode = n.GetStringValue(); } },
+                { "manufacturer_standard_code", n => { ManufacturerStandardCode = n.GetStringValue(); } },
                 { "mass_unit", n => { MassUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "net_weight", n => { NetWeight = n.GetStringValue(); } },
@@ -146,7 +168,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("eccn_ear99", EccnEar99);
+            writer.WriteBoolValue("eu_exempt_category", EuExemptCategory);
             writer.WriteStringValue("hs_code", HsCode);
+            writer.WriteStringValue("manufacturer_code", ManufacturerCode);
+            writer.WriteStringValue("manufacturer_standard_code", ManufacturerStandardCode);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>("mass_unit", MassUnit);
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("net_weight", NetWeight);

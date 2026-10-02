@@ -218,6 +218,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum? ObjectState { get; set; }
         /// <summary>Date and time of last object update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
+        /// <summary>Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created declarations default to false when the field is not provided; declarations created before the field existed return null, which is treated as false. When true, EU product identifiers are not required on the customs items.</summary>
+        public bool? RecipientIsBusiness { get; set; }
         /// <summary>Indicates whether the object has been created in test mode.</summary>
         public bool? Test { get; set; }
         /// <summary>
@@ -226,6 +228,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public CustomsDeclaration()
         {
             AdditionalData = new Dictionary<string, object>();
+            RecipientIsBusiness = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -275,6 +278,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_state", n => { ObjectState = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum>(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
+                { "recipient_is_business", n => { RecipientIsBusiness = n.GetBoolValue(); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
@@ -315,6 +319,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("object_owner", ObjectOwner);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum>("object_state", ObjectState);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
+            writer.WriteBoolValue("recipient_is_business", RecipientIsBusiness);
             writer.WriteBoolValue("test", Test);
             writer.WriteAdditionalData(AdditionalData);
         }
