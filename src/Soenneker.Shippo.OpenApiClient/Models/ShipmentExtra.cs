@@ -139,7 +139,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields DealerOrderNumber { get; set; }
 #endif
-        /// <summary>Specify delivery instructions. Up to 500 characters. (FedEx and OnTrac only).</summary>
+        /// <summary>Specify delivery instructions. Up to 500 characters (Purolator accepts up to 30 characters). (FedEx, OnTrac and Purolator only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeliveryInstructions { get; set; }
@@ -178,6 +178,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #nullable restore
 #else
         public string FulfillmentCenter { get; set; }
+#endif
+        /// <summary>Requests the carrier&apos;s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier&apos;sregular service level token.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| Purolator | Maps to Health Care+. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling? HealthcareHandling { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling HealthcareHandling { get; set; }
 #endif
         /// <summary>To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), specify `amount`, `content`, and `currency`. Alternatively, you can choose carrier provided insurance by additionally specifying `provider` (UPS, FedEx and OnTrac only).If you do not want to add insurance to your shipment, do not set these parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -267,7 +275,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Request a QR code for a given transaction when creating a shipping label (USPS domestic and Evri UK only).</summary>
         public bool? QrCodeRequested { get; set; }
-        /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) |</summary>
+        /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) || Purolator | Max 25 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Reference1 { get; set; }
@@ -275,13 +283,29 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Reference1 { get; set; }
 #endif
-        /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters. For DHL eCommerce, this field can be used for billing reference.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 characters |</summary>
+        /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters. For DHL eCommerce, this field can be used for billing reference.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 characters || Purolator | Max 25 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Reference2 { get; set; }
 #nullable restore
 #else
         public string Reference2 { get; set; }
+#endif
+        /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| Purolator | Max 25 characters |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reference3 { get; set; }
+#nullable restore
+#else
+        public string Reference3 { get; set; }
+#endif
+        /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| Purolator | Max 25 characters |</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reference4 { get; set; }
+#nullable restore
+#else
+        public string Reference4 { get; set; }
 #endif
         /// <summary>Returns retail rates instead of account-based rates (UPS and FedEx only).</summary>
         public bool? RequestRetailRates { get; set; }
@@ -389,6 +413,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "dry_ice", n => { DryIce = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DryIce>(global::Soenneker.Shippo.OpenApiClient.Models.DryIce.CreateFromDiscriminatorValue); } },
                 { "fda_product_code", n => { FdaProductCode = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "fulfillment_center", n => { FulfillmentCenter = n.GetStringValue(); } },
+                { "healthcare_handling", n => { HealthcareHandling = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling>(global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling.CreateFromDiscriminatorValue); } },
                 { "insurance", n => { Insurance = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Insurance>(global::Soenneker.Shippo.OpenApiClient.Models.Insurance.CreateFromDiscriminatorValue); } },
                 { "invoice_number", n => { InvoiceNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber>(global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber.CreateFromDiscriminatorValue); } },
                 { "is_return", n => { IsReturn = n.GetBoolValue(); } },
@@ -405,6 +430,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "qr_code_requested", n => { QrCodeRequested = n.GetBoolValue(); } },
                 { "reference_1", n => { Reference1 = n.GetStringValue(); } },
                 { "reference_2", n => { Reference2 = n.GetStringValue(); } },
+                { "reference_3", n => { Reference3 = n.GetStringValue(); } },
+                { "reference_4", n => { Reference4 = n.GetStringValue(); } },
                 { "request_retail_rates", n => { RequestRetailRates = n.GetBoolValue(); } },
                 { "return_service_type", n => { ReturnServiceType = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType.CreateFromDiscriminatorValue); } },
                 { "rma_number", n => { RmaNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber>(global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber.CreateFromDiscriminatorValue); } },
@@ -449,6 +476,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.DryIce>("dry_ice", DryIce);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("fda_product_code", FdaProductCode);
             writer.WriteStringValue("fulfillment_center", FulfillmentCenter);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling>("healthcare_handling", HealthcareHandling);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Insurance>("insurance", Insurance);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber>("invoice_number", InvoiceNumber);
             writer.WriteBoolValue("is_return", IsReturn);
@@ -465,6 +493,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteBoolValue("qr_code_requested", QrCodeRequested);
             writer.WriteStringValue("reference_1", Reference1);
             writer.WriteStringValue("reference_2", Reference2);
+            writer.WriteStringValue("reference_3", Reference3);
+            writer.WriteStringValue("reference_4", Reference4);
             writer.WriteBoolValue("request_retail_rates", RequestRetailRates);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType>("return_service_type", ReturnServiceType);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber>("rma_number", RmaNumber);

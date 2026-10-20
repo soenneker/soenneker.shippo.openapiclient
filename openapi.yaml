@@ -19328,6 +19328,20 @@ components:
           type: string
           description: Mandatory. Units must be in Kilograms. Cannot be greater than package weight.
       type: object
+    HealthcareHandling:
+      description: |-
+        Requests the carrier's healthcare handling program, where the carrier offers one. The rate returned keeps the carrier's
+        regular service level token.
+
+        **Carrier-Specific Constraints:**
+        | Carrier | Constraints |
+        |:---|:---|
+        | Purolator | Maps to Health Care+. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |
+      properties:
+        enabled:
+          type: boolean
+          description: Set to `true` to request the carrier's healthcare handling program for this shipment.
+      type: object
     LiveRate:
       title: Live Rate
       x-tags:
@@ -20627,7 +20641,7 @@ components:
           $ref: '#/components/schemas/UPSReferenceFields'
         delivery_instructions:
           type: string
-          description: Specify delivery instructions. Up to 500 characters. (FedEx and OnTrac only).
+          description: Specify delivery instructions. Up to 500 characters (Purolator accepts up to 30 characters). (FedEx, OnTrac and Purolator only).
         dept_number:
           $ref: '#/components/schemas/DepartmentNumber'
         dry_ice:
@@ -20638,6 +20652,8 @@ components:
         fulfillment_center:
           type: string
           description: The fulfilment center where the package originates from.
+        healthcare_handling:
+          $ref: '#/components/schemas/HealthcareHandling'
         insurance:
           $ref: '#/components/schemas/Insurance'
         invoice_number:
@@ -20695,6 +20711,7 @@ components:
             | Carrier | Constraints |
             |:---|:---|
             | FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) |
+            | Purolator | Max 25 characters |
         reference_2:
           type: string
           maxLength: 50
@@ -20705,6 +20722,27 @@ components:
             | Carrier | Constraints |
             |:---|:---|
             | FedEx | Max 30 characters |
+            | Purolator | Max 25 characters |
+        reference_3:
+          type: string
+          maxLength: 50
+          description: |-
+            Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.
+
+            **Carrier-Specific Constraints:**
+            | Carrier | Constraints |
+            |:---|:---|
+            | Purolator | Max 25 characters |
+        reference_4:
+          type: string
+          maxLength: 50
+          description: |-
+            Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.
+
+            **Carrier-Specific Constraints:**
+            | Carrier | Constraints |
+            |:---|:---|
+            | Purolator | Max 25 characters |
         request_retail_rates:
           type: boolean
           description: Returns retail rates instead of account-based rates (UPS and FedEx only).

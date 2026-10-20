@@ -8083,6 +8083,16 @@
         },
         "description": "Specify that the package contains Dry Ice (FedEx, Veho, and UPS only)."
       },
+      "HealthcareHandling": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "description": "Set to \u0060true\u0060 to request the carrier\u0027s healthcare handling program for this shipment."
+          }
+        },
+        "description": "Requests the carrier\u0027s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier\u0027s\nregular service level token.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| Purolator | Maps to Health Care\u002B. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |"
+      },
       "LiveRate": {
         "title": "Live Rate",
         "type": "object",
@@ -10122,7 +10132,7 @@
           },
           "delivery_instructions": {
             "type": "string",
-            "description": "Specify delivery instructions. Up to 500 characters. (FedEx and OnTrac only)."
+            "description": "Specify delivery instructions. Up to 500 characters (Purolator accepts up to 30 characters). (FedEx, OnTrac and Purolator only)."
           },
           "dept_number": {
             "description": "Specify the department number field on the label (FedEx and UPS only).",
@@ -10138,6 +10148,10 @@
           "fulfillment_center": {
             "type": "string",
             "description": "The fulfilment center where the package originates from."
+          },
+          "healthcare_handling": {
+            "description": "Requests the carrier\u0027s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier\u0027s\nregular service level token.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| Purolator | Maps to Health Care\u002B. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |",
+            "$ref": "#/components/schemas/HealthcareHandling"
           },
           "insurance": {
             "description": "To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), \nspecify \u0060amount\u0060, \u0060content\u0060, and \u0060currency\u0060. Alternatively, you can choose carrier provided insurance \nby additionally specifying \u0060provider\u0060 (UPS, FedEx and OnTrac only).\n\nIf you do not want to add insurance \nto your shipment, do not set these parameters.",
@@ -10195,12 +10209,22 @@
           "reference_1": {
             "maxLength": 50,
             "type": "string",
-            "description": "Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) |"
+            "description": "Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) |\n| Purolator | Max 25 characters |"
           },
           "reference_2": {
             "maxLength": 50,
             "type": "string",
-            "description": "Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters. For DHL eCommerce, this field can be used for billing reference.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 30 characters |"
+            "description": "Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters. For DHL eCommerce, this field can be used for billing reference.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 30 characters |\n| Purolator | Max 25 characters |"
+          },
+          "reference_3": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| Purolator | Max 25 characters |"
+          },
+          "reference_4": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| Purolator | Max 25 characters |"
           },
           "request_retail_rates": {
             "type": "boolean",
