@@ -32,14 +32,14 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts
         }
         /// <summary>Gets an item from the Soenneker.Shippo.OpenApiClient.carrier_accounts.item collection</summary>
         /// <param name="position">Object ID of the carrier account</param>
-        /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.CarrierAccountItemRequestBuilder"/></returns>
-        public global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.CarrierAccountItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.WithCarrierAccountItemRequestBuilder"/></returns>
+        public global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.WithCarrierAccountItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("carrierAccount%2Did", position);
-                return new global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.CarrierAccountItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("carrierAccountId", position);
+                return new global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.WithCarrierAccountItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

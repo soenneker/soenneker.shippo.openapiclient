@@ -30,14 +30,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string AesItn { get; set; }
 #endif
-        /// <summary>The b13a_filing_option property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? B13aFilingOption { get; set; }
-#nullable restore
-#else
-        public string B13aFilingOption { get; set; }
-#endif
+        /// <summary>B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). [More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)Allowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequestB13AFilingOption? B13aFilingOption { get; set; }
         /// <summary>**must be provided if and only if b13a_filing_option is provided**Represents the Proof of Report (POR) Number when b13a_filing_option is `FILED_ELECTRONICALLY`; the Summary ID Number when b13a_filing_option is `SUMMARY_REPORTING`; or the Exemption Number when b13a_filing_option is `NOT_REQUIRED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,13 +69,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ContentsExplanation { get; set; }
 #endif
         /// <summary>Type of goods of the shipment.  Allowed values available [here](/shippoapi/public-api/customs-declaration-contents-type)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ContentsType { get; set; }
-#nullable restore
-#else
-        public string ContentsType { get; set; }
-#endif
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationContentsTypeEnum? ContentsType { get; set; }
         /// <summary>Disclaimer for the shipment and customs information that have been provided.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 554 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,13 +87,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor DutiesPayor { get; set; }
 #endif
         /// <summary>EEL / PFC type of the shipment. For most shipments from the US to CA, `NOEEI_30_36` is applicable; for most other shipments from the US, `NOEEI_30_37_a` is applicable.Allowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EelPfc { get; set; }
-#nullable restore
-#else
-        public string EelPfc { get; set; }
-#endif
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationEelPfcEnum? EelPfc { get; set; }
         /// <summary>Additional exporter identification that may be required to ship in certain countries</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -131,13 +113,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ImporterReference { get; set; }
 #endif
         /// <summary>The incoterm reference of the shipment. FCA is available for DHL Express and FedEx only.eDAP is available for DPD UK only. DAP is available for DHL Express, FedEx, and DPD UK.If expecting DAP for other carriers, please use DDU.Allowed values available [here](/shippoapi/public-api/customs-declaration-incoterm)Carrier-specific restrictions are in the table below.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Must be one of DDP, DDU, FCA, DAP |</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Incoterm { get; set; }
-#nullable restore
-#else
-        public string Incoterm { get; set; }
-#endif
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationIncotermEnum? Incoterm { get; set; }
         /// <summary>Invoice reference of the shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -173,13 +149,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Metadata { get; set; }
 #endif
         /// <summary>Indicates how the carrier should proceed in case the shipment can&apos;t be delivered.Allowed values available [here](/shippoapi/public-api/customs-declaration-non-delivery-option)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? NonDeliveryOption { get; set; }
-#nullable restore
-#else
-        public string NonDeliveryOption { get; set; }
-#endif
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationNonDeliveryOptionEnum? NonDeliveryOption { get; set; }
         /// <summary>Additional notes to be included in the customs declaration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -220,27 +190,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 { "address_importer", n => { AddressImporter = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressImporter>(global::Soenneker.Shippo.OpenApiClient.Models.AddressImporter.CreateFromDiscriminatorValue); } },
                 { "aes_itn", n => { AesItn = n.GetStringValue(); } },
-                { "b13a_filing_option", n => { B13aFilingOption = n.GetStringValue(); } },
+                { "b13a_filing_option", n => { B13aFilingOption = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequestB13AFilingOption>(); } },
                 { "b13a_number", n => { B13aNumber = n.GetStringValue(); } },
                 { "certificate", n => { Certificate = n.GetStringValue(); } },
                 { "certify", n => { Certify = n.GetBoolValue(); } },
                 { "certify_signer", n => { CertifySigner = n.GetStringValue(); } },
                 { "commercial_invoice", n => { CommercialInvoice = n.GetBoolValue(); } },
                 { "contents_explanation", n => { ContentsExplanation = n.GetStringValue(); } },
-                { "contents_type", n => { ContentsType = n.GetStringValue(); } },
+                { "contents_type", n => { ContentsType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationContentsTypeEnum>(); } },
                 { "disclaimer", n => { Disclaimer = n.GetStringValue(); } },
                 { "duties_payor", n => { DutiesPayor = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor>(global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor.CreateFromDiscriminatorValue); } },
-                { "eel_pfc", n => { EelPfc = n.GetStringValue(); } },
+                { "eel_pfc", n => { EelPfc = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationEelPfcEnum>(); } },
                 { "exporter_identification", n => { ExporterIdentification = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsExporterIdentification>(global::Soenneker.Shippo.OpenApiClient.Models.CustomsExporterIdentification.CreateFromDiscriminatorValue); } },
                 { "exporter_reference", n => { ExporterReference = n.GetStringValue(); } },
                 { "importer_reference", n => { ImporterReference = n.GetStringValue(); } },
-                { "incoterm", n => { Incoterm = n.GetStringValue(); } },
+                { "incoterm", n => { Incoterm = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationIncotermEnum>(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
                 { "is_vat_collected", n => { IsVatCollected = n.GetBoolValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemCreateRequest>(global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemCreateRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "license", n => { License = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
-                { "non_delivery_option", n => { NonDeliveryOption = n.GetStringValue(); } },
+                { "non_delivery_option", n => { NonDeliveryOption = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationNonDeliveryOptionEnum>(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "recipient_is_business", n => { RecipientIsBusiness = n.GetBoolValue(); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
@@ -255,27 +225,27 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressImporter>("address_importer", AddressImporter);
             writer.WriteStringValue("aes_itn", AesItn);
-            writer.WriteStringValue("b13a_filing_option", B13aFilingOption);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequestB13AFilingOption>("b13a_filing_option", B13aFilingOption);
             writer.WriteStringValue("b13a_number", B13aNumber);
             writer.WriteStringValue("certificate", Certificate);
             writer.WriteBoolValue("certify", Certify);
             writer.WriteStringValue("certify_signer", CertifySigner);
             writer.WriteBoolValue("commercial_invoice", CommercialInvoice);
             writer.WriteStringValue("contents_explanation", ContentsExplanation);
-            writer.WriteStringValue("contents_type", ContentsType);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationContentsTypeEnum>("contents_type", ContentsType);
             writer.WriteStringValue("disclaimer", Disclaimer);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationBaseDutiesPayor>("duties_payor", DutiesPayor);
-            writer.WriteStringValue("eel_pfc", EelPfc);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationEelPfcEnum>("eel_pfc", EelPfc);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsExporterIdentification>("exporter_identification", ExporterIdentification);
             writer.WriteStringValue("exporter_reference", ExporterReference);
             writer.WriteStringValue("importer_reference", ImporterReference);
-            writer.WriteStringValue("incoterm", Incoterm);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationIncotermEnum>("incoterm", Incoterm);
             writer.WriteStringValue("invoice", Invoice);
             writer.WriteBoolValue("is_vat_collected", IsVatCollected);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.CustomsItemCreateRequest>("items", Items);
             writer.WriteStringValue("license", License);
             writer.WriteStringValue("metadata", Metadata);
-            writer.WriteStringValue("non_delivery_option", NonDeliveryOption);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationNonDeliveryOptionEnum>("non_delivery_option", NonDeliveryOption);
             writer.WriteStringValue("notes", Notes);
             writer.WriteBoolValue("recipient_is_business", RecipientIsBusiness);
             writer.WriteBoolValue("test", Test);

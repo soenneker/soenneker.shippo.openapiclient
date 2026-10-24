@@ -26,10 +26,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>List of Shipment and Transaction error messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem>? Messages { get; set; }
+        public UntypedNode? Messages { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem> Messages { get; set; }
+        public UntypedNode Messages { get; set; }
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,7 +99,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "carrier_account", n => { CarrierAccount = n.GetStringValue(); } },
-                { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem>(global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "messages", n => { Messages = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "servicelevel_token", n => { ServicelevelToken = n.GetStringValue(); } },
@@ -116,7 +116,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("carrier_account", CarrierAccount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentMessagesItem>("messages", Messages);
+            writer.WriteObjectValue<UntypedNode>("messages", Messages);
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("object_id", ObjectId);
             writer.WriteStringValue("servicelevel_token", ServicelevelToken);

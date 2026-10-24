@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CoreRate"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.TransactionRateBranch2"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CoreRate"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TransactionRate : IComposedTypeWrapper, IParsable
@@ -21,13 +21,13 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.CoreRate CoreRate { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.TransactionRateBranch2"/></summary>
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionRateBranch2? TransactionRateBranch2 { get; set; }
+        public string? String { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionRateBranch2 TransactionRateBranch2 { get; set; }
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -43,9 +43,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 result.CoreRate = new global::Soenneker.Shippo.OpenApiClient.Models.CoreRate();
             }
-            else if("TransactionRateBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetStringValue() is string stringValue)
             {
-                result.TransactionRateBranch2 = new global::Soenneker.Shippo.OpenApiClient.Models.TransactionRateBranch2();
+                result.String = stringValue;
             }
             return result;
         }
@@ -58,10 +58,6 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(CoreRate != null)
             {
                 return CoreRate.GetFieldDeserializers();
-            }
-            else if(TransactionRateBranch2 != null)
-            {
-                return TransactionRateBranch2.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -76,9 +72,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CoreRate>(null, CoreRate);
             }
-            else if(TransactionRateBranch2 != null)
+            else if(String != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionRateBranch2>(null, TransactionRateBranch2);
+                writer.WriteStringValue(null, String);
             }
         }
     }

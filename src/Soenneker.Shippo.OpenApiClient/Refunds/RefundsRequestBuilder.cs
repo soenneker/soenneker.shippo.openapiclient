@@ -108,7 +108,7 @@ namespace Soenneker.Shippo.OpenApiClient.Refunds
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, (UrlTemplate.Contains("{?", global::System.StringComparison.Ordinal) ? UrlTemplate.Insert(UrlTemplate.IndexOf("{?", global::System.StringComparison.Ordinal), "/") : UrlTemplate + "/"), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

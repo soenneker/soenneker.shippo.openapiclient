@@ -155,63 +155,63 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 result.CarrierAccountCanadaPostCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountCanadaPostCreateRequest();
             }
-            else if("CarrierAccountChronopostCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("chronopost".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountChronopostCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountChronopostCreateRequest();
             }
-            else if("CarrierAccountColissimoCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("colissimo".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountColissimoCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountColissimoCreateRequest();
             }
-            else if("CarrierAccountCorreosCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("correos".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountCorreosCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountCorreosCreateRequest();
             }
-            else if("CarrierAccountDeutschePostCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("deutsche_post".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountDeutschePostCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDeutschePostCreateRequest();
             }
-            else if("CarrierAccountDhlExpressCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("dhl_express".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountDhlExpressCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDhlExpressCreateRequest();
             }
-            else if("CarrierAccountDpdDeCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("dpd_de".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountDpdDeCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDpdDeCreateRequest();
             }
-            else if("CarrierAccountDpdukCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("dpd_uk".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountDpdukCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDpdukCreateRequest();
             }
-            else if("CarrierAccountFedExCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("fedex".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountFedExCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountFedExCreateRequest();
             }
-            else if("CarrierAccountHermesUkCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("hermes_uk".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountHermesUkCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountHermesUkCreateRequest();
             }
-            else if("CarrierAccountMondialRelayCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("mondial_relay".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountMondialRelayCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountMondialRelayCreateRequest();
             }
-            else if("CarrierAccountPosteItalianeCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("poste_italiane".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountPosteItalianeCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountPosteItalianeCreateRequest();
             }
-            else if("CarrierAccountRoyalMailCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("royal_mail".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountRoyalMailCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountRoyalMailCreateRequest();
             }
-            else if("CarrierAccountRoyalMailSfCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("royal_mail_sf".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountRoyalMailSfCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountRoyalMailSfCreateRequest();
             }
-            else if("CarrierAccountUpsCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ups".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountUpsCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequest();
             }
-            else if("CarrierAccountUspsCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("usps".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CarrierAccountUspsCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUspsCreateRequest();
             }

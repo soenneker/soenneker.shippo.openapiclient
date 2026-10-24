@@ -75,10 +75,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>List of parcels to be shipped.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 items |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2ParcelsItem>? Parcels { get; set; }
+        public List<string>? Parcels { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2ParcelsItem> Parcels { get; set; }
+        public List<string> Parcels { get; set; }
 #endif
         /// <summary>Date the shipment will be tendered to the carrier. Must be in the format `2014-01-18T00:35:03.463Z`. Defaults to current date and time if no value is provided. Please note that some carriers require this value tobe in the future, on a working day, or similar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -121,7 +121,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "customs_declaration", n => { CustomsDeclaration = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration.CreateFromDiscriminatorValue); } },
                 { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
-                { "parcels", n => { Parcels = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2ParcelsItem>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2ParcelsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "parcels", n => { Parcels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "shipment_date", n => { ShipmentDate = n.GetStringValue(); } },
             };
         }
@@ -140,7 +140,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration>("customs_declaration", CustomsDeclaration);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra>("extra", Extra);
             writer.WriteStringValue("metadata", Metadata);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2ParcelsItem>("parcels", Parcels);
+            writer.WriteCollectionOfPrimitiveValues<string>("parcels", Parcels);
             writer.WriteStringValue("shipment_date", ShipmentDate);
             writer.WriteAdditionalData(AdditionalData);
         }

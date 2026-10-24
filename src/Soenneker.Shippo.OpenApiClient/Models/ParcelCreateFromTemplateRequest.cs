@@ -33,13 +33,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Metadata { get; set; }
 #endif
         /// <summary>If template is passed, `length`, `width`, `height`, and `distance_unit` are not required</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet? Template { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet Template { get; set; }
-#endif
         /// <summary>Weight of the parcel. Up to six digits in front and four digits after the decimal separator are accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +70,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra.CreateFromDiscriminatorValue); } },
                 { "mass_unit", n => { MassUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>(); } },
                 { "weight", n => { Weight = n.GetStringValue(); } },
             };
         }
@@ -90,7 +84,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra>("extra", Extra);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>("mass_unit", MassUnit);
             writer.WriteStringValue("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>("template", Template);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>("template", Template);
             writer.WriteStringValue("weight", Weight);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -35,10 +35,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Carrier name, see [Carriers](/shippoapi/public-api/carriers)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountCarrierName? CarrierName { get; set; }
+        public UntypedNode? CarrierName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountCarrierName CarrierName { get; set; }
+        public UntypedNode CarrierName { get; set; }
 #endif
         /// <summary>The is_shippo_account property</summary>
         public bool? IsShippoAccount { get; set; }
@@ -112,7 +112,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "carrier", n => { Carrier = n.GetStringValue(); } },
-                { "carrier_name", n => { CarrierName = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountCarrierName>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountCarrierName.CreateFromDiscriminatorValue); } },
+                { "carrier_name", n => { CarrierName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "is_shippo_account", n => { IsShippoAccount = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
@@ -132,7 +132,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("carrier", Carrier);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountCarrierName>("carrier_name", CarrierName);
+            writer.WriteObjectValue<UntypedNode>("carrier_name", CarrierName);
             writer.WriteBoolValue("is_shippo_account", IsShippoAccount);
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteStringValue("object_id", ObjectId);

@@ -13,10 +13,10 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \carrier_accounts\{carrierAccount-id}
+    /// Builds and executes requests for operations under \carrier_accounts\{carrierAccountId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CarrierAccountItemRequestBuilder : BaseRequestBuilder
+    public partial class WithCarrierAccountItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The signin property</summary>
         public global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.SigninRequestBuilder Signin
@@ -24,19 +24,19 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item
             get => new global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.SigninRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.CarrierAccountItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.WithCarrierAccountItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CarrierAccountItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccount%2Did}", pathParameters)
+        public WithCarrierAccountItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccountId}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.CarrierAccountItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.WithCarrierAccountItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CarrierAccountItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccount%2Did}", rawUrl)
+        public WithCarrierAccountItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccountId}", rawUrl)
         {
         }
         /// <summary>
@@ -131,11 +131,11 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.CarrierAccountItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.WithCarrierAccountItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.CarrierAccountItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.WithCarrierAccountItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.CarrierAccountItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.WithCarrierAccountItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

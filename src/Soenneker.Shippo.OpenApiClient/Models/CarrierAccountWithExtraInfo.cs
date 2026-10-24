@@ -9,9 +9,55 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CarrierAccountWithExtraInfo : global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccount, IParsable
+    public partial class CarrierAccountWithExtraInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the `account_id` per carrier.To protect account information, this field will be masked in any API response.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AccountId { get; set; }
+#nullable restore
+#else
+        public string AccountId { get; set; }
+#endif
+        /// <summary>Determines whether the account is active. When creating a shipment, if no `carrier_accounts` are explicitly passed Shippo will query all carrier accounts that have this field set. By default, this is set to True.</summary>
+        public bool? Active { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Carrier token, see [Carriers](/shippoapi/public-api/carriers)Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for all supported carriers.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Carrier { get; set; }
+#nullable restore
+#else
+        public string Carrier { get; set; }
+#endif
+        /// <summary>Carrier name, see [Carriers](/shippoapi/public-api/carriers)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? CarrierName { get; set; }
+#nullable restore
+#else
+        public UntypedNode CarrierName { get; set; }
+#endif
+        /// <summary>The is_shippo_account property</summary>
+        public bool? IsShippoAccount { get; set; }
+        /// <summary>The metadata property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
+#endif
+        /// <summary>Unique identifier of the carrier account object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ObjectId { get; set; }
+#nullable restore
+#else
+        public string ObjectId { get; set; }
+#endif
         /// <summary>Holds internal state relevant to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -20,12 +66,45 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo ObjectInfo { get; set; }
 #endif
+        /// <summary>Username of the user who created the carrier account object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ObjectOwner { get; set; }
+#nullable restore
+#else
+        public string ObjectOwner { get; set; }
+#endif
+        /// <summary>The parameters property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters? Parameters { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters Parameters { get; set; }
+#endif
+        /// <summary>The service_levels property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountServiceLevel>? ServiceLevels { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountServiceLevel> ServiceLevels { get; set; }
+#endif
+        /// <summary>Indicates whether the object has been created in test mode.</summary>
+        public bool? Test { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo"/> and sets the default values.
+        /// </summary>
+        public CarrierAccountWithExtraInfo()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfo();
@@ -34,22 +113,44 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "account_id", n => { AccountId = n.GetStringValue(); } },
+                { "active", n => { Active = n.GetBoolValue(); } },
+                { "carrier", n => { Carrier = n.GetStringValue(); } },
+                { "carrier_name", n => { CarrierName = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "is_shippo_account", n => { IsShippoAccount = n.GetBoolValue(); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_info", n => { ObjectInfo = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo.CreateFromDiscriminatorValue); } },
+                { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters.CreateFromDiscriminatorValue); } },
+                { "service_levels", n => { ServiceLevels = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountServiceLevel>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountServiceLevel.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("account_id", AccountId);
+            writer.WriteBoolValue("active", Active);
+            writer.WriteStringValue("carrier", Carrier);
+            writer.WriteObjectValue<UntypedNode>("carrier_name", CarrierName);
+            writer.WriteBoolValue("is_shippo_account", IsShippoAccount);
+            writer.WriteStringValue("metadata", Metadata);
+            writer.WriteStringValue("object_id", ObjectId);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfo>("object_info", ObjectInfo);
+            writer.WriteStringValue("object_owner", ObjectOwner);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters>("parameters", Parameters);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountServiceLevel>("service_levels", ServiceLevels);
+            writer.WriteBoolValue("test", Test);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
 {
     /// <summary>
-    /// Builds and executes requests for operations under \carrier_accounts\{carrierAccount-id}\signin\initiate
+    /// Builds and executes requests for operations under \carrier_accounts\{carrierAccountId}\signin\initiate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InitiateRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InitiateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccount%2Did}/signin/initiate?redirect_uri={redirect_uri}{&state*}", pathParameters)
+        public InitiateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccountId}/signin/initiate?redirect_uri={redirect_uri}{&state*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InitiateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccount%2Did}/signin/initiate?redirect_uri={redirect_uri}{&state*}", rawUrl)
+        public InitiateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/carrier_accounts/{carrierAccountId}/signin/initiate?redirect_uri={redirect_uri}{&state*}", rawUrl)
         {
         }
         /// <summary>

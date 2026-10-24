@@ -16,14 +16,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public bool? Active { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Type of event that triggers the webhook.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Event { get; set; }
-#nullable restore
-#else
-        public string Event { get; set; }
-#endif
+        /// <summary>Type of event that triggered the webhook.</summary>
+        public global::Soenneker.Shippo.OpenApiClient.Models.WebhookUpdateRequestEvent? Event { get; set; }
         /// <summary>Determines whether the webhook is a test webhook or not.</summary>
         public bool? IsTest { get; set; }
         /// <summary>URL webhook events are sent to.</summary>
@@ -60,7 +54,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "event", n => { Event = n.GetStringValue(); } },
+                { "event", n => { Event = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WebhookUpdateRequestEvent>(); } },
                 { "is_test", n => { IsTest = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -73,7 +67,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
-            writer.WriteStringValue("event", Event);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WebhookUpdateRequestEvent>("event", Event);
             writer.WriteBoolValue("is_test", IsTest);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

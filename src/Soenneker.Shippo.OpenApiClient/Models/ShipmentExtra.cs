@@ -310,13 +310,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Returns retail rates instead of account-based rates (UPS and FedEx only).</summary>
         public bool? RequestRetailRates { get; set; }
         /// <summary>Request additional return option for return shipments (UPS and Lasership only).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType? ReturnServiceType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType ReturnServiceType { get; set; }
-#endif
         /// <summary>Specify the RMA number field on the label (FedEx and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -433,7 +427,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "reference_3", n => { Reference3 = n.GetStringValue(); } },
                 { "reference_4", n => { Reference4 = n.GetStringValue(); } },
                 { "request_retail_rates", n => { RequestRetailRates = n.GetBoolValue(); } },
-                { "return_service_type", n => { ReturnServiceType = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType.CreateFromDiscriminatorValue); } },
+                { "return_service_type", n => { ReturnServiceType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType>(); } },
                 { "rma_number", n => { RmaNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber>(global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber.CreateFromDiscriminatorValue); } },
                 { "salesperson_number", n => { SalespersonNumber = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "saturday_delivery", n => { SaturdayDelivery = n.GetBoolValue(); } },
@@ -496,7 +490,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("reference_3", Reference3);
             writer.WriteStringValue("reference_4", Reference4);
             writer.WriteBoolValue("request_retail_rates", RequestRetailRates);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType>("return_service_type", ReturnServiceType);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType>("return_service_type", ReturnServiceType);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber>("rma_number", RmaNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("salesperson_number", SalespersonNumber);
             writer.WriteBoolValue("saturday_delivery", SaturdayDelivery);

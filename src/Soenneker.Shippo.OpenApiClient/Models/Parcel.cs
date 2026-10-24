@@ -73,13 +73,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Date and time of last Parcel update. Since you cannot update Parcels after they were created, this time stamp reflects the time when the Parcel was changed by Shippo&apos;s systems for the last time, e.g., during sorting the dimensions given.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
         /// <summary>If template is passed, `length`, `width`, `height`, and `distance_unit` are not required</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet? Template { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet Template { get; set; }
-#endif
         /// <summary>Indicates whether the object has been created in test mode.</summary>
         public bool? Test { get; set; }
         /// <summary>Weight of the parcel. Up to six digits in front and four digits after the decimal separator are accepted.</summary>
@@ -134,7 +128,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_state", n => { ObjectState = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ValidObjectState>(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
-                { "template", n => { Template = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet.CreateFromDiscriminatorValue); } },
+                { "template", n => { Template = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>(); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
                 { "weight", n => { Weight = n.GetStringValue(); } },
                 { "width", n => { Width = n.GetStringValue(); } },
@@ -158,7 +152,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("object_owner", ObjectOwner);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ValidObjectState>("object_state", ObjectState);
             writer.WriteDateTimeOffsetValue("object_updated", ObjectUpdated);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>("template", Template);
+            writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>("template", Template);
             writer.WriteBoolValue("test", Test);
             writer.WriteStringValue("weight", Weight);
             writer.WriteStringValue("width", Width);
