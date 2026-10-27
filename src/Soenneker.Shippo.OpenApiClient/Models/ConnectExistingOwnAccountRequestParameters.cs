@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParametersMember1"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountParameters"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParametersMember1"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountParameters"/>, <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConnectExistingOwnAccountRequestParameters : IComposedTypeWrapper, IParsable
@@ -37,6 +37,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountParameters UpsConnectExistingOwnAccountParameters { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters? UpsConnectExistingOwnAccountStreamlinedParameters { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters UpsConnectExistingOwnAccountStreamlinedParameters { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -54,6 +62,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             else if("UpsConnectExistingOwnAccountParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.UpsConnectExistingOwnAccountParameters = new global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountParameters();
+            }
+            else if("UpsConnectExistingOwnAccountStreamlinedParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UpsConnectExistingOwnAccountStreamlinedParameters = new global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters();
             }
             return result;
         }
@@ -75,6 +87,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 return UpsConnectExistingOwnAccountParameters.GetFieldDeserializers();
             }
+            else if(UpsConnectExistingOwnAccountStreamlinedParameters != null)
+            {
+                return UpsConnectExistingOwnAccountStreamlinedParameters.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -95,6 +111,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             else if(UpsConnectExistingOwnAccountParameters != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountParameters>(null, UpsConnectExistingOwnAccountParameters);
+            }
+            else if(UpsConnectExistingOwnAccountStreamlinedParameters != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters>(null, UpsConnectExistingOwnAccountStreamlinedParameters);
             }
         }
     }

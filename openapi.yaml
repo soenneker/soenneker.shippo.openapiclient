@@ -5780,6 +5780,15 @@ paths:
                   pickup_address_zip: 94103
                   ups_agreements: true
                 test: false
+            ups-streamlined-account-example:
+              summary: Connect an existing UPS account (streamlined)
+              value:
+                carrier: ups
+                account_id: '123456'
+                parameters:
+                  billing_address_country_iso2: BE
+                  account_number: '1989'
+                  ups_agreements: true
       responses:
         '201':
           $ref: '#/components/responses/carrierAccountResponse'
@@ -18738,6 +18747,7 @@ components:
             - $ref: '#/components/schemas/ConnectExistingOwnAccountParameters'
             - $ref: '#/components/schemas/FedExConnectExistingOwnAccountParameters'
             - $ref: '#/components/schemas/UPSConnectExistingOwnAccountParameters'
+            - $ref: '#/components/schemas/UPSConnectExistingOwnAccountStreamlinedParameters'
         test:
           example: false
           type: boolean
@@ -21610,7 +21620,7 @@ components:
         - verification_option
       type: object
     UPSConnectExistingOwnAccountParameters:
-      title: UPS account parameters
+      title: UPS account parameters (full)
       description: |-
         An array of additional parameters for the account, such as e.g. password or token.
         Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the parameters per carrier.
@@ -21732,6 +21742,40 @@ components:
         - has_invoice
         - email
       type: object
+    UPSConnectExistingOwnAccountStreamlinedParameters:
+      title: UPS account parameters (streamlined)
+      description: |-
+        Streamlined alternative to the full UPS account parameters. Provide only the UPS account number, the billing country, and acceptance of the UPS terms. Contact, billing address, and invoice details are not required with this format.
+        The full UPS account parameters format is also supported.
+
+        To protect account information, this field will be masked in any API response.
+        In the case of masked fields, they should be handled carefully.
+
+        Fields also must consider: 
+        - Not providing a *fields* in parameters will not result in a change to any configured value 
+        - Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value 
+        - Providing *field* with null will clear the configured value 
+        - Providing *field* with any other value will change the configured value and may affect the behavior of the account.
+      properties:
+        account_number:
+          description: The UPS account number
+          example: '1989'
+          type: string
+        billing_address_country_iso2:
+          description: Two-letter ISO 3166-1 country code of the billing address on the UPS account
+          example: 'BE'
+          maxLength: 2
+          minLength: 2
+          type: string
+        ups_agreements:
+          description: Whether the user agrees to the UPS terms and conditions or not. Error 400 will be returned if passed in as false
+          type: boolean
+      required:
+        - ups_agreements
+        - account_number
+        - billing_address_country_iso2
+      additionalProperties: false
+      type: object
     CarrierAccountBase:
       properties:
         account_id:
@@ -21757,6 +21801,7 @@ components:
             - $ref: '#/components/schemas/ConnectExistingOwnAccountParameters'
             - $ref: '#/components/schemas/FedExConnectExistingOwnAccountParameters'
             - $ref: '#/components/schemas/UPSConnectExistingOwnAccountParameters'
+            - $ref: '#/components/schemas/UPSConnectExistingOwnAccountStreamlinedParameters'
       required:
         - carrier
         - account_id
