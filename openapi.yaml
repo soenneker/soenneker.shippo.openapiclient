@@ -568,6 +568,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageDefault5QueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/addressPaginatedResponse'
@@ -696,6 +697,7 @@ paths:
       operationId: CreateAddress
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -926,6 +928,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/addressResponse'
@@ -1058,6 +1061,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/addressResponse'
@@ -1185,6 +1189,7 @@ paths:
       operationId: CreateBatch
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -2840,6 +2845,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageDefault5QueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/batchResponse'
@@ -2977,6 +2983,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -5246,6 +5253,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '202':
           $ref: '#/components/responses/batchResponse'
@@ -5379,6 +5387,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -5567,6 +5576,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageDefault5QueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/carrierAccountPaginatedResponse'
@@ -5695,6 +5705,7 @@ paths:
       operationId: CreateCarrierAccount
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -6041,6 +6052,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/carrierAccountResponse'
@@ -6172,6 +6184,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         content:
           application/json:
@@ -6482,6 +6495,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '302':
           description: Redirects the browser to the carrier login page, with the needed parameters
@@ -6658,6 +6672,7 @@ paths:
       operationId: RegisterCarrierAccount
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -6866,6 +6881,7 @@ paths:
               - usps
               - canada_post
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/carrierAccountRegistrationStatusResponse'
@@ -6995,6 +7011,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageDefault5QueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/customsDeclarationPaginatedResponse'
@@ -7123,6 +7140,7 @@ paths:
       operationId: CreateCustomsDeclaration
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -7579,6 +7597,7 @@ paths:
             type: string
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/customsDeclarationResponse'
@@ -7710,6 +7729,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/customsItemPaginatedResponse'
@@ -7838,6 +7858,7 @@ paths:
       operationId: CreateCustomsItem
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -8046,6 +8067,7 @@ paths:
             type: string
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/customsItemResponse'
@@ -8185,11 +8207,17 @@ paths:
       operationId: CreateEmbeddedAuthorization
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
-        - name: SHIPPO-ACCOUNT-ID
+        # Same header as SHIPPO-ACCOUNT-ID on the other endpoints (HTTP header names are
+        # case-insensitive; the gateway reads it lowercased). It is declared inline with this
+        # spelling on purpose: the SDK generator matches the hidden client-level global by
+        # exact header name, and this endpoint must keep its existing per-call argument in
+        # every SDK. Do not fold this into the ShippoAccountIdHeader component.
+        - name: Shippo-Account-Id
           in: header
           description: |-
             Optional. The object ID of a Managed Shippo Account. Platform accounts set this to
-            mint a JWT scoped to one of their managed accounts.
+            mint a JWT scoped to one of their managed accounts. `Shippo-Account-Id` and
+            `SHIPPO-ACCOUNT-ID` are the same header.
           required: false
           schema:
             type: string
@@ -8236,6 +8264,7 @@ paths:
       operationId: CreateLiveRate
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -8611,6 +8640,7 @@ paths:
       operationId: GetDefaultParcelTemplate
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/defaultParcelTemplateResponse'
@@ -8733,6 +8763,7 @@ paths:
       operationId: UpdateDefaultParcelTemplate
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         content:
           application/json:
@@ -8882,6 +8913,7 @@ paths:
       operationId: DeleteDefaultParcelTemplate
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '204':
           description: The parcel template was successfully deleted.
@@ -9001,6 +9033,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageDefault5QueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/manifestPaginatedResponse'
@@ -9129,6 +9162,7 @@ paths:
       operationId: CreateManifest
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -9391,6 +9425,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/manifestResponse'
@@ -9519,6 +9554,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
         - description: Filter orders by order status
           in: query
           name: order_status[]
@@ -9705,6 +9741,7 @@ paths:
       operationId: CreateOrder
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -10197,6 +10234,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/orderResponse'
@@ -10346,6 +10384,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/carrierParcelTemplateListResponse'
@@ -10485,6 +10524,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/carrierParcelTemplateResponse'
@@ -10614,6 +10654,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/parcelPaginatedResponse'
@@ -10742,6 +10783,7 @@ paths:
       operationId: CreateParcel
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -11009,6 +11051,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/parcelResponse'
@@ -11135,6 +11178,7 @@ paths:
       operationId: CreatePickup
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -11452,6 +11496,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/rateResponse'
@@ -11578,6 +11623,7 @@ paths:
       operationId: CreateRefund
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -11730,6 +11776,7 @@ paths:
       operationId: ListRefunds
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/refundPaginatedResponse'
@@ -11857,6 +11904,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/refundResponse'
@@ -11983,6 +12031,7 @@ paths:
       operationId: ListServiceGroups
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/serviceGroupListResponse'
@@ -12104,6 +12153,7 @@ paths:
       operationId: CreateServiceGroup
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -12335,6 +12385,7 @@ paths:
       operationId: UpdateServiceGroup
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         content:
           application/json:
@@ -12607,6 +12658,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '204':
           description: The service group was successfully deleted.
@@ -12749,6 +12801,7 @@ paths:
         - $ref: '#/components/parameters/ObjectCreatedLtQueryParam'
         - $ref: '#/components/parameters/ObjectCreatedLteQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/shipmentPaginatedResponse'
@@ -12877,6 +12930,7 @@ paths:
       operationId: CreateShipment
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -14275,6 +14329,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/shipmentResponse'
@@ -14409,6 +14464,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/ratePaginatedResponse'
@@ -14565,6 +14621,7 @@ paths:
         - $ref: '#/components/parameters/PageNumberQueryParam'
         - $ref: '#/components/parameters/ResultsPerPageQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/ratePaginatedResponse'
@@ -14705,6 +14762,7 @@ paths:
       operationId: CreateTrack
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -14875,6 +14933,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/trackResponse'
@@ -15039,6 +15098,7 @@ paths:
         - $ref: '#/components/parameters/ObjectCreatedLtQueryParam'
         - $ref: '#/components/parameters/ObjectCreatedLteQueryParam'
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/transactionPaginatedResponse'
@@ -15187,6 +15247,7 @@ paths:
       operationId: CreateTransaction
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -15440,6 +15501,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/transactionResponse'
@@ -15567,6 +15629,7 @@ paths:
       operationId: ListUserParcelTemplates
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/userParcelTemplateListResponse'
@@ -15697,6 +15760,7 @@ paths:
       operationId: CreateUserParcelTemplate
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         required: true
         content:
@@ -15867,6 +15931,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '204':
           description: The user parcel template was successfully deleted.
@@ -15995,6 +16060,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       responses:
         '200':
           $ref: '#/components/responses/userParcelTemplateResponse'
@@ -16127,6 +16193,7 @@ paths:
           schema:
             type: string
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
+        - $ref: '#/components/parameters/ShippoAccountIdHeader'
       requestBody:
         content:
           application/json:
@@ -17571,6 +17638,17 @@ components:
         example: '2018-02-08'
         default: '2018-02-08'
         x-default: '2018-02-08'
+      x-speakeasy-globals-hidden: true
+    ShippoAccountIdHeader:
+      description: >-
+        Optional. The object ID of a Managed Shippo Account. Platform accounts set this to make the
+        request on behalf of one of their managed accounts. See the
+        [Platform accounts guide](https://docs.goshippo.com/platform-accounts/platform-using-accounts).
+      in: header
+      name: SHIPPO-ACCOUNT-ID
+      required: false
+      schema:
+        type: string
       x-speakeasy-globals-hidden: true
     ObjectCreatedGtQueryParam:
       description: Object(s) created greater than a provided date and time.
@@ -23833,6 +23911,7 @@ webhooks:
 x-speakeasy-globals:
   parameters:
     - $ref: '#/components/parameters/ShippoApiVersionHeader'
+    - $ref: '#/components/parameters/ShippoAccountIdHeader'
 x-speakeasy-name-override:
   - operationId: ^Create.*
     methodNameOverride: create
