@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressFrom FromAddress { get; set; }
 #endif
-        /// <summary>Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. All objects will be returned expanded by default.</summary>
+        /// <summary>Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order.All objects will be returned expanded by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Shippo.OpenApiClient.Models.LineItem>? LineItems { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ShippingCostCurrency { get; set; }
 #endif
-        /// <summary>Shipping method (carrier + service or other free text description) chosen by the buyer. This value can be different from the shipping method the seller will actually choose.</summary>
+        /// <summary>Shipping method (carrier + service or other free text description) chosen by the buyer.This value can be different from the shipping method the seller will actually choose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShippingMethod { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ShippingMethod { get; set; }
 #endif
-        /// <summary>Platform the order was created on and, if applicable, imported from. Orders created via the Shippo API or dashboard will have the value &quot;Shippo&quot;.</summary>
+        /// <summary>Platform the order was created on and, if applicable, imported from.Orders created via the Shippo API or dashboard will have the value &quot;Shippo&quot;.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.OrderShopAppEnum? ShopApp { get; set; }
         /// <summary>The subtotal_price property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

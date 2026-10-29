@@ -56,7 +56,7 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the parcel template information for a specific user parceltemplate, identified by the object ID.
+        /// Returns the parcel template information for a specific user parcel template, identified by the object ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplate"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -123,7 +123,7 @@ namespace Soenneker.Shippo.OpenApiClient.UserParcelTemplates.Item
             return requestInfo;
         }
         /// <summary>
-        /// Returns the parcel template information for a specific user parceltemplate, identified by the object ID.
+        /// Returns the parcel template information for a specific user parcel template, identified by the object ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -15,7 +15,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Service level name, e.g. `Priority Mail` or `FedEx Ground®`. A service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. These names vary depending on the provider.See [Service Levels](/shippoapi/public-api/service-levels).</summary>
+        /// <summary>Service level name, e.g. `Priority Mail` or `FedEx Ground®`.A service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.These names vary depending on the provider.See [Service Levels](/shippoapi/public-api/service-levels).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

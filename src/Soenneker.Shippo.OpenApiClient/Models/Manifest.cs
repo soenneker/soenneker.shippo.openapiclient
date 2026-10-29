@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of the Address object that should be used as pickup address for the scan form. The USPS will validate this address before creating the scan form.</summary>
+        /// <summary>ID of the Address object that should be used as pickup address for the scan form.The USPS will validate this address before creating the scan form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AddressFrom { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Date and time of last object update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
-        /// <summary>All shipments to be submitted on this day will be closed out. Must be in the format `2014-01-18T00:35:03.463Z` (ISO 8601 date).</summary>
+        /// <summary>All shipments to be submitted on this day will be closed out.Must be in the format `2014-01-18T00:35:03.463Z` (ISO 8601 date).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentDate { get; set; }

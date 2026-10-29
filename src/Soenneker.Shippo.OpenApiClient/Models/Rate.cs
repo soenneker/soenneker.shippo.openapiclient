@@ -38,7 +38,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ArrivesBy { get; set; }
 #endif
-        /// <summary>An array containing specific attributes of this Rate in context of the entire shipment. Attributes can be assigned `CHEAPEST`, `FASTEST`, or `BESTVALUE`.</summary>
+        /// <summary>An array containing specific attributes of this Rate in context of the entire shipment.Attributes can be assigned `CHEAPEST`, `FASTEST`, or `BESTVALUE`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Shippo.OpenApiClient.Models.RateAttributesItem?>? Attributes { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string CarrierAccount { get; set; }
 #endif
-        /// <summary>Currency used in the sender&apos;s country, refers to `amount`. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. `USD` or `EUR`.</summary>
+        /// <summary>Currency used in the sender&apos;s country, refers to `amount`.The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. `USD` or `EUR`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Currency { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>Currency used in the recipient&apos;s country, refers to `amount_local`. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. `USD` or &quot;EUR&quot;.</summary>
+        /// <summary>Currency used in the recipient&apos;s country, refers to `amount_local`.The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. `USD` or &quot;EUR&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CurrencyLocal { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string CurrencyLocal { get; set; }
 #endif
-        /// <summary>Further clarification of the transit times. Often, this includes notes that the transit time as given in &quot;days&quot; is only an average, not a guaranteed time.</summary>
+        /// <summary>Further clarification of the transit times.Often, this includes notes that the transit time as given in &quot;days&quot; is only an average, not a guaranteed time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DurationTerms { get; set; }
@@ -78,9 +78,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string DurationTerms { get; set; }
 #endif
-        /// <summary>Estimated transit time (duration) in days of the Parcel at the given servicelevel. Please note that this is not binding, but only an average value as given by the provider. Shippo is not able to guarantee any transit times.</summary>
+        /// <summary>Estimated transit time (duration) in days of the Parcel at the given servicelevel.Please note that this is not binding, but only an average value as given by the provider.Shippo is not able to guarantee any transit times.</summary>
         public long? EstimatedDays { get; set; }
-        /// <summary>Cost to the user to insure the Rate for the requested amount of coverage, if insurance coverage was requested. Expressed in the currency used in the sender&apos;s country. Will be null if no insurance coverage was requested, or if insurance is requested from a non-standard insurance provider. Please note this price is already included in the `amount` and `amount_local` fields on the Rate. Do not add this field to them.</summary>
+        /// <summary>Cost to the user to insure the Rate for the requested amount of coverage, if insurance coverage was requested.Expressed in the currency used in the sender&apos;s country. Will be null if no insurance coverage was requested, or if insurance is requested from a non-standard insurance provider.Please note this price is already included in the `amount` and `amount_local` fields on the Rate. Do not add this field to them.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IncludedInsurancePrice { get; set; }
@@ -122,7 +122,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Provider { get; set; }
 #endif
-        /// <summary>URL to the provider logo with max. dimensions of 200*200px. Please refer to the provider&apos;s Logo Usage Guidelines before using the logo.</summary>
+        /// <summary>URL to the provider logo with max. dimensions of 200*200px.Please refer to the provider&apos;s Logo Usage Guidelines before using the logo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProviderImage200 { get; set; }
@@ -130,7 +130,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ProviderImage200 { get; set; }
 #endif
-        /// <summary>URL to the provider logo with max. dimensions of 75*75px. Please refer to the provider&apos;s Logo Usage Guidelines before using the logo.</summary>
+        /// <summary>URL to the provider logo with max. dimensions of 75*75px.Please refer to the provider&apos;s Logo Usage Guidelines before using the logo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProviderImage75 { get; set; }

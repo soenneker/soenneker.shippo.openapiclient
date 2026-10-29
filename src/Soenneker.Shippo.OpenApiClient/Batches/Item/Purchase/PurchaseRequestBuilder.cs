@@ -34,7 +34,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item.Purchase
         {
         }
         /// <summary>
-        /// Purchases an existing batch with a status of `VALID`. Once you send a POST request to the purchase endpoint the batch status will change to `PURCHASING`. When all the shipments are purchased, the status will change to `PURCHASED` and you will receive a `batch_purchased` webhook indicating that the batch has been purchased
+        /// Purchases an existing batch with a status of `VALID`.Once you send a POST request to the purchase endpoint the batch status will change to `PURCHASING`.When all the shipments are purchased, the status will change to `PURCHASED` and you will receive a `batch_purchased` webhook indicating that the batch has been purchased
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Batch"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Shippo.OpenApiClient.Batches.Item.Purchase
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Batch>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Batch.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Purchases an existing batch with a status of `VALID`. Once you send a POST request to the purchase endpoint the batch status will change to `PURCHASING`. When all the shipments are purchased, the status will change to `PURCHASED` and you will receive a `batch_purchased` webhook indicating that the batch has been purchased
+        /// Purchases an existing batch with a status of `VALID`.Once you send a POST request to the purchase endpoint the batch status will change to `PURCHASING`.When all the shipments are purchased, the status will change to `PURCHASED` and you will receive a `batch_purchased` webhook indicating that the batch has been purchased
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

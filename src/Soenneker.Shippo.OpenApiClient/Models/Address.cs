@@ -84,7 +84,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Date and time of Address creation.</summary>
         public DateTimeOffset? ObjectCreated { get; set; }
-        /// <summary>Unique identifier of the given Address object. This ID is required to create a Shipment object.</summary>
+        /// <summary>Unique identifier of the given Address object.This ID is required to create a Shipment object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectId { get; set; }
@@ -142,7 +142,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Street3 { get; set; }
 #endif
-        /// <summary>Street number of the addressed building. This field can be included in street1 for all carriers except for DHL Germany.</summary>
+        /// <summary>Street number of the addressed building.This field can be included in street1 for all carriers except for DHL Germany.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StreetNo { get; set; }

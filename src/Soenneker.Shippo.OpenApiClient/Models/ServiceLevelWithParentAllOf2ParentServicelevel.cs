@@ -15,7 +15,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Unique, extended version of the Service Level &quot;token&quot;. Guaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes.</summary>
+        /// <summary>Unique, extended version of the Service Level &quot;token&quot;.Guaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExtendedToken { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ExtendedToken { get; set; }
 #endif
-        /// <summary>Name of the Rate&apos;s servicelevel, e.g. `International Priority` or `Standard Post`. A servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. These names vary depending on the provider.</summary>
+        /// <summary>Name of the Rate&apos;s servicelevel, e.g. `International Priority` or `Standard Post`.A servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.These names vary depending on the provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Further clarification of the service. For FedEx, a value of `ONERATE` indicates thisrate is a FedEx One Rate variant of the same service level — it shares the same`token` as the standard-rate object but is a separate rate with its own `amount`.Standard (non-One Rate) rates have an empty string here.</summary>
+        /// <summary>Further clarification of the service. For FedEx, a value of `ONERATE` indicates this rate is a FedEx One Rate variant of the same service level — it shares the same `token` as the standard-rate object but is a separate rate with its own `amount`.Standard (non-One Rate) rates have an empty string here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Terms { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Terms { get; set; }
 #endif
-        /// <summary>Token of the Rate&apos;s servicelevel, e.g. `usps_priority` or `fedex_ground`. See [servicelevels](/shippoapi/public-api/service-levels).</summary>
+        /// <summary>Token of the Rate&apos;s servicelevel, e.g. `usps_priority` or `fedex_ground`.See [servicelevels](/shippoapi/public-api/service-levels).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }

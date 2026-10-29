@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string EccnEar99 { get; set; }
 #endif
-        /// <summary>Marks the item as belonging to an EU-exempt product category. Exempt items do not needproduct identifiers on shipments that meet the EU product identifier conditions(EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).</summary>
+        /// <summary>Marks the item as belonging to an EU-exempt product category. Exempt items do not need product identifiers on shipments that meet the EU product identifier conditions (EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).</summary>
         public bool? EuExemptCategory { get; set; }
         /// <summary>HS code of the item, which is required by some carriers. If `tariff_number` is not provided, `hs_code` will be used.  If both `hs_code` and `tariff_number` are provided, `tariff_number` will be used. 50 character limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string HsCode { get; set; }
 #endif
-        /// <summary>Product identifier assigned by the manufacturer. Up to 100 characters; some carriersaccept fewer and reject longer values at label purchase. Required together with`sku_code` on every non-exempt item when the shipment meets the EU productidentifier conditions.</summary>
+        /// <summary>Product identifier assigned by the manufacturer. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with `sku_code` on every non-exempt item when the shipment meets the EU product identifier conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ManufacturerCode { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ManufacturerCode { get; set; }
 #endif
-        /// <summary>Standardized product identifier such as a GTIN. Up to 100 characters. Never required,but recommended for EU-bound shipments when one exists.</summary>
+        /// <summary>Standardized product identifier such as a GTIN. Up to 100 characters. Never required, but recommended for EU-bound shipments when one exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ManufacturerStandardCode { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum? ObjectState { get; set; }
         /// <summary>Date and time of last object update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
-        /// <summary>Country of origin of the item. Example: `US` or `DE`. All accepted values can be found on the [Official ISO Website](http://www.iso.org/).</summary>
+        /// <summary>Country of origin of the item. Example: `US` or `DE`.All accepted values can be found on the [Official ISO Website](http://www.iso.org/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OriginCountry { get; set; }
@@ -106,7 +106,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Quantity of this item in the shipment you send.  Must be greater than 0.</summary>
         public long? Quantity { get; set; }
-        /// <summary>SKU or merchant-assigned product code of the item. Up to 100 characters; some carriersaccept fewer and reject longer values at label purchase. Required together with`manufacturer_code` on every non-exempt item when the shipment meets the EU productidentifier conditions; some carriers also use it outside the EU.</summary>
+        /// <summary>SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with `manufacturer_code` on every non-exempt item when the shipment meets the EU product identifier conditions; some carriers also use it outside the EU.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SkuCode { get; set; }

@@ -15,7 +15,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Custom prefix for PO number field (ZPL labels only). Up to 11 characters, including trailing spaces. Empty string indicates removal of default prefix. To use the default prefix, do not includethis property.</summary>
+        /// <summary>Custom prefix for PO number field (ZPL labels only). Up to 11 characters, including trailing spaces. Empty string indicates removal of default prefix. To use the default prefix, do not include this property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Prefix { get; set; }

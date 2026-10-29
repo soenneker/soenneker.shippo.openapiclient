@@ -104,7 +104,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Street3 { get; set; }
 #endif
-        /// <summary>Street number of the addressed building. This field can be included in street1 for all carriers except for DHL Germany.</summary>
+        /// <summary>Street number of the addressed building.This field can be included in street1 for all carriers except for DHL Germany.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StreetNo { get; set; }

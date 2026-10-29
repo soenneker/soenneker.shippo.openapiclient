@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A URL pointing to the commercial invoice as a 8.5x11 inch PDF file. A value will only be returned if the Transactions has been processed successfully and if the shipment is international.</summary>
+        /// <summary>A URL pointing to the commercial invoice as a 8.5x11 inch PDF file.A value will only be returned if the Transactions has been processed successfully and if the shipment is international.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommercialInvoiceUrl { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string CommercialInvoiceUrl { get; set; }
 #endif
-        /// <summary>An object with details about the user who created the Transaction (purchased the label).A value will be returned only for Transactions that can be associated with a specific user, e.g. when a logged-inuser purchases a label via the Shippo Web application; but not for Transactions purchased e.g. via the API using a ShippoToken,which is associated with the account but not any specific user.</summary>
+        /// <summary>An object with details about the user who created the Transaction (purchased the label).A value will be returned only for Transactions that can be associated with a specific user, e.g. when a logged-in user purchases a label via the Shippo Web application; but not for Transactions purchased e.g. via the API using a ShippoToken, which is associated with the account but not any specific user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy? CreatedBy { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFileType { get; set; }
-        /// <summary>A URL pointing directly to the label in the format you&apos;ve set in your settings. A value will only be returned if the Transactions has been processed successfully.</summary>
+        /// <summary>A URL pointing directly to the label in the format you&apos;ve set in your settings.A value will only be returned if the Transactions has been processed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LabelUrl { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Parcel { get; set; }
 #endif
-        /// <summary>A URL pointing directly to the QR code in PNG format. A value will only be returned if requested using qr_code_requested flag and the carrier provides such an option.</summary>
+        /// <summary>A URL pointing directly to the QR code in PNG format.A value will only be returned if requested using qr_code_requested flag and the carrier provides such an option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? QrCodeUrl { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public global::Soenneker.Shippo.OpenApiClient.Models.TransactionStatusEnum? Status { get; set; }
         /// <summary>Indicates whether the object has been created in test mode.</summary>
         public bool? Test { get; set; }
-        /// <summary>The carrier-specific tracking number that can be used to track the Shipment. A value will only be returned if the Rate is for a trackable Shipment and if the Transactions has been processed successfully.</summary>
+        /// <summary>The carrier-specific tracking number that can be used to track the Shipment.A value will only be returned if the Rate is for a trackable Shipment and if the Transactions has been processed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TrackingNumber { get; set; }
@@ -124,7 +124,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Indicates the high level status of the shipment.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusEnum? TrackingStatus { get; set; }
-        /// <summary>A link to track this item on the carrier-provided tracking website. A value will only be returned if tracking is available and the carrier provides such a service.</summary>
+        /// <summary>A link to track this item on the carrier-provided tracking website.A value will only be returned if tracking is available and the carrier provides such a service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TrackingUrlProvider { get; set; }

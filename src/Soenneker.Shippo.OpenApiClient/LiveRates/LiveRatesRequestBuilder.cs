@@ -40,7 +40,7 @@ namespace Soenneker.Shippo.OpenApiClient.LiveRates
         {
         }
         /// <summary>
-        /// Initiates a live rates request. Include either the object ID foran existing address record or a fully formed address object when enteringan address value. You can also enter the object ID of an existing user parceltemplate or a fully formed user parcel template object as the parcel value.
+        /// Initiates a live rates request. Include either the object ID for an existing address record or a fully formed address object when entering an address value. You can also enter the object ID of an existing user parcel template or a fully formed user parcel template object as the parcel value.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.LiveRatePaginatedList"/></returns>
         /// <param name="body">The request body</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Shippo.OpenApiClient.LiveRates
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.LiveRatePaginatedList>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.LiveRatePaginatedList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Initiates a live rates request. Include either the object ID foran existing address record or a fully formed address object when enteringan address value. You can also enter the object ID of an existing user parceltemplate or a fully formed user parcel template object as the parcel value.
+        /// Initiates a live rates request. Include either the object ID for an existing address record or a fully formed address object when entering an address value. You can also enter the object ID of an existing user parcel template or a fully formed user parcel template object as the parcel value.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

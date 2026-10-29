@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentPaginatedList BatchShipments { get; set; }
 #endif
-        /// <summary>ID of the Carrier Account object to use as the default for all shipments in this Batch. The carrier account can be changed on a per-shipment basis by changing the carrier_account in the corresponding BatchShipment object.</summary>
+        /// <summary>ID of the Carrier Account object to use as the default for all shipments in this Batch.The carrier account can be changed on a per-shipment basis by changing the carrier_account in the corresponding BatchShipment object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultCarrierAccount { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string DefaultCarrierAccount { get; set; }
 #endif
-        /// <summary>Token of the service level to use as the default for all shipments in this Batch. The servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)</summary>
+        /// <summary>Token of the service level to use as the default for all shipments in this Batch.The servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultServicelevelToken { get; set; }

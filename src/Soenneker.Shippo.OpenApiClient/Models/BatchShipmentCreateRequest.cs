@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Metadata { get; set; }
 #endif
-        /// <summary>A token that sets the shipping method for the batch, overriding the batch default. Servicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).</summary>
+        /// <summary>A token that sets the shipping method for the batch, overriding the batch default.Servicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServicelevelToken { get; set; }

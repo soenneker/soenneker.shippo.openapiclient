@@ -80,7 +80,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public List<string> Parcels { get; set; }
 #endif
-        /// <summary>Date the shipment will be tendered to the carrier. Must be in the format `2014-01-18T00:35:03.463Z`. Defaults to current date and time if no value is provided. Please note that some carriers require this value tobe in the future, on a working day, or similar.</summary>
+        /// <summary>Date the shipment will be tendered to the carrier. Must be in the format `2014-01-18T00:35:03.463Z`.Defaults to current date and time if no value is provided. Please note that some carriers require this value to be in the future, on a working day, or similar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentDate { get; set; }

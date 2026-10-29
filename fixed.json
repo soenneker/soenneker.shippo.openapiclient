@@ -543,7 +543,7 @@
           "Batches"
         ],
         "summary": "Purchase a batch",
-        "description": "Purchases an existing batch with a status of \u0060VALID\u0060. \nOnce you send a POST request to the purchase endpoint the batch status will change to \u0060PURCHASING\u0060. \nWhen all the shipments are purchased, the status will change to \u0060PURCHASED\u0060 and you will receive a \n\u0060batch_purchased\u0060 webhook indicating that the batch has been purchased",
+        "description": "Purchases an existing batch with a status of \u0060VALID\u0060.\nOnce you send a POST request to the purchase endpoint the batch status will change to \u0060PURCHASING\u0060.\nWhen all the shipments are purchased, the status will change to \u0060PURCHASED\u0060 and you will receive a \u0060batch_purchased\u0060 webhook indicating that the batch has been purchased",
         "operationId": "PurchaseBatch",
         "parameters": [
           {
@@ -1824,7 +1824,7 @@
           "Embedded Authorization"
         ],
         "summary": "Create a JWT",
-        "description": "Creates a short-lived JSON Web Token (JWT) that client-side applications can use\nto authenticate against the Shippo API without exposing a long-lived API token.\n\nAuthenticate this request with either a Shippo API token\n(\u0060Authorization: ShippoToken \u003CAPI_TOKEN\u003E\u0060) or an OAuth bearer token\n(\u0060Authorization: Bearer \u003COAUTH_BEARER_TOKEN\u003E\u0060). Platform accounts can mint a token\non behalf of a Managed Shippo Account by setting the \u0060SHIPPO-ACCOUNT-ID\u0060 header.\n\nThe returned token is valid for 12 hours. Send it on subsequent requests as\n\u0060Authorization: JWT \u003CJWT_TOKEN\u003E\u0060.",
+        "description": "Creates a short-lived JSON Web Token (JWT) that client-side applications can use to authenticate against the Shippo API without exposing a long-lived API token.\n\nAuthenticate this request with either a Shippo API token (\u0060Authorization: ShippoToken \u003CAPI_TOKEN\u003E\u0060) or an OAuth bearer token (\u0060Authorization: Bearer \u003COAUTH_BEARER_TOKEN\u003E\u0060). Platform accounts can mint a token on behalf of a Managed Shippo Account by setting the \u0060SHIPPO-ACCOUNT-ID\u0060 header.\n\nThe returned token is valid for 12 hours. Send it on subsequent requests as \u0060Authorization: JWT \u003CJWT_TOKEN\u003E\u0060.",
         "operationId": "CreateEmbeddedAuthorization",
         "parameters": [
           {
@@ -1834,7 +1834,7 @@
           {
             "name": "Shippo-Account-Id",
             "in": "header",
-            "description": "Optional. The object ID of a Managed Shippo Account. Platform accounts set this to\nmint a JWT scoped to one of their managed accounts. \u0060Shippo-Account-Id\u0060 and\n\u0060SHIPPO-ACCOUNT-ID\u0060 are the same header.",
+            "description": "Optional. The object ID of a Managed Shippo Account. Platform accounts set this to mint a JWT scoped to one of their managed accounts. \u0060Shippo-Account-Id\u0060 and \u0060SHIPPO-ACCOUNT-ID\u0060 are the same header.",
             "schema": {
               "type": "string"
             },
@@ -1891,7 +1891,7 @@
           "Rates at Checkout"
         ],
         "summary": "Generate a live rates request",
-        "description": "Initiates a live rates request. Include either the object ID for\nan existing address record or a fully formed address object when entering\nan address value. You can also enter the object ID of an existing user parcel\ntemplate or a fully formed user parcel template object as the parcel value.",
+        "description": "Initiates a live rates request. Include either the object ID for an existing address record or a fully formed address object when entering an address value. You can also enter the object ID of an existing user parcel template or a fully formed user parcel template object as the parcel value.",
         "operationId": "CreateLiveRate",
         "parameters": [
           {
@@ -4550,7 +4550,7 @@
           "User Parcel Templates"
         ],
         "summary": "Create a new user parcel template",
-        "description": "Creates a new user parcel template.\n\nYou can choose to create a\nparcel template using a preset carrier template as a starting point, or\nyou can create an entirely custom one. To use a preset carrier template,\npass in a unique template token from [this list](/shippoapi/public-api/parcel-templates)\nplus the weight fields (**weight** and **weight_unit**). Otherwise, omit\nthe template field and pass the other fields, for the weight, length, height,\nand depth, as well as their units.\u0022",
+        "description": "Creates a new user parcel template.\n\nYou can choose to create a parcel template using a preset carrier template as a starting point, or you can create an entirely custom one. To use a preset carrier template, pass in a unique template token from [this list](/shippoapi/public-api/parcel-templates) plus the weight fields (**weight** and **weight_unit**). Otherwise, omit the template field and pass the other fields, for the weight, length, height, and depth, as well as their units.\u0022",
         "operationId": "CreateUserParcelTemplate",
         "parameters": [
           {
@@ -4690,7 +4690,7 @@
           "User Parcel Templates"
         ],
         "summary": "Retrieves a user parcel template",
-        "description": "Returns the parcel template information for a specific user parcel\ntemplate, identified by the object ID.",
+        "description": "Returns the parcel template information for a specific user parcel template, identified by the object ID.",
         "operationId": "GetUserParcelTemplate",
         "parameters": [
           {
@@ -5397,7 +5397,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -5442,7 +5442,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           }
         },
@@ -5485,7 +5485,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -5530,7 +5530,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "is_complete": {
@@ -5568,7 +5568,7 @@
           },
           "object_id": {
             "type": "string",
-            "description": "Unique identifier of the given Address object. \nThis ID is required to create a Shipment object.",
+            "description": "Unique identifier of the given Address object.\nThis ID is required to create a Shipment object.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           },
           "object_owner": {
@@ -5578,12 +5578,12 @@
           },
           "object_updated": {
             "type": "string",
-            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time \nstamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the \napproximation of one or more values.",
+            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time stamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the approximation of one or more values.",
             "format": "date-time",
             "example": "2014-07-09T02:19:13.174Z"
           },
           "validation_results": {
-            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages \ngenerated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
+            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
             "$ref": "#/components/schemas/AddressValidationResults"
           },
           "test": {
@@ -5633,7 +5633,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -5678,7 +5678,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "is_complete": {
@@ -5716,7 +5716,7 @@
           },
           "object_id": {
             "type": "string",
-            "description": "Unique identifier of the given Address object. \nThis ID is required to create a Shipment object.",
+            "description": "Unique identifier of the given Address object.\nThis ID is required to create a Shipment object.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           },
           "object_owner": {
@@ -5726,12 +5726,12 @@
           },
           "object_updated": {
             "type": "string",
-            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time \nstamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the \napproximation of one or more values.",
+            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time stamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the approximation of one or more values.",
             "format": "date-time",
             "example": "2014-07-09T02:19:13.174Z"
           },
           "validation_results": {
-            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages \ngenerated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
+            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
             "$ref": "#/components/schemas/AddressValidationResults"
           },
           "test": {
@@ -5779,7 +5779,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -5824,7 +5824,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "is_complete": {
@@ -5862,7 +5862,7 @@
           },
           "object_id": {
             "type": "string",
-            "description": "Unique identifier of the given Address object. \nThis ID is required to create a Shipment object.",
+            "description": "Unique identifier of the given Address object.\nThis ID is required to create a Shipment object.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           },
           "object_owner": {
@@ -5872,12 +5872,12 @@
           },
           "object_updated": {
             "type": "string",
-            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time \nstamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the \napproximation of one or more values.",
+            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time stamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the approximation of one or more values.",
             "format": "date-time",
             "example": "2014-07-09T02:19:13.174Z"
           },
           "validation_results": {
-            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages \ngenerated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
+            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
             "$ref": "#/components/schemas/AddressValidationResults"
           },
           "test": {
@@ -5925,7 +5925,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -5970,7 +5970,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "is_complete": {
@@ -6008,7 +6008,7 @@
           },
           "object_id": {
             "type": "string",
-            "description": "Unique identifier of the given Address object. \nThis ID is required to create a Shipment object.",
+            "description": "Unique identifier of the given Address object.\nThis ID is required to create a Shipment object.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           },
           "object_owner": {
@@ -6018,12 +6018,12 @@
           },
           "object_updated": {
             "type": "string",
-            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time \nstamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the \napproximation of one or more values.",
+            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time stamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the approximation of one or more values.",
             "format": "date-time",
             "example": "2014-07-09T02:19:13.174Z"
           },
           "validation_results": {
-            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages \ngenerated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
+            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
             "$ref": "#/components/schemas/AddressValidationResults"
           },
           "test": {
@@ -6071,7 +6071,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -6116,7 +6116,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "validate": {
@@ -6163,7 +6163,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -6208,7 +6208,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "validate": {
@@ -6256,7 +6256,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -6301,7 +6301,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "validate": {
@@ -6354,7 +6354,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -6399,7 +6399,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "validate": {
@@ -6450,7 +6450,7 @@
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": ""
           },
           "city": {
@@ -6495,7 +6495,7 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Customer ID 123456"
           },
           "validate": {
@@ -6503,7 +6503,7 @@
             "example": true
           }
         },
-        "description": "The pickup address, which includes your name, company name, street address, city, state, zip code, \ncountry, phone number, and email address (strings). Special characters should not be included in \nany address element, especially name, company, and email."
+        "description": "The pickup address, which includes your name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email."
       },
       "AddressPaginatedList": {
         "type": "object",
@@ -6548,12 +6548,12 @@
           },
           "street3": {
             "type": "string",
-            "description": "Third street line, 35 character limit. \nOnly accepted for USPS international shipments, UPS domestic and UPS international shipments.",
+            "description": "Third street line, 35 character limit.\nOnly accepted for USPS international shipments, UPS domestic and UPS international shipments.",
             "example": ""
           },
           "street_no": {
             "type": "string",
-            "description": "Street number of the addressed building. \nThis field can be included in street1 for all carriers except for DHL Germany.",
+            "description": "Street number of the addressed building.\nThis field can be included in street1 for all carriers except for DHL Germany.",
             "example": "22"
           },
           "city": {
@@ -6563,7 +6563,7 @@
           },
           "state": {
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some \ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers \nonly accept two or three character state abbreviations.",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.",
             "example": "CA"
           },
           "zip": {
@@ -6573,12 +6573,12 @@
           },
           "country": {
             "type": "string",
-            "description": "Example: \u0060US\u0060 or \u0060DE\u0060. All accepted values can be found on the \n[Official ISO Website](http://www.iso.org/).\nSending a country is always required.",
+            "description": "Example: \u0060US\u0060 or \u0060DE\u0060. All accepted values can be found on the [Official ISO Website](http://www.iso.org/).\nSending a country is always required.",
             "example": "DE"
           },
           "phone": {
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This \nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.    ",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.",
             "example": "80331"
           },
           "email": {
@@ -6608,7 +6608,7 @@
             }
           }
         },
-        "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages \ngenerated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array)."
+        "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array)."
       },
       "AddressValidationResultsMessage": {
         "type": "object",
@@ -7047,16 +7047,16 @@
         "properties": {
           "default_carrier_account": {
             "type": "string",
-            "description": "ID of the Carrier Account object to use as the default for all shipments in this Batch. \nThe carrier account can be changed on a per-shipment basis by changing the carrier_account in the \ncorresponding BatchShipment object.",
+            "description": "ID of the Carrier Account object to use as the default for all shipments in this Batch.\nThe carrier account can be changed on a per-shipment basis by changing the carrier_account in the corresponding BatchShipment object.",
             "example": "078870331023437cb917f5187429b093"
           },
           "default_servicelevel_token": {
             "type": "string",
-            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
+            "description": "Token of the service level to use as the default for all shipments in this Batch.\nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
             "example": "usps_priority"
           },
           "label_filetype": {
-            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from \n[the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
+            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
             "$ref": "#/components/schemas/LabelFileTypeEnum"
           },
           "metadata": {
@@ -7084,16 +7084,16 @@
         "properties": {
           "default_carrier_account": {
             "type": "string",
-            "description": "ID of the Carrier Account object to use as the default for all shipments in this Batch. \nThe carrier account can be changed on a per-shipment basis by changing the carrier_account in the \ncorresponding BatchShipment object.",
+            "description": "ID of the Carrier Account object to use as the default for all shipments in this Batch.\nThe carrier account can be changed on a per-shipment basis by changing the carrier_account in the corresponding BatchShipment object.",
             "example": "078870331023437cb917f5187429b093"
           },
           "default_servicelevel_token": {
             "type": "string",
-            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
+            "description": "Token of the service level to use as the default for all shipments in this Batch.\nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
             "example": "usps_priority"
           },
           "label_filetype": {
-            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from \n[the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
+            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
             "$ref": "#/components/schemas/LabelFileTypeEnum"
           },
           "metadata": {
@@ -7157,16 +7157,16 @@
         "properties": {
           "default_carrier_account": {
             "type": "string",
-            "description": "ID of the Carrier Account object to use as the default for all shipments in this Batch. \nThe carrier account can be changed on a per-shipment basis by changing the carrier_account in the \ncorresponding BatchShipment object.",
+            "description": "ID of the Carrier Account object to use as the default for all shipments in this Batch.\nThe carrier account can be changed on a per-shipment basis by changing the carrier_account in the corresponding BatchShipment object.",
             "example": "078870331023437cb917f5187429b093"
           },
           "default_servicelevel_token": {
             "type": "string",
-            "description": "Token of the service level to use as the default for all shipments in this Batch. \nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the \ncorresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
+            "description": "Token of the service level to use as the default for all shipments in this Batch.\nThe servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)",
             "example": "usps_priority"
           },
           "label_filetype": {
-            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from \n[the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
+            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
             "$ref": "#/components/schemas/LabelFileTypeEnum"
           },
           "metadata": {
@@ -7195,12 +7195,12 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "SHIPMENT #1"
           },
           "servicelevel_token": {
             "type": "string",
-            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) \nor [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
+            "description": "A token that sets the shipping method for the batch, overriding the batch default.\nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
             "example": "fedex_ground"
           }
         }
@@ -7222,12 +7222,12 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "SHIPMENT #1"
           },
           "servicelevel_token": {
             "type": "string",
-            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) \nor [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
+            "description": "A token that sets the shipping method for the batch, overriding the batch default.\nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
             "example": "fedex_ground"
           },
           "messages": {
@@ -7254,7 +7254,7 @@
             "example": "4c33736a67e2450da88b38c42deef6b7"
           }
         },
-        "description": "The batch shipment object is a wrapper around a shipment object, which include shipment-specific information\nfor batch processing.\n\nNote: batch shipments can only be created on the batch endpoint, either when creating a batch object or by through\nthe \u0060/batches/{BATCH_OBJECT_ID}/add_shipments\u0060 endpoint",
+        "description": "The batch shipment object is a wrapper around a shipment object, which include shipment-specific information for batch processing.\n\nNote: batch shipments can only be created on the batch endpoint, either when creating a batch object or by through the \u0060/batches/{BATCH_OBJECT_ID}/add_shipments\u0060 endpoint",
         "x-tags": [
           "Batches"
         ]
@@ -7273,12 +7273,12 @@
           "metadata": {
             "maxLength": 100,
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want \nto attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "SHIPMENT #1"
           },
           "servicelevel_token": {
             "type": "string",
-            "description": "A token that sets the shipping method for the batch, overriding the batch default. \nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) \nor [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
+            "description": "A token that sets the shipping method for the batch, overriding the batch default.\nServicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).",
             "example": "fedex_ground"
           },
           "shipment": {
@@ -7448,7 +7448,7 @@
         "properties": {
           "prefix": {
             "type": "string",
-            "description": "Custom prefix for customer reference field (ZPL labels only). Up to 11 characters, including trailing \nspaces. Empty string indicates removal of default prefix. To use the default prefix, do not include\nthis property."
+            "description": "Custom prefix for customer reference field (ZPL labels only). Up to 11 characters, including trailing spaces. Empty string indicates removal of default prefix. To use the default prefix, do not include this property."
           },
           "value": {
             "maxLength": 40,
@@ -7494,7 +7494,7 @@
           },
           "certify_signer": {
             "type": "string",
-            "description": "Name of the person who created the customs declaration and is responsible for the validity of all \ninformation provided.",
+            "description": "Name of the person who created the customs declaration and is responsible for the validity of all information provided.",
             "example": "Shawn Ippotle"
           },
           "commercial_invoice": {
@@ -7541,7 +7541,7 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Order ID #123123"
           },
           "notes": {
@@ -7550,14 +7550,14 @@
           },
           "recipient_is_business": {
             "type": "boolean",
-            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created \ndeclarations default to false when the field is not provided; declarations created before \nthe field existed return null, which is treated as false. When true, EU product \nidentifiers are not required on the customs items.",
+            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created declarations default to false when the field is not provided; declarations created before the field existed return null, which is treated as false. When true, EU product identifiers are not required on the customs items.",
             "default": false
           }
         }
       },
       "CustomsDeclarationB13AFilingOption": {
         "type": "string",
-        "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
+        "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS).\n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
         "example": "FILED_ELECTRONICALLY"
       },
       "CustomsDeclarationB13AFilingOptionEnum": {
@@ -7567,7 +7567,7 @@
           "NOT_REQUIRED"
         ],
         "type": "string",
-        "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
+        "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS).\n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
         "example": "FILED_ELECTRONICALLY",
         "x-ms-enum": {
           "name": "CustomsDeclarationB13AFilingOptionEnum",
@@ -7643,7 +7643,7 @@
       },
       "CustomsDeclarationEelPfc": {
         "type": "string",
-        "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)",
+        "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most other shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)",
         "example": "NOEEI_30_37_a"
       },
       "CustomsDeclarationEelPfcEnum": {
@@ -7655,7 +7655,7 @@
           "AES_ITN"
         ],
         "type": "string",
-        "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)",
+        "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most other shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)",
         "example": "NOEEI_30_37_a",
         "x-ms-enum": {
           "name": "CustomsDeclarationEelPfcEnum",
@@ -7772,7 +7772,7 @@
           },
           "b13a_filing_option": {
             "type": "string",
-            "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
+            "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS).\n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
             "example": "FILED_ELECTRONICALLY"
           },
           "b13a_number": {
@@ -7790,7 +7790,7 @@
           },
           "certify_signer": {
             "type": "string",
-            "description": "Name of the person who created the customs declaration and is responsible for the validity of all \ninformation provided.",
+            "description": "Name of the person who created the customs declaration and is responsible for the validity of all information provided.",
             "example": "Shawn Ippotle"
           },
           "commercial_invoice": {
@@ -7837,7 +7837,7 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Order ID #123123"
           },
           "notes": {
@@ -7846,7 +7846,7 @@
           },
           "recipient_is_business": {
             "type": "boolean",
-            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created \ndeclarations default to false when the field is not provided; declarations created before \nthe field existed return null, which is treated as false. When true, EU product \nidentifiers are not required on the customs items.",
+            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created declarations default to false when the field is not provided; declarations created before the field existed return null, which is treated as false. When true, EU product identifiers are not required on the customs items.",
             "default": false
           },
           "address_importer": {
@@ -7861,7 +7861,7 @@
           },
           "eel_pfc": {
             "type": "string",
-            "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)",
+            "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most other shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)",
             "example": "NOEEI_30_37_a"
           },
           "incoterm": {
@@ -7956,7 +7956,7 @@
           },
           "certify_signer": {
             "type": "string",
-            "description": "Name of the person who created the customs declaration and is responsible for the validity of all \ninformation provided.",
+            "description": "Name of the person who created the customs declaration and is responsible for the validity of all information provided.",
             "example": "Shawn Ippotle"
           },
           "commercial_invoice": {
@@ -8003,7 +8003,7 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Order ID #123123"
           },
           "notes": {
@@ -8012,7 +8012,7 @@
           },
           "recipient_is_business": {
             "type": "boolean",
-            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created \ndeclarations default to false when the field is not provided; declarations created before \nthe field existed return null, which is treated as false. When true, EU product \nidentifiers are not required on the customs items.",
+            "description": "Indicates the shipment goes to a business (B2B) rather than a consumer. Newly created declarations default to false when the field is not provided; declarations created before the field existed return null, which is treated as false. When true, EU product identifiers are not required on the customs items.",
             "default": false
           },
           "address_importer": {
@@ -8067,11 +8067,11 @@
         "properties": {
           "eori_number": {
             "type": "string",
-            "description": "Economic Operators\u0027 Registration and Identification (EORI) number. Must start with a 2 character \ncountry code followed by a 6-17 character alphanumeric identifier (e.g. PL1234567890ABCDE).\n[More information on EORI.](https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en)",
+            "description": "Economic Operators\u0027 Registration and Identification (EORI) number. Must start with a 2 character country code followed by a 6-17 character alphanumeric identifier (e.g. PL1234567890ABCDE).\n[More information on EORI.](https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en)",
             "example": "PL123456790ABCDE"
           },
           "tax_id": {
-            "description": "Tax identification that may be required to ship in certain countries. Typically used to assess duties on \ngoods that are crossing a border.",
+            "description": "Tax identification that may be required to ship in certain countries. Typically used to assess duties on goods that are crossing a border.",
             "$ref": "#/components/schemas/CustomsTaxIdentification"
           }
         },
@@ -8130,17 +8130,17 @@
           },
           "eu_exempt_category": {
             "type": "boolean",
-            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need\nproduct identifiers on shipments that meet the EU product identifier conditions\n(EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
+            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need product identifiers on shipments that meet the EU product identifier conditions (EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
             "default": false
           },
           "manufacturer_code": {
             "type": "string",
-            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions.",
+            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with \u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product identifier conditions.",
             "example": "ACME-TS-001"
           },
           "manufacturer_standard_code": {
             "type": "string",
-            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required,\nbut recommended for EU-bound shipments when one exists.",
+            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required, but recommended for EU-bound shipments when one exists.",
             "example": "00012345678905"
           },
           "mass_unit": {
@@ -8149,7 +8149,7 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Order ID \u0022123454\u0022"
           },
           "net_weight": {
@@ -8159,7 +8159,7 @@
           },
           "origin_country": {
             "type": "string",
-            "description": "Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/)."
+            "description": "Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060.\nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/)."
           },
           "quantity": {
             "type": "integer",
@@ -8169,7 +8169,7 @@
           },
           "sku_code": {
             "type": "string",
-            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions; some carriers also use it outside the EU.",
+            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with \u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product identifier conditions; some carriers also use it outside the EU.",
             "example": "HM-123"
           },
           "hs_code": {
@@ -8188,7 +8188,7 @@
           },
           "value_currency": {
             "type": "string",
-            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           }
         }
@@ -8217,17 +8217,17 @@
           },
           "eu_exempt_category": {
             "type": "boolean",
-            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need\nproduct identifiers on shipments that meet the EU product identifier conditions\n(EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
+            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need product identifiers on shipments that meet the EU product identifier conditions (EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
             "default": false
           },
           "manufacturer_code": {
             "type": "string",
-            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions.",
+            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with \u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product identifier conditions.",
             "example": "ACME-TS-001"
           },
           "manufacturer_standard_code": {
             "type": "string",
-            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required,\nbut recommended for EU-bound shipments when one exists.",
+            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required, but recommended for EU-bound shipments when one exists.",
             "example": "00012345678905"
           },
           "mass_unit": {
@@ -8236,7 +8236,7 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Order ID \u0022123454\u0022"
           },
           "net_weight": {
@@ -8246,7 +8246,7 @@
           },
           "origin_country": {
             "type": "string",
-            "description": "Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/)."
+            "description": "Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060.\nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/)."
           },
           "quantity": {
             "type": "integer",
@@ -8256,7 +8256,7 @@
           },
           "sku_code": {
             "type": "string",
-            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions; some carriers also use it outside the EU.",
+            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with \u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product identifier conditions; some carriers also use it outside the EU.",
             "example": "HM-123"
           },
           "hs_code": {
@@ -8275,7 +8275,7 @@
           },
           "value_currency": {
             "type": "string",
-            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "object_created": {
@@ -8336,17 +8336,17 @@
           },
           "eu_exempt_category": {
             "type": "boolean",
-            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need\nproduct identifiers on shipments that meet the EU product identifier conditions\n(EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
+            "description": "Marks the item as belonging to an EU-exempt product category. Exempt items do not need product identifiers on shipments that meet the EU product identifier conditions (EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).",
             "default": false
           },
           "manufacturer_code": {
             "type": "string",
-            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions.",
+            "description": "Product identifier assigned by the manufacturer. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with \u0060sku_code\u0060 on every non-exempt item when the shipment meets the EU product identifier conditions.",
             "example": "ACME-TS-001"
           },
           "manufacturer_standard_code": {
             "type": "string",
-            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required,\nbut recommended for EU-bound shipments when one exists.",
+            "description": "Standardized product identifier such as a GTIN. Up to 100 characters. Never required, but recommended for EU-bound shipments when one exists.",
             "example": "00012345678905"
           },
           "mass_unit": {
@@ -8355,7 +8355,7 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object.",
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object.",
             "example": "Order ID \u0022123454\u0022"
           },
           "net_weight": {
@@ -8365,7 +8365,7 @@
           },
           "origin_country": {
             "type": "string",
-            "description": "Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060. \nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/)."
+            "description": "Country of origin of the item. Example: \u0060US\u0060 or \u0060DE\u0060.\nAll accepted values can be found on the [Official ISO Website](http://www.iso.org/)."
           },
           "quantity": {
             "type": "integer",
@@ -8375,7 +8375,7 @@
           },
           "sku_code": {
             "type": "string",
-            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers\naccept fewer and reject longer values at label purchase. Required together with\n\u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product\nidentifier conditions; some carriers also use it outside the EU.",
+            "description": "SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with \u0060manufacturer_code\u0060 on every non-exempt item when the shipment meets the EU product identifier conditions; some carriers also use it outside the EU.",
             "example": "HM-123"
           },
           "hs_code": {
@@ -8394,7 +8394,7 @@
           },
           "value_currency": {
             "type": "string",
-            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) \ncurrency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g.  \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           }
         },
@@ -8433,7 +8433,7 @@
             "$ref": "#/components/schemas/CustomsTaxIdentificationType"
           }
         },
-        "description": "Tax identification that may be required to ship in certain countries. Typically used to assess duties on \ngoods that are crossing a border."
+        "description": "Tax identification that may be required to ship in certain countries. Typically used to assess duties on goods that are crossing a border."
       },
       "DangerousGoodsBiologicalMaterial": {
         "type": "object",
@@ -8471,7 +8471,7 @@
             "$ref": "#/components/schemas/DangerousGoodsLithiumBatteries"
           }
         },
-        "description": "Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contents\nare provided, only certain USPS service levels will be eligible. For more information, see our\n[guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/)."
+        "description": "Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contents are provided, only certain USPS service levels will be eligible. For more information, see our [guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/)."
       },
       "DefaultParcelTemplate": {
         "title": "Default Parcel Template",
@@ -8499,7 +8499,7 @@
         "properties": {
           "prefix": {
             "type": "string",
-            "description": "Custom prefix for department number field (ZPL labels only). Up to 11 characters, including trailing \nspaces. Empty string indicates removal of default prefix. To use the default prefix, do not include\nthis property."
+            "description": "Custom prefix for department number field (ZPL labels only). Up to 11 characters, including trailing spaces. Empty string indicates removal of default prefix. To use the default prefix, do not include this property."
           },
           "value": {
             "maxLength": 40,
@@ -8554,12 +8554,12 @@
           },
           "currency": {
             "type": "string",
-            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060.\nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "currency_local": {
             "type": "string",
-            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
+            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060.\nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
             "example": "USD"
           },
           "estimated_days": {
@@ -8610,7 +8610,7 @@
         "type": "object",
         "properties": {
           "address": {
-            "description": "The pickup address, which includes your name, company name, street address, city, state, zip code, \ncountry, phone number, and email address (strings). Special characters should not be included in \nany address element, especially name, company, and email.",
+            "description": "The pickup address, which includes your name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email.",
             "$ref": "#/components/schemas/AddressPickupCompleteCreateRequest"
           },
           "building_location_type": {
@@ -8641,7 +8641,7 @@
           },
           "shipment_date": {
             "type": "string",
-            "description": "All shipments to be submitted on this day will be closed out. \nMust be in the format \u00602014-01-18T00:35:03.463Z\u0060 (ISO 8601 date).",
+            "description": "All shipments to be submitted on this day will be closed out.\nMust be in the format \u00602014-01-18T00:35:03.463Z\u0060 (ISO 8601 date).",
             "example": "2014-05-16T23:59:59Z"
           },
           "transactions": {
@@ -8649,7 +8649,7 @@
             "items": {
               "type": "string"
             },
-            "description": "IDs transactions to use. If you set this to null or not send this parameter, \nShippo will automatically assign all applicable transactions.",
+            "description": "IDs transactions to use. If you set this to null or not send this parameter, Shippo will automatically assign all applicable transactions.",
             "example": [
               "adcfdddf8ec64b84ad22772bce3ea37a"
             ]
@@ -8677,7 +8677,7 @@
           },
           "shipment_date": {
             "type": "string",
-            "description": "All shipments to be submitted on this day will be closed out. \nMust be in the format \u00602014-01-18T00:35:03.463Z\u0060 (ISO 8601 date).",
+            "description": "All shipments to be submitted on this day will be closed out.\nMust be in the format \u00602014-01-18T00:35:03.463Z\u0060 (ISO 8601 date).",
             "example": "2014-05-16T23:59:59Z"
           },
           "transactions": {
@@ -8685,14 +8685,14 @@
             "items": {
               "type": "string"
             },
-            "description": "IDs transactions to use. If you set this to null or not send this parameter, \nShippo will automatically assign all applicable transactions.",
+            "description": "IDs transactions to use. If you set this to null or not send this parameter, Shippo will automatically assign all applicable transactions.",
             "example": [
               "adcfdddf8ec64b84ad22772bce3ea37a"
             ]
           },
           "address_from": {
             "type": "string",
-            "description": "ID of the Address object that should be used as pickup address for the scan form. \nThe USPS will validate this address before creating the scan form.",
+            "description": "ID of the Address object that should be used as pickup address for the scan form.\nThe USPS will validate this address before creating the scan form.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           },
           "documents": {
@@ -8755,7 +8755,7 @@
           },
           "shipment_date": {
             "type": "string",
-            "description": "All shipments to be submitted on this day will be closed out. \nMust be in the format \u00602014-01-18T00:35:03.463Z\u0060 (ISO 8601 date).",
+            "description": "All shipments to be submitted on this day will be closed out.\nMust be in the format \u00602014-01-18T00:35:03.463Z\u0060 (ISO 8601 date).",
             "example": "2014-05-16T23:59:59Z"
           },
           "transactions": {
@@ -8763,7 +8763,7 @@
             "items": {
               "type": "string"
             },
-            "description": "IDs transactions to use. If you set this to null or not send this parameter, \nShippo will automatically assign all applicable transactions.",
+            "description": "IDs transactions to use. If you set this to null or not send this parameter, Shippo will automatically assign all applicable transactions.",
             "example": [
               "adcfdddf8ec64b84ad22772bce3ea37a"
             ]
@@ -8817,7 +8817,7 @@
             "example": "#1068"
           },
           "order_status": {
-            "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) \nfor the logic of how the status is handled.",
+            "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) for the logic of how the status is handled.",
             "$ref": "#/components/schemas/OrderStatusEnum"
           },
           "placed_at": {
@@ -8837,7 +8837,7 @@
           },
           "shipping_method": {
             "type": "string",
-            "description": "Shipping method (carrier \u002B service or other free text description) chosen by the buyer. \nThis value can be different from the shipping method the seller will actually choose.",
+            "description": "Shipping method (carrier \u002B service or other free text description) chosen by the buyer.\nThis value can be different from the shipping method the seller will actually choose.",
             "example": "USPS First Class Package"
           },
           "subtotal_price": {
@@ -8876,7 +8876,7 @@
           "SHIPPED"
         ],
         "type": "string",
-        "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) \nfor the logic of how the status is handled.",
+        "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) for the logic of how the status is handled.",
         "example": "PAID",
         "x-ms-enum": {
           "name": "OrderStatusEnum",
@@ -8936,7 +8936,7 @@
             "example": "#1068"
           },
           "order_status": {
-            "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) \nfor the logic of how the status is handled.",
+            "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) for the logic of how the status is handled.",
             "$ref": "#/components/schemas/OrderStatusEnum"
           },
           "placed_at": {
@@ -8956,7 +8956,7 @@
           },
           "shipping_method": {
             "type": "string",
-            "description": "Shipping method (carrier \u002B service or other free text description) chosen by the buyer. \nThis value can be different from the shipping method the seller will actually choose.",
+            "description": "Shipping method (carrier \u002B service or other free text description) chosen by the buyer.\nThis value can be different from the shipping method the seller will actually choose.",
             "example": "USPS First Class Package"
           },
           "subtotal_price": {
@@ -8995,7 +8995,7 @@
             "items": {
               "$ref": "#/components/schemas/LineItem"
             },
-            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. \nAll objects will be returned expanded by default."
+            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order.\nAll objects will be returned expanded by default."
           },
           "object_id": {
             "type": "string",
@@ -9008,7 +9008,7 @@
             "example": "shippotle@shippo.com"
           },
           "shop_app": {
-            "description": "Platform the order was created on and, if applicable, imported from. \nOrders created via the Shippo API or dashboard will have the value \u0022Shippo\u0022.",
+            "description": "Platform the order was created on and, if applicable, imported from.\nOrders created via the Shippo API or dashboard will have the value \u0022Shippo\u0022.",
             "$ref": "#/components/schemas/OrderShopAppEnum"
           },
           "transactions": {
@@ -9042,7 +9042,7 @@
           "WooCommerce"
         ],
         "type": "string",
-        "description": "Platform the order was created on and, if applicable, imported from. \nOrders created via the Shippo API or dashboard will have the value \u0022Shippo\u0022.",
+        "description": "Platform the order was created on and, if applicable, imported from.\nOrders created via the Shippo API or dashboard will have the value \u0022Shippo\u0022.",
         "example": "Shippo",
         "x-ms-enum": {
           "name": "OrderShopAppEnum",
@@ -9086,7 +9086,7 @@
             "example": "#1068"
           },
           "order_status": {
-            "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) \nfor the logic of how the status is handled.",
+            "description": "Current state of the order. See the [orders tutorial](https://docs.goshippo.com/docs/orders/orders/) for the logic of how the status is handled.",
             "$ref": "#/components/schemas/OrderStatusEnum"
           },
           "placed_at": {
@@ -9106,7 +9106,7 @@
           },
           "shipping_method": {
             "type": "string",
-            "description": "Shipping method (carrier \u002B service or other free text description) chosen by the buyer. \nThis value can be different from the shipping method the seller will actually choose.",
+            "description": "Shipping method (carrier \u002B service or other free text description) chosen by the buyer.\nThis value can be different from the shipping method the seller will actually choose.",
             "example": "USPS First Class Package"
           },
           "subtotal_price": {
@@ -9145,7 +9145,7 @@
             "items": {
               "$ref": "#/components/schemas/LineItemCreateRequest"
             },
-            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. \nAll objects will be returned expanded by default."
+            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order.\nAll objects will be returned expanded by default."
           }
         }
       },
@@ -9461,7 +9461,7 @@
         "properties": {
           "carrier_account": {
             "type": "string",
-            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
+            "description": "The object ID of your USPS or DHL Express carrier account.\nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
             "example": "adcfdddf8ec64b84ad22772bce3ea37a"
           },
           "location": {
@@ -9470,16 +9470,16 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object."
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object."
           },
           "requested_end_time": {
             "type": "string",
-            "description": "The latest that you requested your parcels to be available for pickup. \nExpressed in the timezone specified in the response.",
+            "description": "The latest that you requested your parcels to be available for pickup.\nExpressed in the timezone specified in the response.",
             "format": "date-time"
           },
           "requested_start_time": {
             "type": "string",
-            "description": "The earliest that you requested your parcels to be ready for pickup. \nExpressed in the timezone specified in the response.",
+            "description": "The earliest that you requested your parcels to be ready for pickup.\nExpressed in the timezone specified in the response.",
             "format": "date-time"
           },
           "transactions": {
@@ -9506,7 +9506,7 @@
         "properties": {
           "carrier_account": {
             "type": "string",
-            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
+            "description": "The object ID of your USPS or DHL Express carrier account.\nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
             "example": "adcfdddf8ec64b84ad22772bce3ea37a"
           },
           "location": {
@@ -9515,16 +9515,16 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object."
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object."
           },
           "requested_end_time": {
             "type": "string",
-            "description": "The latest that you requested your parcels to be available for pickup. \nExpressed in the timezone specified in the response.",
+            "description": "The latest that you requested your parcels to be available for pickup.\nExpressed in the timezone specified in the response.",
             "format": "date-time"
           },
           "requested_start_time": {
             "type": "string",
-            "description": "The earliest that you requested your parcels to be ready for pickup. \nExpressed in the timezone specified in the response.",
+            "description": "The earliest that you requested your parcels to be ready for pickup.\nExpressed in the timezone specified in the response.",
             "format": "date-time"
           },
           "transactions": {
@@ -9553,19 +9553,19 @@
           },
           "confirmed_start_time": {
             "type": "string",
-            "description": "The earliest that your parcels will be ready for pickup, confirmed by the carrier. \nExpressed in the timezone specified in the response.",
+            "description": "The earliest that your parcels will be ready for pickup, confirmed by the carrier.\nExpressed in the timezone specified in the response.",
             "format": "datetime",
             "example": "2020-05-09T12:00:00Z"
           },
           "confirmed_end_time": {
             "type": "string",
-            "description": "The latest that your parcels will be available for pickup, confirmed by the carrier. \nExpressed in the timezone specified in the response.",
+            "description": "The latest that your parcels will be available for pickup, confirmed by the carrier.\nExpressed in the timezone specified in the response.",
             "format": "datetime",
             "example": "2020-05-09T23:59:59.999Z"
           },
           "cancel_by_time": {
             "type": "string",
-            "description": "The latest time to cancel a pickup. Expressed in the timezone specified in the response. \nTo cancel a pickup, you will need to contact the carrier directly. \nThe ability to cancel a pickup through Shippo may be released in future iterations.",
+            "description": "The latest time to cancel a pickup. Expressed in the timezone specified in the response.\nTo cancel a pickup, you will need to contact the carrier directly.\nThe ability to cancel a pickup through Shippo may be released in future iterations.",
             "format": "datetime",
             "example": "2020-05-09T08:00:00Z"
           },
@@ -9574,7 +9574,7 @@
           },
           "confirmation_code": {
             "type": "string",
-            "description": "Pickup\u0027s confirmation code returned by the carrier. \nTo edit or cancel a pickup, you will need to contact USPS or DHL Express directly and provide your \u0060confirmation_code\u0060.",
+            "description": "Pickup\u0027s confirmation code returned by the carrier.\nTo edit or cancel a pickup, you will need to contact USPS or DHL Express directly and provide your \u0060confirmation_code\u0060.",
             "example": "WTC310058750"
           },
           "timezone": {
@@ -9611,7 +9611,7 @@
         "properties": {
           "carrier_account": {
             "type": "string",
-            "description": "The object ID of your USPS or DHL Express carrier account. \nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
+            "description": "The object ID of your USPS or DHL Express carrier account.\nYou can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.",
             "example": "adcfdddf8ec64b84ad22772bce3ea37a"
           },
           "location": {
@@ -9620,16 +9620,16 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you \nwant to attach to the object."
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object."
           },
           "requested_end_time": {
             "type": "string",
-            "description": "The latest that you requested your parcels to be available for pickup. \nExpressed in the timezone specified in the response.",
+            "description": "The latest that you requested your parcels to be available for pickup.\nExpressed in the timezone specified in the response.",
             "format": "date-time"
           },
           "requested_start_time": {
             "type": "string",
-            "description": "The earliest that you requested your parcels to be ready for pickup. \nExpressed in the timezone specified in the response.",
+            "description": "The earliest that you requested your parcels to be ready for pickup.\nExpressed in the timezone specified in the response.",
             "format": "date-time"
           },
           "transactions": {
@@ -9652,7 +9652,7 @@
         "properties": {
           "prefix": {
             "type": "string",
-            "description": "Custom prefix for PO number field (ZPL labels only). Up to 11 characters, including trailing \nspaces. Empty string indicates removal of default prefix. To use the default prefix, do not include\nthis property."
+            "description": "Custom prefix for PO number field (ZPL labels only). Up to 11 characters, including trailing spaces. Empty string indicates removal of default prefix. To use the default prefix, do not include this property."
           },
           "value": {
             "maxLength": 40,
@@ -9701,12 +9701,12 @@
           },
           "currency": {
             "type": "string",
-            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060.\nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "currency_local": {
             "type": "string",
-            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
+            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060.\nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
             "example": "USD"
           }
         }
@@ -9740,12 +9740,12 @@
           },
           "currency": {
             "type": "string",
-            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060.\nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "currency_local": {
             "type": "string",
-            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
+            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060.\nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
             "example": "USD"
           },
           "arrives_by": {
@@ -9758,7 +9758,7 @@
             "items": {
               "$ref": "#/components/schemas/RateAttributesItem"
             },
-            "description": "An array containing specific attributes of this Rate in context of the entire shipment. \nAttributes can be assigned \u0060CHEAPEST\u0060, \u0060FASTEST\u0060, or \u0060BESTVALUE\u0060."
+            "description": "An array containing specific attributes of this Rate in context of the entire shipment.\nAttributes can be assigned \u0060CHEAPEST\u0060, \u0060FASTEST\u0060, or \u0060BESTVALUE\u0060."
           },
           "carrier_account": {
             "type": "string",
@@ -9767,18 +9767,18 @@
           },
           "duration_terms": {
             "type": "string",
-            "description": "Further clarification of the transit times. \nOften, this includes notes that the transit time as given in \u0022days\u0022 is only an average, not a guaranteed time.",
+            "description": "Further clarification of the transit times.\nOften, this includes notes that the transit time as given in \u0022days\u0022 is only an average, not a guaranteed time.",
             "example": "Delivery in 1 to 3 business days"
           },
           "estimated_days": {
             "type": "integer",
-            "description": "Estimated transit time (duration) in days of the Parcel at the given servicelevel. \nPlease note that this is not binding, but only an average value as given by the provider. \nShippo is not able to guarantee any transit times.",
+            "description": "Estimated transit time (duration) in days of the Parcel at the given servicelevel.\nPlease note that this is not binding, but only an average value as given by the provider.\nShippo is not able to guarantee any transit times.",
             "format": "int64",
             "example": 2
           },
           "included_insurance_price": {
             "type": "string",
-            "description": "Cost to the user to insure the Rate for the requested amount of coverage, if insurance coverage was requested. \nExpressed in the currency used in the sender\u0027s country. Will be null if no insurance coverage was requested, or if insurance is requested from a non-standard insurance provider. \nPlease note this price is already included in the \u0060amount\u0060 and \u0060amount_local\u0060 fields on the Rate. Do not add this field to them.",
+            "description": "Cost to the user to insure the Rate for the requested amount of coverage, if insurance coverage was requested.\nExpressed in the currency used in the sender\u0027s country. Will be null if no insurance coverage was requested, or if insurance is requested from a non-standard insurance provider.\nPlease note this price is already included in the \u0060amount\u0060 and \u0060amount_local\u0060 fields on the Rate. Do not add this field to them.",
             "example": "1.05"
           },
           "messages": {
@@ -9809,12 +9809,12 @@
           },
           "provider_image_75": {
             "type": "string",
-            "description": "URL to the provider logo with max. dimensions of 75*75px. \nPlease refer to the provider\u0027s Logo Usage Guidelines before using the logo.",
+            "description": "URL to the provider logo with max. dimensions of 75*75px.\nPlease refer to the provider\u0027s Logo Usage Guidelines before using the logo.",
             "example": "https://cdn2.goshippo.com/providers/75/USPS.png"
           },
           "provider_image_200": {
             "type": "string",
-            "description": "URL to the provider logo with max. dimensions of 200*200px. \nPlease refer to the provider\u0027s Logo Usage Guidelines before using the logo.",
+            "description": "URL to the provider logo with max. dimensions of 200*200px.\nPlease refer to the provider\u0027s Logo Usage Guidelines before using the logo.",
             "example": "https://cdn2.goshippo.com/providers/200/USPS.png"
           },
           "servicelevel": {
@@ -9882,7 +9882,7 @@
             "example": "UPS API did not respond. Please try again in a few minutes."
           }
         },
-        "description": "Message returned with supporting information from a request. In some cases this can be an error message, \nfor example a timeout from a carrier. If available, the origin of the message is displayed in \u0060source\u0060."
+        "description": "Message returned with supporting information from a request. In some cases this can be an error message, for example a timeout from a carrier. If available, the origin of the message is displayed in \u0060source\u0060."
       },
       "Refund": {
         "type": "object",
@@ -9964,7 +9964,7 @@
         "properties": {
           "prefix": {
             "type": "string",
-            "description": "Custom prefix for RMA number field (ZPL labels only). Up to 11 characters, including trailing \nspaces. Empty string indicates removal of default prefix. To use the default prefix, do not include\nthis property."
+            "description": "Custom prefix for RMA number field (ZPL labels only). Up to 11 characters, including trailing spaces. Empty string indicates removal of default prefix. To use the default prefix, do not include this property."
           },
           "value": {
             "maxLength": 40,
@@ -9989,7 +9989,7 @@
           },
           "flat_rate": {
             "type": "string",
-            "description": "String representation of an amount to be returned as the flat rate\nif 1. The service group is of type \u0060LIVE_RATE\u0060 and no matching rates\nwere found; or 2. The service group is of type \u0060FLAT_RATE\u0060. Either\nintegers or decimals are accepted. Required unless type is\n\u0060FREE_SHIPPING\u0060",
+            "description": "String representation of an amount to be returned as the flat rate if 1. The service group is of type \u0060LIVE_RATE\u0060 and no matching rates were found; or 2. The service group is of type \u0060FLAT_RATE\u0060. Either integers or decimals are accepted. Required unless type is \u0060FREE_SHIPPING\u0060",
             "example": "5"
           },
           "flat_rate_currency": {
@@ -10004,7 +10004,7 @@
           },
           "free_shipping_threshold_min": {
             "type": "string",
-            "description": "For service groups of type \u0060FREE_SHIPPING\u0060, this field must be required to configure the minimum \ncart total (total cost of items in the cart) for this service group to be returned for rates at \ncheckout. Optional unless type is \u0060FREE_SHIPPING\u0060",
+            "description": "For service groups of type \u0060FREE_SHIPPING\u0060, this field must be required to configure the minimum cart total (total cost of items in the cart) for this service group to be returned for rates at checkout. Optional unless type is \u0060FREE_SHIPPING\u0060",
             "example": "5"
           },
           "name": {
@@ -10070,7 +10070,7 @@
           },
           "flat_rate": {
             "type": "string",
-            "description": "String representation of an amount to be returned as the flat rate\nif 1. The service group is of type \u0060LIVE_RATE\u0060 and no matching rates\nwere found; or 2. The service group is of type \u0060FLAT_RATE\u0060. Either\nintegers or decimals are accepted. Required unless type is\n\u0060FREE_SHIPPING\u0060",
+            "description": "String representation of an amount to be returned as the flat rate if 1. The service group is of type \u0060LIVE_RATE\u0060 and no matching rates were found; or 2. The service group is of type \u0060FLAT_RATE\u0060. Either integers or decimals are accepted. Required unless type is \u0060FREE_SHIPPING\u0060",
             "example": "5"
           },
           "flat_rate_currency": {
@@ -10085,7 +10085,7 @@
           },
           "free_shipping_threshold_min": {
             "type": "string",
-            "description": "For service groups of type \u0060FREE_SHIPPING\u0060, this field must be required to configure the minimum \ncart total (total cost of items in the cart) for this service group to be returned for rates at \ncheckout. Optional unless type is \u0060FREE_SHIPPING\u0060",
+            "description": "For service groups of type \u0060FREE_SHIPPING\u0060, this field must be required to configure the minimum cart total (total cost of items in the cart) for this service group to be returned for rates at checkout. Optional unless type is \u0060FREE_SHIPPING\u0060",
             "example": "5"
           },
           "name": {
@@ -10140,7 +10140,7 @@
           },
           "flat_rate": {
             "type": "string",
-            "description": "String representation of an amount to be returned as the flat rate\nif 1. The service group is of type \u0060LIVE_RATE\u0060 and no matching rates\nwere found; or 2. The service group is of type \u0060FLAT_RATE\u0060. Either\nintegers or decimals are accepted. Required unless type is\n\u0060FREE_SHIPPING\u0060",
+            "description": "String representation of an amount to be returned as the flat rate if 1. The service group is of type \u0060LIVE_RATE\u0060 and no matching rates were found; or 2. The service group is of type \u0060FLAT_RATE\u0060. Either integers or decimals are accepted. Required unless type is \u0060FREE_SHIPPING\u0060",
             "example": "5"
           },
           "flat_rate_currency": {
@@ -10155,7 +10155,7 @@
           },
           "free_shipping_threshold_min": {
             "type": "string",
-            "description": "For service groups of type \u0060FREE_SHIPPING\u0060, this field must be required to configure the minimum \ncart total (total cost of items in the cart) for this service group to be returned for rates at \ncheckout. Optional unless type is \u0060FREE_SHIPPING\u0060",
+            "description": "For service groups of type \u0060FREE_SHIPPING\u0060, this field must be required to configure the minimum cart total (total cost of items in the cart) for this service group to be returned for rates at checkout. Optional unless type is \u0060FREE_SHIPPING\u0060",
             "example": "5"
           },
           "name": {
@@ -10199,7 +10199,7 @@
           },
           "flat_rate": {
             "type": "string",
-            "description": "String representation of an amount to be returned as the flat rate\nif 1. The service group is of type \u0060LIVE_RATE\u0060 and no matching rates\nwere found; or 2. The service group is of type \u0060FLAT_RATE\u0060. Either\nintegers or decimals are accepted. Required unless type is\n\u0060FREE_SHIPPING\u0060",
+            "description": "String representation of an amount to be returned as the flat rate if 1. The service group is of type \u0060LIVE_RATE\u0060 and no matching rates were found; or 2. The service group is of type \u0060FLAT_RATE\u0060. Either integers or decimals are accepted. Required unless type is \u0060FREE_SHIPPING\u0060",
             "example": "5"
           },
           "flat_rate_currency": {
@@ -10214,7 +10214,7 @@
           },
           "free_shipping_threshold_min": {
             "type": "string",
-            "description": "For service groups of type \u0060FREE_SHIPPING\u0060, this field must be required to configure the minimum \ncart total (total cost of items in the cart) for this service group to be returned for rates at \ncheckout. Optional unless type is \u0060FREE_SHIPPING\u0060",
+            "description": "For service groups of type \u0060FREE_SHIPPING\u0060, this field must be required to configure the minimum cart total (total cost of items in the cart) for this service group to be returned for rates at checkout. Optional unless type is \u0060FREE_SHIPPING\u0060",
             "example": "5"
           },
           "name": {
@@ -10270,22 +10270,22 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Name of the Rate\u0027s servicelevel, e.g. \u0060International Priority\u0060 or \u0060Standard Post\u0060. \nA servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. \nThese names vary depending on the provider.",
+            "description": "Name of the Rate\u0027s servicelevel, e.g. \u0060International Priority\u0060 or \u0060Standard Post\u0060.\nA servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.\nThese names vary depending on the provider.",
             "example": "Priority Mail Express"
           },
           "terms": {
             "type": "string",
-            "description": "Further clarification of the service. For FedEx, a value of \u0060ONERATE\u0060 indicates this\nrate is a FedEx One Rate variant of the same service level \u2014 it shares the same\n\u0060token\u0060 as the standard-rate object but is a separate rate with its own \u0060amount\u0060.\nStandard (non-One Rate) rates have an empty string here.",
+            "description": "Further clarification of the service. For FedEx, a value of \u0060ONERATE\u0060 indicates this rate is a FedEx One Rate variant of the same service level \u2014 it shares the same \u0060token\u0060 as the standard-rate object but is a separate rate with its own \u0060amount\u0060.\nStandard (non-One Rate) rates have an empty string here.",
             "example": "ONERATE"
           },
           "token": {
             "type": "string",
-            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee [servicelevels](/shippoapi/public-api/service-levels).",
+            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee [servicelevels](/shippoapi/public-api/service-levels).",
             "example": "usps_priority_express"
           },
           "extended_token": {
             "type": "string",
-            "description": "Unique, extended version of the Service Level \u0022token\u0022. \nGuaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes."
+            "description": "Unique, extended version of the Service Level \u0022token\u0022.\nGuaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes."
           }
         },
         "description": "Contains details regarding the service level for the given rate.",
@@ -10296,22 +10296,22 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Name of the Rate\u0027s servicelevel, e.g. \u0060International Priority\u0060 or \u0060Standard Post\u0060. \nA servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. \nThese names vary depending on the provider.",
+            "description": "Name of the Rate\u0027s servicelevel, e.g. \u0060International Priority\u0060 or \u0060Standard Post\u0060.\nA servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.\nThese names vary depending on the provider.",
             "example": "Priority Mail Express"
           },
           "terms": {
             "type": "string",
-            "description": "Further clarification of the service. For FedEx, a value of \u0060ONERATE\u0060 indicates this\nrate is a FedEx One Rate variant of the same service level \u2014 it shares the same\n\u0060token\u0060 as the standard-rate object but is a separate rate with its own \u0060amount\u0060.\nStandard (non-One Rate) rates have an empty string here.",
+            "description": "Further clarification of the service. For FedEx, a value of \u0060ONERATE\u0060 indicates this rate is a FedEx One Rate variant of the same service level \u2014 it shares the same \u0060token\u0060 as the standard-rate object but is a separate rate with its own \u0060amount\u0060.\nStandard (non-One Rate) rates have an empty string here.",
             "example": "ONERATE"
           },
           "token": {
             "type": "string",
-            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee [servicelevels](/shippoapi/public-api/service-levels).",
+            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee [servicelevels](/shippoapi/public-api/service-levels).",
             "example": "usps_priority_express"
           },
           "extended_token": {
             "type": "string",
-            "description": "Unique, extended version of the Service Level \u0022token\u0022. \nGuaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes."
+            "description": "Unique, extended version of the Service Level \u0022token\u0022.\nGuaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes."
           },
           "parent_servicelevel": {
             "$ref": "#/components/schemas/ServiceLevelWithParentAllOf2ParentServicelevel"
@@ -10333,7 +10333,7 @@
           },
           "shipment_date": {
             "type": "string",
-            "description": "Date the shipment will be tendered to the carrier. Must be in the format \u00602014-01-18T00:35:03.463Z\u0060. \nDefaults to current date and time if no value is provided. Please note that some carriers require this value to\nbe in the future, on a working day, or similar.",
+            "description": "Date the shipment will be tendered to the carrier. Must be in the format \u00602014-01-18T00:35:03.463Z\u0060.\nDefaults to current date and time if no value is provided. Please note that some carriers require this value to be in the future, on a working day, or similar.",
             "example": "2021-03-22T12:00:00Z"
           }
         }
@@ -10367,7 +10367,7 @@
           },
           "shipment_date": {
             "type": "string",
-            "description": "Date the shipment will be tendered to the carrier. Must be in the format \u00602014-01-18T00:35:03.463Z\u0060. \nDefaults to current date and time if no value is provided. Please note that some carriers require this value to\nbe in the future, on a working day, or similar.",
+            "description": "Date the shipment will be tendered to the carrier. Must be in the format \u00602014-01-18T00:35:03.463Z\u0060.\nDefaults to current date and time if no value is provided. Please note that some carriers require this value to be in the future, on a working day, or similar.",
             "example": "2021-03-22T12:00:00Z"
           },
           "address_from": {
@@ -10387,7 +10387,7 @@
             "items": {
               "type": "string"
             },
-            "description": "An array of object_ids of the carrier account objects to be used for getting shipping rates for this shipment. \nIf no carrier account object_ids are set in this field, Shippo will attempt to generate rates using all the \ncarrier accounts that have the \u0060active\u0060 field set."
+            "description": "An array of object_ids of the carrier account objects to be used for getting shipping rates for this shipment.\nIf no carrier account object_ids are set in this field, Shippo will attempt to generate rates using all the carrier accounts that have the \u0060active\u0060 field set."
           },
           "customs_declaration": {
             "$ref": "#/components/schemas/CustomsDeclaration"
@@ -10430,7 +10430,7 @@
             "items": {
               "$ref": "#/components/schemas/Rate"
             },
-            "description": "An array with all available rates. If \u0060async\u0060 has been set to \u0060false\u0060 in the request,\nthis will be populated with all available rates in the response. Otherwise rates will be created\nasynchronously and this array will initially be empty."
+            "description": "An array with all available rates. If \u0060async\u0060 has been set to \u0060false\u0060 in the request, this will be populated with all available rates in the response. Otherwise rates will be created asynchronously and this array will initially be empty."
           },
           "status": {
             "$ref": "#/components/schemas/ShipmentStatus"
@@ -10464,7 +10464,7 @@
           },
           "shipment_date": {
             "type": "string",
-            "description": "Date the shipment will be tendered to the carrier. Must be in the format \u00602014-01-18T00:35:03.463Z\u0060. \nDefaults to current date and time if no value is provided. Please note that some carriers require this value to\nbe in the future, on a working day, or similar.",
+            "description": "Date the shipment will be tendered to the carrier. Must be in the format \u00602014-01-18T00:35:03.463Z\u0060.\nDefaults to current date and time if no value is provided. Please note that some carriers require this value to be in the future, on a working day, or similar.",
             "example": "2021-03-22T12:00:00Z"
           },
           "address_from": {
@@ -10487,7 +10487,7 @@
             "items": {
               "type": "string"
             },
-            "description": "List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) \u0060object_id\u0060s used to filter \nthe returned rates.  If set, only rates from these carriers will be returned.",
+            "description": "List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) \u0060object_id\u0060s used to filter the returned rates.  If set, only rates from these carriers will be returned.",
             "example": [
               "065a4a8c10d24a34ab932163a1b87f52",
               "73f706f4bdb94b54a337563840ce52b0"
@@ -10540,7 +10540,7 @@
           },
           "authority_to_leave": {
             "type": "boolean",
-            "description": "Request \u0060true\u0060 to give carrier permission to leave the parcel in a safe place if no one answers the \ndoor (where supported). When set to \u0060false\u0060, if no one is available to receive the item, the parcel \nwill not be left (*surcharges may be applicable)."
+            "description": "Request \u0060true\u0060 to give carrier permission to leave the parcel in a safe place if no one answers the door (where supported). When set to \u0060false\u0060, if no one is available to receive the item, the parcel will not be left (*surcharges may be applicable)."
           },
           "bill_of_lading_number": {
             "$ref": "#/components/schemas/UpsReferenceFields"
@@ -10577,7 +10577,7 @@
           },
           "critical_pull_time": {
             "type": "string",
-            "description": "Carrier arrival time to pickup packages from the fulfillment center. \nUTC format: \u0060%Y-%m-%dT%H:%M:%SZ\u0060"
+            "description": "Carrier arrival time to pickup packages from the fulfillment center.\nUTC format: \u0060%Y-%m-%dT%H:%M:%SZ\u0060"
           },
           "customer_branch": {
             "type": "string",
@@ -10588,7 +10588,7 @@
             "$ref": "#/components/schemas/CustomerReference"
           },
           "dangerous_goods": {
-            "description": "Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contents\nare provided, only certain USPS service levels will be eligible. For more information, see our\n[guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/).",
+            "description": "Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contents are provided, only certain USPS service levels will be eligible. For more information, see our [guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/).",
             "$ref": "#/components/schemas/DangerousGoodsObject"
           },
           "dangerous_goods_code": {
@@ -10621,7 +10621,7 @@
             "$ref": "#/components/schemas/HealthcareHandling"
           },
           "insurance": {
-            "description": "To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), \nspecify \u0060amount\u0060, \u0060content\u0060, and \u0060currency\u0060. Alternatively, you can choose carrier provided insurance \nby additionally specifying \u0060provider\u0060 (UPS, FedEx and OnTrac only).\n\nIf you do not want to add insurance \nto your shipment, do not set these parameters.",
+            "description": "To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), specify \u0060amount\u0060, \u0060content\u0060, and \u0060currency\u0060. Alternatively, you can choose carrier provided insurance by additionally specifying \u0060provider\u0060 (UPS, FedEx and OnTrac only).\n\nIf you do not want to add insurance to your shipment, do not set these parameters.",
             "$ref": "#/components/schemas/Insurance"
           },
           "invoice_number": {
@@ -10850,14 +10850,14 @@
             "$ref": "#/components/schemas/InsuranceProvider"
           }
         },
-        "description": "To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), \nspecify \u0060amount\u0060, \u0060content\u0060, and \u0060currency\u0060. Alternatively, you can choose carrier provided insurance \nby additionally specifying \u0060provider\u0060 (UPS, FedEx and OnTrac only).\n\nIf you do not want to add insurance \nto your shipment, do not set these parameters."
+        "description": "To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), specify \u0060amount\u0060, \u0060content\u0060, and \u0060currency\u0060. Alternatively, you can choose carrier provided insurance by additionally specifying \u0060provider\u0060 (UPS, FedEx and OnTrac only).\n\nIf you do not want to add insurance to your shipment, do not set these parameters."
       },
       "InvoiceNumber": {
         "type": "object",
         "properties": {
           "prefix": {
             "type": "string",
-            "description": "Custom prefix for invoice number field (ZPL labels only). Up to 11 characters, including trailing \nspaces. Empty string indicates removal of default prefix. To use the default prefix, do not include\nthis property."
+            "description": "Custom prefix for invoice number field (ZPL labels only). Up to 11 characters, including trailing spaces. Empty string indicates removal of default prefix. To use the default prefix, do not include this property."
           },
           "value": {
             "maxLength": 40,
@@ -10887,13 +10887,13 @@
           },
           "max_delivery_time": {
             "type": "string",
-            "description": "The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer. \nThis value is used by some platforms such as eBay to measure a seller\u0027s shipping time and performance. \nIt will be displayed in the Shippo dashboard.",
+            "description": "The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer.\nThis value is used by some platforms such as eBay to measure a seller\u0027s shipping time and performance.\nIt will be displayed in the Shippo dashboard.",
             "format": "date-time",
             "example": "2016-07-23T00:00:00Z"
           },
           "max_ship_time": {
             "type": "string",
-            "description": "The date and time this item needs to be fulfilled by, i.e. by when the shipping label needs to be \ncreated and handed over to the carrier. This value is used by some platforms such as eBay to measure \na seller\u0027s handling time and performance. It will be displayed in the Shippo dashboard.",
+            "description": "The date and time this item needs to be fulfilled by, i.e. by when the shipping label needs to be created and handed over to the carrier. This value is used by some platforms such as eBay to measure a seller\u0027s handling time and performance. It will be displayed in the Shippo dashboard.",
             "format": "date-time",
             "example": "2016-07-23T00:00:00Z"
           },
@@ -10920,12 +10920,12 @@
           },
           "variant_title": {
             "type": "string",
-            "description": "A variant is a specific variation of an item (e.g. \u0060size M\u0060 or \u0060color blue\u0060). \nVariants might be exposed as a separate resource in the future too. \nCurrently the variant title is a free text field describing the variant.",
+            "description": "A variant is a specific variation of an item (e.g. \u0060size M\u0060 or \u0060color blue\u0060).\nVariants might be exposed as a separate resource in the future too.\nCurrently the variant title is a free text field describing the variant.",
             "example": "June Edition"
           },
           "weight": {
             "type": "string",
-            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u0060total_weight\u0060 value of the order object.",
+            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, you can also set the \u0060total_weight\u0060 value of the order object.",
             "example": "0.4"
           },
           "weight_unit": {
@@ -10950,13 +10950,13 @@
           },
           "max_delivery_time": {
             "type": "string",
-            "description": "The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer. \nThis value is used by some platforms such as eBay to measure a seller\u0027s shipping time and performance. \nIt will be displayed in the Shippo dashboard.",
+            "description": "The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer.\nThis value is used by some platforms such as eBay to measure a seller\u0027s shipping time and performance.\nIt will be displayed in the Shippo dashboard.",
             "format": "date-time",
             "example": "2016-07-23T00:00:00Z"
           },
           "max_ship_time": {
             "type": "string",
-            "description": "The date and time this item needs to be fulfilled by, i.e. by when the shipping label needs to be \ncreated and handed over to the carrier. This value is used by some platforms such as eBay to measure \na seller\u0027s handling time and performance. It will be displayed in the Shippo dashboard.",
+            "description": "The date and time this item needs to be fulfilled by, i.e. by when the shipping label needs to be created and handed over to the carrier. This value is used by some platforms such as eBay to measure a seller\u0027s handling time and performance. It will be displayed in the Shippo dashboard.",
             "format": "date-time",
             "example": "2016-07-23T00:00:00Z"
           },
@@ -10983,12 +10983,12 @@
           },
           "variant_title": {
             "type": "string",
-            "description": "A variant is a specific variation of an item (e.g. \u0060size M\u0060 or \u0060color blue\u0060). \nVariants might be exposed as a separate resource in the future too. \nCurrently the variant title is a free text field describing the variant.",
+            "description": "A variant is a specific variation of an item (e.g. \u0060size M\u0060 or \u0060color blue\u0060).\nVariants might be exposed as a separate resource in the future too.\nCurrently the variant title is a free text field describing the variant.",
             "example": "June Edition"
           },
           "weight": {
             "type": "string",
-            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u0060total_weight\u0060 value of the order object.",
+            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, you can also set the \u0060total_weight\u0060 value of the order object.",
             "example": "0.4"
           },
           "weight_unit": {
@@ -11001,7 +11001,7 @@
             "example": "abf7d5675d744b6ea9fdb6f796b28f28"
           }
         },
-        "description": "Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource\nin the future. Currently it\u0027s a nested object within the order resource.\n\nA line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.",
+        "description": "Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource in the future. Currently it\u0027s a nested object within the order resource.\n\nA line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.",
         "x-tags": [
           "Orders"
         ]
@@ -11021,13 +11021,13 @@
           },
           "max_delivery_time": {
             "type": "string",
-            "description": "The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer. \nThis value is used by some platforms such as eBay to measure a seller\u0027s shipping time and performance. \nIt will be displayed in the Shippo dashboard.",
+            "description": "The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer.\nThis value is used by some platforms such as eBay to measure a seller\u0027s shipping time and performance.\nIt will be displayed in the Shippo dashboard.",
             "format": "date-time",
             "example": "2016-07-23T00:00:00Z"
           },
           "max_ship_time": {
             "type": "string",
-            "description": "The date and time this item needs to be fulfilled by, i.e. by when the shipping label needs to be \ncreated and handed over to the carrier. This value is used by some platforms such as eBay to measure \na seller\u0027s handling time and performance. It will be displayed in the Shippo dashboard.",
+            "description": "The date and time this item needs to be fulfilled by, i.e. by when the shipping label needs to be created and handed over to the carrier. This value is used by some platforms such as eBay to measure a seller\u0027s handling time and performance. It will be displayed in the Shippo dashboard.",
             "format": "date-time",
             "example": "2016-07-23T00:00:00Z"
           },
@@ -11054,12 +11054,12 @@
           },
           "variant_title": {
             "type": "string",
-            "description": "A variant is a specific variation of an item (e.g. \u0060size M\u0060 or \u0060color blue\u0060). \nVariants might be exposed as a separate resource in the future too. \nCurrently the variant title is a free text field describing the variant.",
+            "description": "A variant is a specific variation of an item (e.g. \u0060size M\u0060 or \u0060color blue\u0060).\nVariants might be exposed as a separate resource in the future too.\nCurrently the variant title is a free text field describing the variant.",
             "example": "June Edition"
           },
           "weight": {
             "type": "string",
-            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, \nyou can also set the \u0060total_weight\u0060 value of the order object.",
+            "description": "Total weight of this/these item(s). Instead of specifying the weight of all items, you can also set the \u0060total_weight\u0060 value of the order object.",
             "example": "0.4"
           },
           "weight_unit": {
@@ -11145,7 +11145,7 @@
             "items": {
               "$ref": "#/components/schemas/TrackingStatus"
             },
-            "description": "A list of tracking events, following the same structure as \u0060tracking_status\u0060. \nIt contains a full history of all tracking statuses, starting with the earlier tracking event first."
+            "description": "A list of tracking events, following the same structure as \u0060tracking_status\u0060.\nIt contains a full history of all tracking statuses, starting with the earlier tracking event first."
           },
           "tracking_number": {
             "type": "string",
@@ -11158,7 +11158,7 @@
           },
           "transaction": {
             "type": "string",
-            "description": "The \u0060object_id\u0060 of the transaction associated with this tracking object. \nThis field is visible only to the object owner of the transaction."
+            "description": "The \u0060object_id\u0060 of the transaction associated with this tracking object.\nThis field is visible only to the object owner of the transaction."
           }
         },
         "x-tags": [
@@ -11396,7 +11396,7 @@
         "properties": {
           "commercial_invoice_url": {
             "type": "string",
-            "description": "A URL pointing to the commercial invoice as a 8.5x11 inch PDF file. \nA value will only be returned if the Transactions has been processed successfully and if the shipment is international."
+            "description": "A URL pointing to the commercial invoice as a 8.5x11 inch PDF file.\nA value will only be returned if the Transactions has been processed successfully and if the shipment is international."
           },
           "created_by": {
             "$ref": "#/components/schemas/TransactionCreatedBy"
@@ -11406,12 +11406,12 @@
             "description": "The estimated time of arrival according to the carrier."
           },
           "label_file_type": {
-            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from \n[the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
+            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
             "$ref": "#/components/schemas/LabelFileTypeEnum"
           },
           "label_url": {
             "type": "string",
-            "description": "A URL pointing directly to the label in the format you\u0027ve set in your settings. \nA value will only be returned if the Transactions has been processed successfully.",
+            "description": "A URL pointing directly to the label in the format you\u0027ve set in your settings.\nA value will only be returned if the Transactions has been processed successfully.",
             "example": "https://shippo-delivery.s3.amazonaws.com/70ae8117ee1749e393f249d5b77c45e0.pdf?Signature=vDw1ltcyGveVR1OQoUDdzC43BY8%3D\u0026Expires=1437093830\u0026AWSAccessKeyId=AKIAJTHP3LLFMYAWALIA"
           },
           "messages": {
@@ -11422,7 +11422,7 @@
           },
           "metadata": {
             "type": "string",
-            "description": "A string of up to 100 characters that can be filled with any additional information you want to \nattach to the object."
+            "description": "A string of up to 100 characters that can be filled with any additional information you want to attach to the object."
           },
           "object_created": {
             "type": "string",
@@ -11455,7 +11455,7 @@
           },
           "qr_code_url": {
             "type": "string",
-            "description": "A URL pointing directly to the QR code in PNG format. \nA value will only be returned if requested using qr_code_requested flag and the carrier provides such an option.",
+            "description": "A URL pointing directly to the QR code in PNG format.\nA value will only be returned if requested using qr_code_requested flag and the carrier provides such an option.",
             "example": "https://shippo-delivery.s3.amazonaws.com/96_qr_code.pdf?Signature=PEdWrp0mFWAGwJp7FW3b%2FeA2eyY%3D\u0026Expires=1385930652\u0026AWSAccessKeyId=AKIAJTHP3LLFMYAWALIA"
           },
           "rate": {
@@ -11471,7 +11471,7 @@
           },
           "tracking_number": {
             "type": "string",
-            "description": "The carrier-specific tracking number that can be used to track the Shipment. \nA value will only be returned if the Rate is for a trackable Shipment and if the Transactions has been processed successfully.",
+            "description": "The carrier-specific tracking number that can be used to track the Shipment.\nA value will only be returned if the Rate is for a trackable Shipment and if the Transactions has been processed successfully.",
             "example": "9499907123456123456781"
           },
           "tracking_status": {
@@ -11480,7 +11480,7 @@
           },
           "tracking_url_provider": {
             "type": "string",
-            "description": "A link to track this item on the carrier-provided tracking website. \nA value will only be returned if tracking is available and the carrier provides such a service.",
+            "description": "A link to track this item on the carrier-provided tracking website.\nA value will only be returned if tracking is available and the carrier provides such a service.",
             "example": "https://tools.usps.com/go/TrackConfirmAction_input?origTrackNum=9499907123456123456781"
           }
         },
@@ -11549,7 +11549,7 @@
             "example": false
           },
           "label_file_type": {
-            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from \n[the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
+            "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
             "$ref": "#/components/schemas/LabelFileTypeEnum"
           },
           "metadata": {
@@ -11619,12 +11619,12 @@
           },
           "currency": {
             "type": "string",
-            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
+            "description": "Currency used in the sender\u0027s country, refers to \u0060amount\u0060.\nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0060EUR\u0060.",
             "example": "USD"
           },
           "currency_local": {
             "type": "string",
-            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060. \nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
+            "description": "Currency used in the recipient\u0027s country, refers to \u0060amount_local\u0060.\nThe [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. \u0060USD\u0060 or \u0022EUR\u0022.",
             "example": "USD"
           },
           "object_id": {
@@ -11644,7 +11644,7 @@
           },
           "servicelevel_name": {
             "type": "string",
-            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), \nalong with other properties.  These names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
+            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060.\nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.  These names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
             "example": "Priority Mail"
           },
           "servicelevel_token": {
@@ -12190,12 +12190,12 @@
         "properties": {
           "account_id": {
             "type": "string",
-            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \npage for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
+            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
             "example": "****"
           },
           "active": {
             "type": "boolean",
-            "description": "Determines whether the account is active. When creating a shipment, if no \u0060carrier_accounts\u0060 are explicitly \npassed Shippo will query all carrier accounts that have this field set. By default, this is set to True."
+            "description": "Determines whether the account is active. When creating a shipment, if no \u0060carrier_accounts\u0060 are explicitly passed Shippo will query all carrier accounts that have this field set. By default, this is set to True."
           },
           "carrier": {
             "type": "string",
@@ -12215,12 +12215,12 @@
           },
           "account_id": {
             "type": "string",
-            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \npage for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
+            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
             "example": "****"
           },
           "active": {
             "type": "boolean",
-            "description": "Determines whether the account is active. When creating a shipment, if no \u0060carrier_accounts\u0060 are explicitly \npassed Shippo will query all carrier accounts that have this field set. By default, this is set to True."
+            "description": "Determines whether the account is active. When creating a shipment, if no \u0060carrier_accounts\u0060 are explicitly passed Shippo will query all carrier accounts that have this field set. By default, this is set to True."
           },
           "carrier": {
             "type": "string",
@@ -12278,12 +12278,12 @@
         "properties": {
           "account_id": {
             "type": "string",
-            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \npage for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
+            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
             "example": "****"
           },
           "active": {
             "type": "boolean",
-            "description": "Determines whether the account is active. When creating a shipment, if no \u0060carrier_accounts\u0060 are explicitly \npassed Shippo will query all carrier accounts that have this field set. By default, this is set to True."
+            "description": "Determines whether the account is active. When creating a shipment, if no \u0060carrier_accounts\u0060 are explicitly passed Shippo will query all carrier accounts that have this field set. By default, this is set to True."
           },
           "carrier": {
             "type": "string",
@@ -12335,7 +12335,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. \nThese names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
+            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060.\nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.\nThese names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
             "example": "Priority Mail Express"
           },
           "token": {
@@ -12360,12 +12360,12 @@
         "properties": {
           "account_id": {
             "type": "string",
-            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \npage for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
+            "description": "Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the \u0060account_id\u0060 per carrier.\nTo protect account information, this field will be masked in any API response.",
             "example": "****"
           },
           "active": {
             "type": "boolean",
-            "description": "Determines whether the account is active. When creating a shipment, if no \u0060carrier_accounts\u0060 are explicitly \npassed Shippo will query all carrier accounts that have this field set. By default, this is set to True."
+            "description": "Determines whether the account is active. When creating a shipment, if no \u0060carrier_accounts\u0060 are explicitly passed Shippo will query all carrier accounts that have this field set. By default, this is set to True."
           },
           "carrier": {
             "type": "string",
@@ -18043,7 +18043,7 @@
           "ZPLII"
         ],
         "type": "string",
-        "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from \n[the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
+        "description": "Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)",
         "example": "PDF_4x6",
         "x-ms-enum": {
           "name": "LabelFileTypeEnum",
@@ -18296,12 +18296,12 @@
         "properties": {
           "token": {
             "type": "string",
-            "description": "The encoded JSON Web Token. Pass it on subsequent API requests as\n\u0060Authorization: JWT \u003CJWT_TOKEN\u003E\u0060.",
+            "description": "The encoded JSON Web Token. Pass it on subsequent API requests as \u0060Authorization: JWT \u003CJWT_TOKEN\u003E\u0060.",
             "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3QiOnsidXNlcl9pZCI6MTIzNDU2N30sImV4cCI6MTcwMDAwMDAwMCwiaXNfdGVzdCI6dHJ1ZSwib2F1dGhfYXBwX2lkIjoxMDAwMSwib3JpZ2luYWxfYXV0aF9zdHJhdGVneSI6IkpXVEF1dGgiLCJwYXJ0bmVyX25hbWUiOiJleGFtcGxlLXBhcnRuZXIiLCJwbGF0Zm9ybV9pZCI6MTAwMCwidXNlcl9pZCI6MTIzNDU2NywidXNlcl9vYmplY3RfaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJ1c2VybmFtZSI6InNoaXBwb3RsZUBzaGlwcG8uY29tIn0.EXAMPLE_SIGNATURE_NOT_VALID"
           },
           "expiresIn": {
             "type": "integer",
-            "description": "Unix timestamp (seconds) of when the token expires. This matches the \u0060exp\u0060 claim\ninside the token itself. Tokens are valid for 12 hours from issue.",
+            "description": "Unix timestamp (seconds) of when the token expires. This matches the \u0060exp\u0060 claim inside the token itself. Tokens are valid for 12 hours from issue.",
             "example": 1700000000
           }
         }
@@ -18353,7 +18353,7 @@
           },
           "object_id": {
             "type": "string",
-            "description": "Unique identifier of the given Address object. \nThis ID is required to create a Shipment object.",
+            "description": "Unique identifier of the given Address object.\nThis ID is required to create a Shipment object.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           },
           "object_owner": {
@@ -18363,12 +18363,12 @@
           },
           "object_updated": {
             "type": "string",
-            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time \nstamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the \napproximation of one or more values.",
+            "description": "Date and time of last Address update. Since you cannot update Addresses after they were created, this time stamp reflects the time when the Address was changed by Shippo\u0027s systems for the last time, e.g., during the approximation of one or more values.",
             "format": "date-time",
             "example": "2014-07-09T02:19:13.174Z"
           },
           "validation_results": {
-            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages \ngenerated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
+            "description": "Object that contains information regarding if an address had been validated or not. Also contains any messages generated during validation. Children keys are \u0060is_valid\u0060(boolean) and \u0060messages\u0060(array).",
             "$ref": "#/components/schemas/AddressValidationResults"
           },
           "test": {
@@ -18572,7 +18572,7 @@
           },
           "b13a_filing_option": {
             "type": "string",
-            "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
+            "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS).\n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
             "example": "FILED_ELECTRONICALLY"
           },
           "contents_type": {
@@ -18582,7 +18582,7 @@
           },
           "eel_pfc": {
             "type": "string",
-            "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most \nother shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)",
+            "description": "EEL / PFC type of the shipment. For most shipments from the US to CA, \u0060NOEEI_30_36\u0060 is applicable; for most other shipments from the US, \u0060NOEEI_30_37_a\u0060 is applicable.\nAllowed values available [here](/shippoapi/public-api/customs-declaration-eelpfc)",
             "example": "NOEEI_30_37_a"
           },
           "incoterm": {
@@ -18782,7 +18782,7 @@
         "properties": {
           "address_from": {
             "type": "string",
-            "description": "ID of the Address object that should be used as pickup address for the scan form. \nThe USPS will validate this address before creating the scan form.",
+            "description": "ID of the Address object that should be used as pickup address for the scan form.\nThe USPS will validate this address before creating the scan form.",
             "example": "d799c2679e644279b59fe661ac8fa488"
           },
           "documents": {
@@ -18871,7 +18871,7 @@
             "items": {
               "$ref": "#/components/schemas/LineItem"
             },
-            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. \nAll objects will be returned expanded by default."
+            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order.\nAll objects will be returned expanded by default."
           },
           "object_id": {
             "type": "string",
@@ -18884,7 +18884,7 @@
             "example": "shippotle@shippo.com"
           },
           "shop_app": {
-            "description": "Platform the order was created on and, if applicable, imported from. \nOrders created via the Shippo API or dashboard will have the value \u0022Shippo\u0022.",
+            "description": "Platform the order was created on and, if applicable, imported from.\nOrders created via the Shippo API or dashboard will have the value \u0022Shippo\u0022.",
             "$ref": "#/components/schemas/OrderShopAppEnum"
           },
           "transactions": {
@@ -18915,7 +18915,7 @@
             "items": {
               "$ref": "#/components/schemas/LineItemCreateRequest"
             },
-            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order. \nAll objects will be returned expanded by default."
+            "description": "Array of [line item](/shippoapi/public-api/orders/lineitem) objects representing the items in this order.\nAll objects will be returned expanded by default."
           }
         }
       },
@@ -19007,19 +19007,19 @@
           },
           "confirmed_start_time": {
             "type": "string",
-            "description": "The earliest that your parcels will be ready for pickup, confirmed by the carrier. \nExpressed in the timezone specified in the response.",
+            "description": "The earliest that your parcels will be ready for pickup, confirmed by the carrier.\nExpressed in the timezone specified in the response.",
             "format": "datetime",
             "example": "2020-05-09T12:00:00Z"
           },
           "confirmed_end_time": {
             "type": "string",
-            "description": "The latest that your parcels will be available for pickup, confirmed by the carrier. \nExpressed in the timezone specified in the response.",
+            "description": "The latest that your parcels will be available for pickup, confirmed by the carrier.\nExpressed in the timezone specified in the response.",
             "format": "datetime",
             "example": "2020-05-09T23:59:59.999Z"
           },
           "cancel_by_time": {
             "type": "string",
-            "description": "The latest time to cancel a pickup. Expressed in the timezone specified in the response. \nTo cancel a pickup, you will need to contact the carrier directly. \nThe ability to cancel a pickup through Shippo may be released in future iterations.",
+            "description": "The latest time to cancel a pickup. Expressed in the timezone specified in the response.\nTo cancel a pickup, you will need to contact the carrier directly.\nThe ability to cancel a pickup through Shippo may be released in future iterations.",
             "format": "datetime",
             "example": "2020-05-09T08:00:00Z"
           },
@@ -19028,7 +19028,7 @@
           },
           "confirmation_code": {
             "type": "string",
-            "description": "Pickup\u0027s confirmation code returned by the carrier. \nTo edit or cancel a pickup, you will need to contact USPS or DHL Express directly and provide your \u0060confirmation_code\u0060.",
+            "description": "Pickup\u0027s confirmation code returned by the carrier.\nTo edit or cancel a pickup, you will need to contact USPS or DHL Express directly and provide your \u0060confirmation_code\u0060.",
             "example": "WTC310058750"
           },
           "timezone": {
@@ -19088,7 +19088,7 @@
             "items": {
               "$ref": "#/components/schemas/RateAttributesItem"
             },
-            "description": "An array containing specific attributes of this Rate in context of the entire shipment. \nAttributes can be assigned \u0060CHEAPEST\u0060, \u0060FASTEST\u0060, or \u0060BESTVALUE\u0060."
+            "description": "An array containing specific attributes of this Rate in context of the entire shipment.\nAttributes can be assigned \u0060CHEAPEST\u0060, \u0060FASTEST\u0060, or \u0060BESTVALUE\u0060."
           },
           "carrier_account": {
             "type": "string",
@@ -19097,18 +19097,18 @@
           },
           "duration_terms": {
             "type": "string",
-            "description": "Further clarification of the transit times. \nOften, this includes notes that the transit time as given in \u0022days\u0022 is only an average, not a guaranteed time.",
+            "description": "Further clarification of the transit times.\nOften, this includes notes that the transit time as given in \u0022days\u0022 is only an average, not a guaranteed time.",
             "example": "Delivery in 1 to 3 business days"
           },
           "estimated_days": {
             "type": "integer",
-            "description": "Estimated transit time (duration) in days of the Parcel at the given servicelevel. \nPlease note that this is not binding, but only an average value as given by the provider. \nShippo is not able to guarantee any transit times.",
+            "description": "Estimated transit time (duration) in days of the Parcel at the given servicelevel.\nPlease note that this is not binding, but only an average value as given by the provider.\nShippo is not able to guarantee any transit times.",
             "format": "int64",
             "example": 2
           },
           "included_insurance_price": {
             "type": "string",
-            "description": "Cost to the user to insure the Rate for the requested amount of coverage, if insurance coverage was requested. \nExpressed in the currency used in the sender\u0027s country. Will be null if no insurance coverage was requested, or if insurance is requested from a non-standard insurance provider. \nPlease note this price is already included in the \u0060amount\u0060 and \u0060amount_local\u0060 fields on the Rate. Do not add this field to them.",
+            "description": "Cost to the user to insure the Rate for the requested amount of coverage, if insurance coverage was requested.\nExpressed in the currency used in the sender\u0027s country. Will be null if no insurance coverage was requested, or if insurance is requested from a non-standard insurance provider.\nPlease note this price is already included in the \u0060amount\u0060 and \u0060amount_local\u0060 fields on the Rate. Do not add this field to them.",
             "example": "1.05"
           },
           "messages": {
@@ -19139,12 +19139,12 @@
           },
           "provider_image_75": {
             "type": "string",
-            "description": "URL to the provider logo with max. dimensions of 75*75px. \nPlease refer to the provider\u0027s Logo Usage Guidelines before using the logo.",
+            "description": "URL to the provider logo with max. dimensions of 75*75px.\nPlease refer to the provider\u0027s Logo Usage Guidelines before using the logo.",
             "example": "https://cdn2.goshippo.com/providers/75/USPS.png"
           },
           "provider_image_200": {
             "type": "string",
-            "description": "URL to the provider logo with max. dimensions of 200*200px. \nPlease refer to the provider\u0027s Logo Usage Guidelines before using the logo.",
+            "description": "URL to the provider logo with max. dimensions of 200*200px.\nPlease refer to the provider\u0027s Logo Usage Guidelines before using the logo.",
             "example": "https://cdn2.goshippo.com/providers/200/USPS.png"
           },
           "servicelevel": {
@@ -19289,7 +19289,7 @@
             "items": {
               "type": "string"
             },
-            "description": "An array of object_ids of the carrier account objects to be used for getting shipping rates for this shipment. \nIf no carrier account object_ids are set in this field, Shippo will attempt to generate rates using all the \ncarrier accounts that have the \u0060active\u0060 field set."
+            "description": "An array of object_ids of the carrier account objects to be used for getting shipping rates for this shipment.\nIf no carrier account object_ids are set in this field, Shippo will attempt to generate rates using all the carrier accounts that have the \u0060active\u0060 field set."
           },
           "customs_declaration": {
             "$ref": "#/components/schemas/CustomsDeclaration"
@@ -19332,7 +19332,7 @@
             "items": {
               "$ref": "#/components/schemas/Rate"
             },
-            "description": "An array with all available rates. If \u0060async\u0060 has been set to \u0060false\u0060 in the request,\nthis will be populated with all available rates in the response. Otherwise rates will be created\nasynchronously and this array will initially be empty."
+            "description": "An array with all available rates. If \u0060async\u0060 has been set to \u0060false\u0060 in the request, this will be populated with all available rates in the response. Otherwise rates will be created asynchronously and this array will initially be empty."
           },
           "status": {
             "$ref": "#/components/schemas/ShipmentStatus"
@@ -19372,7 +19372,7 @@
             "items": {
               "type": "string"
             },
-            "description": "List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) \u0060object_id\u0060s used to filter \nthe returned rates.  If set, only rates from these carriers will be returned.",
+            "description": "List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) \u0060object_id\u0060s used to filter the returned rates.  If set, only rates from these carriers will be returned.",
             "example": [
               "065a4a8c10d24a34ab932163a1b87f52",
               "73f706f4bdb94b54a337563840ce52b0"
@@ -19455,7 +19455,7 @@
             "$ref": "#/components/schemas/AddressCompleteCreateRequest"
           }
         ],
-        "description": "The sender address, which includes your name, company name, street address, city, state, zip code, \ncountry, phone number, and email address (strings). Special characters should not be included in \nany address element, especially name, company, and email."
+        "description": "The sender address, which includes your name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email."
       },
       "LiveRateCreateRequestAddressTo": {
         "oneOf": [
@@ -19467,7 +19467,7 @@
             "$ref": "#/components/schemas/AddressCompleteCreateRequest"
           }
         ],
-        "description": "The recipient address, which includes the recipient\u0027s name, company name, street address, city, state, zip code, \ncountry, phone number, and email address (strings). Special characters should not be included in \nany address element, especially name, company, and email."
+        "description": "The recipient address, which includes the recipient\u0027s name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email."
       },
       "LiveRateCreateRequestParcel": {
         "oneOf": [
@@ -19492,7 +19492,7 @@
             "example": "ec9f0d3adc9441449c85d315f0997fd5"
           }
         ],
-        "description": "ID of the Rate object for which a Label has to be obtained.  \nIf you purchase a label by calling the transaction endpoint without a rate (instalabel), \nthis field will be a simplified Rate object in the Transaction model returned from the POST request.\nNote, only rates less than 7 days old can be purchased to ensure up-to-date pricing."
+        "description": "ID of the Rate object for which a Label has to be obtained.  \nIf you purchase a label by calling the transaction endpoint without a rate (instalabel), this field will be a simplified Rate object in the Transaction model returned from the POST request.\nNote, only rates less than 7 days old can be purchased to ensure up-to-date pricing."
       },
       "CoreRateAllOf2": {
         "type": "object",
@@ -19514,7 +19514,7 @@
           },
           "servicelevel_name": {
             "type": "string",
-            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060. \nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), \nalong with other properties.  These names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
+            "description": "Service level name, e.g. \u0060Priority Mail\u0060 or \u0060FedEx Ground\u00AE\u0060.\nA service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.  These names vary depending on the provider.\nSee [Service Levels](/shippoapi/public-api/service-levels).",
             "example": "Priority Mail"
           },
           "servicelevel_token": {
@@ -19756,7 +19756,7 @@
           },
           {
             "type": "string",
-            "description": "ID of the Address object that should be used as pickup address for the scan form. \nThe USPS will validate this address before creating the scan form."
+            "description": "ID of the Address object that should be used as pickup address for the scan form.\nThe USPS will validate this address before creating the scan form."
           }
         ]
       },
@@ -19765,22 +19765,22 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Name of the Rate\u0027s servicelevel, e.g. \u0060International Priority\u0060 or \u0060Standard Post\u0060. \nA servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. \nThese names vary depending on the provider.",
+            "description": "Name of the Rate\u0027s servicelevel, e.g. \u0060International Priority\u0060 or \u0060Standard Post\u0060.\nA servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.\nThese names vary depending on the provider.",
             "example": "Priority Mail Express"
           },
           "terms": {
             "type": "string",
-            "description": "Further clarification of the service. For FedEx, a value of \u0060ONERATE\u0060 indicates this\nrate is a FedEx One Rate variant of the same service level \u2014 it shares the same\n\u0060token\u0060 as the standard-rate object but is a separate rate with its own \u0060amount\u0060.\nStandard (non-One Rate) rates have an empty string here.",
+            "description": "Further clarification of the service. For FedEx, a value of \u0060ONERATE\u0060 indicates this rate is a FedEx One Rate variant of the same service level \u2014 it shares the same \u0060token\u0060 as the standard-rate object but is a separate rate with its own \u0060amount\u0060.\nStandard (non-One Rate) rates have an empty string here.",
             "example": "ONERATE"
           },
           "token": {
             "type": "string",
-            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060. \nSee [servicelevels](/shippoapi/public-api/service-levels).",
+            "description": "Token of the Rate\u0027s servicelevel, e.g. \u0060usps_priority\u0060 or \u0060fedex_ground\u0060.\nSee [servicelevels](/shippoapi/public-api/service-levels).",
             "example": "usps_priority_express"
           },
           "extended_token": {
             "type": "string",
-            "description": "Unique, extended version of the Service Level \u0022token\u0022. \nGuaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes."
+            "description": "Unique, extended version of the Service Level \u0022token\u0022.\nGuaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes."
           }
         },
         "description": "Used for some Service Levels to link to the more \u0022generic\u0022 version of this Service Level - for example, \nif this Service Level is a variation specific to shipments to Europe(\u0022ups_saver_eu\u0022), the \u0022parent\u0022 is \nthe fully generic version (\u0022ups_saver\u0022). Helpful when displaying Service Levels to users. Has the same \nstructure of the servicelevel - \u0022name\u0022, \u0022token\u0022, \u0022terms\u0022, and \u0022extended_token\u0022, or it is otherwise null."
@@ -19828,7 +19828,7 @@
           },
           {
             "type": "string",
-            "description": "[Customs Declaration](/shippoapi/public-api/customs-declarations) \u0060object_id\u0060 of a previously\ncreated customs declaration.",
+            "description": "[Customs Declaration](/shippoapi/public-api/customs-declarations) \u0060object_id\u0060 of a previously created customs declaration.",
             "example": "adcfdddf8ec64b84ad22772bce3ea37a"
           }
         ]
@@ -19883,7 +19883,7 @@
             "example": "shippotle@shippo.com"
           }
         },
-        "description": "An object with details about the user who created the Transaction (purchased the label).\nA value will be returned only for Transactions that can be associated with a specific user, e.g. when a logged-in\nuser purchases a label via the Shippo Web application; but not for Transactions purchased e.g. via the API using a ShippoToken,\nwhich is associated with the account but not any specific user."
+        "description": "An object with details about the user who created the Transaction (purchased the label).\nA value will be returned only for Transactions that can be associated with a specific user, e.g. when a logged-in user purchases a label via the Shippo Web application; but not for Transactions purchased e.g. via the API using a ShippoToken, which is associated with the account but not any specific user."
       },
       "CarrierAccountChronopostCreateRequestParameters": {
         "type": "object"
@@ -20354,7 +20354,7 @@
           "ANY"
         ],
         "type": "string",
-        "description": "Secured funds include money orders, certified cheques and others (see \n[UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details). \nIf no payment_method inputted the value defaults to \u0022ANY\u0022.)",
+        "description": "Secured funds include money orders, certified cheques and others (see [UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details).\nIf no payment_method inputted the value defaults to \u0022ANY\u0022.)",
         "example": "CASH",
         "x-ms-enum": {
           "name": "CodPaymentMethod",
@@ -20382,7 +20382,7 @@
           "NOT_REQUIRED"
         ],
         "type": "string",
-        "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). \n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
+        "description": "B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS).\n[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)\nAllowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)",
         "example": "FILED_ELECTRONICALLY",
         "x-ms-enum": {
           "name": "CustomsDeclarationCreateRequestB13AFilingOption",
@@ -20452,7 +20452,7 @@
           "Side Door"
         ],
         "type": "string",
-        "description": "Where your parcels will be available for pickup. \u0022Security Deck\u0022 and \u0022Shipping Dock\u0022 are only \nsupported for DHL Express.",
+        "description": "Where your parcels will be available for pickup. \u0022Security Deck\u0022 and \u0022Shipping Dock\u0022 are only supported for DHL Express.",
         "example": "Front Door",
         "x-ms-enum": {
           "name": "LocationBuildingLocationType",
@@ -20869,7 +20869,7 @@
           "CARRIER_CONFIRMATION"
         ],
         "type": "string",
-        "description": "Request standard or adult signature confirmation. You can alternatively request Certified Mail (USPS only) \nor Indirect signature (FedEx only) or Carrier Confirmation (Deutsche Post only).",
+        "description": "Request standard or adult signature confirmation. You can alternatively request Certified Mail (USPS only) or Indirect signature (FedEx only) or Carrier Confirmation (Deutsche Post only).",
         "x-ms-enum": {
           "name": "ShipmentExtraSignatureConfirmation",
           "modelAsString": false,
@@ -22087,7 +22087,7 @@
     },
     {
       "name": "Customs Declarations",
-      "description": "Customs declarations are relevant information, including one or multiple customs items, you need to provide for \ncustoms clearance for your international shipments."
+      "description": "Customs declarations are relevant information, including one or multiple customs items, you need to provide for customs clearance for your international shipments."
     },
     {
       "name": "Refunds",
@@ -22124,7 +22124,7 @@
     },
     {
       "name": "Service Groups",
-      "description": "A service group is a set of service levels grouped together. \nRates at checkout uses services groups to present available shipping options to customers in their shopping basket."
+      "description": "A service group is a set of service levels grouped together.\nRates at checkout uses services groups to present available shipping options to customers in their shopping basket."
     },
     {
       "name": "Carrier Parcel Templates",
@@ -22132,7 +22132,7 @@
     },
     {
       "name": "User Parcel Templates",
-      "description": "A user parcel template represents a package used for shipping that has preset dimensions and attributes defined \nby you. They are useful for capturing attributes of parcel-types you frequently use for shipping, allowing \nthem to be defined once and then used for many shipments. These parcel templates can also be used for live rates.\n\nUser parcel templates can also be created using a carrier parcel template, where the dimensions will be copied from \nthe carrier presets, but the weight can be configured by you."
+      "description": "A user parcel template represents a package used for shipping that has preset dimensions and attributes defined by you. They are useful for capturing attributes of parcel-types you frequently use for shipping, allowing them to be defined once and then used for many shipments. These parcel templates can also be used for live rates.\n\nUser parcel templates can also be created using a carrier parcel template, where the dimensions will be copied from the carrier presets, but the weight can be configured by you."
     },
     {
       "name": "Rates at Checkout",
@@ -22152,11 +22152,11 @@
     },
     {
       "name": "Shippo Accounts",
-      "description": "Shippo Accounts are used by Shippo Platform Accounts to create and manage Managed Shippo Accounts. \nManaged Shippo Accounts are headless accounts that represent your customers. They are opaque to your end customers, meaning customers do not need to create their own Shippo login or have a billing relationship with Shippo. \nThey can be used by marketplaces, e-commerce platforms, and third-party logistics providers who want to offer, seamless, built-in shipping functionality to their customers. See our [guide](https://docs.goshippo.com/docs/platformaccounts/platform_accounts/) for more details."
+      "description": "Shippo Accounts are used by Shippo Platform Accounts to create and manage Managed Shippo Accounts.\nManaged Shippo Accounts are headless accounts that represent your customers. They are opaque to your end customers, meaning customers do not need to create their own Shippo login or have a billing relationship with Shippo.\nThey can be used by marketplaces, e-commerce platforms, and third-party logistics providers who want to offer, seamless, built-in shipping functionality to their customers. See our [guide](https://docs.goshippo.com/docs/platformaccounts/platform_accounts/) for more details."
     },
     {
       "name": "Embedded Authorization",
-      "description": "Mint short-lived JSON Web Tokens (JWTs) for client-side applications, so you never ship a\nlong-lived API token to the browser. Authenticate the request with a Shippo API token or an\nOAuth bearer token, then pass the returned token as \u0060Authorization: JWT \u003CJWT_TOKEN\u003E\u0060.\nSee our [Authentication using JWT guide](https://docs.goshippo.com/docs/guides_general/authentication_using_jwt/) for details."
+      "description": "Mint short-lived JSON Web Tokens (JWTs) for client-side applications, so you never ship a long-lived API token to the browser. Authenticate the request with a Shippo API token or an OAuth bearer token, then pass the returned token as \u0060Authorization: JWT \u003CJWT_TOKEN\u003E\u0060.\nSee our [Authentication using JWT guide](https://docs.goshippo.com/docs/guides_general/authentication_using_jwt/) for details."
     },
     {
       "name": "Customs Declaration B13A Filing Option",

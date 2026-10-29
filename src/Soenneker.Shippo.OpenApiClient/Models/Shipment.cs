@@ -38,7 +38,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.AddressTo AddressTo { get; set; }
 #endif
-        /// <summary>An array of object_ids of the carrier account objects to be used for getting shipping rates for this shipment. If no carrier account object_ids are set in this field, Shippo will attempt to generate rates using all the carrier accounts that have the `active` field set.</summary>
+        /// <summary>An array of object_ids of the carrier account objects to be used for getting shipping rates for this shipment.If no carrier account object_ids are set in this field, Shippo will attempt to generate rates using all the carrier accounts that have the `active` field set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CarrierAccounts { get; set; }
@@ -106,7 +106,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.Parcel> Parcels { get; set; }
 #endif
-        /// <summary>An array with all available rates. If `async` has been set to `false` in the request,this will be populated with all available rates in the response. Otherwise rates will be createdasynchronously and this array will initially be empty.</summary>
+        /// <summary>An array with all available rates. If `async` has been set to `false` in the request, this will be populated with all available rates in the response. Otherwise rates will be created asynchronously and this array will initially be empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Shippo.OpenApiClient.Models.Rate>? Rates { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Shippo.OpenApiClient.Models.Rate> Rates { get; set; }
 #endif
-        /// <summary>Date the shipment will be tendered to the carrier. Must be in the format `2014-01-18T00:35:03.463Z`. Defaults to current date and time if no value is provided. Please note that some carriers require this value tobe in the future, on a working day, or similar.</summary>
+        /// <summary>Date the shipment will be tendered to the carrier. Must be in the format `2014-01-18T00:35:03.463Z`.Defaults to current date and time if no value is provided. Please note that some carriers require this value to be in the future, on a working day, or similar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentDate { get; set; }

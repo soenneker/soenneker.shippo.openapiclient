@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>String representation of an amount to be returned as the flat rateif 1. The service group is of type `LIVE_RATE` and no matching rateswere found; or 2. The service group is of type `FLAT_RATE`. Eitherintegers or decimals are accepted. Required unless type is`FREE_SHIPPING`</summary>
+        /// <summary>String representation of an amount to be returned as the flat rate if 1. The service group is of type `LIVE_RATE` and no matching rates were found; or 2. The service group is of type `FLAT_RATE`. Either integers or decimals are accepted. Required unless type is `FREE_SHIPPING`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FlatRate { get; set; }

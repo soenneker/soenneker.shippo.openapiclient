@@ -14,9 +14,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Unix timestamp (seconds) of when the token expires. This matches the `exp` claiminside the token itself. Tokens are valid for 12 hours from issue.</summary>
+        /// <summary>Unix timestamp (seconds) of when the token expires. This matches the `exp` claim inside the token itself. Tokens are valid for 12 hours from issue.</summary>
         public int? ExpiresIn { get; set; }
-        /// <summary>The encoded JSON Web Token. Pass it on subsequent API requests as`Authorization: JWT &lt;JWT_TOKEN&gt;`.</summary>
+        /// <summary>The encoded JSON Web Token. Pass it on subsequent API requests as `Authorization: JWT &lt;JWT_TOKEN&gt;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get; set; }

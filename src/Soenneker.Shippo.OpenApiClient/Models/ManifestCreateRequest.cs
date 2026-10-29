@@ -32,7 +32,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string CarrierAccount { get; set; }
 #endif
-        /// <summary>All shipments to be submitted on this day will be closed out. Must be in the format `2014-01-18T00:35:03.463Z` (ISO 8601 date).</summary>
+        /// <summary>All shipments to be submitted on this day will be closed out.Must be in the format `2014-01-18T00:35:03.463Z` (ISO 8601 date).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShipmentDate { get; set; }

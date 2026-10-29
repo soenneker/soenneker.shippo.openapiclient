@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string AesItn { get; set; }
 #endif
-        /// <summary>B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS). [More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)Allowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)</summary>
+        /// <summary>B13A Option details are obtained by filing a B13A Canada Export Declaration via the Canadian Export Reporting System (CERS).[More information on reporting commercial exports from Canada.](https://www.cbsa-asfc.gc.ca/services/export/guide-eng.html)Allowed values available [here](/shippoapi/public-api/customs-declaration-b13a-filing-option)</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.CustomsDeclarationCreateRequestB13AFilingOption? B13aFilingOption { get; set; }
         /// <summary>**must be provided if and only if b13a_filing_option is provided**Represents the Proof of Report (POR) Number when b13a_filing_option is `FILED_ELECTRONICALLY`; the Summary ID Number when b13a_filing_option is `SUMMARY_REPORTING`; or the Exemption Number when b13a_filing_option is `NOT_REQUIRED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// The batch shipment object is a wrapper around a shipment object, which include shipment-specific informationfor batch processing.Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or by throughthe `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint
+    /// The batch shipment object is a wrapper around a shipment object, which include shipment-specific information for batch processing.Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or by through the `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchShipment : IAdditionalDataHolder, IParsable
@@ -47,7 +47,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ObjectId { get; set; }
 #endif
-        /// <summary>A token that sets the shipping method for the batch, overriding the batch default. Servicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).</summary>
+        /// <summary>A token that sets the shipping method for the batch, overriding the batch default.Servicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServicelevelToken { get; set; }

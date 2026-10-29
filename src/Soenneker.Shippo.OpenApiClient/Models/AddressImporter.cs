@@ -57,7 +57,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.    </summary>
+        /// <summary>Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Phone { get; set; }
@@ -89,7 +89,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Street2 { get; set; }
 #endif
-        /// <summary>Third street line, 35 character limit. Only accepted for USPS international shipments, UPS domestic and UPS international shipments.</summary>
+        /// <summary>Third street line, 35 character limit.Only accepted for USPS international shipments, UPS domestic and UPS international shipments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Street3 { get; set; }
@@ -97,7 +97,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Street3 { get; set; }
 #endif
-        /// <summary>Street number of the addressed building. This field can be included in street1 for all carriers except for DHL Germany.</summary>
+        /// <summary>Street number of the addressed building.This field can be included in street1 for all carriers except for DHL Germany.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StreetNo { get; set; }

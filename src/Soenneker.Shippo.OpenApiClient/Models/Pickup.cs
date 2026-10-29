@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The latest time to cancel a pickup. Expressed in the timezone specified in the response. To cancel a pickup, you will need to contact the carrier directly. The ability to cancel a pickup through Shippo may be released in future iterations.</summary>
+        /// <summary>The latest time to cancel a pickup. Expressed in the timezone specified in the response.To cancel a pickup, you will need to contact the carrier directly.The ability to cancel a pickup through Shippo may be released in future iterations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CancelByTime { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string CancelByTime { get; set; }
 #endif
-        /// <summary>The object ID of your USPS or DHL Express carrier account. You can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.</summary>
+        /// <summary>The object ID of your USPS or DHL Express carrier account.You can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CarrierAccount { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string CarrierAccount { get; set; }
 #endif
-        /// <summary>Pickup&apos;s confirmation code returned by the carrier. To edit or cancel a pickup, you will need to contact USPS or DHL Express directly and provide your `confirmation_code`.</summary>
+        /// <summary>Pickup&apos;s confirmation code returned by the carrier.To edit or cancel a pickup, you will need to contact USPS or DHL Express directly and provide your `confirmation_code`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConfirmationCode { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ConfirmationCode { get; set; }
 #endif
-        /// <summary>The latest that your parcels will be available for pickup, confirmed by the carrier. Expressed in the timezone specified in the response.</summary>
+        /// <summary>The latest that your parcels will be available for pickup, confirmed by the carrier.Expressed in the timezone specified in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConfirmedEndTime { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ConfirmedEndTime { get; set; }
 #endif
-        /// <summary>The earliest that your parcels will be ready for pickup, confirmed by the carrier. Expressed in the timezone specified in the response.</summary>
+        /// <summary>The earliest that your parcels will be ready for pickup, confirmed by the carrier.Expressed in the timezone specified in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConfirmedStartTime { get; set; }
@@ -92,9 +92,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #endif
         /// <summary>Date and time of last Pickup update.</summary>
         public DateTimeOffset? ObjectUpdated { get; set; }
-        /// <summary>The latest that you requested your parcels to be available for pickup. Expressed in the timezone specified in the response.</summary>
+        /// <summary>The latest that you requested your parcels to be available for pickup.Expressed in the timezone specified in the response.</summary>
         public DateTimeOffset? RequestedEndTime { get; set; }
-        /// <summary>The earliest that you requested your parcels to be ready for pickup. Expressed in the timezone specified in the response.</summary>
+        /// <summary>The earliest that you requested your parcels to be ready for pickup.Expressed in the timezone specified in the response.</summary>
         public DateTimeOffset? RequestedStartTime { get; set; }
         /// <summary>Indicates the status of the pickup.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.PickupStatus? Status { get; set; }

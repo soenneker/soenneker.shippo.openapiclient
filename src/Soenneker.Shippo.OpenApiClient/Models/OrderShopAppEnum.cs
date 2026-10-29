@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
-    /// <summary>Platform the order was created on and, if applicable, imported from. Orders created via the Shippo API or dashboard will have the value &quot;Shippo&quot;.</summary>
+    /// <summary>Platform the order was created on and, if applicable, imported from.Orders created via the Shippo API or dashboard will have the value &quot;Shippo&quot;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OrderShopAppEnum
     {

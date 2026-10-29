@@ -66,7 +66,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent Servicelevel { get; set; }
 #endif
-        /// <summary>A list of tracking events, following the same structure as `tracking_status`. It contains a full history of all tracking statuses, starting with the earlier tracking event first.</summary>
+        /// <summary>A list of tracking events, following the same structure as `tracking_status`.It contains a full history of all tracking statuses, starting with the earlier tracking event first.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus>? TrackingHistory { get; set; }
@@ -90,7 +90,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus TrackingStatus { get; set; }
 #endif
-        /// <summary>The `object_id` of the transaction associated with this tracking object. This field is visible only to the object owner of the transaction.</summary>
+        /// <summary>The `object_id` of the transaction associated with this tracking object.This field is visible only to the object owner of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Transaction { get; set; }

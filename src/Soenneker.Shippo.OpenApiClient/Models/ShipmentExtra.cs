@@ -97,7 +97,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ContainerType { get; set; }
 #endif
-        /// <summary>Carrier arrival time to pickup packages from the fulfillment center. UTC format: `%Y-%m-%dT%H:%M:%SZ`</summary>
+        /// <summary>Carrier arrival time to pickup packages from the fulfillment center.UTC format: `%Y-%m-%dT%H:%M:%SZ`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CriticalPullTime { get; set; }
@@ -121,7 +121,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference CustomerReference { get; set; }
 #endif
-        /// <summary>Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contentsare provided, only certain USPS service levels will be eligible. For more information, see our[guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/).</summary>
+        /// <summary>Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contents are provided, only certain USPS service levels will be eligible. For more information, see our [guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject? DangerousGoods { get; set; }

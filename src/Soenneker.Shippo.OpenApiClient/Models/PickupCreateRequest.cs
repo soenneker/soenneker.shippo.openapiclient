@@ -14,7 +14,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The object ID of your USPS or DHL Express carrier account. You can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.</summary>
+        /// <summary>The object ID of your USPS or DHL Express carrier account.You can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CarrierAccount { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string Metadata { get; set; }
 #endif
-        /// <summary>The latest that you requested your parcels to be available for pickup. Expressed in the timezone specified in the response.</summary>
+        /// <summary>The latest that you requested your parcels to be available for pickup.Expressed in the timezone specified in the response.</summary>
         public DateTimeOffset? RequestedEndTime { get; set; }
-        /// <summary>The earliest that you requested your parcels to be ready for pickup. Expressed in the timezone specified in the response.</summary>
+        /// <summary>The earliest that you requested your parcels to be ready for pickup.Expressed in the timezone specified in the response.</summary>
         public DateTimeOffset? RequestedStartTime { get; set; }
         /// <summary>The transaction(s) object ID(s) for the parcel(s) that need to be picked up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

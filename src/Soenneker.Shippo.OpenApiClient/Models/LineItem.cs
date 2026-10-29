@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resourcein the future. Currently it&apos;s a nested object within the order resource.A line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.
+    /// Line Items, and their corresponding abstract Products and Variants, might be exposed as a separate resource in the future. Currently it&apos;s a nested object within the order resource.A line item is an individual object in an order. For example, if your order contains a t-shirt, shorts, and a jacket, each item is represented by a line item.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LineItem : IAdditionalDataHolder, IParsable
@@ -31,7 +31,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string ManufactureCountry { get; set; }
 #endif
-        /// <summary>The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer. This value is used by some platforms such as eBay to measure a seller&apos;s shipping time and performance. It will be displayed in the Shippo dashboard.</summary>
+        /// <summary>The date and time this item needs to be delivered by, i.e. by when the carrier delivers it to the buyer.This value is used by some platforms such as eBay to measure a seller&apos;s shipping time and performance.It will be displayed in the Shippo dashboard.</summary>
         public DateTimeOffset? MaxDeliveryTime { get; set; }
         /// <summary>The date and time this item needs to be fulfilled by, i.e. by when the shipping label needs to be created and handed over to the carrier. This value is used by some platforms such as eBay to measure a seller&apos;s handling time and performance. It will be displayed in the Shippo dashboard.</summary>
         public DateTimeOffset? MaxShipTime { get; set; }
@@ -69,7 +69,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 #else
         public string TotalPrice { get; set; }
 #endif
-        /// <summary>A variant is a specific variation of an item (e.g. `size M` or `color blue`). Variants might be exposed as a separate resource in the future too. Currently the variant title is a free text field describing the variant.</summary>
+        /// <summary>A variant is a specific variation of an item (e.g. `size M` or `color blue`).Variants might be exposed as a separate resource in the future too.Currently the variant title is a free text field describing the variant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VariantTitle { get; set; }
