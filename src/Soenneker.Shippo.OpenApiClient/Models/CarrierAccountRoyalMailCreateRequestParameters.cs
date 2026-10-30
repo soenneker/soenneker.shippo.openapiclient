@@ -17,9 +17,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
-            if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
-            if (parseNode.GetChildNode("partner_token") is { } nullNodePartnerToken && nullNodePartnerToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerToken = null;
+            if (parseNode.GetChildNode("client_id") is null) { _explicitNullValueClientId = default!; _explicitNullProperties?.Remove("client_id"); }
+            else if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
+            if (parseNode.GetChildNode("client_secret") is null) { _explicitNullValueClientSecret = default!; _explicitNullProperties?.Remove("client_secret"); }
+            else if (parseNode.GetChildNode("client_secret") is { } nullNodeClientSecret && nullNodeClientSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSecret = null;
+            if (parseNode.GetChildNode("partner_token") is null) { _explicitNullValuePartnerToken = default!; _explicitNullProperties?.Remove("partner_token"); }
+            else if (parseNode.GetChildNode("partner_token") is { } nullNodePartnerToken && nullNodePartnerToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartnerToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The client ID assigned to the user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string? _explicitNullValueClientId = default!;
 #nullable restore
 #else
-        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string _explicitNullValueClientId = default!;
 #endif
         /// <summary>The secret that corresponds to the supplied client ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        public string? ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; AdditionalData?.Remove("client_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
         private string? _explicitNullValueClientSecret = default!;
 #nullable restore
 #else
-        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
+        public string ClientSecret { get => _explicitNullValueClientSecret; set { _explicitNullValueClientSecret = value; AdditionalData?.Remove("client_secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_secret"); else _explicitNullProperties?.Remove("client_secret"); } }
         private string _explicitNullValueClientSecret = default!;
 #endif
         /// <summary>A unique identifier for your OBA account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PartnerToken { get => _explicitNullValuePartnerToken; set { _explicitNullValuePartnerToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_token"); else _explicitNullProperties?.Remove("partner_token"); } }
+        public string? PartnerToken { get => _explicitNullValuePartnerToken; set { _explicitNullValuePartnerToken = value; AdditionalData?.Remove("partner_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_token"); else _explicitNullProperties?.Remove("partner_token"); } }
         private string? _explicitNullValuePartnerToken = default!;
 #nullable restore
 #else
-        public string PartnerToken { get => _explicitNullValuePartnerToken; set { _explicitNullValuePartnerToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_token"); else _explicitNullProperties?.Remove("partner_token"); } }
+        public string PartnerToken { get => _explicitNullValuePartnerToken; set { _explicitNullValuePartnerToken = value; AdditionalData?.Remove("partner_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("partner_token"); else _explicitNullProperties?.Remove("partner_token"); } }
         private string _explicitNullValuePartnerToken = default!;
 #endif
         /// <summary>

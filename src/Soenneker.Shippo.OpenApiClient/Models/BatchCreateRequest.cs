@@ -17,11 +17,16 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("batch_shipments") is { } nullNodeBatchShipments && nullNodeBatchShipments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchShipments = null;
-            if (parseNode.GetChildNode("default_carrier_account") is { } nullNodeDefaultCarrierAccount && nullNodeDefaultCarrierAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCarrierAccount = null;
-            if (parseNode.GetChildNode("default_servicelevel_token") is { } nullNodeDefaultServicelevelToken && nullNodeDefaultServicelevelToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultServicelevelToken = null;
-            if (parseNode.GetChildNode("label_filetype") is { } nullNodeLabelFiletype && nullNodeLabelFiletype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelFiletype = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("batch_shipments") is null) { _explicitNullValueBatchShipments = default!; _explicitNullProperties?.Remove("batch_shipments"); }
+            else if (parseNode.GetChildNode("batch_shipments") is { } nullNodeBatchShipments && nullNodeBatchShipments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchShipments = null;
+            if (parseNode.GetChildNode("default_carrier_account") is null) { _explicitNullValueDefaultCarrierAccount = default!; _explicitNullProperties?.Remove("default_carrier_account"); }
+            else if (parseNode.GetChildNode("default_carrier_account") is { } nullNodeDefaultCarrierAccount && nullNodeDefaultCarrierAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCarrierAccount = null;
+            if (parseNode.GetChildNode("default_servicelevel_token") is null) { _explicitNullValueDefaultServicelevelToken = default!; _explicitNullProperties?.Remove("default_servicelevel_token"); }
+            else if (parseNode.GetChildNode("default_servicelevel_token") is { } nullNodeDefaultServicelevelToken && nullNodeDefaultServicelevelToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultServicelevelToken = null;
+            if (parseNode.GetChildNode("label_filetype") is null) { _explicitNullValueLabelFiletype = default!; _explicitNullProperties?.Remove("label_filetype"); }
+            else if (parseNode.GetChildNode("label_filetype") is { } nullNodeLabelFiletype && nullNodeLabelFiletype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelFiletype = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Array of BatchShipment objects. The response keeps the same order as in the request array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest>? BatchShipments { get => _explicitNullValueBatchShipments; set { _explicitNullValueBatchShipments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_shipments"); else _explicitNullProperties?.Remove("batch_shipments"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest>? BatchShipments { get => _explicitNullValueBatchShipments; set { _explicitNullValueBatchShipments = value; AdditionalData?.Remove("batch_shipments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_shipments"); else _explicitNullProperties?.Remove("batch_shipments"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest>? _explicitNullValueBatchShipments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest> BatchShipments { get => _explicitNullValueBatchShipments; set { _explicitNullValueBatchShipments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_shipments"); else _explicitNullProperties?.Remove("batch_shipments"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest> BatchShipments { get => _explicitNullValueBatchShipments; set { _explicitNullValueBatchShipments = value; AdditionalData?.Remove("batch_shipments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch_shipments"); else _explicitNullProperties?.Remove("batch_shipments"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest> _explicitNullValueBatchShipments = default!;
 #endif
         /// <summary>ID of the Carrier Account object to use as the default for all shipments in this Batch.The carrier account can be changed on a per-shipment basis by changing the carrier_account in the corresponding BatchShipment object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultCarrierAccount { get => _explicitNullValueDefaultCarrierAccount; set { _explicitNullValueDefaultCarrierAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_carrier_account"); else _explicitNullProperties?.Remove("default_carrier_account"); } }
+        public string? DefaultCarrierAccount { get => _explicitNullValueDefaultCarrierAccount; set { _explicitNullValueDefaultCarrierAccount = value; AdditionalData?.Remove("default_carrier_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_carrier_account"); else _explicitNullProperties?.Remove("default_carrier_account"); } }
         private string? _explicitNullValueDefaultCarrierAccount = default!;
 #nullable restore
 #else
-        public string DefaultCarrierAccount { get => _explicitNullValueDefaultCarrierAccount; set { _explicitNullValueDefaultCarrierAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_carrier_account"); else _explicitNullProperties?.Remove("default_carrier_account"); } }
+        public string DefaultCarrierAccount { get => _explicitNullValueDefaultCarrierAccount; set { _explicitNullValueDefaultCarrierAccount = value; AdditionalData?.Remove("default_carrier_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_carrier_account"); else _explicitNullProperties?.Remove("default_carrier_account"); } }
         private string _explicitNullValueDefaultCarrierAccount = default!;
 #endif
         /// <summary>Token of the service level to use as the default for all shipments in this Batch.The servicelevel can be changed on a per-shipment basis by changing the servicelevel_token in the corresponding BatchShipment object. [Servicelevel tokens can be found here.](/shippoapi/public-api/service-levels)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultServicelevelToken { get => _explicitNullValueDefaultServicelevelToken; set { _explicitNullValueDefaultServicelevelToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_servicelevel_token"); else _explicitNullProperties?.Remove("default_servicelevel_token"); } }
+        public string? DefaultServicelevelToken { get => _explicitNullValueDefaultServicelevelToken; set { _explicitNullValueDefaultServicelevelToken = value; AdditionalData?.Remove("default_servicelevel_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_servicelevel_token"); else _explicitNullProperties?.Remove("default_servicelevel_token"); } }
         private string? _explicitNullValueDefaultServicelevelToken = default!;
 #nullable restore
 #else
-        public string DefaultServicelevelToken { get => _explicitNullValueDefaultServicelevelToken; set { _explicitNullValueDefaultServicelevelToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_servicelevel_token"); else _explicitNullProperties?.Remove("default_servicelevel_token"); } }
+        public string DefaultServicelevelToken { get => _explicitNullValueDefaultServicelevelToken; set { _explicitNullValueDefaultServicelevelToken = value; AdditionalData?.Remove("default_servicelevel_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_servicelevel_token"); else _explicitNullProperties?.Remove("default_servicelevel_token"); } }
         private string _explicitNullValueDefaultServicelevelToken = default!;
 #endif
         /// <summary>Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFiletype { get => _explicitNullValueLabelFiletype; set { _explicitNullValueLabelFiletype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_filetype"); else _explicitNullProperties?.Remove("label_filetype"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFiletype { get => _explicitNullValueLabelFiletype; set { _explicitNullValueLabelFiletype = value; AdditionalData?.Remove("label_filetype"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_filetype"); else _explicitNullProperties?.Remove("label_filetype"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? _explicitNullValueLabelFiletype = default!;
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>
@@ -97,7 +102,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "batch_shipments", n => { BatchShipments = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest>(global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentCreateRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "default_carrier_account", n => { DefaultCarrierAccount = n.GetStringValue(); } },
                 { "default_servicelevel_token", n => { DefaultServicelevelToken = n.GetStringValue(); } },
-                { "label_filetype", n => { LabelFiletype = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>(); } },
+                { "label_filetype", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLabelFiletype = default; _explicitNullProperties?.Remove("label_filetype"); AdditionalData["label_filetype"] = unknown; } else { LabelFiletype = parsed; AdditionalData.Remove("label_filetype"); } } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
             };
         }

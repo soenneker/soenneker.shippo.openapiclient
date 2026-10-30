@@ -17,13 +17,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("royal_mail_sf_agreements") is { } nullNodeRoyalMailSfAgreements && nullNodeRoyalMailSfAgreements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoyalMailSfAgreements = null;
+            if (parseNode.GetChildNode("royal_mail_sf_agreements") is null) { _explicitNullValueRoyalMailSfAgreements = default!; _explicitNullProperties?.Remove("royal_mail_sf_agreements"); }
+            else if (parseNode.GetChildNode("royal_mail_sf_agreements") is { } nullNodeRoyalMailSfAgreements && nullNodeRoyalMailSfAgreements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoyalMailSfAgreements = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The royal_mail_sf_agreements property</summary>
-        public bool? RoyalMailSfAgreements { get => _explicitNullValueRoyalMailSfAgreements; set { _explicitNullValueRoyalMailSfAgreements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("royal_mail_sf_agreements"); else _explicitNullProperties?.Remove("royal_mail_sf_agreements"); } }
+        public bool? RoyalMailSfAgreements { get => _explicitNullValueRoyalMailSfAgreements; set { _explicitNullValueRoyalMailSfAgreements = value; AdditionalData?.Remove("royal_mail_sf_agreements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("royal_mail_sf_agreements"); else _explicitNullProperties?.Remove("royal_mail_sf_agreements"); } }
         private bool? _explicitNullValueRoyalMailSfAgreements = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountRoyalMailSfCreateRequestParameters"/> and sets the default values.

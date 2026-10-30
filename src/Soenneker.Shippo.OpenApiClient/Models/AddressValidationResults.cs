@@ -18,23 +18,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_valid") is { } nullNodeIsValid && nullNodeIsValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsValid = null;
-            if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
+            if (parseNode.GetChildNode("is_valid") is null) { _explicitNullValueIsValid = default!; _explicitNullProperties?.Remove("is_valid"); }
+            else if (parseNode.GetChildNode("is_valid") is { } nullNodeIsValid && nullNodeIsValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsValid = null;
+            if (parseNode.GetChildNode("messages") is null) { _explicitNullValueMessages = default!; _explicitNullProperties?.Remove("messages"); }
+            else if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_valid property</summary>
-        public bool? IsValid { get => _explicitNullValueIsValid; set { _explicitNullValueIsValid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_valid"); else _explicitNullProperties?.Remove("is_valid"); } }
+        public bool? IsValid { get => _explicitNullValueIsValid; set { _explicitNullValueIsValid = value; AdditionalData?.Remove("is_valid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_valid"); else _explicitNullProperties?.Remove("is_valid"); } }
         private bool? _explicitNullValueIsValid = default!;
         /// <summary>The messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResultsMessage>? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResultsMessage>? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; AdditionalData?.Remove("messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResultsMessage>? _explicitNullValueMessages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResultsMessage> Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResultsMessage> Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; AdditionalData?.Remove("messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.AddressValidationResultsMessage> _explicitNullValueMessages = default!;
 #endif
         /// <summary>

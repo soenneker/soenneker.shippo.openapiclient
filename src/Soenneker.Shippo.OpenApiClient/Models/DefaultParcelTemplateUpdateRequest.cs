@@ -17,7 +17,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("object_id") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("object_id"); }
+            else if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The object_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>

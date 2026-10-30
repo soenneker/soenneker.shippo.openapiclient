@@ -18,9 +18,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
-            if (parseNode.GetChildNode("payment_method") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("currency") is null) { _explicitNullValueCurrency = default!; _explicitNullProperties?.Remove("currency"); }
+            else if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("payment_method") is null) { _explicitNullValuePaymentMethod = default!; _explicitNullProperties?.Remove("payment_method"); }
+            else if (parseNode.GetChildNode("payment_method") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Amount to be collected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private string? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private string _explicitNullValueAmount = default!;
 #endif
         /// <summary>Currency for the amount to be collected. Currently only USD is supported for UPS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Secured funds include money orders, certified cheques and others (see [UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details).If no payment_method inputted the value defaults to &quot;ANY&quot;.)</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.CodPaymentMethod? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CodPaymentMethod? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; AdditionalData?.Remove("payment_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CodPaymentMethod? _explicitNullValuePaymentMethod = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Cod"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "payment_method", n => { PaymentMethod = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CodPaymentMethod>(); } },
+                { "payment_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CodPaymentMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePaymentMethod = default; _explicitNullProperties?.Remove("payment_method"); AdditionalData["payment_method"] = unknown; } else { PaymentMethod = parsed; AdditionalData.Remove("payment_method"); } } },
             };
         }
         /// <summary>

@@ -17,21 +17,36 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("eccn_ear99") is { } nullNodeEccnEar99 && nullNodeEccnEar99.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EccnEar99 = null;
-            if (parseNode.GetChildNode("eu_exempt_category") is { } nullNodeEuExemptCategory && nullNodeEuExemptCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EuExemptCategory = null;
-            if (parseNode.GetChildNode("hs_code") is { } nullNodeHsCode && nullNodeHsCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsCode = null;
-            if (parseNode.GetChildNode("manufacturer_code") is { } nullNodeManufacturerCode && nullNodeManufacturerCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManufacturerCode = null;
-            if (parseNode.GetChildNode("manufacturer_standard_code") is { } nullNodeManufacturerStandardCode && nullNodeManufacturerStandardCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManufacturerStandardCode = null;
-            if (parseNode.GetChildNode("mass_unit") is { } nullNodeMassUnit && nullNodeMassUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MassUnit = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("net_weight") is { } nullNodeNetWeight && nullNodeNetWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetWeight = null;
-            if (parseNode.GetChildNode("origin_country") is { } nullNodeOriginCountry && nullNodeOriginCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginCountry = null;
-            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("sku_code") is { } nullNodeSkuCode && nullNodeSkuCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkuCode = null;
-            if (parseNode.GetChildNode("tariff_number") is { } nullNodeTariffNumber && nullNodeTariffNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TariffNumber = null;
-            if (parseNode.GetChildNode("value_amount") is { } nullNodeValueAmount && nullNodeValueAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueAmount = null;
-            if (parseNode.GetChildNode("value_currency") is { } nullNodeValueCurrency && nullNodeValueCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueCurrency = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("eccn_ear99") is null) { _explicitNullValueEccnEar99 = default!; _explicitNullProperties?.Remove("eccn_ear99"); }
+            else if (parseNode.GetChildNode("eccn_ear99") is { } nullNodeEccnEar99 && nullNodeEccnEar99.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EccnEar99 = null;
+            if (parseNode.GetChildNode("eu_exempt_category") is null) { _explicitNullValueEuExemptCategory = default!; _explicitNullProperties?.Remove("eu_exempt_category"); }
+            else if (parseNode.GetChildNode("eu_exempt_category") is { } nullNodeEuExemptCategory && nullNodeEuExemptCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EuExemptCategory = null;
+            if (parseNode.GetChildNode("hs_code") is null) { _explicitNullValueHsCode = default!; _explicitNullProperties?.Remove("hs_code"); }
+            else if (parseNode.GetChildNode("hs_code") is { } nullNodeHsCode && nullNodeHsCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HsCode = null;
+            if (parseNode.GetChildNode("manufacturer_code") is null) { _explicitNullValueManufacturerCode = default!; _explicitNullProperties?.Remove("manufacturer_code"); }
+            else if (parseNode.GetChildNode("manufacturer_code") is { } nullNodeManufacturerCode && nullNodeManufacturerCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManufacturerCode = null;
+            if (parseNode.GetChildNode("manufacturer_standard_code") is null) { _explicitNullValueManufacturerStandardCode = default!; _explicitNullProperties?.Remove("manufacturer_standard_code"); }
+            else if (parseNode.GetChildNode("manufacturer_standard_code") is { } nullNodeManufacturerStandardCode && nullNodeManufacturerStandardCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManufacturerStandardCode = null;
+            if (parseNode.GetChildNode("mass_unit") is null) { _explicitNullValueMassUnit = default!; _explicitNullProperties?.Remove("mass_unit"); }
+            else if (parseNode.GetChildNode("mass_unit") is { } nullNodeMassUnit && nullNodeMassUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MassUnit = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("net_weight") is null) { _explicitNullValueNetWeight = default!; _explicitNullProperties?.Remove("net_weight"); }
+            else if (parseNode.GetChildNode("net_weight") is { } nullNodeNetWeight && nullNodeNetWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetWeight = null;
+            if (parseNode.GetChildNode("origin_country") is null) { _explicitNullValueOriginCountry = default!; _explicitNullProperties?.Remove("origin_country"); }
+            else if (parseNode.GetChildNode("origin_country") is { } nullNodeOriginCountry && nullNodeOriginCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginCountry = null;
+            if (parseNode.GetChildNode("quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("quantity"); }
+            else if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("sku_code") is null) { _explicitNullValueSkuCode = default!; _explicitNullProperties?.Remove("sku_code"); }
+            else if (parseNode.GetChildNode("sku_code") is { } nullNodeSkuCode && nullNodeSkuCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkuCode = null;
+            if (parseNode.GetChildNode("tariff_number") is null) { _explicitNullValueTariffNumber = default!; _explicitNullProperties?.Remove("tariff_number"); }
+            else if (parseNode.GetChildNode("tariff_number") is { } nullNodeTariffNumber && nullNodeTariffNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TariffNumber = null;
+            if (parseNode.GetChildNode("value_amount") is null) { _explicitNullValueValueAmount = default!; _explicitNullProperties?.Remove("value_amount"); }
+            else if (parseNode.GetChildNode("value_amount") is { } nullNodeValueAmount && nullNodeValueAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueAmount = null;
+            if (parseNode.GetChildNode("value_currency") is null) { _explicitNullValueValueCurrency = default!; _explicitNullProperties?.Remove("value_currency"); }
+            else if (parseNode.GetChildNode("value_currency") is { } nullNodeValueCurrency && nullNodeValueCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueCurrency = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,130 +54,130 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Text description of your item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Export Control Classification Number, required on some exports from the United States.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EccnEar99 { get => _explicitNullValueEccnEar99; set { _explicitNullValueEccnEar99 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eccn_ear99"); else _explicitNullProperties?.Remove("eccn_ear99"); } }
+        public string? EccnEar99 { get => _explicitNullValueEccnEar99; set { _explicitNullValueEccnEar99 = value; AdditionalData?.Remove("eccn_ear99"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eccn_ear99"); else _explicitNullProperties?.Remove("eccn_ear99"); } }
         private string? _explicitNullValueEccnEar99 = default!;
 #nullable restore
 #else
-        public string EccnEar99 { get => _explicitNullValueEccnEar99; set { _explicitNullValueEccnEar99 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eccn_ear99"); else _explicitNullProperties?.Remove("eccn_ear99"); } }
+        public string EccnEar99 { get => _explicitNullValueEccnEar99; set { _explicitNullValueEccnEar99 = value; AdditionalData?.Remove("eccn_ear99"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eccn_ear99"); else _explicitNullProperties?.Remove("eccn_ear99"); } }
         private string _explicitNullValueEccnEar99 = default!;
 #endif
         /// <summary>Marks the item as belonging to an EU-exempt product category. Exempt items do not need product identifiers on shipments that meet the EU product identifier conditions (EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).</summary>
-        public bool? EuExemptCategory { get => _explicitNullValueEuExemptCategory; set { _explicitNullValueEuExemptCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_exempt_category"); else _explicitNullProperties?.Remove("eu_exempt_category"); } }
+        public bool? EuExemptCategory { get => _explicitNullValueEuExemptCategory; set { _explicitNullValueEuExemptCategory = value; AdditionalData?.Remove("eu_exempt_category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_exempt_category"); else _explicitNullProperties?.Remove("eu_exempt_category"); } }
         private bool? _explicitNullValueEuExemptCategory = default!;
         /// <summary>HS code of the item, which is required by some carriers. If `tariff_number` is not provided, `hs_code` will be used.  If both `hs_code` and `tariff_number` are provided, `tariff_number` will be used. 50 character limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_code"); else _explicitNullProperties?.Remove("hs_code"); } }
+        public string? HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; AdditionalData?.Remove("hs_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_code"); else _explicitNullProperties?.Remove("hs_code"); } }
         private string? _explicitNullValueHsCode = default!;
 #nullable restore
 #else
-        public string HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_code"); else _explicitNullProperties?.Remove("hs_code"); } }
+        public string HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; AdditionalData?.Remove("hs_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_code"); else _explicitNullProperties?.Remove("hs_code"); } }
         private string _explicitNullValueHsCode = default!;
 #endif
         /// <summary>Product identifier assigned by the manufacturer. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with `sku_code` on every non-exempt item when the shipment meets the EU product identifier conditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ManufacturerCode { get => _explicitNullValueManufacturerCode; set { _explicitNullValueManufacturerCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manufacturer_code"); else _explicitNullProperties?.Remove("manufacturer_code"); } }
+        public string? ManufacturerCode { get => _explicitNullValueManufacturerCode; set { _explicitNullValueManufacturerCode = value; AdditionalData?.Remove("manufacturer_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manufacturer_code"); else _explicitNullProperties?.Remove("manufacturer_code"); } }
         private string? _explicitNullValueManufacturerCode = default!;
 #nullable restore
 #else
-        public string ManufacturerCode { get => _explicitNullValueManufacturerCode; set { _explicitNullValueManufacturerCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manufacturer_code"); else _explicitNullProperties?.Remove("manufacturer_code"); } }
+        public string ManufacturerCode { get => _explicitNullValueManufacturerCode; set { _explicitNullValueManufacturerCode = value; AdditionalData?.Remove("manufacturer_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manufacturer_code"); else _explicitNullProperties?.Remove("manufacturer_code"); } }
         private string _explicitNullValueManufacturerCode = default!;
 #endif
         /// <summary>Standardized product identifier such as a GTIN. Up to 100 characters. Never required, but recommended for EU-bound shipments when one exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ManufacturerStandardCode { get => _explicitNullValueManufacturerStandardCode; set { _explicitNullValueManufacturerStandardCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manufacturer_standard_code"); else _explicitNullProperties?.Remove("manufacturer_standard_code"); } }
+        public string? ManufacturerStandardCode { get => _explicitNullValueManufacturerStandardCode; set { _explicitNullValueManufacturerStandardCode = value; AdditionalData?.Remove("manufacturer_standard_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manufacturer_standard_code"); else _explicitNullProperties?.Remove("manufacturer_standard_code"); } }
         private string? _explicitNullValueManufacturerStandardCode = default!;
 #nullable restore
 #else
-        public string ManufacturerStandardCode { get => _explicitNullValueManufacturerStandardCode; set { _explicitNullValueManufacturerStandardCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manufacturer_standard_code"); else _explicitNullProperties?.Remove("manufacturer_standard_code"); } }
+        public string ManufacturerStandardCode { get => _explicitNullValueManufacturerStandardCode; set { _explicitNullValueManufacturerStandardCode = value; AdditionalData?.Remove("manufacturer_standard_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manufacturer_standard_code"); else _explicitNullProperties?.Remove("manufacturer_standard_code"); } }
         private string _explicitNullValueManufacturerStandardCode = default!;
 #endif
         /// <summary>The unit used for weight.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? MassUnit { get => _explicitNullValueMassUnit; set { _explicitNullValueMassUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass_unit"); else _explicitNullProperties?.Remove("mass_unit"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? MassUnit { get => _explicitNullValueMassUnit; set { _explicitNullValueMassUnit = value; AdditionalData?.Remove("mass_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass_unit"); else _explicitNullProperties?.Remove("mass_unit"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? _explicitNullValueMassUnit = default!;
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Total weight of this item, i.e. quantity * weight per item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetWeight { get => _explicitNullValueNetWeight; set { _explicitNullValueNetWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_weight"); else _explicitNullProperties?.Remove("net_weight"); } }
+        public string? NetWeight { get => _explicitNullValueNetWeight; set { _explicitNullValueNetWeight = value; AdditionalData?.Remove("net_weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_weight"); else _explicitNullProperties?.Remove("net_weight"); } }
         private string? _explicitNullValueNetWeight = default!;
 #nullable restore
 #else
-        public string NetWeight { get => _explicitNullValueNetWeight; set { _explicitNullValueNetWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_weight"); else _explicitNullProperties?.Remove("net_weight"); } }
+        public string NetWeight { get => _explicitNullValueNetWeight; set { _explicitNullValueNetWeight = value; AdditionalData?.Remove("net_weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("net_weight"); else _explicitNullProperties?.Remove("net_weight"); } }
         private string _explicitNullValueNetWeight = default!;
 #endif
         /// <summary>Country of origin of the item. Example: `US` or `DE`.All accepted values can be found on the [Official ISO Website](http://www.iso.org/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginCountry { get => _explicitNullValueOriginCountry; set { _explicitNullValueOriginCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_country"); else _explicitNullProperties?.Remove("origin_country"); } }
+        public string? OriginCountry { get => _explicitNullValueOriginCountry; set { _explicitNullValueOriginCountry = value; AdditionalData?.Remove("origin_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_country"); else _explicitNullProperties?.Remove("origin_country"); } }
         private string? _explicitNullValueOriginCountry = default!;
 #nullable restore
 #else
-        public string OriginCountry { get => _explicitNullValueOriginCountry; set { _explicitNullValueOriginCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_country"); else _explicitNullProperties?.Remove("origin_country"); } }
+        public string OriginCountry { get => _explicitNullValueOriginCountry; set { _explicitNullValueOriginCountry = value; AdditionalData?.Remove("origin_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_country"); else _explicitNullProperties?.Remove("origin_country"); } }
         private string _explicitNullValueOriginCountry = default!;
 #endif
         /// <summary>Quantity of this item in the shipment you send.  Must be greater than 0.</summary>
-        public long? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public long? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private long? _explicitNullValueQuantity = default!;
         /// <summary>SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with `manufacturer_code` on every non-exempt item when the shipment meets the EU product identifier conditions; some carriers also use it outside the EU.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SkuCode { get => _explicitNullValueSkuCode; set { _explicitNullValueSkuCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku_code"); else _explicitNullProperties?.Remove("sku_code"); } }
+        public string? SkuCode { get => _explicitNullValueSkuCode; set { _explicitNullValueSkuCode = value; AdditionalData?.Remove("sku_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku_code"); else _explicitNullProperties?.Remove("sku_code"); } }
         private string? _explicitNullValueSkuCode = default!;
 #nullable restore
 #else
-        public string SkuCode { get => _explicitNullValueSkuCode; set { _explicitNullValueSkuCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku_code"); else _explicitNullProperties?.Remove("sku_code"); } }
+        public string SkuCode { get => _explicitNullValueSkuCode; set { _explicitNullValueSkuCode = value; AdditionalData?.Remove("sku_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku_code"); else _explicitNullProperties?.Remove("sku_code"); } }
         private string _explicitNullValueSkuCode = default!;
 #endif
         /// <summary>The tariff number of the item. If `tariff_number` is not provided, `hs_code` will be used. If both `hs_code` and `tariff_number` are provided, `tariff_number` will be used. 12 character limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TariffNumber { get => _explicitNullValueTariffNumber; set { _explicitNullValueTariffNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tariff_number"); else _explicitNullProperties?.Remove("tariff_number"); } }
+        public string? TariffNumber { get => _explicitNullValueTariffNumber; set { _explicitNullValueTariffNumber = value; AdditionalData?.Remove("tariff_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tariff_number"); else _explicitNullProperties?.Remove("tariff_number"); } }
         private string? _explicitNullValueTariffNumber = default!;
 #nullable restore
 #else
-        public string TariffNumber { get => _explicitNullValueTariffNumber; set { _explicitNullValueTariffNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tariff_number"); else _explicitNullProperties?.Remove("tariff_number"); } }
+        public string TariffNumber { get => _explicitNullValueTariffNumber; set { _explicitNullValueTariffNumber = value; AdditionalData?.Remove("tariff_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tariff_number"); else _explicitNullProperties?.Remove("tariff_number"); } }
         private string _explicitNullValueTariffNumber = default!;
 #endif
         /// <summary>Total value of this item, i.e. quantity * value per item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValueAmount { get => _explicitNullValueValueAmount; set { _explicitNullValueValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_amount"); else _explicitNullProperties?.Remove("value_amount"); } }
+        public string? ValueAmount { get => _explicitNullValueValueAmount; set { _explicitNullValueValueAmount = value; AdditionalData?.Remove("value_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_amount"); else _explicitNullProperties?.Remove("value_amount"); } }
         private string? _explicitNullValueValueAmount = default!;
 #nullable restore
 #else
-        public string ValueAmount { get => _explicitNullValueValueAmount; set { _explicitNullValueValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_amount"); else _explicitNullProperties?.Remove("value_amount"); } }
+        public string ValueAmount { get => _explicitNullValueValueAmount; set { _explicitNullValueValueAmount = value; AdditionalData?.Remove("value_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_amount"); else _explicitNullProperties?.Remove("value_amount"); } }
         private string _explicitNullValueValueAmount = default!;
 #endif
         /// <summary>Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g.  `USD` or `EUR`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValueCurrency { get => _explicitNullValueValueCurrency; set { _explicitNullValueValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_currency"); else _explicitNullProperties?.Remove("value_currency"); } }
+        public string? ValueCurrency { get => _explicitNullValueValueCurrency; set { _explicitNullValueValueCurrency = value; AdditionalData?.Remove("value_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_currency"); else _explicitNullProperties?.Remove("value_currency"); } }
         private string? _explicitNullValueValueCurrency = default!;
 #nullable restore
 #else
-        public string ValueCurrency { get => _explicitNullValueValueCurrency; set { _explicitNullValueValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_currency"); else _explicitNullProperties?.Remove("value_currency"); } }
+        public string ValueCurrency { get => _explicitNullValueValueCurrency; set { _explicitNullValueValueCurrency = value; AdditionalData?.Remove("value_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_currency"); else _explicitNullProperties?.Remove("value_currency"); } }
         private string _explicitNullValueValueCurrency = default!;
 #endif
         /// <summary>
@@ -197,7 +212,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "hs_code", n => { HsCode = n.GetStringValue(); } },
                 { "manufacturer_code", n => { ManufacturerCode = n.GetStringValue(); } },
                 { "manufacturer_standard_code", n => { ManufacturerStandardCode = n.GetStringValue(); } },
-                { "mass_unit", n => { MassUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
+                { "mass_unit", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMassUnit = default; _explicitNullProperties?.Remove("mass_unit"); AdditionalData["mass_unit"] = unknown; } else { MassUnit = parsed; AdditionalData.Remove("mass_unit"); } } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "net_weight", n => { NetWeight = n.GetStringValue(); } },
                 { "origin_country", n => { OriginCountry = n.GetStringValue(); } },

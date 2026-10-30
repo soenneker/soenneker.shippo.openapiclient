@@ -18,8 +18,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("eori_number") is { } nullNodeEoriNumber && nullNodeEoriNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EoriNumber = null;
-            if (parseNode.GetChildNode("tax_id") is { } nullNodeTaxId && nullNodeTaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxId = null;
+            if (parseNode.GetChildNode("eori_number") is null) { _explicitNullValueEoriNumber = default!; _explicitNullProperties?.Remove("eori_number"); }
+            else if (parseNode.GetChildNode("eori_number") is { } nullNodeEoriNumber && nullNodeEoriNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EoriNumber = null;
+            if (parseNode.GetChildNode("tax_id") is null) { _explicitNullValueTaxId = default!; _explicitNullProperties?.Remove("tax_id"); }
+            else if (parseNode.GetChildNode("tax_id") is { } nullNodeTaxId && nullNodeTaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Economic Operators&apos; Registration and Identification (EORI) number. Must start with a 2 character country code followed by a 6-17 character alphanumeric identifier (e.g. PL1234567890ABCDE).[More information on EORI.](https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_en)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EoriNumber { get => _explicitNullValueEoriNumber; set { _explicitNullValueEoriNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eori_number"); else _explicitNullProperties?.Remove("eori_number"); } }
+        public string? EoriNumber { get => _explicitNullValueEoriNumber; set { _explicitNullValueEoriNumber = value; AdditionalData?.Remove("eori_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eori_number"); else _explicitNullProperties?.Remove("eori_number"); } }
         private string? _explicitNullValueEoriNumber = default!;
 #nullable restore
 #else
-        public string EoriNumber { get => _explicitNullValueEoriNumber; set { _explicitNullValueEoriNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eori_number"); else _explicitNullProperties?.Remove("eori_number"); } }
+        public string EoriNumber { get => _explicitNullValueEoriNumber; set { _explicitNullValueEoriNumber = value; AdditionalData?.Remove("eori_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eori_number"); else _explicitNullProperties?.Remove("eori_number"); } }
         private string _explicitNullValueEoriNumber = default!;
 #endif
         /// <summary>Tax identification that may be required to ship in certain countries. Typically used to assess duties on goods that are crossing a border.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification? TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification? TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; AdditionalData?.Remove("tax_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification? _explicitNullValueTaxId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification TaxId { get => _explicitNullValueTaxId; set { _explicitNullValueTaxId = value; AdditionalData?.Remove("tax_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax_id"); else _explicitNullProperties?.Remove("tax_id"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CustomsTaxIdentification _explicitNullValueTaxId = default!;
 #endif
         /// <summary>

@@ -17,45 +17,49 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
-            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
-            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
-            if (parseNode.GetChildNode("parameters") is { } nullNodeParameters && nullNodeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameters = null;
+            if (parseNode.GetChildNode("account_id") is null) { _explicitNullValueAccountId = default!; _explicitNullProperties?.Remove("account_id"); }
+            else if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("active") is null) { _explicitNullValueActive = default!; _explicitNullProperties?.Remove("active"); }
+            else if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("carrier") is null) { _explicitNullValueCarrier = default!; _explicitNullProperties?.Remove("carrier"); }
+            else if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("parameters") is null) { _explicitNullValueParameters = default!; _explicitNullProperties?.Remove("parameters"); }
+            else if (parseNode.GetChildNode("parameters") is { } nullNodeParameters && nullNodeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameters = null;
         }
 
         /// <summary>Unique identifier of the account. Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the `account_id` per carrier.To protect account information, this field will be masked in any API response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Determines whether the account is active. When creating a shipment, if no `carrier_accounts` are explicitly passed Shippo will query all carrier accounts that have this field set. By default, this is set to True.</summary>
-        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Carrier token, see [Carriers](/shippoapi/public-api/carriers)Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for all supported carriers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string? _explicitNullValueCarrier = default!;
 #nullable restore
 #else
-        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string _explicitNullValueCarrier = default!;
 #endif
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters? _explicitNullValueParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters _explicitNullValueParameters = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authentication") is { } nullNodeAuthentication && nullNodeAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authentication = null;
-            if (parseNode.GetChildNode("verification") is { } nullNodeVerification && nullNodeVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verification = null;
+            if (parseNode.GetChildNode("authentication") is null) { _explicitNullValueAuthentication = default!; _explicitNullProperties?.Remove("authentication"); }
+            else if (parseNode.GetChildNode("authentication") is { } nullNodeAuthentication && nullNodeAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authentication = null;
+            if (parseNode.GetChildNode("verification") is null) { _explicitNullValueVerification = default!; _explicitNullProperties?.Remove("verification"); }
+            else if (parseNode.GetChildNode("verification") is { } nullNodeVerification && nullNodeVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verification = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The authentication property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthentication? Authentication { get => _explicitNullValueAuthentication; set { _explicitNullValueAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication"); else _explicitNullProperties?.Remove("authentication"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthentication? Authentication { get => _explicitNullValueAuthentication; set { _explicitNullValueAuthentication = value; AdditionalData?.Remove("authentication"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication"); else _explicitNullProperties?.Remove("authentication"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthentication? _explicitNullValueAuthentication = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthentication Authentication { get => _explicitNullValueAuthentication; set { _explicitNullValueAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication"); else _explicitNullProperties?.Remove("authentication"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthentication Authentication { get => _explicitNullValueAuthentication; set { _explicitNullValueAuthentication = value; AdditionalData?.Remove("authentication"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authentication"); else _explicitNullProperties?.Remove("authentication"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthentication _explicitNullValueAuthentication = default!;
 #endif
         /// <summary>The verification property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerification? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerification? Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerification? _explicitNullValueVerification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerification Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerification Verification { get => _explicitNullValueVerification; set { _explicitNullValueVerification = value; AdditionalData?.Remove("verification"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification"); else _explicitNullProperties?.Remove("verification"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerification _explicitNullValueVerification = default!;
 #endif
         /// <summary>

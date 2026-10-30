@@ -72,7 +72,7 @@ namespace Soenneker.Shippo.OpenApiClient.Customs.Declarations.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Shippo.OpenApiClient.Customs.Declarations.Item.WithCustomsDeclarationItemRequestBuilder.WithCustomsDeclarationItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.goshippo.com", "/customs/declarations/{customsDeclarationId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

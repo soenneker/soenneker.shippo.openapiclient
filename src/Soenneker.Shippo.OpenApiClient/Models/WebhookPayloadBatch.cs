@@ -17,9 +17,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
-            if (parseNode.GetChildNode("event") is { } nullNodeEvent && nullNodeEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Event = null;
-            if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
+            if (parseNode.GetChildNode("data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("data"); }
+            else if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("event") is null) { _explicitNullValueEvent = default!; _explicitNullProperties?.Remove("event"); }
+            else if (parseNode.GetChildNode("event") is { } nullNodeEvent && nullNodeEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Event = null;
+            if (parseNode.GetChildNode("test") is null) { _explicitNullValueTest = default!; _explicitNullProperties?.Remove("test"); }
+            else if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>A string containing the batch object ID, of the form &apos;batch {batchId} (created|processing complete)&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public string? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private string? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public string Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public string Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private string _explicitNullValueData = default!;
 #endif
         /// <summary>Type of event that triggered the webhook.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.WebhookEventTypeEnum? Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.WebhookEventTypeEnum? Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; AdditionalData?.Remove("event"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.WebhookEventTypeEnum? _explicitNullValueEvent = default!;
         /// <summary>Determines whether the webhook is a test webhook or not.</summary>
-        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
+        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; AdditionalData?.Remove("test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
         private bool? _explicitNullValueTest = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.WebhookPayloadBatch"/> and sets the default values.
@@ -66,7 +69,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetStringValue(); } },
-                { "event", n => { Event = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WebhookEventTypeEnum>(); } },
+                { "event", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WebhookEventTypeEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEvent = default; _explicitNullProperties?.Remove("event"); AdditionalData["event"] = unknown; } else { Event = parsed; AdditionalData.Remove("event"); } } },
                 { "test", n => { Test = n.GetBoolValue(); } },
             };
         }

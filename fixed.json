@@ -7435,7 +7435,7 @@
             "example": "FEDEX Account"
           },
           "parameters": {
-            "$ref": "#/components/schemas/ConnectExistingOwnAccountRequestParameters"
+            "$ref": "#/components/schemas/CarrierAccountBaseParameters"
           },
           "test": {
             "type": "boolean",
@@ -10471,7 +10471,7 @@
             "$ref": "#/components/schemas/ShipmentCreateRequestAllOf2AddressFrom"
           },
           "address_return": {
-            "$ref": "#/components/schemas/ShipmentCreateRequestAllOf2AddressReturn"
+            "$ref": "#/components/schemas/ShipmentCreateRequestAllOf2AddressFrom"
           },
           "address_to": {
             "$ref": "#/components/schemas/ShipmentCreateRequestAllOf2AddressTo"
@@ -19348,7 +19348,7 @@
             "$ref": "#/components/schemas/ShipmentCreateRequestAllOf2AddressFrom"
           },
           "address_return": {
-            "$ref": "#/components/schemas/ShipmentCreateRequestAllOf2AddressReturn"
+            "$ref": "#/components/schemas/ShipmentCreateRequestAllOf2AddressFrom"
           },
           "address_to": {
             "$ref": "#/components/schemas/ShipmentCreateRequestAllOf2AddressTo"
@@ -20998,11 +20998,11 @@
         }
       },
       "CanadaPostCarrier": {
-        "const": null,
         "enum": [
           "canada_post"
         ],
         "type": "string",
+        "x-client-original-const": "canada_post",
         "x-ms-enum": {
           "name": "CanadaPostCarrier",
           "modelAsString": false,
@@ -21015,11 +21015,11 @@
         }
       },
       "ChronopostCarrier": {
-        "const": null,
         "enum": [
           "chronopost"
         ],
         "type": "string",
+        "x-client-original-const": "chronopost",
         "x-ms-enum": {
           "name": "ChronopostCarrier",
           "modelAsString": false,
@@ -21032,11 +21032,11 @@
         }
       },
       "ColissimoCarrier": {
-        "const": null,
         "enum": [
           "colissimo"
         ],
         "type": "string",
+        "x-client-original-const": "colissimo",
         "x-ms-enum": {
           "name": "ColissimoCarrier",
           "modelAsString": false,
@@ -21049,11 +21049,11 @@
         }
       },
       "CorreosCarrier": {
-        "const": null,
         "enum": [
           "correos"
         ],
         "type": "string",
+        "x-client-original-const": "correos",
         "x-ms-enum": {
           "name": "CorreosCarrier",
           "modelAsString": false,
@@ -21066,11 +21066,11 @@
         }
       },
       "DeutschePostCarrier": {
-        "const": null,
         "enum": [
           "deutsche_post"
         ],
         "type": "string",
+        "x-client-original-const": "deutsche_post",
         "x-ms-enum": {
           "name": "DeutschePostCarrier",
           "modelAsString": false,
@@ -21083,11 +21083,11 @@
         }
       },
       "DhlExpressCarrier": {
-        "const": null,
         "enum": [
           "dhl_express"
         ],
         "type": "string",
+        "x-client-original-const": "dhl_express",
         "x-ms-enum": {
           "name": "DhlExpressCarrier",
           "modelAsString": false,
@@ -21100,11 +21100,11 @@
         }
       },
       "DpdDeCarrier": {
-        "const": null,
         "enum": [
           "dpd_de"
         ],
         "type": "string",
+        "x-client-original-const": "dpd_de",
         "x-ms-enum": {
           "name": "DpdDeCarrier",
           "modelAsString": false,
@@ -21117,11 +21117,11 @@
         }
       },
       "DpdUkCarrier": {
-        "const": null,
         "enum": [
           "dpd_uk"
         ],
         "type": "string",
+        "x-client-original-const": "dpd_uk",
         "x-ms-enum": {
           "name": "DpdUkCarrier",
           "modelAsString": false,
@@ -21134,11 +21134,11 @@
         }
       },
       "FedexCarrier": {
-        "const": null,
         "enum": [
           "fedex"
         ],
         "type": "string",
+        "x-client-original-const": "fedex",
         "x-ms-enum": {
           "name": "FedexCarrier",
           "modelAsString": false,
@@ -21151,11 +21151,11 @@
         }
       },
       "HermesUkCarrier": {
-        "const": null,
         "enum": [
           "hermes_uk"
         ],
         "type": "string",
+        "x-client-original-const": "hermes_uk",
         "x-ms-enum": {
           "name": "HermesUkCarrier",
           "modelAsString": false,
@@ -21168,11 +21168,11 @@
         }
       },
       "MondialRelayCarrier": {
-        "const": null,
         "enum": [
           "mondial_relay"
         ],
         "type": "string",
+        "x-client-original-const": "mondial_relay",
         "x-ms-enum": {
           "name": "MondialRelayCarrier",
           "modelAsString": false,
@@ -21185,11 +21185,11 @@
         }
       },
       "PosteItalianeCarrier": {
-        "const": null,
         "enum": [
           "poste_italiane"
         ],
         "type": "string",
+        "x-client-original-const": "poste_italiane",
         "x-ms-enum": {
           "name": "PosteItalianeCarrier",
           "modelAsString": false,
@@ -21202,11 +21202,11 @@
         }
       },
       "UpsCarrier": {
-        "const": null,
         "enum": [
           "ups"
         ],
         "type": "string",
+        "x-client-original-const": "ups",
         "x-ms-enum": {
           "name": "UpsCarrier",
           "modelAsString": false,
@@ -21219,11 +21219,11 @@
         }
       },
       "UspsCarrier": {
-        "const": null,
         "enum": [
           "usps"
         ],
         "type": "string",
+        "x-client-original-const": "usps",
         "x-ms-enum": {
           "name": "UspsCarrier",
           "modelAsString": false,
@@ -21236,11 +21236,11 @@
         }
       },
       "RoyalMailCarrier": {
-        "const": null,
         "enum": [
           "royal_mail"
         ],
         "type": "string",
+        "x-client-original-const": "royal_mail",
         "x-ms-enum": {
           "name": "RoyalMailCarrier",
           "modelAsString": false,
@@ -21253,11 +21253,11 @@
         }
       },
       "RoyalMailSfCarrier": {
-        "const": null,
         "enum": [
           "royal_mail_sf"
         ],
         "type": "string",
+        "x-client-original-const": "royal_mail_sf",
         "x-ms-enum": {
           "name": "RoyalMailSfCarrier",
           "modelAsString": false,

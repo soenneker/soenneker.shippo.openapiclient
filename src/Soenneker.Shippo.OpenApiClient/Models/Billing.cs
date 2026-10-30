@@ -18,21 +18,26 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
-            if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
-            if (parseNode.GetChildNode("participation_code") is { } nullNodeParticipationCode && nullNodeParticipationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipationCode = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("zip") is { } nullNodeZip && nullNodeZip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zip = null;
+            if (parseNode.GetChildNode("account") is null) { _explicitNullValueAccount = default!; _explicitNullProperties?.Remove("account"); }
+            else if (parseNode.GetChildNode("account") is { } nullNodeAccount && nullNodeAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Account = null;
+            if (parseNode.GetChildNode("country") is null) { _explicitNullValueCountry = default!; _explicitNullProperties?.Remove("country"); }
+            else if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
+            if (parseNode.GetChildNode("participation_code") is null) { _explicitNullValueParticipationCode = default!; _explicitNullProperties?.Remove("participation_code"); }
+            else if (parseNode.GetChildNode("participation_code") is { } nullNodeParticipationCode && nullNodeParticipationCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParticipationCode = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("zip") is null) { _explicitNullValueZip = default!; _explicitNullProperties?.Remove("zip"); }
+            else if (parseNode.GetChildNode("zip") is { } nullNodeZip && nullNodeZip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zip = null;
         }
 
         /// <summary>Account number to be billed. (For DHL Germany, leave this field blank.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public string? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private string? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public string Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        public string Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
         private string _explicitNullValueAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -40,34 +45,34 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Country iso2 code of account number to be billed (required for UPS third party billing only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        public string? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; AdditionalData?.Remove("country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
         private string? _explicitNullValueCountry = default!;
 #nullable restore
 #else
-        public string Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        public string Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; AdditionalData?.Remove("country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
         private string _explicitNullValueCountry = default!;
 #endif
         /// <summary>2 digit code used to override your default participation code associated with your DHL Germany account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParticipationCode { get => _explicitNullValueParticipationCode; set { _explicitNullValueParticipationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participation_code"); else _explicitNullProperties?.Remove("participation_code"); } }
+        public string? ParticipationCode { get => _explicitNullValueParticipationCode; set { _explicitNullValueParticipationCode = value; AdditionalData?.Remove("participation_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participation_code"); else _explicitNullProperties?.Remove("participation_code"); } }
         private string? _explicitNullValueParticipationCode = default!;
 #nullable restore
 #else
-        public string ParticipationCode { get => _explicitNullValueParticipationCode; set { _explicitNullValueParticipationCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participation_code"); else _explicitNullProperties?.Remove("participation_code"); } }
+        public string ParticipationCode { get => _explicitNullValueParticipationCode; set { _explicitNullValueParticipationCode = value; AdditionalData?.Remove("participation_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participation_code"); else _explicitNullProperties?.Remove("participation_code"); } }
         private string _explicitNullValueParticipationCode = default!;
 #endif
         /// <summary>Party to be billed. (Leave blank for DHL Germany.)</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.BillingType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.BillingType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.BillingType? _explicitNullValueType = default!;
         /// <summary>ZIP code of account number to be billed (required for UPS if there is a zip on the billing account).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Zip { get => _explicitNullValueZip; set { _explicitNullValueZip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zip"); else _explicitNullProperties?.Remove("zip"); } }
+        public string? Zip { get => _explicitNullValueZip; set { _explicitNullValueZip = value; AdditionalData?.Remove("zip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zip"); else _explicitNullProperties?.Remove("zip"); } }
         private string? _explicitNullValueZip = default!;
 #nullable restore
 #else
-        public string Zip { get => _explicitNullValueZip; set { _explicitNullValueZip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zip"); else _explicitNullProperties?.Remove("zip"); } }
+        public string Zip { get => _explicitNullValueZip; set { _explicitNullValueZip = value; AdditionalData?.Remove("zip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zip"); else _explicitNullProperties?.Remove("zip"); } }
         private string _explicitNullValueZip = default!;
 #endif
         /// <summary>
@@ -98,7 +103,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "participation_code", n => { ParticipationCode = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BillingType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BillingType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "zip", n => { Zip = n.GetStringValue(); } },
             };
         }

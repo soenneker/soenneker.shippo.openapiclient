@@ -17,11 +17,16 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carrier_account") is { } nullNodeCarrierAccount && nullNodeCarrierAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierAccount = null;
-            if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
-            if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
-            if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("carrier_account") is null) { _explicitNullValueCarrierAccount = default!; _explicitNullProperties?.Remove("carrier_account"); }
+            else if (parseNode.GetChildNode("carrier_account") is { } nullNodeCarrierAccount && nullNodeCarrierAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierAccount = null;
+            if (parseNode.GetChildNode("object_created") is null) { _explicitNullValueObjectCreated = default!; _explicitNullProperties?.Remove("object_created"); }
+            else if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
+            if (parseNode.GetChildNode("object_owner") is null) { _explicitNullValueObjectOwner = default!; _explicitNullProperties?.Remove("object_owner"); }
+            else if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
+            if (parseNode.GetChildNode("object_updated") is null) { _explicitNullValueObjectUpdated = default!; _explicitNullProperties?.Remove("object_updated"); }
+            else if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,37 +34,37 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The carrier_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
+        public string? CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; AdditionalData?.Remove("carrier_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
         private string? _explicitNullValueCarrierAccount = default!;
 #nullable restore
 #else
-        public string CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
+        public string CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; AdditionalData?.Remove("carrier_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
         private string _explicitNullValueCarrierAccount = default!;
 #endif
         /// <summary>The object_created property</summary>
-        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
+        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; AdditionalData?.Remove("object_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
         private DateTimeOffset? _explicitNullValueObjectCreated = default!;
         /// <summary>The object_owner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string? _explicitNullValueObjectOwner = default!;
 #nullable restore
 #else
-        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string _explicitNullValueObjectOwner = default!;
 #endif
         /// <summary>The object_updated property</summary>
-        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
+        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; AdditionalData?.Remove("object_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
         private DateTimeOffset? _explicitNullValueObjectUpdated = default!;
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>

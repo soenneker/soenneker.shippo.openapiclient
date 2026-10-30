@@ -17,57 +17,64 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
-            if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
-            if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
-            if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
-            if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
+            if (parseNode.GetChildNode("object_created") is null) { _explicitNullValueObjectCreated = default!; _explicitNullProperties?.Remove("object_created"); }
+            else if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
+            if (parseNode.GetChildNode("object_id") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("object_id"); }
+            else if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("object_owner") is null) { _explicitNullValueObjectOwner = default!; _explicitNullProperties?.Remove("object_owner"); }
+            else if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
+            if (parseNode.GetChildNode("object_updated") is null) { _explicitNullValueObjectUpdated = default!; _explicitNullProperties?.Remove("object_updated"); }
+            else if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("test") is null) { _explicitNullValueTest = default!; _explicitNullProperties?.Remove("test"); }
+            else if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
+            if (parseNode.GetChildNode("transaction") is null) { _explicitNullValueTransaction = default!; _explicitNullProperties?.Remove("transaction"); }
+            else if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date and time of object creation.</summary>
-        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
+        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; AdditionalData?.Remove("object_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
         private DateTimeOffset? _explicitNullValueObjectCreated = default!;
         /// <summary>Unique identifier of the given object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>Username of the user who created the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string? _explicitNullValueObjectOwner = default!;
 #nullable restore
 #else
-        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string _explicitNullValueObjectOwner = default!;
 #endif
         /// <summary>Date and time of last object update.</summary>
-        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
+        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; AdditionalData?.Remove("object_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
         private DateTimeOffset? _explicitNullValueObjectUpdated = default!;
         /// <summary>Indicates the status of the Refund.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.RefundStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.RefundStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.RefundStatus? _explicitNullValueStatus = default!;
         /// <summary>Indicates whether the object has been created in test mode.</summary>
-        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
+        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; AdditionalData?.Remove("test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
         private bool? _explicitNullValueTest = default!;
         /// <summary>Object ID of the Transaction to be refunded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        public string? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
         private string? _explicitNullValueTransaction = default!;
 #nullable restore
 #else
-        public string Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        public string Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
         private string _explicitNullValueTransaction = default!;
 #endif
         /// <summary>
@@ -99,7 +106,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.RefundStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.RefundStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "test", n => { Test = n.GetBoolValue(); } },
                 { "transaction", n => { Transaction = n.GetStringValue(); } },
             };

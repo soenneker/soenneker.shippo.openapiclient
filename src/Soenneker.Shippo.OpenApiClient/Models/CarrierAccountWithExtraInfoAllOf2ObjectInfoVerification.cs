@@ -17,13 +17,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("policy") is { } nullNodePolicy && nullNodePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policy = null;
+            if (parseNode.GetChildNode("policy") is null) { _explicitNullValuePolicy = default!; _explicitNullProperties?.Remove("policy"); }
+            else if (parseNode.GetChildNode("policy") is { } nullNodePolicy && nullNodePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policy = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Policy to indicate if the Account needs multi-factor verification.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerificationPolicy? Policy { get => _explicitNullValuePolicy; set { _explicitNullValuePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy"); else _explicitNullProperties?.Remove("policy"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerificationPolicy? Policy { get => _explicitNullValuePolicy; set { _explicitNullValuePolicy = value; AdditionalData?.Remove("policy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy"); else _explicitNullProperties?.Remove("policy"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerificationPolicy? _explicitNullValuePolicy = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerification"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "policy", n => { Policy = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerificationPolicy>(); } },
+                { "policy", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoVerificationPolicy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePolicy = default; _explicitNullProperties?.Remove("policy"); AdditionalData["policy"] = unknown; } else { Policy = parsed; AdditionalData.Remove("policy"); } } },
             };
         }
         /// <summary>

@@ -17,68 +17,76 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
-            if (parseNode.GetChildNode("event") is { } nullNodeEvent && nullNodeEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Event = null;
-            if (parseNode.GetChildNode("is_test") is { } nullNodeIsTest && nullNodeIsTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTest = null;
-            if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
-            if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
-            if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
-            if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("active") is null) { _explicitNullValueActive = default!; _explicitNullProperties?.Remove("active"); }
+            else if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("event") is null) { _explicitNullValueEvent = default!; _explicitNullProperties?.Remove("event"); }
+            else if (parseNode.GetChildNode("event") is { } nullNodeEvent && nullNodeEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Event = null;
+            if (parseNode.GetChildNode("is_test") is null) { _explicitNullValueIsTest = default!; _explicitNullProperties?.Remove("is_test"); }
+            else if (parseNode.GetChildNode("is_test") is { } nullNodeIsTest && nullNodeIsTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTest = null;
+            if (parseNode.GetChildNode("object_created") is null) { _explicitNullValueObjectCreated = default!; _explicitNullProperties?.Remove("object_created"); }
+            else if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
+            if (parseNode.GetChildNode("object_id") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("object_id"); }
+            else if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("object_owner") is null) { _explicitNullValueObjectOwner = default!; _explicitNullProperties?.Remove("object_owner"); }
+            else if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
+            if (parseNode.GetChildNode("object_updated") is null) { _explicitNullValueObjectUpdated = default!; _explicitNullProperties?.Remove("object_updated"); }
+            else if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Determines whether the webhook is active or not.</summary>
-        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of event that triggers the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
+        public string? Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; AdditionalData?.Remove("event"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
         private string? _explicitNullValueEvent = default!;
 #nullable restore
 #else
-        public string Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
+        public string Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; AdditionalData?.Remove("event"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
         private string _explicitNullValueEvent = default!;
 #endif
         /// <summary>Determines whether the webhook is a test webhook or not.</summary>
-        public bool? IsTest { get => _explicitNullValueIsTest; set { _explicitNullValueIsTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_test"); else _explicitNullProperties?.Remove("is_test"); } }
+        public bool? IsTest { get => _explicitNullValueIsTest; set { _explicitNullValueIsTest = value; AdditionalData?.Remove("is_test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_test"); else _explicitNullProperties?.Remove("is_test"); } }
         private bool? _explicitNullValueIsTest = default!;
         /// <summary>Timestamp of the creation of the webhook.</summary>
-        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
+        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; AdditionalData?.Remove("object_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
         private DateTimeOffset? _explicitNullValueObjectCreated = default!;
         /// <summary>Unique identifier of the webhook. This can be used to retrieve or delete the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>Username of the user who created the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string? _explicitNullValueObjectOwner = default!;
 #nullable restore
 #else
-        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string _explicitNullValueObjectOwner = default!;
 #endif
         /// <summary>Timestamp of the last update of the webhook.</summary>
-        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
+        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; AdditionalData?.Remove("object_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
         private DateTimeOffset? _explicitNullValueObjectUpdated = default!;
         /// <summary>URL webhook events are sent to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>

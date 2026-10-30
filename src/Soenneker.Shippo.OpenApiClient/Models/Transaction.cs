@@ -17,26 +17,46 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("commercial_invoice_url") is { } nullNodeCommercialInvoiceUrl && nullNodeCommercialInvoiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommercialInvoiceUrl = null;
-            if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
-            if (parseNode.GetChildNode("eta") is { } nullNodeEta && nullNodeEta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eta = null;
-            if (parseNode.GetChildNode("label_file_type") is { } nullNodeLabelFileType && nullNodeLabelFileType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelFileType = null;
-            if (parseNode.GetChildNode("label_url") is { } nullNodeLabelUrl && nullNodeLabelUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelUrl = null;
-            if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
-            if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
-            if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
-            if (parseNode.GetChildNode("object_state") is { } nullNodeObjectState && nullNodeObjectState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectState = null;
-            if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
-            if (parseNode.GetChildNode("parcel") is { } nullNodeParcel && nullNodeParcel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parcel = null;
-            if (parseNode.GetChildNode("qr_code_url") is { } nullNodeQrCodeUrl && nullNodeQrCodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QrCodeUrl = null;
-            if (parseNode.GetChildNode("rate") is { } nullNodeRate && nullNodeRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rate = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
-            if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
-            if (parseNode.GetChildNode("tracking_status") is { } nullNodeTrackingStatus && nullNodeTrackingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingStatus = null;
-            if (parseNode.GetChildNode("tracking_url_provider") is { } nullNodeTrackingUrlProvider && nullNodeTrackingUrlProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingUrlProvider = null;
+            if (parseNode.GetChildNode("commercial_invoice_url") is null) { _explicitNullValueCommercialInvoiceUrl = default!; _explicitNullProperties?.Remove("commercial_invoice_url"); }
+            else if (parseNode.GetChildNode("commercial_invoice_url") is { } nullNodeCommercialInvoiceUrl && nullNodeCommercialInvoiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommercialInvoiceUrl = null;
+            if (parseNode.GetChildNode("created_by") is null) { _explicitNullValueCreatedBy = default!; _explicitNullProperties?.Remove("created_by"); }
+            else if (parseNode.GetChildNode("created_by") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("eta") is null) { _explicitNullValueEta = default!; _explicitNullProperties?.Remove("eta"); }
+            else if (parseNode.GetChildNode("eta") is { } nullNodeEta && nullNodeEta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eta = null;
+            if (parseNode.GetChildNode("label_file_type") is null) { _explicitNullValueLabelFileType = default!; _explicitNullProperties?.Remove("label_file_type"); }
+            else if (parseNode.GetChildNode("label_file_type") is { } nullNodeLabelFileType && nullNodeLabelFileType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelFileType = null;
+            if (parseNode.GetChildNode("label_url") is null) { _explicitNullValueLabelUrl = default!; _explicitNullProperties?.Remove("label_url"); }
+            else if (parseNode.GetChildNode("label_url") is { } nullNodeLabelUrl && nullNodeLabelUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelUrl = null;
+            if (parseNode.GetChildNode("messages") is null) { _explicitNullValueMessages = default!; _explicitNullProperties?.Remove("messages"); }
+            else if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("object_created") is null) { _explicitNullValueObjectCreated = default!; _explicitNullProperties?.Remove("object_created"); }
+            else if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
+            if (parseNode.GetChildNode("object_id") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("object_id"); }
+            else if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("object_owner") is null) { _explicitNullValueObjectOwner = default!; _explicitNullProperties?.Remove("object_owner"); }
+            else if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
+            if (parseNode.GetChildNode("object_state") is null) { _explicitNullValueObjectState = default!; _explicitNullProperties?.Remove("object_state"); }
+            else if (parseNode.GetChildNode("object_state") is { } nullNodeObjectState && nullNodeObjectState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectState = null;
+            if (parseNode.GetChildNode("object_updated") is null) { _explicitNullValueObjectUpdated = default!; _explicitNullProperties?.Remove("object_updated"); }
+            else if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
+            if (parseNode.GetChildNode("parcel") is null) { _explicitNullValueParcel = default!; _explicitNullProperties?.Remove("parcel"); }
+            else if (parseNode.GetChildNode("parcel") is { } nullNodeParcel && nullNodeParcel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parcel = null;
+            if (parseNode.GetChildNode("qr_code_url") is null) { _explicitNullValueQrCodeUrl = default!; _explicitNullProperties?.Remove("qr_code_url"); }
+            else if (parseNode.GetChildNode("qr_code_url") is { } nullNodeQrCodeUrl && nullNodeQrCodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QrCodeUrl = null;
+            if (parseNode.GetChildNode("rate") is null) { _explicitNullValueRate = default!; _explicitNullProperties?.Remove("rate"); }
+            else if (parseNode.GetChildNode("rate") is { } nullNodeRate && nullNodeRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rate = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("test") is null) { _explicitNullValueTest = default!; _explicitNullProperties?.Remove("test"); }
+            else if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
+            if (parseNode.GetChildNode("tracking_number") is null) { _explicitNullValueTrackingNumber = default!; _explicitNullProperties?.Remove("tracking_number"); }
+            else if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("tracking_status") is null) { _explicitNullValueTrackingStatus = default!; _explicitNullProperties?.Remove("tracking_status"); }
+            else if (parseNode.GetChildNode("tracking_status") is { } nullNodeTrackingStatus && nullNodeTrackingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingStatus = null;
+            if (parseNode.GetChildNode("tracking_url_provider") is null) { _explicitNullValueTrackingUrlProvider = default!; _explicitNullProperties?.Remove("tracking_url_provider"); }
+            else if (parseNode.GetChildNode("tracking_url_provider") is { } nullNodeTrackingUrlProvider && nullNodeTrackingUrlProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingUrlProvider = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -44,152 +64,152 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>A URL pointing to the commercial invoice as a 8.5x11 inch PDF file.A value will only be returned if the Transactions has been processed successfully and if the shipment is international.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommercialInvoiceUrl { get => _explicitNullValueCommercialInvoiceUrl; set { _explicitNullValueCommercialInvoiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commercial_invoice_url"); else _explicitNullProperties?.Remove("commercial_invoice_url"); } }
+        public string? CommercialInvoiceUrl { get => _explicitNullValueCommercialInvoiceUrl; set { _explicitNullValueCommercialInvoiceUrl = value; AdditionalData?.Remove("commercial_invoice_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commercial_invoice_url"); else _explicitNullProperties?.Remove("commercial_invoice_url"); } }
         private string? _explicitNullValueCommercialInvoiceUrl = default!;
 #nullable restore
 #else
-        public string CommercialInvoiceUrl { get => _explicitNullValueCommercialInvoiceUrl; set { _explicitNullValueCommercialInvoiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commercial_invoice_url"); else _explicitNullProperties?.Remove("commercial_invoice_url"); } }
+        public string CommercialInvoiceUrl { get => _explicitNullValueCommercialInvoiceUrl; set { _explicitNullValueCommercialInvoiceUrl = value; AdditionalData?.Remove("commercial_invoice_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commercial_invoice_url"); else _explicitNullProperties?.Remove("commercial_invoice_url"); } }
         private string _explicitNullValueCommercialInvoiceUrl = default!;
 #endif
         /// <summary>An object with details about the user who created the Transaction (purchased the label).A value will be returned only for Transactions that can be associated with a specific user, e.g. when a logged-in user purchases a label via the Shippo Web application; but not for Transactions purchased e.g. via the API using a ShippoToken, which is associated with the account but not any specific user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("created_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("created_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_by"); else _explicitNullProperties?.Remove("created_by"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>The estimated time of arrival according to the carrier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Eta { get => _explicitNullValueEta; set { _explicitNullValueEta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eta"); else _explicitNullProperties?.Remove("eta"); } }
+        public string? Eta { get => _explicitNullValueEta; set { _explicitNullValueEta = value; AdditionalData?.Remove("eta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eta"); else _explicitNullProperties?.Remove("eta"); } }
         private string? _explicitNullValueEta = default!;
 #nullable restore
 #else
-        public string Eta { get => _explicitNullValueEta; set { _explicitNullValueEta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eta"); else _explicitNullProperties?.Remove("eta"); } }
+        public string Eta { get => _explicitNullValueEta; set { _explicitNullValueEta = value; AdditionalData?.Remove("eta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eta"); else _explicitNullProperties?.Remove("eta"); } }
         private string _explicitNullValueEta = default!;
 #endif
         /// <summary>Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFileType { get => _explicitNullValueLabelFileType; set { _explicitNullValueLabelFileType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_file_type"); else _explicitNullProperties?.Remove("label_file_type"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFileType { get => _explicitNullValueLabelFileType; set { _explicitNullValueLabelFileType = value; AdditionalData?.Remove("label_file_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_file_type"); else _explicitNullProperties?.Remove("label_file_type"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? _explicitNullValueLabelFileType = default!;
         /// <summary>A URL pointing directly to the label in the format you&apos;ve set in your settings.A value will only be returned if the Transactions has been processed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LabelUrl { get => _explicitNullValueLabelUrl; set { _explicitNullValueLabelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_url"); else _explicitNullProperties?.Remove("label_url"); } }
+        public string? LabelUrl { get => _explicitNullValueLabelUrl; set { _explicitNullValueLabelUrl = value; AdditionalData?.Remove("label_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_url"); else _explicitNullProperties?.Remove("label_url"); } }
         private string? _explicitNullValueLabelUrl = default!;
 #nullable restore
 #else
-        public string LabelUrl { get => _explicitNullValueLabelUrl; set { _explicitNullValueLabelUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_url"); else _explicitNullProperties?.Remove("label_url"); } }
+        public string LabelUrl { get => _explicitNullValueLabelUrl; set { _explicitNullValueLabelUrl = value; AdditionalData?.Remove("label_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_url"); else _explicitNullProperties?.Remove("label_url"); } }
         private string _explicitNullValueLabelUrl = default!;
 #endif
         /// <summary>The messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage>? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage>? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; AdditionalData?.Remove("messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage>? _explicitNullValueMessages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage> Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage> Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; AdditionalData?.Remove("messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage> _explicitNullValueMessages = default!;
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Date and time of Transaction creation.</summary>
-        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
+        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; AdditionalData?.Remove("object_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
         private DateTimeOffset? _explicitNullValueObjectCreated = default!;
         /// <summary>Unique identifier of the given Transaction object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>Username of the user who created the Transaction object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string? _explicitNullValueObjectOwner = default!;
 #nullable restore
 #else
-        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string _explicitNullValueObjectOwner = default!;
 #endif
         /// <summary>Indicates the validity of the enclosing object</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum? ObjectState { get => _explicitNullValueObjectState; set { _explicitNullValueObjectState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_state"); else _explicitNullProperties?.Remove("object_state"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum? ObjectState { get => _explicitNullValueObjectState; set { _explicitNullValueObjectState = value; AdditionalData?.Remove("object_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_state"); else _explicitNullProperties?.Remove("object_state"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum? _explicitNullValueObjectState = default!;
         /// <summary>Date and time of last Transaction update.</summary>
-        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
+        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; AdditionalData?.Remove("object_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
         private DateTimeOffset? _explicitNullValueObjectUpdated = default!;
         /// <summary>Object ID of the Parcel object that is being shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parcel { get => _explicitNullValueParcel; set { _explicitNullValueParcel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcel"); else _explicitNullProperties?.Remove("parcel"); } }
+        public string? Parcel { get => _explicitNullValueParcel; set { _explicitNullValueParcel = value; AdditionalData?.Remove("parcel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcel"); else _explicitNullProperties?.Remove("parcel"); } }
         private string? _explicitNullValueParcel = default!;
 #nullable restore
 #else
-        public string Parcel { get => _explicitNullValueParcel; set { _explicitNullValueParcel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcel"); else _explicitNullProperties?.Remove("parcel"); } }
+        public string Parcel { get => _explicitNullValueParcel; set { _explicitNullValueParcel = value; AdditionalData?.Remove("parcel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcel"); else _explicitNullProperties?.Remove("parcel"); } }
         private string _explicitNullValueParcel = default!;
 #endif
         /// <summary>A URL pointing directly to the QR code in PNG format.A value will only be returned if requested using qr_code_requested flag and the carrier provides such an option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QrCodeUrl { get => _explicitNullValueQrCodeUrl; set { _explicitNullValueQrCodeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_url"); else _explicitNullProperties?.Remove("qr_code_url"); } }
+        public string? QrCodeUrl { get => _explicitNullValueQrCodeUrl; set { _explicitNullValueQrCodeUrl = value; AdditionalData?.Remove("qr_code_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_url"); else _explicitNullProperties?.Remove("qr_code_url"); } }
         private string? _explicitNullValueQrCodeUrl = default!;
 #nullable restore
 #else
-        public string QrCodeUrl { get => _explicitNullValueQrCodeUrl; set { _explicitNullValueQrCodeUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_url"); else _explicitNullProperties?.Remove("qr_code_url"); } }
+        public string QrCodeUrl { get => _explicitNullValueQrCodeUrl; set { _explicitNullValueQrCodeUrl = value; AdditionalData?.Remove("qr_code_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_url"); else _explicitNullProperties?.Remove("qr_code_url"); } }
         private string _explicitNullValueQrCodeUrl = default!;
 #endif
         /// <summary>ID of the Rate object for which a Label has to be obtained.  If you purchase a label by calling the transaction endpoint without a rate (instalabel), this field will be a simplified Rate object in the Transaction model returned from the POST request.Note, only rates less than 7 days old can be purchased to ensure up-to-date pricing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate? Rate { get => _explicitNullValueRate; set { _explicitNullValueRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate"); else _explicitNullProperties?.Remove("rate"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate? Rate { get => _explicitNullValueRate; set { _explicitNullValueRate = value; AdditionalData?.Remove("rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate"); else _explicitNullProperties?.Remove("rate"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate? _explicitNullValueRate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate Rate { get => _explicitNullValueRate; set { _explicitNullValueRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate"); else _explicitNullProperties?.Remove("rate"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate Rate { get => _explicitNullValueRate; set { _explicitNullValueRate = value; AdditionalData?.Remove("rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate"); else _explicitNullProperties?.Remove("rate"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate _explicitNullValueRate = default!;
 #endif
         /// <summary>Indicates the status of the Transaction.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionStatusEnum? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TransactionStatusEnum? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.TransactionStatusEnum? _explicitNullValueStatus = default!;
         /// <summary>Indicates whether the object has been created in test mode.</summary>
-        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
+        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; AdditionalData?.Remove("test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
         private bool? _explicitNullValueTest = default!;
         /// <summary>The carrier-specific tracking number that can be used to track the Shipment.A value will only be returned if the Rate is for a trackable Shipment and if the Transactions has been processed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("tracking_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
         private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("tracking_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
         private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>Indicates the high level status of the shipment.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusEnum? TrackingStatus { get => _explicitNullValueTrackingStatus; set { _explicitNullValueTrackingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_status"); else _explicitNullProperties?.Remove("tracking_status"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusEnum? TrackingStatus { get => _explicitNullValueTrackingStatus; set { _explicitNullValueTrackingStatus = value; AdditionalData?.Remove("tracking_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_status"); else _explicitNullProperties?.Remove("tracking_status"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusEnum? _explicitNullValueTrackingStatus = default!;
         /// <summary>A link to track this item on the carrier-provided tracking website.A value will only be returned if tracking is available and the carrier provides such a service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingUrlProvider { get => _explicitNullValueTrackingUrlProvider; set { _explicitNullValueTrackingUrlProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_url_provider"); else _explicitNullProperties?.Remove("tracking_url_provider"); } }
+        public string? TrackingUrlProvider { get => _explicitNullValueTrackingUrlProvider; set { _explicitNullValueTrackingUrlProvider = value; AdditionalData?.Remove("tracking_url_provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_url_provider"); else _explicitNullProperties?.Remove("tracking_url_provider"); } }
         private string? _explicitNullValueTrackingUrlProvider = default!;
 #nullable restore
 #else
-        public string TrackingUrlProvider { get => _explicitNullValueTrackingUrlProvider; set { _explicitNullValueTrackingUrlProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_url_provider"); else _explicitNullProperties?.Remove("tracking_url_provider"); } }
+        public string TrackingUrlProvider { get => _explicitNullValueTrackingUrlProvider; set { _explicitNullValueTrackingUrlProvider = value; AdditionalData?.Remove("tracking_url_provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_url_provider"); else _explicitNullProperties?.Remove("tracking_url_provider"); } }
         private string _explicitNullValueTrackingUrlProvider = default!;
 #endif
         /// <summary>
@@ -220,22 +240,22 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "commercial_invoice_url", n => { CommercialInvoiceUrl = n.GetStringValue(); } },
                 { "created_by", n => { CreatedBy = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy>(global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreatedBy.CreateFromDiscriminatorValue); } },
                 { "eta", n => { Eta = n.GetStringValue(); } },
-                { "label_file_type", n => { LabelFileType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>(); } },
+                { "label_file_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLabelFileType = default; _explicitNullProperties?.Remove("label_file_type"); AdditionalData["label_file_type"] = unknown; } else { LabelFileType = parsed; AdditionalData.Remove("label_file_type"); } } },
                 { "label_url", n => { LabelUrl = n.GetStringValue(); } },
                 { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage>(global::Soenneker.Shippo.OpenApiClient.Models.ResponseMessage.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
-                { "object_state", n => { ObjectState = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum>(); } },
+                { "object_state", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ObjectStateEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObjectState = default; _explicitNullProperties?.Remove("object_state"); AdditionalData["object_state"] = unknown; } else { ObjectState = parsed; AdditionalData.Remove("object_state"); } } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
                 { "parcel", n => { Parcel = n.GetStringValue(); } },
                 { "qr_code_url", n => { QrCodeUrl = n.GetStringValue(); } },
                 { "rate", n => { Rate = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate>(global::Soenneker.Shippo.OpenApiClient.Models.TransactionRate.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionStatusEnum>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionStatusEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "test", n => { Test = n.GetBoolValue(); } },
                 { "tracking_number", n => { TrackingNumber = n.GetStringValue(); } },
-                { "tracking_status", n => { TrackingStatus = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusEnum>(); } },
+                { "tracking_status", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTrackingStatus = default; _explicitNullProperties?.Remove("tracking_status"); AdditionalData["tracking_status"] = unknown; } else { TrackingStatus = parsed; AdditionalData.Remove("tracking_status"); } } },
                 { "tracking_url_provider", n => { TrackingUrlProvider = n.GetStringValue(); } },
             };
         }

@@ -17,124 +17,139 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("distance_unit") is { } nullNodeDistanceUnit && nullNodeDistanceUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DistanceUnit = null;
-            if (parseNode.GetChildNode("extra") is { } nullNodeExtra && nullNodeExtra.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extra = null;
-            if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
-            if (parseNode.GetChildNode("length") is { } nullNodeLength && nullNodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Length = null;
-            if (parseNode.GetChildNode("mass_unit") is { } nullNodeMassUnit && nullNodeMassUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MassUnit = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
-            if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
-            if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
-            if (parseNode.GetChildNode("object_state") is { } nullNodeObjectState && nullNodeObjectState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectState = null;
-            if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
-            if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
-            if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
-            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
-            if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
+            if (parseNode.GetChildNode("distance_unit") is null) { _explicitNullValueDistanceUnit = default!; _explicitNullProperties?.Remove("distance_unit"); }
+            else if (parseNode.GetChildNode("distance_unit") is { } nullNodeDistanceUnit && nullNodeDistanceUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DistanceUnit = null;
+            if (parseNode.GetChildNode("extra") is null) { _explicitNullValueExtra = default!; _explicitNullProperties?.Remove("extra"); }
+            else if (parseNode.GetChildNode("extra") is { } nullNodeExtra && nullNodeExtra.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extra = null;
+            if (parseNode.GetChildNode("height") is null) { _explicitNullValueHeight = default!; _explicitNullProperties?.Remove("height"); }
+            else if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("length") is null) { _explicitNullValueLength = default!; _explicitNullProperties?.Remove("length"); }
+            else if (parseNode.GetChildNode("length") is { } nullNodeLength && nullNodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Length = null;
+            if (parseNode.GetChildNode("mass_unit") is null) { _explicitNullValueMassUnit = default!; _explicitNullProperties?.Remove("mass_unit"); }
+            else if (parseNode.GetChildNode("mass_unit") is { } nullNodeMassUnit && nullNodeMassUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MassUnit = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("object_created") is null) { _explicitNullValueObjectCreated = default!; _explicitNullProperties?.Remove("object_created"); }
+            else if (parseNode.GetChildNode("object_created") is { } nullNodeObjectCreated && nullNodeObjectCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectCreated = null;
+            if (parseNode.GetChildNode("object_id") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("object_id"); }
+            else if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("object_owner") is null) { _explicitNullValueObjectOwner = default!; _explicitNullProperties?.Remove("object_owner"); }
+            else if (parseNode.GetChildNode("object_owner") is { } nullNodeObjectOwner && nullNodeObjectOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectOwner = null;
+            if (parseNode.GetChildNode("object_state") is null) { _explicitNullValueObjectState = default!; _explicitNullProperties?.Remove("object_state"); }
+            else if (parseNode.GetChildNode("object_state") is { } nullNodeObjectState && nullNodeObjectState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectState = null;
+            if (parseNode.GetChildNode("object_updated") is null) { _explicitNullValueObjectUpdated = default!; _explicitNullProperties?.Remove("object_updated"); }
+            else if (parseNode.GetChildNode("object_updated") is { } nullNodeObjectUpdated && nullNodeObjectUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectUpdated = null;
+            if (parseNode.GetChildNode("template") is null) { _explicitNullValueTemplate = default!; _explicitNullProperties?.Remove("template"); }
+            else if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+            if (parseNode.GetChildNode("test") is null) { _explicitNullValueTest = default!; _explicitNullProperties?.Remove("test"); }
+            else if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
+            if (parseNode.GetChildNode("weight") is null) { _explicitNullValueWeight = default!; _explicitNullProperties?.Remove("weight"); }
+            else if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("width") is null) { _explicitNullValueWidth = default!; _explicitNullProperties?.Remove("width"); }
+            else if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The measure unit used for length, width and height.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum? DistanceUnit { get => _explicitNullValueDistanceUnit; set { _explicitNullValueDistanceUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("distance_unit"); else _explicitNullProperties?.Remove("distance_unit"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum? DistanceUnit { get => _explicitNullValueDistanceUnit; set { _explicitNullValueDistanceUnit = value; AdditionalData?.Remove("distance_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("distance_unit"); else _explicitNullProperties?.Remove("distance_unit"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum? _explicitNullValueDistanceUnit = default!;
         /// <summary>An object holding optional extra services to be requested for each parcel in a multi-piece shipment.The following values are supported for the `extra` field of the parcel object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra? Extra { get => _explicitNullValueExtra; set { _explicitNullValueExtra = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra"); else _explicitNullProperties?.Remove("extra"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra? Extra { get => _explicitNullValueExtra; set { _explicitNullValueExtra = value; AdditionalData?.Remove("extra"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra"); else _explicitNullProperties?.Remove("extra"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra? _explicitNullValueExtra = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra Extra { get => _explicitNullValueExtra; set { _explicitNullValueExtra = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra"); else _explicitNullProperties?.Remove("extra"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra Extra { get => _explicitNullValueExtra; set { _explicitNullValueExtra = value; AdditionalData?.Remove("extra"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra"); else _explicitNullProperties?.Remove("extra"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra _explicitNullValueExtra = default!;
 #endif
         /// <summary>Height of the parcel. Up to six digits in front and four digits after the decimal separator are accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        public string? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
         private string? _explicitNullValueHeight = default!;
 #nullable restore
 #else
-        public string Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        public string Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
         private string _explicitNullValueHeight = default!;
 #endif
         /// <summary>Length of the Parcel. Up to six digits in front and four digits after the decimal separator are accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
+        public string? Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; AdditionalData?.Remove("length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
         private string? _explicitNullValueLength = default!;
 #nullable restore
 #else
-        public string Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
+        public string Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; AdditionalData?.Remove("length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
         private string _explicitNullValueLength = default!;
 #endif
         /// <summary>The unit used for weight.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? MassUnit { get => _explicitNullValueMassUnit; set { _explicitNullValueMassUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass_unit"); else _explicitNullProperties?.Remove("mass_unit"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? MassUnit { get => _explicitNullValueMassUnit; set { _explicitNullValueMassUnit = value; AdditionalData?.Remove("mass_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass_unit"); else _explicitNullProperties?.Remove("mass_unit"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? _explicitNullValueMassUnit = default!;
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Date and time of Parcel creation.</summary>
-        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
+        public DateTimeOffset? ObjectCreated { get => _explicitNullValueObjectCreated; set { _explicitNullValueObjectCreated = value; AdditionalData?.Remove("object_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_created"); else _explicitNullProperties?.Remove("object_created"); } }
         private DateTimeOffset? _explicitNullValueObjectCreated = default!;
         /// <summary>Unique identifier of the given Parcel object. This ID is required to create a Shipment object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>Username of the user who created the Parcel object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string? ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string? _explicitNullValueObjectOwner = default!;
 #nullable restore
 #else
-        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
+        public string ObjectOwner { get => _explicitNullValueObjectOwner; set { _explicitNullValueObjectOwner = value; AdditionalData?.Remove("object_owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_owner"); else _explicitNullProperties?.Remove("object_owner"); } }
         private string _explicitNullValueObjectOwner = default!;
 #endif
         /// <summary>A Parcel will only be valid when all required values have been sent and validated successfully.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ValidObjectState? ObjectState { get => _explicitNullValueObjectState; set { _explicitNullValueObjectState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_state"); else _explicitNullProperties?.Remove("object_state"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ValidObjectState? ObjectState { get => _explicitNullValueObjectState; set { _explicitNullValueObjectState = value; AdditionalData?.Remove("object_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_state"); else _explicitNullProperties?.Remove("object_state"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ValidObjectState? _explicitNullValueObjectState = default!;
         /// <summary>Date and time of last Parcel update. Since you cannot update Parcels after they were created, this time stamp reflects the time when the Parcel was changed by Shippo&apos;s systems for the last time, e.g., during sorting the dimensions given.</summary>
-        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
+        public DateTimeOffset? ObjectUpdated { get => _explicitNullValueObjectUpdated; set { _explicitNullValueObjectUpdated = value; AdditionalData?.Remove("object_updated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_updated"); else _explicitNullProperties?.Remove("object_updated"); } }
         private DateTimeOffset? _explicitNullValueObjectUpdated = default!;
         /// <summary>If template is passed, `length`, `width`, `height`, and `distance_unit` are not required</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet? _explicitNullValueTemplate = default!;
         /// <summary>Indicates whether the object has been created in test mode.</summary>
-        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
+        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; AdditionalData?.Remove("test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
         private bool? _explicitNullValueTest = default!;
         /// <summary>Weight of the parcel. Up to six digits in front and four digits after the decimal separator are accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
         private string? _explicitNullValueWeight = default!;
 #nullable restore
 #else
-        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
         private string _explicitNullValueWeight = default!;
 #endif
         /// <summary>Width of the Parcel. Up to six digits in front and four digits after the decimal separator are accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        public string? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
         private string? _explicitNullValueWidth = default!;
 #nullable restore
 #else
-        public string Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        public string Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
         private string _explicitNullValueWidth = default!;
 #endif
         /// <summary>
@@ -162,18 +177,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "distance_unit", n => { DistanceUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum>(); } },
+                { "distance_unit", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDistanceUnit = default; _explicitNullProperties?.Remove("distance_unit"); AdditionalData["distance_unit"] = unknown; } else { DistanceUnit = parsed; AdditionalData.Remove("distance_unit"); } } },
                 { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra.CreateFromDiscriminatorValue); } },
                 { "height", n => { Height = n.GetStringValue(); } },
                 { "length", n => { Length = n.GetStringValue(); } },
-                { "mass_unit", n => { MassUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
+                { "mass_unit", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMassUnit = default; _explicitNullProperties?.Remove("mass_unit"); AdditionalData["mass_unit"] = unknown; } else { MassUnit = parsed; AdditionalData.Remove("mass_unit"); } } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "object_owner", n => { ObjectOwner = n.GetStringValue(); } },
-                { "object_state", n => { ObjectState = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ValidObjectState>(); } },
+                { "object_state", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ValidObjectState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueObjectState = default; _explicitNullProperties?.Remove("object_state"); AdditionalData["object_state"] = unknown; } else { ObjectState = parsed; AdditionalData.Remove("object_state"); } } },
                 { "object_updated", n => { ObjectUpdated = n.GetDateTimeOffsetValue(); } },
-                { "template", n => { Template = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>(); } },
+                { "template", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelTemplateEnumSet>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTemplate = default; _explicitNullProperties?.Remove("template"); AdditionalData["template"] = unknown; } else { Template = parsed; AdditionalData.Remove("template"); } } },
                 { "test", n => { Test = n.GetBoolValue(); } },
                 { "weight", n => { Weight = n.GetStringValue(); } },
                 { "width", n => { Width = n.GetStringValue(); } },

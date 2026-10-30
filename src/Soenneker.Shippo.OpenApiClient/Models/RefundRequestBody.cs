@@ -17,23 +17,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("async") is { } nullNodeAsync && nullNodeAsync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Async = null;
-            if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
+            if (parseNode.GetChildNode("async") is null) { _explicitNullValueAsync = default!; _explicitNullProperties?.Remove("async"); }
+            else if (parseNode.GetChildNode("async") is { } nullNodeAsync && nullNodeAsync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Async = null;
+            if (parseNode.GetChildNode("transaction") is null) { _explicitNullValueTransaction = default!; _explicitNullProperties?.Remove("transaction"); }
+            else if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The async property</summary>
-        public bool? Async { get => _explicitNullValueAsync; set { _explicitNullValueAsync = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async"); else _explicitNullProperties?.Remove("async"); } }
+        public bool? Async { get => _explicitNullValueAsync; set { _explicitNullValueAsync = value; AdditionalData?.Remove("async"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async"); else _explicitNullProperties?.Remove("async"); } }
         private bool? _explicitNullValueAsync = default!;
         /// <summary>The transaction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        public string? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
         private string? _explicitNullValueTransaction = default!;
 #nullable restore
 #else
-        public string Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        public string Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
         private string _explicitNullValueTransaction = default!;
 #endif
         /// <summary>

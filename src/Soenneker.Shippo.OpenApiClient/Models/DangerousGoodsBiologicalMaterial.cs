@@ -18,13 +18,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contains") is { } nullNodeContains && nullNodeContains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contains = null;
+            if (parseNode.GetChildNode("contains") is null) { _explicitNullValueContains = default!; _explicitNullProperties?.Remove("contains"); }
+            else if (parseNode.GetChildNode("contains") is { } nullNodeContains && nullNodeContains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contains = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates if the shipment contains biological material.</summary>
-        public bool? Contains { get => _explicitNullValueContains; set { _explicitNullValueContains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains"); else _explicitNullProperties?.Remove("contains"); } }
+        public bool? Contains { get => _explicitNullValueContains; set { _explicitNullValueContains = value; AdditionalData?.Remove("contains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains"); else _explicitNullProperties?.Remove("contains"); } }
         private bool? _explicitNullValueContains = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsBiologicalMaterial"/> and sets the default values.

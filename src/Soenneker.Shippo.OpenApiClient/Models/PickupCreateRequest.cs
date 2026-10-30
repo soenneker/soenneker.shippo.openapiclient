@@ -17,12 +17,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carrier_account") is { } nullNodeCarrierAccount && nullNodeCarrierAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierAccount = null;
-            if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("requested_end_time") is { } nullNodeRequestedEndTime && nullNodeRequestedEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedEndTime = null;
-            if (parseNode.GetChildNode("requested_start_time") is { } nullNodeRequestedStartTime && nullNodeRequestedStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedStartTime = null;
-            if (parseNode.GetChildNode("transactions") is { } nullNodeTransactions && nullNodeTransactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transactions = null;
+            if (parseNode.GetChildNode("carrier_account") is null) { _explicitNullValueCarrierAccount = default!; _explicitNullProperties?.Remove("carrier_account"); }
+            else if (parseNode.GetChildNode("carrier_account") is { } nullNodeCarrierAccount && nullNodeCarrierAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierAccount = null;
+            if (parseNode.GetChildNode("location") is null) { _explicitNullValueLocation = default!; _explicitNullProperties?.Remove("location"); }
+            else if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("requested_end_time") is null) { _explicitNullValueRequestedEndTime = default!; _explicitNullProperties?.Remove("requested_end_time"); }
+            else if (parseNode.GetChildNode("requested_end_time") is { } nullNodeRequestedEndTime && nullNodeRequestedEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedEndTime = null;
+            if (parseNode.GetChildNode("requested_start_time") is null) { _explicitNullValueRequestedStartTime = default!; _explicitNullProperties?.Remove("requested_start_time"); }
+            else if (parseNode.GetChildNode("requested_start_time") is { } nullNodeRequestedStartTime && nullNodeRequestedStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedStartTime = null;
+            if (parseNode.GetChildNode("transactions") is null) { _explicitNullValueTransactions = default!; _explicitNullProperties?.Remove("transactions"); }
+            else if (parseNode.GetChildNode("transactions") is { } nullNodeTransactions && nullNodeTransactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transactions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,47 +36,47 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The object ID of your USPS or DHL Express carrier account.You can retrieve this from your Rate requests or our [Carrier Accounts](/shippoapi/public-api/carrier-accounts) endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
+        public string? CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; AdditionalData?.Remove("carrier_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
         private string? _explicitNullValueCarrierAccount = default!;
 #nullable restore
 #else
-        public string CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
+        public string CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; AdditionalData?.Remove("carrier_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
         private string _explicitNullValueCarrierAccount = default!;
 #endif
         /// <summary>Location where the parcel(s) will be picked up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.Location? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Location? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.Location? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.Location Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Location Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.Location _explicitNullValueLocation = default!;
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The latest that you requested your parcels to be available for pickup.Expressed in the timezone specified in the response.</summary>
-        public DateTimeOffset? RequestedEndTime { get => _explicitNullValueRequestedEndTime; set { _explicitNullValueRequestedEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_end_time"); else _explicitNullProperties?.Remove("requested_end_time"); } }
+        public DateTimeOffset? RequestedEndTime { get => _explicitNullValueRequestedEndTime; set { _explicitNullValueRequestedEndTime = value; AdditionalData?.Remove("requested_end_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_end_time"); else _explicitNullProperties?.Remove("requested_end_time"); } }
         private DateTimeOffset? _explicitNullValueRequestedEndTime = default!;
         /// <summary>The earliest that you requested your parcels to be ready for pickup.Expressed in the timezone specified in the response.</summary>
-        public DateTimeOffset? RequestedStartTime { get => _explicitNullValueRequestedStartTime; set { _explicitNullValueRequestedStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_start_time"); else _explicitNullProperties?.Remove("requested_start_time"); } }
+        public DateTimeOffset? RequestedStartTime { get => _explicitNullValueRequestedStartTime; set { _explicitNullValueRequestedStartTime = value; AdditionalData?.Remove("requested_start_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_start_time"); else _explicitNullProperties?.Remove("requested_start_time"); } }
         private DateTimeOffset? _explicitNullValueRequestedStartTime = default!;
         /// <summary>The transaction(s) object ID(s) for the parcel(s) that need to be picked up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Transactions { get => _explicitNullValueTransactions; set { _explicitNullValueTransactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactions"); else _explicitNullProperties?.Remove("transactions"); } }
+        public List<string>? Transactions { get => _explicitNullValueTransactions; set { _explicitNullValueTransactions = value; AdditionalData?.Remove("transactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactions"); else _explicitNullProperties?.Remove("transactions"); } }
         private List<string>? _explicitNullValueTransactions = default!;
 #nullable restore
 #else
-        public List<string> Transactions { get => _explicitNullValueTransactions; set { _explicitNullValueTransactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactions"); else _explicitNullProperties?.Remove("transactions"); } }
+        public List<string> Transactions { get => _explicitNullValueTransactions; set { _explicitNullValueTransactions = value; AdditionalData?.Remove("transactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactions"); else _explicitNullProperties?.Remove("transactions"); } }
         private List<string> _explicitNullValueTransactions = default!;
 #endif
         /// <summary>

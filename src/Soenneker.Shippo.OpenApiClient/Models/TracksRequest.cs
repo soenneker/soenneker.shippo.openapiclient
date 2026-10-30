@@ -17,9 +17,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("carrier") is null) { _explicitNullValueCarrier = default!; _explicitNullProperties?.Remove("carrier"); }
+            else if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("tracking_number") is null) { _explicitNullValueTrackingNumber = default!; _explicitNullProperties?.Remove("tracking_number"); }
+            else if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Name of the carrier of the shipment to track.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string? _explicitNullValueCarrier = default!;
 #nullable restore
 #else
-        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string _explicitNullValueCarrier = default!;
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Tracking number to track.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("tracking_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
         private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("tracking_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
         private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>

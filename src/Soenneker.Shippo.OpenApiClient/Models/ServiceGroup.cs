@@ -17,17 +17,28 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("flat_rate") is { } nullNodeFlatRate && nullNodeFlatRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlatRate = null;
-            if (parseNode.GetChildNode("flat_rate_currency") is { } nullNodeFlatRateCurrency && nullNodeFlatRateCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlatRateCurrency = null;
-            if (parseNode.GetChildNode("free_shipping_threshold_currency") is { } nullNodeFreeShippingThresholdCurrency && nullNodeFreeShippingThresholdCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeShippingThresholdCurrency = null;
-            if (parseNode.GetChildNode("free_shipping_threshold_min") is { } nullNodeFreeShippingThresholdMin && nullNodeFreeShippingThresholdMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeShippingThresholdMin = null;
-            if (parseNode.GetChildNode("is_active") is { } nullNodeIsActive && nullNodeIsActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsActive = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
-            if (parseNode.GetChildNode("rate_adjustment") is { } nullNodeRateAdjustment && nullNodeRateAdjustment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateAdjustment = null;
-            if (parseNode.GetChildNode("service_levels") is { } nullNodeServiceLevels && nullNodeServiceLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceLevels = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("flat_rate") is null) { _explicitNullValueFlatRate = default!; _explicitNullProperties?.Remove("flat_rate"); }
+            else if (parseNode.GetChildNode("flat_rate") is { } nullNodeFlatRate && nullNodeFlatRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlatRate = null;
+            if (parseNode.GetChildNode("flat_rate_currency") is null) { _explicitNullValueFlatRateCurrency = default!; _explicitNullProperties?.Remove("flat_rate_currency"); }
+            else if (parseNode.GetChildNode("flat_rate_currency") is { } nullNodeFlatRateCurrency && nullNodeFlatRateCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlatRateCurrency = null;
+            if (parseNode.GetChildNode("free_shipping_threshold_currency") is null) { _explicitNullValueFreeShippingThresholdCurrency = default!; _explicitNullProperties?.Remove("free_shipping_threshold_currency"); }
+            else if (parseNode.GetChildNode("free_shipping_threshold_currency") is { } nullNodeFreeShippingThresholdCurrency && nullNodeFreeShippingThresholdCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeShippingThresholdCurrency = null;
+            if (parseNode.GetChildNode("free_shipping_threshold_min") is null) { _explicitNullValueFreeShippingThresholdMin = default!; _explicitNullProperties?.Remove("free_shipping_threshold_min"); }
+            else if (parseNode.GetChildNode("free_shipping_threshold_min") is { } nullNodeFreeShippingThresholdMin && nullNodeFreeShippingThresholdMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeShippingThresholdMin = null;
+            if (parseNode.GetChildNode("is_active") is null) { _explicitNullValueIsActive = default!; _explicitNullProperties?.Remove("is_active"); }
+            else if (parseNode.GetChildNode("is_active") is { } nullNodeIsActive && nullNodeIsActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsActive = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("object_id") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("object_id"); }
+            else if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("rate_adjustment") is null) { _explicitNullValueRateAdjustment = default!; _explicitNullProperties?.Remove("rate_adjustment"); }
+            else if (parseNode.GetChildNode("rate_adjustment") is { } nullNodeRateAdjustment && nullNodeRateAdjustment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateAdjustment = null;
+            if (parseNode.GetChildNode("service_levels") is null) { _explicitNullValueServiceLevels = default!; _explicitNullProperties?.Remove("service_levels"); }
+            else if (parseNode.GetChildNode("service_levels") is { } nullNodeServiceLevels && nullNodeServiceLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceLevels = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,91 +46,91 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Description for the service group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>String representation of an amount to be returned as the flat rate if 1. The service group is of type `LIVE_RATE` and no matching rates were found; or 2. The service group is of type `FLAT_RATE`. Either integers or decimals are accepted. Required unless type is `FREE_SHIPPING`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlatRate { get => _explicitNullValueFlatRate; set { _explicitNullValueFlatRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_rate"); else _explicitNullProperties?.Remove("flat_rate"); } }
+        public string? FlatRate { get => _explicitNullValueFlatRate; set { _explicitNullValueFlatRate = value; AdditionalData?.Remove("flat_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_rate"); else _explicitNullProperties?.Remove("flat_rate"); } }
         private string? _explicitNullValueFlatRate = default!;
 #nullable restore
 #else
-        public string FlatRate { get => _explicitNullValueFlatRate; set { _explicitNullValueFlatRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_rate"); else _explicitNullProperties?.Remove("flat_rate"); } }
+        public string FlatRate { get => _explicitNullValueFlatRate; set { _explicitNullValueFlatRate = value; AdditionalData?.Remove("flat_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_rate"); else _explicitNullProperties?.Remove("flat_rate"); } }
         private string _explicitNullValueFlatRate = default!;
 #endif
         /// <summary>required unless type is `FREE_SHIPPING`. (ISO 4217 currency)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlatRateCurrency { get => _explicitNullValueFlatRateCurrency; set { _explicitNullValueFlatRateCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_rate_currency"); else _explicitNullProperties?.Remove("flat_rate_currency"); } }
+        public string? FlatRateCurrency { get => _explicitNullValueFlatRateCurrency; set { _explicitNullValueFlatRateCurrency = value; AdditionalData?.Remove("flat_rate_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_rate_currency"); else _explicitNullProperties?.Remove("flat_rate_currency"); } }
         private string? _explicitNullValueFlatRateCurrency = default!;
 #nullable restore
 #else
-        public string FlatRateCurrency { get => _explicitNullValueFlatRateCurrency; set { _explicitNullValueFlatRateCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_rate_currency"); else _explicitNullProperties?.Remove("flat_rate_currency"); } }
+        public string FlatRateCurrency { get => _explicitNullValueFlatRateCurrency; set { _explicitNullValueFlatRateCurrency = value; AdditionalData?.Remove("flat_rate_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flat_rate_currency"); else _explicitNullProperties?.Remove("flat_rate_currency"); } }
         private string _explicitNullValueFlatRateCurrency = default!;
 #endif
         /// <summary>optional unless type is `FREE_SHIPPING`. (ISO 4217 currency)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreeShippingThresholdCurrency { get => _explicitNullValueFreeShippingThresholdCurrency; set { _explicitNullValueFreeShippingThresholdCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_shipping_threshold_currency"); else _explicitNullProperties?.Remove("free_shipping_threshold_currency"); } }
+        public string? FreeShippingThresholdCurrency { get => _explicitNullValueFreeShippingThresholdCurrency; set { _explicitNullValueFreeShippingThresholdCurrency = value; AdditionalData?.Remove("free_shipping_threshold_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_shipping_threshold_currency"); else _explicitNullProperties?.Remove("free_shipping_threshold_currency"); } }
         private string? _explicitNullValueFreeShippingThresholdCurrency = default!;
 #nullable restore
 #else
-        public string FreeShippingThresholdCurrency { get => _explicitNullValueFreeShippingThresholdCurrency; set { _explicitNullValueFreeShippingThresholdCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_shipping_threshold_currency"); else _explicitNullProperties?.Remove("free_shipping_threshold_currency"); } }
+        public string FreeShippingThresholdCurrency { get => _explicitNullValueFreeShippingThresholdCurrency; set { _explicitNullValueFreeShippingThresholdCurrency = value; AdditionalData?.Remove("free_shipping_threshold_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_shipping_threshold_currency"); else _explicitNullProperties?.Remove("free_shipping_threshold_currency"); } }
         private string _explicitNullValueFreeShippingThresholdCurrency = default!;
 #endif
         /// <summary>For service groups of type `FREE_SHIPPING`, this field must be required to configure the minimum cart total (total cost of items in the cart) for this service group to be returned for rates at checkout. Optional unless type is `FREE_SHIPPING`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FreeShippingThresholdMin { get => _explicitNullValueFreeShippingThresholdMin; set { _explicitNullValueFreeShippingThresholdMin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_shipping_threshold_min"); else _explicitNullProperties?.Remove("free_shipping_threshold_min"); } }
+        public string? FreeShippingThresholdMin { get => _explicitNullValueFreeShippingThresholdMin; set { _explicitNullValueFreeShippingThresholdMin = value; AdditionalData?.Remove("free_shipping_threshold_min"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_shipping_threshold_min"); else _explicitNullProperties?.Remove("free_shipping_threshold_min"); } }
         private string? _explicitNullValueFreeShippingThresholdMin = default!;
 #nullable restore
 #else
-        public string FreeShippingThresholdMin { get => _explicitNullValueFreeShippingThresholdMin; set { _explicitNullValueFreeShippingThresholdMin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_shipping_threshold_min"); else _explicitNullProperties?.Remove("free_shipping_threshold_min"); } }
+        public string FreeShippingThresholdMin { get => _explicitNullValueFreeShippingThresholdMin; set { _explicitNullValueFreeShippingThresholdMin = value; AdditionalData?.Remove("free_shipping_threshold_min"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free_shipping_threshold_min"); else _explicitNullProperties?.Remove("free_shipping_threshold_min"); } }
         private string _explicitNullValueFreeShippingThresholdMin = default!;
 #endif
         /// <summary>True if the service group is enabled, false otherwise.</summary>
-        public bool? IsActive { get => _explicitNullValueIsActive; set { _explicitNullValueIsActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_active"); else _explicitNullProperties?.Remove("is_active"); } }
+        public bool? IsActive { get => _explicitNullValueIsActive; set { _explicitNullValueIsActive = value; AdditionalData?.Remove("is_active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_active"); else _explicitNullProperties?.Remove("is_active"); } }
         private bool? _explicitNullValueIsActive = default!;
         /// <summary>Name for the service group that will be shown to customers in the response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The unique identifier of the given Service Group object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>The amount in percent (%) that the service group&apos;s returned rate should be adjusted. For example, if this field is set to 5 and the matched rate price is $5.00, the returned value of the service group will be $5.25. Negative integers are also accepted and will discount the rate price by the defined percentage amount.</summary>
-        public long? RateAdjustment { get => _explicitNullValueRateAdjustment; set { _explicitNullValueRateAdjustment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate_adjustment"); else _explicitNullProperties?.Remove("rate_adjustment"); } }
+        public long? RateAdjustment { get => _explicitNullValueRateAdjustment; set { _explicitNullValueRateAdjustment = value; AdditionalData?.Remove("rate_adjustment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate_adjustment"); else _explicitNullProperties?.Remove("rate_adjustment"); } }
         private long? _explicitNullValueRateAdjustment = default!;
         /// <summary>The service_levels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel>? ServiceLevels { get => _explicitNullValueServiceLevels; set { _explicitNullValueServiceLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_levels"); else _explicitNullProperties?.Remove("service_levels"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel>? ServiceLevels { get => _explicitNullValueServiceLevels; set { _explicitNullValueServiceLevels = value; AdditionalData?.Remove("service_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_levels"); else _explicitNullProperties?.Remove("service_levels"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel>? _explicitNullValueServiceLevels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel> ServiceLevels { get => _explicitNullValueServiceLevels; set { _explicitNullValueServiceLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_levels"); else _explicitNullProperties?.Remove("service_levels"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel> ServiceLevels { get => _explicitNullValueServiceLevels; set { _explicitNullValueServiceLevels = value; AdditionalData?.Remove("service_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_levels"); else _explicitNullProperties?.Remove("service_levels"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel> _explicitNullValueServiceLevels = default!;
 #endif
         /// <summary>The type of the service group.- `LIVE_RATE`: Shippo will make a rating request and return real-time rates for the shipping group, only falling back to the specified flat rate amount if no rates match a service level in the service group.- `FLAT_RATE`: returns a shipping option with the specified flat rate amount.- `FREE_SHIPPING`: returns a shipping option with a price of $0 only if the total cost of items exceeds the amount defined by `free_shipping_threshold_min`</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupTypeEnum? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupTypeEnum? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupTypeEnum? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroup"/> and sets the default values.
@@ -156,7 +167,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "rate_adjustment", n => { RateAdjustment = n.GetLongValue(); } },
                 { "service_levels", n => { ServiceLevels = n.GetCollectionOfObjectValues<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel>(global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupAccountAndServiceLevel.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupTypeEnum>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.ServiceGroupTypeEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

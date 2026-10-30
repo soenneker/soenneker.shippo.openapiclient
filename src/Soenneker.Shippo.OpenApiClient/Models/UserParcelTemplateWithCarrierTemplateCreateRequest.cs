@@ -17,9 +17,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
-            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
-            if (parseNode.GetChildNode("weight_unit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
+            if (parseNode.GetChildNode("template") is null) { _explicitNullValueTemplate = default!; _explicitNullProperties?.Remove("template"); }
+            else if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+            if (parseNode.GetChildNode("weight") is null) { _explicitNullValueWeight = default!; _explicitNullProperties?.Remove("weight"); }
+            else if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("weight_unit") is null) { _explicitNullValueWeightUnit = default!; _explicitNullProperties?.Remove("weight_unit"); }
+            else if (parseNode.GetChildNode("weight_unit") is { } nullNodeWeightUnit && nullNodeWeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WeightUnit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The object representing the carrier parcel template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        public string? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
         private string? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public string Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        public string Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; AdditionalData?.Remove("template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
         private string _explicitNullValueTemplate = default!;
 #endif
         /// <summary>The weight of the package, in units specified by the weight_unit attribute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
         private string? _explicitNullValueWeight = default!;
 #nullable restore
 #else
-        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
         private string _explicitNullValueWeight = default!;
 #endif
         /// <summary>The unit used for weight.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight_unit"); else _explicitNullProperties?.Remove("weight_unit"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? WeightUnit { get => _explicitNullValueWeightUnit; set { _explicitNullValueWeightUnit = value; AdditionalData?.Remove("weight_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight_unit"); else _explicitNullProperties?.Remove("weight_unit"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum? _explicitNullValueWeightUnit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateWithCarrierTemplateCreateRequest"/> and sets the default values.
@@ -74,7 +77,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             {
                 { "template", n => { Template = n.GetStringValue(); } },
                 { "weight", n => { Weight = n.GetStringValue(); } },
-                { "weight_unit", n => { WeightUnit = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); } },
+                { "weight_unit", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWeightUnit = default; _explicitNullProperties?.Remove("weight_unit"); AdditionalData["weight_unit"] = unknown; } else { WeightUnit = parsed; AdditionalData.Remove("weight_unit"); } } },
             };
         }
         /// <summary>

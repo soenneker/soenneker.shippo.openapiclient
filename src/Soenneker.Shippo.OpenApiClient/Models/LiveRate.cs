@@ -17,12 +17,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("amount_local") is { } nullNodeAmountLocal && nullNodeAmountLocal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountLocal = null;
-            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
-            if (parseNode.GetChildNode("currency_local") is { } nullNodeCurrencyLocal && nullNodeCurrencyLocal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyLocal = null;
-            if (parseNode.GetChildNode("estimated_days") is { } nullNodeEstimatedDays && nullNodeEstimatedDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedDays = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("amount_local") is null) { _explicitNullValueAmountLocal = default!; _explicitNullProperties?.Remove("amount_local"); }
+            else if (parseNode.GetChildNode("amount_local") is { } nullNodeAmountLocal && nullNodeAmountLocal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountLocal = null;
+            if (parseNode.GetChildNode("currency") is null) { _explicitNullValueCurrency = default!; _explicitNullProperties?.Remove("currency"); }
+            else if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("currency_local") is null) { _explicitNullValueCurrencyLocal = default!; _explicitNullProperties?.Remove("currency_local"); }
+            else if (parseNode.GetChildNode("currency_local") is { } nullNodeCurrencyLocal && nullNodeCurrencyLocal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyLocal = null;
+            if (parseNode.GetChildNode("estimated_days") is null) { _explicitNullValueEstimatedDays = default!; _explicitNullProperties?.Remove("estimated_days"); }
+            else if (parseNode.GetChildNode("estimated_days") is { } nullNodeEstimatedDays && nullNodeEstimatedDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedDays = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,54 +36,54 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Final Rate price, expressed in the currency used in the sender&apos;s country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private string? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private string _explicitNullValueAmount = default!;
 #endif
         /// <summary>Final Rate price, expressed in the currency used in the recipient&apos;s country.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AmountLocal { get => _explicitNullValueAmountLocal; set { _explicitNullValueAmountLocal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_local"); else _explicitNullProperties?.Remove("amount_local"); } }
+        public string? AmountLocal { get => _explicitNullValueAmountLocal; set { _explicitNullValueAmountLocal = value; AdditionalData?.Remove("amount_local"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_local"); else _explicitNullProperties?.Remove("amount_local"); } }
         private string? _explicitNullValueAmountLocal = default!;
 #nullable restore
 #else
-        public string AmountLocal { get => _explicitNullValueAmountLocal; set { _explicitNullValueAmountLocal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_local"); else _explicitNullProperties?.Remove("amount_local"); } }
+        public string AmountLocal { get => _explicitNullValueAmountLocal; set { _explicitNullValueAmountLocal = value; AdditionalData?.Remove("amount_local"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount_local"); else _explicitNullProperties?.Remove("amount_local"); } }
         private string _explicitNullValueAmountLocal = default!;
 #endif
         /// <summary>Currency used in the sender&apos;s country, refers to `amount`.The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. `USD` or `EUR`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Currency used in the recipient&apos;s country, refers to `amount_local`.The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. `USD` or &quot;EUR&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrencyLocal { get => _explicitNullValueCurrencyLocal; set { _explicitNullValueCurrencyLocal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_local"); else _explicitNullProperties?.Remove("currency_local"); } }
+        public string? CurrencyLocal { get => _explicitNullValueCurrencyLocal; set { _explicitNullValueCurrencyLocal = value; AdditionalData?.Remove("currency_local"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_local"); else _explicitNullProperties?.Remove("currency_local"); } }
         private string? _explicitNullValueCurrencyLocal = default!;
 #nullable restore
 #else
-        public string CurrencyLocal { get => _explicitNullValueCurrencyLocal; set { _explicitNullValueCurrencyLocal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_local"); else _explicitNullProperties?.Remove("currency_local"); } }
+        public string CurrencyLocal { get => _explicitNullValueCurrencyLocal; set { _explicitNullValueCurrencyLocal = value; AdditionalData?.Remove("currency_local"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_local"); else _explicitNullProperties?.Remove("currency_local"); } }
         private string _explicitNullValueCurrencyLocal = default!;
 #endif
         /// <summary>The estimated days in transit of the rate that powers the shipping option, if available.</summary>
-        public long? EstimatedDays { get => _explicitNullValueEstimatedDays; set { _explicitNullValueEstimatedDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimated_days"); else _explicitNullProperties?.Remove("estimated_days"); } }
+        public long? EstimatedDays { get => _explicitNullValueEstimatedDays; set { _explicitNullValueEstimatedDays = value; AdditionalData?.Remove("estimated_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimated_days"); else _explicitNullProperties?.Remove("estimated_days"); } }
         private long? _explicitNullValueEstimatedDays = default!;
         /// <summary>The name of the service group being returned</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>

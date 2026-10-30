@@ -18,10 +18,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
-            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
-            if (parseNode.GetChildNode("provider") is { } nullNodeProvider && nullNodeProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provider = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("content") is null) { _explicitNullValueContent = default!; _explicitNullProperties?.Remove("content"); }
+            else if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("currency") is null) { _explicitNullValueCurrency = default!; _explicitNullProperties?.Remove("currency"); }
+            else if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("provider") is null) { _explicitNullValueProvider = default!; _explicitNullProperties?.Remove("provider"); }
+            else if (parseNode.GetChildNode("provider") is { } nullNodeProvider && nullNodeProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provider = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,35 +33,35 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Declared value of the goods you want to insure.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public string? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private string? _explicitNullValueAmount = default!;
 #nullable restore
 #else
-        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public string Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private string _explicitNullValueAmount = default!;
 #endif
         /// <summary>Description of package content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
         private string? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
         private string _explicitNullValueContent = default!;
 #endif
         /// <summary>Currency for the amount value.Currently only USD is supported for FedEx and UPS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>To have insurance cover provided by a carrier directly instead of Shippo&apos;s provider (XCover), set `provider` to `FEDEX`, `UPS`, or `ONTRAC`.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.InsuranceProvider? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.InsuranceProvider? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.InsuranceProvider? _explicitNullValueProvider = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Insurance"/> and sets the default values.
@@ -87,7 +91,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetStringValue(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.InsuranceProvider>(); } },
+                { "provider", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.InsuranceProvider>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProvider = default; _explicitNullProperties?.Remove("provider"); AdditionalData["provider"] = unknown; } else { Provider = parsed; AdditionalData.Remove("provider"); } } },
             };
         }
         /// <summary>

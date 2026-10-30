@@ -17,61 +17,67 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
-            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
-            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("parameters") is { } nullNodeParameters && nullNodeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameters = null;
-            if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
+            if (parseNode.GetChildNode("account_id") is null) { _explicitNullValueAccountId = default!; _explicitNullProperties?.Remove("account_id"); }
+            else if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("active") is null) { _explicitNullValueActive = default!; _explicitNullProperties?.Remove("active"); }
+            else if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("carrier") is null) { _explicitNullValueCarrier = default!; _explicitNullProperties?.Remove("carrier"); }
+            else if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("parameters") is null) { _explicitNullValueParameters = default!; _explicitNullProperties?.Remove("parameters"); }
+            else if (parseNode.GetChildNode("parameters") is { } nullNodeParameters && nullNodeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameters = null;
+            if (parseNode.GetChildNode("test") is null) { _explicitNullValueTest = default!; _explicitNullProperties?.Remove("test"); }
+            else if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
         }
 
         /// <summary>The account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>The active property</summary>
-        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The carrier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string? _explicitNullValueCarrier = default!;
 #nullable restore
 #else
-        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private string _explicitNullValueCarrier = default!;
 #endif
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
-        private global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters? _explicitNullValueParameters = default!;
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters? _explicitNullValueParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
-        private global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters _explicitNullValueParameters = default!;
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters _explicitNullValueParameters = default!;
 #endif
         /// <summary>The test property</summary>
-        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
+        public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; AdditionalData?.Remove("test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
         private bool? _explicitNullValueTest = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequest"/> and sets the default values.
@@ -102,7 +108,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "carrier", n => { Carrier = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters>(global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters.CreateFromDiscriminatorValue); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
@@ -117,7 +123,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("carrier", Carrier);
             writer.WriteStringValue("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters>("parameters", Parameters);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters>("parameters", Parameters);
             writer.WriteBoolValue("test", Test);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

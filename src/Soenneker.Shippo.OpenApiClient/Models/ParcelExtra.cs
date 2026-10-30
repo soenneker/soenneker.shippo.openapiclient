@@ -18,10 +18,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("COD") is { } nullNodeCOD && nullNodeCOD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) COD = null;
-            if (parseNode.GetChildNode("insurance") is { } nullNodeInsurance && nullNodeInsurance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Insurance = null;
-            if (parseNode.GetChildNode("reference_1") is { } nullNodeReference1 && nullNodeReference1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference1 = null;
-            if (parseNode.GetChildNode("reference_2") is { } nullNodeReference2 && nullNodeReference2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference2 = null;
+            if (parseNode.GetChildNode("COD") is null) { _explicitNullValueCOD = default!; _explicitNullProperties?.Remove("COD"); }
+            else if (parseNode.GetChildNode("COD") is { } nullNodeCOD && nullNodeCOD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) COD = null;
+            if (parseNode.GetChildNode("insurance") is null) { _explicitNullValueInsurance = default!; _explicitNullProperties?.Remove("insurance"); }
+            else if (parseNode.GetChildNode("insurance") is { } nullNodeInsurance && nullNodeInsurance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Insurance = null;
+            if (parseNode.GetChildNode("reference_1") is null) { _explicitNullValueReference1 = default!; _explicitNullProperties?.Remove("reference_1"); }
+            else if (parseNode.GetChildNode("reference_1") is { } nullNodeReference1 && nullNodeReference1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference1 = null;
+            if (parseNode.GetChildNode("reference_2") is null) { _explicitNullValueReference2 = default!; _explicitNullProperties?.Remove("reference_2"); }
+            else if (parseNode.GetChildNode("reference_2") is { } nullNodeReference2 && nullNodeReference2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference2 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Specify collection on delivery details (UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.Cod? COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Cod? COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; AdditionalData?.Remove("COD"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.Cod? _explicitNullValueCOD = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.Cod COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Cod COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; AdditionalData?.Remove("COD"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.Cod _explicitNullValueCOD = default!;
 #endif
         /// <summary>To add insurance to your parcel, specify `amount`, `content` and `currency`. If you do not want to add insurance to your parcel, do not set these parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance? Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insurance"); else _explicitNullProperties?.Remove("insurance"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance? Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; AdditionalData?.Remove("insurance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insurance"); else _explicitNullProperties?.Remove("insurance"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance? _explicitNullValueInsurance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insurance"); else _explicitNullProperties?.Remove("insurance"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; AdditionalData?.Remove("insurance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insurance"); else _explicitNullProperties?.Remove("insurance"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ParcelInsurance _explicitNullValueInsurance = default!;
 #endif
         /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference1 { get => _explicitNullValueReference1; set { _explicitNullValueReference1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_1"); else _explicitNullProperties?.Remove("reference_1"); } }
+        public string? Reference1 { get => _explicitNullValueReference1; set { _explicitNullValueReference1 = value; AdditionalData?.Remove("reference_1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_1"); else _explicitNullProperties?.Remove("reference_1"); } }
         private string? _explicitNullValueReference1 = default!;
 #nullable restore
 #else
-        public string Reference1 { get => _explicitNullValueReference1; set { _explicitNullValueReference1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_1"); else _explicitNullProperties?.Remove("reference_1"); } }
+        public string Reference1 { get => _explicitNullValueReference1; set { _explicitNullValueReference1 = value; AdditionalData?.Remove("reference_1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_1"); else _explicitNullProperties?.Remove("reference_1"); } }
         private string _explicitNullValueReference1 = default!;
 #endif
         /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference2 { get => _explicitNullValueReference2; set { _explicitNullValueReference2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_2"); else _explicitNullProperties?.Remove("reference_2"); } }
+        public string? Reference2 { get => _explicitNullValueReference2; set { _explicitNullValueReference2 = value; AdditionalData?.Remove("reference_2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_2"); else _explicitNullProperties?.Remove("reference_2"); } }
         private string? _explicitNullValueReference2 = default!;
 #nullable restore
 #else
-        public string Reference2 { get => _explicitNullValueReference2; set { _explicitNullValueReference2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_2"); else _explicitNullProperties?.Remove("reference_2"); } }
+        public string Reference2 { get => _explicitNullValueReference2; set { _explicitNullValueReference2 = value; AdditionalData?.Remove("reference_2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_2"); else _explicitNullProperties?.Remove("reference_2"); } }
         private string _explicitNullValueReference2 = default!;
 #endif
         /// <summary>

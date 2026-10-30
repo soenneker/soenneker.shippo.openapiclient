@@ -18,23 +18,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contains_dry_ice") is { } nullNodeContainsDryIce && nullNodeContainsDryIce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainsDryIce = null;
-            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("contains_dry_ice") is null) { _explicitNullValueContainsDryIce = default!; _explicitNullProperties?.Remove("contains_dry_ice"); }
+            else if (parseNode.GetChildNode("contains_dry_ice") is { } nullNodeContainsDryIce && nullNodeContainsDryIce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainsDryIce = null;
+            if (parseNode.GetChildNode("weight") is null) { _explicitNullValueWeight = default!; _explicitNullProperties?.Remove("weight"); }
+            else if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Mandatory. Specifies that the package contains Dry Ice.</summary>
-        public bool? ContainsDryIce { get => _explicitNullValueContainsDryIce; set { _explicitNullValueContainsDryIce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains_dry_ice"); else _explicitNullProperties?.Remove("contains_dry_ice"); } }
+        public bool? ContainsDryIce { get => _explicitNullValueContainsDryIce; set { _explicitNullValueContainsDryIce = value; AdditionalData?.Remove("contains_dry_ice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains_dry_ice"); else _explicitNullProperties?.Remove("contains_dry_ice"); } }
         private bool? _explicitNullValueContainsDryIce = default!;
         /// <summary>Mandatory. Units must be in Kilograms. Cannot be greater than package weight.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        public string? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
         private string? _explicitNullValueWeight = default!;
 #nullable restore
 #else
-        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        public string Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
         private string _explicitNullValueWeight = default!;
 #endif
         /// <summary>

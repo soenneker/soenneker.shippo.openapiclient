@@ -17,49 +17,54 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("async") is { } nullNodeAsync && nullNodeAsync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Async = null;
-            if (parseNode.GetChildNode("label_file_type") is { } nullNodeLabelFileType && nullNodeLabelFileType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelFileType = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
-            if (parseNode.GetChildNode("rate") is { } nullNodeRate && nullNodeRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rate = null;
+            if (parseNode.GetChildNode("async") is null) { _explicitNullValueAsync = default!; _explicitNullProperties?.Remove("async"); }
+            else if (parseNode.GetChildNode("async") is { } nullNodeAsync && nullNodeAsync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Async = null;
+            if (parseNode.GetChildNode("label_file_type") is null) { _explicitNullValueLabelFileType = default!; _explicitNullProperties?.Remove("label_file_type"); }
+            else if (parseNode.GetChildNode("label_file_type") is { } nullNodeLabelFileType && nullNodeLabelFileType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelFileType = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("order") is null) { _explicitNullValueOrder = default!; _explicitNullProperties?.Remove("order"); }
+            else if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("rate") is null) { _explicitNullValueRate = default!; _explicitNullProperties?.Remove("rate"); }
+            else if (parseNode.GetChildNode("rate") is { } nullNodeRate && nullNodeRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The async property</summary>
-        public bool? Async { get => _explicitNullValueAsync; set { _explicitNullValueAsync = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async"); else _explicitNullProperties?.Remove("async"); } }
+        public bool? Async { get => _explicitNullValueAsync; set { _explicitNullValueAsync = value; AdditionalData?.Remove("async"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async"); else _explicitNullProperties?.Remove("async"); } }
         private bool? _explicitNullValueAsync = default!;
         /// <summary>Print format of the [label](https://docs.goshippo.com/docs/shipments/shippinglabelsizes/). If empty, will use the default format set from [the Shippo dashboard.](https://apps.goshippo.com/settings/labels)</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFileType { get => _explicitNullValueLabelFileType; set { _explicitNullValueLabelFileType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_file_type"); else _explicitNullProperties?.Remove("label_file_type"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? LabelFileType { get => _explicitNullValueLabelFileType; set { _explicitNullValueLabelFileType = value; AdditionalData?.Remove("label_file_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_file_type"); else _explicitNullProperties?.Remove("label_file_type"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum? _explicitNullValueLabelFileType = default!;
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The order property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public string? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private string? _explicitNullValueOrder = default!;
 #nullable restore
 #else
-        public string Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public string Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private string _explicitNullValueOrder = default!;
 #endif
         /// <summary>The rate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Rate { get => _explicitNullValueRate; set { _explicitNullValueRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate"); else _explicitNullProperties?.Remove("rate"); } }
+        public string? Rate { get => _explicitNullValueRate; set { _explicitNullValueRate = value; AdditionalData?.Remove("rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate"); else _explicitNullProperties?.Remove("rate"); } }
         private string? _explicitNullValueRate = default!;
 #nullable restore
 #else
-        public string Rate { get => _explicitNullValueRate; set { _explicitNullValueRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate"); else _explicitNullProperties?.Remove("rate"); } }
+        public string Rate { get => _explicitNullValueRate; set { _explicitNullValueRate = value; AdditionalData?.Remove("rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rate"); else _explicitNullProperties?.Remove("rate"); } }
         private string _explicitNullValueRate = default!;
 #endif
         /// <summary>
@@ -89,7 +94,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "async", n => { Async = n.GetBoolValue(); } },
-                { "label_file_type", n => { LabelFileType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>(); } },
+                { "label_file_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLabelFileType = default; _explicitNullProperties?.Remove("label_file_type"); AdditionalData["label_file_type"] = unknown; } else { LabelFileType = parsed; AdditionalData.Remove("label_file_type"); } } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "order", n => { Order = n.GetStringValue(); } },
                 { "rate", n => { Rate = n.GetStringValue(); } },

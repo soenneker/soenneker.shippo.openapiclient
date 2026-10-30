@@ -18,9 +18,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
-            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
-            if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("code") is null) { _explicitNullValueCode = default!; _explicitNullProperties?.Remove("code"); }
+            else if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("text") is null) { _explicitNullValueText = default!; _explicitNullProperties?.Remove("text"); }
+            else if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Classification of message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private string _explicitNullValueCode = default!;
 #endif
         /// <summary>Origin of message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private string _explicitNullValueSource = default!;
 #endif
         /// <summary>Message content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
         private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
         private string _explicitNullValueText = default!;
 #endif
         /// <summary>

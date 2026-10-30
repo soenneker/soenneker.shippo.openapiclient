@@ -17,23 +17,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expiresIn") is { } nullNodeExpiresIn && nullNodeExpiresIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresIn = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("expiresIn") is null) { _explicitNullValueExpiresIn = default!; _explicitNullProperties?.Remove("expiresIn"); }
+            else if (parseNode.GetChildNode("expiresIn") is { } nullNodeExpiresIn && nullNodeExpiresIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresIn = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Unix timestamp (seconds) of when the token expires. This matches the `exp` claim inside the token itself. Tokens are valid for 12 hours from issue.</summary>
-        public int? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiresIn"); else _explicitNullProperties?.Remove("expiresIn"); } }
+        public int? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; AdditionalData?.Remove("expiresIn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiresIn"); else _explicitNullProperties?.Remove("expiresIn"); } }
         private int? _explicitNullValueExpiresIn = default!;
         /// <summary>The encoded JSON Web Token. Pass it on subsequent API requests as `Authorization: JWT &lt;JWT_TOKEN&gt;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>

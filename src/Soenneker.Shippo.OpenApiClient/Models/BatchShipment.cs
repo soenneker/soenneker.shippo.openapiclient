@@ -18,14 +18,22 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carrier_account") is { } nullNodeCarrierAccount && nullNodeCarrierAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierAccount = null;
-            if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
-            if (parseNode.GetChildNode("servicelevel_token") is { } nullNodeServicelevelToken && nullNodeServicelevelToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServicelevelToken = null;
-            if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
+            if (parseNode.GetChildNode("carrier_account") is null) { _explicitNullValueCarrierAccount = default!; _explicitNullProperties?.Remove("carrier_account"); }
+            else if (parseNode.GetChildNode("carrier_account") is { } nullNodeCarrierAccount && nullNodeCarrierAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierAccount = null;
+            if (parseNode.GetChildNode("messages") is null) { _explicitNullValueMessages = default!; _explicitNullProperties?.Remove("messages"); }
+            else if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("object_id") is null) { _explicitNullValueObjectId = default!; _explicitNullProperties?.Remove("object_id"); }
+            else if (parseNode.GetChildNode("object_id") is { } nullNodeObjectId && nullNodeObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectId = null;
+            if (parseNode.GetChildNode("servicelevel_token") is null) { _explicitNullValueServicelevelToken = default!; _explicitNullProperties?.Remove("servicelevel_token"); }
+            else if (parseNode.GetChildNode("servicelevel_token") is { } nullNodeServicelevelToken && nullNodeServicelevelToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServicelevelToken = null;
+            if (parseNode.GetChildNode("shipment") is null) { _explicitNullValueShipment = default!; _explicitNullProperties?.Remove("shipment"); }
+            else if (parseNode.GetChildNode("shipment") is { } nullNodeShipment && nullNodeShipment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shipment = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("transaction") is null) { _explicitNullValueTransaction = default!; _explicitNullProperties?.Remove("transaction"); }
+            else if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,74 +41,74 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Object ID of the carrier account to be used for this shipment (will override batch default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
+        public string? CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; AdditionalData?.Remove("carrier_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
         private string? _explicitNullValueCarrierAccount = default!;
 #nullable restore
 #else
-        public string CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
+        public string CarrierAccount { get => _explicitNullValueCarrierAccount; set { _explicitNullValueCarrierAccount = value; AdditionalData?.Remove("carrier_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_account"); else _explicitNullProperties?.Remove("carrier_account"); } }
         private string _explicitNullValueCarrierAccount = default!;
 #endif
         /// <summary>List of Shipment and Transaction error messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        public UntypedNode? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; AdditionalData?.Remove("messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
         private UntypedNode? _explicitNullValueMessages = default!;
 #nullable restore
 #else
-        public UntypedNode Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        public UntypedNode Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; AdditionalData?.Remove("messages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
         private UntypedNode _explicitNullValueMessages = default!;
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Object ID of this batch shipment. Can be used in the remove_shipments endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string? ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string? _explicitNullValueObjectId = default!;
 #nullable restore
 #else
-        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
+        public string ObjectId { get => _explicitNullValueObjectId; set { _explicitNullValueObjectId = value; AdditionalData?.Remove("object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object_id"); else _explicitNullProperties?.Remove("object_id"); } }
         private string _explicitNullValueObjectId = default!;
 #endif
         /// <summary>A token that sets the shipping method for the batch, overriding the batch default.Servicelevel tokens can be found [in this list](/shippoapi/public-api/service-levels) or [at this endpoint](/shippoapi/public-api/carrier-accounts/listcarrieraccounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServicelevelToken { get => _explicitNullValueServicelevelToken; set { _explicitNullValueServicelevelToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("servicelevel_token"); else _explicitNullProperties?.Remove("servicelevel_token"); } }
+        public string? ServicelevelToken { get => _explicitNullValueServicelevelToken; set { _explicitNullValueServicelevelToken = value; AdditionalData?.Remove("servicelevel_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("servicelevel_token"); else _explicitNullProperties?.Remove("servicelevel_token"); } }
         private string? _explicitNullValueServicelevelToken = default!;
 #nullable restore
 #else
-        public string ServicelevelToken { get => _explicitNullValueServicelevelToken; set { _explicitNullValueServicelevelToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("servicelevel_token"); else _explicitNullProperties?.Remove("servicelevel_token"); } }
+        public string ServicelevelToken { get => _explicitNullValueServicelevelToken; set { _explicitNullValueServicelevelToken = value; AdditionalData?.Remove("servicelevel_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("servicelevel_token"); else _explicitNullProperties?.Remove("servicelevel_token"); } }
         private string _explicitNullValueServicelevelToken = default!;
 #endif
         /// <summary>Object ID of the shipment object created for this batch shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        public string? Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
         private string? _explicitNullValueShipment = default!;
 #nullable restore
 #else
-        public string Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
+        public string Shipment { get => _explicitNullValueShipment; set { _explicitNullValueShipment = value; AdditionalData?.Remove("shipment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment"); else _explicitNullProperties?.Remove("shipment"); } }
         private string _explicitNullValueShipment = default!;
 #endif
         /// <summary>- `INVALID`: the batch shipment cannot be purchased and will have to be removed, fixed, and added to the batch again- `VALID`: the batch shipment can be purchased- `TRANSACTION_FAILED`: the batch shipment was not able to be purchased and the error will be displayed on the message field- `INCOMPLETE`: the batch shipment has an issue with the Address and will need to be removed, fixed, and added to the batch again</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus? _explicitNullValueStatus = default!;
         /// <summary>Object ID of the transaction object created for this batch shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        public string? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
         private string? _explicitNullValueTransaction = default!;
 #nullable restore
 #else
-        public string Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        public string Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; AdditionalData?.Remove("transaction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
         private string _explicitNullValueTransaction = default!;
 #endif
         /// <summary>
@@ -134,7 +142,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "object_id", n => { ObjectId = n.GetStringValue(); } },
                 { "servicelevel_token", n => { ServicelevelToken = n.GetStringValue(); } },
                 { "shipment", n => { Shipment = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.BatchShipmentStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "transaction", n => { Transaction = n.GetStringValue(); } },
             };
         }

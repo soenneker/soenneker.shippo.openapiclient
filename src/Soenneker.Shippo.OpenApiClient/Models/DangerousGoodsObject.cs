@@ -18,9 +18,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("biological_material") is { } nullNodeBiologicalMaterial && nullNodeBiologicalMaterial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BiologicalMaterial = null;
-            if (parseNode.GetChildNode("contains") is { } nullNodeContains && nullNodeContains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contains = null;
-            if (parseNode.GetChildNode("lithium_batteries") is { } nullNodeLithiumBatteries && nullNodeLithiumBatteries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LithiumBatteries = null;
+            if (parseNode.GetChildNode("biological_material") is null) { _explicitNullValueBiologicalMaterial = default!; _explicitNullProperties?.Remove("biological_material"); }
+            else if (parseNode.GetChildNode("biological_material") is { } nullNodeBiologicalMaterial && nullNodeBiologicalMaterial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BiologicalMaterial = null;
+            if (parseNode.GetChildNode("contains") is null) { _explicitNullValueContains = default!; _explicitNullProperties?.Remove("contains"); }
+            else if (parseNode.GetChildNode("contains") is { } nullNodeContains && nullNodeContains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contains = null;
+            if (parseNode.GetChildNode("lithium_batteries") is null) { _explicitNullValueLithiumBatteries = default!; _explicitNullProperties?.Remove("lithium_batteries"); }
+            else if (parseNode.GetChildNode("lithium_batteries") is { } nullNodeLithiumBatteries && nullNodeLithiumBatteries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LithiumBatteries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,24 +31,24 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Container for specifying the presence of biological material.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsBiologicalMaterial? BiologicalMaterial { get => _explicitNullValueBiologicalMaterial; set { _explicitNullValueBiologicalMaterial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biological_material"); else _explicitNullProperties?.Remove("biological_material"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsBiologicalMaterial? BiologicalMaterial { get => _explicitNullValueBiologicalMaterial; set { _explicitNullValueBiologicalMaterial = value; AdditionalData?.Remove("biological_material"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biological_material"); else _explicitNullProperties?.Remove("biological_material"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsBiologicalMaterial? _explicitNullValueBiologicalMaterial = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsBiologicalMaterial BiologicalMaterial { get => _explicitNullValueBiologicalMaterial; set { _explicitNullValueBiologicalMaterial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biological_material"); else _explicitNullProperties?.Remove("biological_material"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsBiologicalMaterial BiologicalMaterial { get => _explicitNullValueBiologicalMaterial; set { _explicitNullValueBiologicalMaterial = value; AdditionalData?.Remove("biological_material"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biological_material"); else _explicitNullProperties?.Remove("biological_material"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsBiologicalMaterial _explicitNullValueBiologicalMaterial = default!;
 #endif
         /// <summary>Indicates if the shipment contains dangerous goods.</summary>
-        public bool? Contains { get => _explicitNullValueContains; set { _explicitNullValueContains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains"); else _explicitNullProperties?.Remove("contains"); } }
+        public bool? Contains { get => _explicitNullValueContains; set { _explicitNullValueContains = value; AdditionalData?.Remove("contains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains"); else _explicitNullProperties?.Remove("contains"); } }
         private bool? _explicitNullValueContains = default!;
         /// <summary>Container for specifying the presence of lithium batteries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsLithiumBatteries? LithiumBatteries { get => _explicitNullValueLithiumBatteries; set { _explicitNullValueLithiumBatteries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lithium_batteries"); else _explicitNullProperties?.Remove("lithium_batteries"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsLithiumBatteries? LithiumBatteries { get => _explicitNullValueLithiumBatteries; set { _explicitNullValueLithiumBatteries = value; AdditionalData?.Remove("lithium_batteries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lithium_batteries"); else _explicitNullProperties?.Remove("lithium_batteries"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsLithiumBatteries? _explicitNullValueLithiumBatteries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsLithiumBatteries LithiumBatteries { get => _explicitNullValueLithiumBatteries; set { _explicitNullValueLithiumBatteries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lithium_batteries"); else _explicitNullProperties?.Remove("lithium_batteries"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsLithiumBatteries LithiumBatteries { get => _explicitNullValueLithiumBatteries; set { _explicitNullValueLithiumBatteries = value; AdditionalData?.Remove("lithium_batteries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lithium_batteries"); else _explicitNullProperties?.Remove("lithium_batteries"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsLithiumBatteries _explicitNullValueLithiumBatteries = default!;
 #endif
         /// <summary>

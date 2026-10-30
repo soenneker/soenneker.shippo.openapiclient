@@ -17,31 +17,35 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
-            if (parseNode.GetChildNode("event") is { } nullNodeEvent && nullNodeEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Event = null;
-            if (parseNode.GetChildNode("is_test") is { } nullNodeIsTest && nullNodeIsTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTest = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("active") is null) { _explicitNullValueActive = default!; _explicitNullProperties?.Remove("active"); }
+            else if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("event") is null) { _explicitNullValueEvent = default!; _explicitNullProperties?.Remove("event"); }
+            else if (parseNode.GetChildNode("event") is { } nullNodeEvent && nullNodeEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Event = null;
+            if (parseNode.GetChildNode("is_test") is null) { _explicitNullValueIsTest = default!; _explicitNullProperties?.Remove("is_test"); }
+            else if (parseNode.GetChildNode("is_test") is { } nullNodeIsTest && nullNodeIsTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsTest = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Determines whether the webhook is active or not.</summary>
-        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of event that triggered the webhook.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.WebhookUpdateRequestEvent? Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.WebhookUpdateRequestEvent? Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; AdditionalData?.Remove("event"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.WebhookUpdateRequestEvent? _explicitNullValueEvent = default!;
         /// <summary>Determines whether the webhook is a test webhook or not.</summary>
-        public bool? IsTest { get => _explicitNullValueIsTest; set { _explicitNullValueIsTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_test"); else _explicitNullProperties?.Remove("is_test"); } }
+        public bool? IsTest { get => _explicitNullValueIsTest; set { _explicitNullValueIsTest = value; AdditionalData?.Remove("is_test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_test"); else _explicitNullProperties?.Remove("is_test"); } }
         private bool? _explicitNullValueIsTest = default!;
         /// <summary>URL webhook events are sent to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -70,7 +74,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "event", n => { Event = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WebhookUpdateRequestEvent>(); } },
+                { "event", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WebhookUpdateRequestEvent>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEvent = default; _explicitNullProperties?.Remove("event"); AdditionalData["event"] = unknown; } else { Event = parsed; AdditionalData.Remove("event"); } } },
                 { "is_test", n => { IsTest = n.GetBoolValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };

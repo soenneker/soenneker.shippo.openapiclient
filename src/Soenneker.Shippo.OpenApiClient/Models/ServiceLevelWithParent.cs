@@ -17,11 +17,16 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("extended_token") is { } nullNodeExtendedToken && nullNodeExtendedToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtendedToken = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("parent_servicelevel") is { } nullNodeParentServicelevel && nullNodeParentServicelevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentServicelevel = null;
-            if (parseNode.GetChildNode("terms") is { } nullNodeTerms && nullNodeTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Terms = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("extended_token") is null) { _explicitNullValueExtendedToken = default!; _explicitNullProperties?.Remove("extended_token"); }
+            else if (parseNode.GetChildNode("extended_token") is { } nullNodeExtendedToken && nullNodeExtendedToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtendedToken = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parent_servicelevel") is null) { _explicitNullValueParentServicelevel = default!; _explicitNullProperties?.Remove("parent_servicelevel"); }
+            else if (parseNode.GetChildNode("parent_servicelevel") is { } nullNodeParentServicelevel && nullNodeParentServicelevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentServicelevel = null;
+            if (parseNode.GetChildNode("terms") is null) { _explicitNullValueTerms = default!; _explicitNullProperties?.Remove("terms"); }
+            else if (parseNode.GetChildNode("terms") is { } nullNodeTerms && nullNodeTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Terms = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Unique, extended version of the Service Level &quot;token&quot;.Guaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExtendedToken { get => _explicitNullValueExtendedToken; set { _explicitNullValueExtendedToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_token"); else _explicitNullProperties?.Remove("extended_token"); } }
+        public string? ExtendedToken { get => _explicitNullValueExtendedToken; set { _explicitNullValueExtendedToken = value; AdditionalData?.Remove("extended_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_token"); else _explicitNullProperties?.Remove("extended_token"); } }
         private string? _explicitNullValueExtendedToken = default!;
 #nullable restore
 #else
-        public string ExtendedToken { get => _explicitNullValueExtendedToken; set { _explicitNullValueExtendedToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_token"); else _explicitNullProperties?.Remove("extended_token"); } }
+        public string ExtendedToken { get => _explicitNullValueExtendedToken; set { _explicitNullValueExtendedToken = value; AdditionalData?.Remove("extended_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_token"); else _explicitNullProperties?.Remove("extended_token"); } }
         private string _explicitNullValueExtendedToken = default!;
 #endif
         /// <summary>Name of the Rate&apos;s servicelevel, e.g. `International Priority` or `Standard Post`.A servicelevel commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.These names vary depending on the provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Used for some Service Levels to link to the more &quot;generic&quot; version of this Service Level - for example, if this Service Level is a variation specific to shipments to Europe(&quot;ups_saver_eu&quot;), the &quot;parent&quot; is the fully generic version (&quot;ups_saver&quot;). Helpful when displaying Service Levels to users. Has the same structure of the servicelevel - &quot;name&quot;, &quot;token&quot;, &quot;terms&quot;, and &quot;extended_token&quot;, or it is otherwise null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel? ParentServicelevel { get => _explicitNullValueParentServicelevel; set { _explicitNullValueParentServicelevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_servicelevel"); else _explicitNullProperties?.Remove("parent_servicelevel"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel? ParentServicelevel { get => _explicitNullValueParentServicelevel; set { _explicitNullValueParentServicelevel = value; AdditionalData?.Remove("parent_servicelevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_servicelevel"); else _explicitNullProperties?.Remove("parent_servicelevel"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel? _explicitNullValueParentServicelevel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel ParentServicelevel { get => _explicitNullValueParentServicelevel; set { _explicitNullValueParentServicelevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_servicelevel"); else _explicitNullProperties?.Remove("parent_servicelevel"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel ParentServicelevel { get => _explicitNullValueParentServicelevel; set { _explicitNullValueParentServicelevel = value; AdditionalData?.Remove("parent_servicelevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_servicelevel"); else _explicitNullProperties?.Remove("parent_servicelevel"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParentAllOf2ParentServicelevel _explicitNullValueParentServicelevel = default!;
 #endif
         /// <summary>Further clarification of the service. For FedEx, a value of `ONERATE` indicates this rate is a FedEx One Rate variant of the same service level — it shares the same `token` as the standard-rate object but is a separate rate with its own `amount`.Standard (non-One Rate) rates have an empty string here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Terms { get => _explicitNullValueTerms; set { _explicitNullValueTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms"); else _explicitNullProperties?.Remove("terms"); } }
+        public string? Terms { get => _explicitNullValueTerms; set { _explicitNullValueTerms = value; AdditionalData?.Remove("terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms"); else _explicitNullProperties?.Remove("terms"); } }
         private string? _explicitNullValueTerms = default!;
 #nullable restore
 #else
-        public string Terms { get => _explicitNullValueTerms; set { _explicitNullValueTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms"); else _explicitNullProperties?.Remove("terms"); } }
+        public string Terms { get => _explicitNullValueTerms; set { _explicitNullValueTerms = value; AdditionalData?.Remove("terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms"); else _explicitNullProperties?.Remove("terms"); } }
         private string _explicitNullValueTerms = default!;
 #endif
         /// <summary>Token of the Rate&apos;s servicelevel, e.g. `usps_priority` or `fedex_ground`.See [servicelevels](/shippoapi/public-api/service-levels).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>

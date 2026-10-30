@@ -17,23 +17,25 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
-            if (parseNode.GetChildNode("parameters") is { } nullNodeParameters && nullNodeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameters = null;
+            if (parseNode.GetChildNode("carrier") is null) { _explicitNullValueCarrier = default!; _explicitNullProperties?.Remove("carrier"); }
+            else if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("parameters") is null) { _explicitNullValueParameters = default!; _explicitNullProperties?.Remove("parameters"); }
+            else if (parseNode.GetChildNode("parameters") is { } nullNodeParameters && nullNodeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameters = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The carrier property</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsCarrier? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsCarrier? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; AdditionalData?.Remove("carrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.UpsCarrier? _explicitNullValueCarrier = default!;
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters? _explicitNullValueParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters _explicitNullValueParameters = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsCarrier>(); } },
+                { "carrier", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsCarrier>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCarrier = default; _explicitNullProperties?.Remove("carrier"); AdditionalData["carrier"] = unknown; } else { Carrier = parsed; AdditionalData.Remove("carrier"); } } },
                 { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountUpsCreateRequestParameters.CreateFromDiscriminatorValue); } },
             };
         }

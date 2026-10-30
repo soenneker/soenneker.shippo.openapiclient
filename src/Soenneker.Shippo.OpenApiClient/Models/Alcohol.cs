@@ -18,17 +18,19 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contains_alcohol") is { } nullNodeContainsAlcohol && nullNodeContainsAlcohol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainsAlcohol = null;
-            if (parseNode.GetChildNode("recipient_type") is { } nullNodeRecipientType && nullNodeRecipientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientType = null;
+            if (parseNode.GetChildNode("contains_alcohol") is null) { _explicitNullValueContainsAlcohol = default!; _explicitNullProperties?.Remove("contains_alcohol"); }
+            else if (parseNode.GetChildNode("contains_alcohol") is { } nullNodeContainsAlcohol && nullNodeContainsAlcohol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainsAlcohol = null;
+            if (parseNode.GetChildNode("recipient_type") is null) { _explicitNullValueRecipientType = default!; _explicitNullProperties?.Remove("recipient_type"); }
+            else if (parseNode.GetChildNode("recipient_type") is { } nullNodeRecipientType && nullNodeRecipientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Mandatory for Fedex and UPS. Specifies that the package contains Alcohol.</summary>
-        public bool? ContainsAlcohol { get => _explicitNullValueContainsAlcohol; set { _explicitNullValueContainsAlcohol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains_alcohol"); else _explicitNullProperties?.Remove("contains_alcohol"); } }
+        public bool? ContainsAlcohol { get => _explicitNullValueContainsAlcohol; set { _explicitNullValueContainsAlcohol = value; AdditionalData?.Remove("contains_alcohol"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contains_alcohol"); else _explicitNullProperties?.Remove("contains_alcohol"); } }
         private bool? _explicitNullValueContainsAlcohol = default!;
         /// <summary>Mandatory for Fedex only. License type of the recipient of the Alcohol Package.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.AlcoholRecipientType? RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.AlcoholRecipientType? RecipientType { get => _explicitNullValueRecipientType; set { _explicitNullValueRecipientType = value; AdditionalData?.Remove("recipient_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_type"); else _explicitNullProperties?.Remove("recipient_type"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.AlcoholRecipientType? _explicitNullValueRecipientType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Alcohol"/> and sets the default values.
@@ -56,7 +58,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "contains_alcohol", n => { ContainsAlcohol = n.GetBoolValue(); } },
-                { "recipient_type", n => { RecipientType = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.AlcoholRecipientType>(); } },
+                { "recipient_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.AlcoholRecipientType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRecipientType = default; _explicitNullProperties?.Remove("recipient_type"); AdditionalData["recipient_type"] = unknown; } else { RecipientType = parsed; AdditionalData.Remove("recipient_type"); } } },
             };
         }
         /// <summary>

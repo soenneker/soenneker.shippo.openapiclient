@@ -17,17 +17,19 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Current authentication status. Possible values: &apos;disconnected&apos; (authorization lost, reconnect needed), &apos;connected&apos; (authorized and active), &apos;authorization_pending&apos; (awaiting initial authorization flow).</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationStatus? _explicitNullValueStatus = default!;
         /// <summary>Authentication method used by this account.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthentication"/> and sets the default values.
@@ -54,8 +56,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationStatus>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationType>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountWithExtraInfoAllOf2ObjectInfoAuthenticationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

@@ -17,10 +17,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("address_from") is { } nullNodeAddressFrom && nullNodeAddressFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressFrom = null;
-            if (parseNode.GetChildNode("address_to") is { } nullNodeAddressTo && nullNodeAddressTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressTo = null;
-            if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
-            if (parseNode.GetChildNode("parcel") is { } nullNodeParcel && nullNodeParcel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parcel = null;
+            if (parseNode.GetChildNode("address_from") is null) { _explicitNullValueAddressFrom = default!; _explicitNullProperties?.Remove("address_from"); }
+            else if (parseNode.GetChildNode("address_from") is { } nullNodeAddressFrom && nullNodeAddressFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressFrom = null;
+            if (parseNode.GetChildNode("address_to") is null) { _explicitNullValueAddressTo = default!; _explicitNullProperties?.Remove("address_to"); }
+            else if (parseNode.GetChildNode("address_to") is { } nullNodeAddressTo && nullNodeAddressTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressTo = null;
+            if (parseNode.GetChildNode("line_items") is null) { _explicitNullValueLineItems = default!; _explicitNullProperties?.Remove("line_items"); }
+            else if (parseNode.GetChildNode("line_items") is { } nullNodeLineItems && nullNodeLineItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineItems = null;
+            if (parseNode.GetChildNode("parcel") is null) { _explicitNullValueParcel = default!; _explicitNullProperties?.Remove("parcel"); }
+            else if (parseNode.GetChildNode("parcel") is { } nullNodeParcel && nullNodeParcel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parcel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The sender address, which includes your name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom? AddressFrom { get => _explicitNullValueAddressFrom; set { _explicitNullValueAddressFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_from"); else _explicitNullProperties?.Remove("address_from"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom? AddressFrom { get => _explicitNullValueAddressFrom; set { _explicitNullValueAddressFrom = value; AdditionalData?.Remove("address_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_from"); else _explicitNullProperties?.Remove("address_from"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom? _explicitNullValueAddressFrom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom AddressFrom { get => _explicitNullValueAddressFrom; set { _explicitNullValueAddressFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_from"); else _explicitNullProperties?.Remove("address_from"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom AddressFrom { get => _explicitNullValueAddressFrom; set { _explicitNullValueAddressFrom = value; AdditionalData?.Remove("address_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_from"); else _explicitNullProperties?.Remove("address_from"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressFrom _explicitNullValueAddressFrom = default!;
 #endif
         /// <summary>The recipient address, which includes the recipient&apos;s name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo? AddressTo { get => _explicitNullValueAddressTo; set { _explicitNullValueAddressTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_to"); else _explicitNullProperties?.Remove("address_to"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo? AddressTo { get => _explicitNullValueAddressTo; set { _explicitNullValueAddressTo = value; AdditionalData?.Remove("address_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_to"); else _explicitNullProperties?.Remove("address_to"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo? _explicitNullValueAddressTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo AddressTo { get => _explicitNullValueAddressTo; set { _explicitNullValueAddressTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_to"); else _explicitNullProperties?.Remove("address_to"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo AddressTo { get => _explicitNullValueAddressTo; set { _explicitNullValueAddressTo = value; AdditionalData?.Remove("address_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_to"); else _explicitNullProperties?.Remove("address_to"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestAddressTo _explicitNullValueAddressTo = default!;
 #endif
         /// <summary>Array of Line Item objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.LineItem>? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.LineItem>? LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; AdditionalData?.Remove("line_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.LineItem>? _explicitNullValueLineItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.LineItem> LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.LineItem> LineItems { get => _explicitNullValueLineItems; set { _explicitNullValueLineItems = value; AdditionalData?.Remove("line_items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_items"); else _explicitNullProperties?.Remove("line_items"); } }
         private List<global::Soenneker.Shippo.OpenApiClient.Models.LineItem> _explicitNullValueLineItems = default!;
 #endif
         /// <summary>Object ID for an existing User Parcel Template OR a fully formed Parcel object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel? Parcel { get => _explicitNullValueParcel; set { _explicitNullValueParcel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcel"); else _explicitNullProperties?.Remove("parcel"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel? Parcel { get => _explicitNullValueParcel; set { _explicitNullValueParcel = value; AdditionalData?.Remove("parcel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcel"); else _explicitNullProperties?.Remove("parcel"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel? _explicitNullValueParcel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel Parcel { get => _explicitNullValueParcel; set { _explicitNullValueParcel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcel"); else _explicitNullProperties?.Remove("parcel"); } }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel Parcel { get => _explicitNullValueParcel; set { _explicitNullValueParcel = value; AdditionalData?.Remove("parcel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcel"); else _explicitNullProperties?.Remove("parcel"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.LiveRateCreateRequestParcel _explicitNullValueParcel = default!;
 #endif
         /// <summary>

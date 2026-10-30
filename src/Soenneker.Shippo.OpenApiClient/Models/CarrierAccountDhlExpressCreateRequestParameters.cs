@@ -17,13 +17,14 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("user_accepted_terms_and_conditions") is { } nullNodeUserAcceptedTermsAndConditions && nullNodeUserAcceptedTermsAndConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAcceptedTermsAndConditions = null;
+            if (parseNode.GetChildNode("user_accepted_terms_and_conditions") is null) { _explicitNullValueUserAcceptedTermsAndConditions = default!; _explicitNullProperties?.Remove("user_accepted_terms_and_conditions"); }
+            else if (parseNode.GetChildNode("user_accepted_terms_and_conditions") is { } nullNodeUserAcceptedTermsAndConditions && nullNodeUserAcceptedTermsAndConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAcceptedTermsAndConditions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether or not the user agrees to the DHL Express Terms and Conditions. If passed in as false, request will fail with error 400</summary>
-        public bool? UserAcceptedTermsAndConditions { get => _explicitNullValueUserAcceptedTermsAndConditions; set { _explicitNullValueUserAcceptedTermsAndConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_accepted_terms_and_conditions"); else _explicitNullProperties?.Remove("user_accepted_terms_and_conditions"); } }
+        public bool? UserAcceptedTermsAndConditions { get => _explicitNullValueUserAcceptedTermsAndConditions; set { _explicitNullValueUserAcceptedTermsAndConditions = value; AdditionalData?.Remove("user_accepted_terms_and_conditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_accepted_terms_and_conditions"); else _explicitNullProperties?.Remove("user_accepted_terms_and_conditions"); } }
         private bool? _explicitNullValueUserAcceptedTermsAndConditions = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountDhlExpressCreateRequestParameters"/> and sets the default values.

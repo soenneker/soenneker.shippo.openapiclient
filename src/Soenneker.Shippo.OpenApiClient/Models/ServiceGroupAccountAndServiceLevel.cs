@@ -17,18 +17,20 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_object_id") is { } nullNodeAccountObjectId && nullNodeAccountObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountObjectId = null;
-            if (parseNode.GetChildNode("service_level_token") is { } nullNodeServiceLevelToken && nullNodeServiceLevelToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceLevelToken = null;
+            if (parseNode.GetChildNode("account_object_id") is null) { _explicitNullValueAccountObjectId = default!; _explicitNullProperties?.Remove("account_object_id"); }
+            else if (parseNode.GetChildNode("account_object_id") is { } nullNodeAccountObjectId && nullNodeAccountObjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountObjectId = null;
+            if (parseNode.GetChildNode("service_level_token") is null) { _explicitNullValueServiceLevelToken = default!; _explicitNullProperties?.Remove("service_level_token"); }
+            else if (parseNode.GetChildNode("service_level_token") is { } nullNodeServiceLevelToken && nullNodeServiceLevelToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceLevelToken = null;
         }
 
         /// <summary>ID of a Carrier Account object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountObjectId { get => _explicitNullValueAccountObjectId; set { _explicitNullValueAccountObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_object_id"); else _explicitNullProperties?.Remove("account_object_id"); } }
+        public string? AccountObjectId { get => _explicitNullValueAccountObjectId; set { _explicitNullValueAccountObjectId = value; AdditionalData?.Remove("account_object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_object_id"); else _explicitNullProperties?.Remove("account_object_id"); } }
         private string? _explicitNullValueAccountObjectId = default!;
 #nullable restore
 #else
-        public string AccountObjectId { get => _explicitNullValueAccountObjectId; set { _explicitNullValueAccountObjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_object_id"); else _explicitNullProperties?.Remove("account_object_id"); } }
+        public string AccountObjectId { get => _explicitNullValueAccountObjectId; set { _explicitNullValueAccountObjectId = value; AdditionalData?.Remove("account_object_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_object_id"); else _explicitNullProperties?.Remove("account_object_id"); } }
         private string _explicitNullValueAccountObjectId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,11 +38,11 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Service level token, e.g. `usps_priority` or `fedex_ground`.See [Service Levels](/shippoapi/public-api/service-levels).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceLevelToken { get => _explicitNullValueServiceLevelToken; set { _explicitNullValueServiceLevelToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_level_token"); else _explicitNullProperties?.Remove("service_level_token"); } }
+        public string? ServiceLevelToken { get => _explicitNullValueServiceLevelToken; set { _explicitNullValueServiceLevelToken = value; AdditionalData?.Remove("service_level_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_level_token"); else _explicitNullProperties?.Remove("service_level_token"); } }
         private string? _explicitNullValueServiceLevelToken = default!;
 #nullable restore
 #else
-        public string ServiceLevelToken { get => _explicitNullValueServiceLevelToken; set { _explicitNullValueServiceLevelToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_level_token"); else _explicitNullProperties?.Remove("service_level_token"); } }
+        public string ServiceLevelToken { get => _explicitNullValueServiceLevelToken; set { _explicitNullValueServiceLevelToken = value; AdditionalData?.Remove("service_level_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_level_token"); else _explicitNullProperties?.Remove("service_level_token"); } }
         private string _explicitNullValueServiceLevelToken = default!;
 #endif
         /// <summary>
