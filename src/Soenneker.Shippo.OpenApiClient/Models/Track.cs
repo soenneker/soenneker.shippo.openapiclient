@@ -11,92 +11,133 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Track : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address_from") is { } nullNodeAddressFrom && nullNodeAddressFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressFrom = null;
+            if (parseNode.GetChildNode("address_to") is { } nullNodeAddressTo && nullNodeAddressTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressTo = null;
+            if (parseNode.GetChildNode("carrier") is { } nullNodeCarrier && nullNodeCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Carrier = null;
+            if (parseNode.GetChildNode("eta") is { } nullNodeEta && nullNodeEta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eta = null;
+            if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("original_eta") is { } nullNodeOriginalEta && nullNodeOriginalEta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalEta = null;
+            if (parseNode.GetChildNode("servicelevel") is { } nullNodeServicelevel && nullNodeServicelevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Servicelevel = null;
+            if (parseNode.GetChildNode("tracking_history") is { } nullNodeTrackingHistory && nullNodeTrackingHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingHistory = null;
+            if (parseNode.GetChildNode("tracking_number") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("tracking_status") is { } nullNodeTrackingStatus && nullNodeTrackingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingStatus = null;
+            if (parseNode.GetChildNode("transaction") is { } nullNodeTransaction && nullNodeTransaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transaction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The sender address with city, state, zip and country information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusFromLocation? AddressFrom { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusFromLocation? AddressFrom { get => _explicitNullValueAddressFrom; set { _explicitNullValueAddressFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_from"); else _explicitNullProperties?.Remove("address_from"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusFromLocation? _explicitNullValueAddressFrom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusFromLocation AddressFrom { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusFromLocation AddressFrom { get => _explicitNullValueAddressFrom; set { _explicitNullValueAddressFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_from"); else _explicitNullProperties?.Remove("address_from"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusFromLocation _explicitNullValueAddressFrom = default!;
 #endif
         /// <summary>The recipient address with city, state, zip and country information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusToLocation? AddressTo { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusToLocation? AddressTo { get => _explicitNullValueAddressTo; set { _explicitNullValueAddressTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_to"); else _explicitNullProperties?.Remove("address_to"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusToLocation? _explicitNullValueAddressTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusToLocation AddressTo { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusToLocation AddressTo { get => _explicitNullValueAddressTo; set { _explicitNullValueAddressTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_to"); else _explicitNullProperties?.Remove("address_to"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusToLocation _explicitNullValueAddressTo = default!;
 #endif
         /// <summary>Name of the carrier of the shipment to track. See [Carriers](/shippoapi/public-api/carriers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Carrier { get; set; }
+        public string? Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        private string? _explicitNullValueCarrier = default!;
 #nullable restore
 #else
-        public string Carrier { get; set; }
+        public string Carrier { get => _explicitNullValueCarrier; set { _explicitNullValueCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier"); else _explicitNullProperties?.Remove("carrier"); } }
+        private string _explicitNullValueCarrier = default!;
 #endif
         /// <summary>The estimated time of arrival according to the carrier, this might be updated by carriers during the life of the shipment.</summary>
-        public DateTimeOffset? Eta { get; set; }
+        public DateTimeOffset? Eta { get => _explicitNullValueEta; set { _explicitNullValueEta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eta"); else _explicitNullProperties?.Remove("eta"); } }
+        private DateTimeOffset? _explicitNullValueEta = default!;
         /// <summary>The messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Messages { get; set; }
+        public List<string>? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        private List<string>? _explicitNullValueMessages = default!;
 #nullable restore
 #else
-        public List<string> Messages { get; set; }
+        public List<string> Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        private List<string> _explicitNullValueMessages = default!;
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get; set; }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get; set; }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The estimated time of arrival according to the carrier at the time the shipment first entered the system.</summary>
-        public DateTimeOffset? OriginalEta { get; set; }
+        public DateTimeOffset? OriginalEta { get => _explicitNullValueOriginalEta; set { _explicitNullValueOriginalEta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_eta"); else _explicitNullProperties?.Remove("original_eta"); } }
+        private DateTimeOffset? _explicitNullValueOriginalEta = default!;
         /// <summary>The servicelevel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent? Servicelevel { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent? Servicelevel { get => _explicitNullValueServicelevel; set { _explicitNullValueServicelevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("servicelevel"); else _explicitNullProperties?.Remove("servicelevel"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent? _explicitNullValueServicelevel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent Servicelevel { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent Servicelevel { get => _explicitNullValueServicelevel; set { _explicitNullValueServicelevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("servicelevel"); else _explicitNullProperties?.Remove("servicelevel"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ServiceLevelWithParent _explicitNullValueServicelevel = default!;
 #endif
         /// <summary>A list of tracking events, following the same structure as `tracking_status`.It contains a full history of all tracking statuses, starting with the earlier tracking event first.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus>? TrackingHistory { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus>? TrackingHistory { get => _explicitNullValueTrackingHistory; set { _explicitNullValueTrackingHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_history"); else _explicitNullProperties?.Remove("tracking_history"); } }
+        private List<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus>? _explicitNullValueTrackingHistory = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus> TrackingHistory { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus> TrackingHistory { get => _explicitNullValueTrackingHistory; set { _explicitNullValueTrackingHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_history"); else _explicitNullProperties?.Remove("tracking_history"); } }
+        private List<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus> _explicitNullValueTrackingHistory = default!;
 #endif
         /// <summary>Tracking number to track.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get; set; }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get; set; }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_number"); else _explicitNullProperties?.Remove("tracking_number"); } }
+        private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>The latest tracking information of this shipment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus? TrackingStatus { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus? TrackingStatus { get => _explicitNullValueTrackingStatus; set { _explicitNullValueTrackingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_status"); else _explicitNullProperties?.Remove("tracking_status"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus? _explicitNullValueTrackingStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus TrackingStatus { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus TrackingStatus { get => _explicitNullValueTrackingStatus; set { _explicitNullValueTrackingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tracking_status"); else _explicitNullProperties?.Remove("tracking_status"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus _explicitNullValueTrackingStatus = default!;
 #endif
         /// <summary>The `object_id` of the transaction associated with this tracking object.This field is visible only to the object owner of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Transaction { get; set; }
+        public string? Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        private string? _explicitNullValueTransaction = default!;
 #nullable restore
 #else
-        public string Transaction { get; set; }
+        public string Transaction { get => _explicitNullValueTransaction; set { _explicitNullValueTransaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction"); else _explicitNullProperties?.Remove("transaction"); } }
+        private string _explicitNullValueTransaction = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Track"/> and sets the default values.
@@ -113,7 +154,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.Track CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.Track();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.Track(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -156,6 +197,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("tracking_number", TrackingNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatus>("tracking_status", TrackingStatus);
             writer.WriteStringValue("transaction", Transaction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

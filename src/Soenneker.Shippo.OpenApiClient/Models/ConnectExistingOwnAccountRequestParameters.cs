@@ -12,7 +12,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConnectExistingOwnAccountRequestParameters : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParametersMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,17 +62,26 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters();
             if("FedExConnectExistingOwnAccountParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.FedExConnectExistingOwnAccountParameters = new global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters();
+                
             }
             else if("UpsConnectExistingOwnAccountParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpsConnectExistingOwnAccountParameters = new global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountParameters();
+                
             }
             else if("UpsConnectExistingOwnAccountStreamlinedParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpsConnectExistingOwnAccountStreamlinedParameters = new global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("first_name") != null && parseNode.GetChildNode("last_name") != null && parseNode.GetChildNode("phone_number") != null && parseNode.GetChildNode("from_address_st") != null && parseNode.GetChildNode("from_address_city") != null && parseNode.GetChildNode("from_address_state") != null && parseNode.GetChildNode("from_address_zip") != null && parseNode.GetChildNode("from_address_country_iso2") != null && parseNode.GetChildNode("use_multi_factor_registration") != null && parseNode.GetChildNode("verification_option") != null && (parseNode.GetChildNode("verification_option")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag10 && ("SMS".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "EMAIL".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "CALL".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal) || "INVOICE".Equals(tag10.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("ups_agreements") != null && parseNode.GetChildNode("account_number") != null && parseNode.GetChildNode("title") != null && parseNode.GetChildNode("company") != null && parseNode.GetChildNode("full_name") != null && parseNode.GetChildNode("phone") != null && parseNode.GetChildNode("billing_address_street1") != null && parseNode.GetChildNode("billing_address_city") != null && parseNode.GetChildNode("billing_address_zip") != null && parseNode.GetChildNode("billing_address_state") != null && parseNode.GetChildNode("billing_address_country_iso2") != null && parseNode.GetChildNode("collec_zip") != null && parseNode.GetChildNode("collec_country_iso2") != null && parseNode.GetChildNode("has_invoice") != null && parseNode.GetChildNode("email") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("ups_agreements") != null && parseNode.GetChildNode("account_number") != null && parseNode.GetChildNode("billing_address_country_iso2") != null))();
+            if (result.ConnectExistingOwnAccountRequestParametersMember1 == null && result.FedExConnectExistingOwnAccountParameters == null && result.UpsConnectExistingOwnAccountParameters == null && result.UpsConnectExistingOwnAccountStreamlinedParameters == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.FedExConnectExistingOwnAccountParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters(), parseNode);
+            if (result.ConnectExistingOwnAccountRequestParametersMember1 == null && result.FedExConnectExistingOwnAccountParameters == null && result.UpsConnectExistingOwnAccountParameters == null && result.UpsConnectExistingOwnAccountStreamlinedParameters == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.UpsConnectExistingOwnAccountParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountParameters(), parseNode);
+            if (result.ConnectExistingOwnAccountRequestParametersMember1 == null && result.FedExConnectExistingOwnAccountParameters == null && result.UpsConnectExistingOwnAccountParameters == null && result.UpsConnectExistingOwnAccountStreamlinedParameters == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.UpsConnectExistingOwnAccountStreamlinedParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters(), parseNode);
+            if (result.ConnectExistingOwnAccountRequestParametersMember1 == null && result.FedExConnectExistingOwnAccountParameters == null && result.UpsConnectExistingOwnAccountParameters == null && result.UpsConnectExistingOwnAccountStreamlinedParameters == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,21 +113,31 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ConnectExistingOwnAccountRequestParametersMember1 == null && FedExConnectExistingOwnAccountParameters == null && UpsConnectExistingOwnAccountParameters == null && UpsConnectExistingOwnAccountStreamlinedParameters == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (FedExConnectExistingOwnAccountParameters != null && ConnectExistingOwnAccountRequestParametersMember1 == null && UpsConnectExistingOwnAccountParameters == null && UpsConnectExistingOwnAccountStreamlinedParameters == null) { if (FedExConnectExistingOwnAccountParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FedExConnectExistingOwnAccountParameters); return; }
+            if (UpsConnectExistingOwnAccountParameters != null && ConnectExistingOwnAccountRequestParametersMember1 == null && FedExConnectExistingOwnAccountParameters == null && UpsConnectExistingOwnAccountStreamlinedParameters == null) { if (UpsConnectExistingOwnAccountParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpsConnectExistingOwnAccountParameters); return; }
+            if (UpsConnectExistingOwnAccountStreamlinedParameters != null && ConnectExistingOwnAccountRequestParametersMember1 == null && FedExConnectExistingOwnAccountParameters == null && UpsConnectExistingOwnAccountParameters == null) { if (UpsConnectExistingOwnAccountStreamlinedParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpsConnectExistingOwnAccountStreamlinedParameters); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ConnectExistingOwnAccountRequestParametersMember1 != null)
             {
+                if (ConnectExistingOwnAccountRequestParametersMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParametersMember1>(null, ConnectExistingOwnAccountRequestParametersMember1);
             }
             else if(FedExConnectExistingOwnAccountParameters != null)
             {
+                if (FedExConnectExistingOwnAccountParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters>(null, FedExConnectExistingOwnAccountParameters);
             }
             else if(UpsConnectExistingOwnAccountParameters != null)
             {
+                if (UpsConnectExistingOwnAccountParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountParameters>(null, UpsConnectExistingOwnAccountParameters);
             }
             else if(UpsConnectExistingOwnAccountStreamlinedParameters != null)
             {
+                if (UpsConnectExistingOwnAccountStreamlinedParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters>(null, UpsConnectExistingOwnAccountStreamlinedParameters);
             }
         }

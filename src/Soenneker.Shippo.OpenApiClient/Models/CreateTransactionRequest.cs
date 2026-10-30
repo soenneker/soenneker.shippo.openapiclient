@@ -12,7 +12,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateTransactionRequest : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,13 +46,20 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.CreateTransactionRequest();
             if("InstantTransactionCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.InstantTransactionCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest();
+                
             }
             else if("TransactionCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TransactionCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("rate") != null && (parseNode.GetChildNode("label_file_type") == null || (parseNode.GetChildNode("label_file_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag1 && ("PNG".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "PNG_2.3x7.5".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "PDF".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "PDF_2.3x7.5".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "PDF_4x6".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "PDF_4x8".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "PDF_A4".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "PDF_A5".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "PDF_A6".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal) || "ZPLII".Equals(optionalTag1.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("shipment") != null && parseNode.GetChildNode("carrier_account") != null && parseNode.GetChildNode("servicelevel_token") != null && (parseNode.GetChildNode("label_file_type") == null || (parseNode.GetChildNode("label_file_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag3 && ("PNG".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "PNG_2.3x7.5".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "PDF".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "PDF_2.3x7.5".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "PDF_4x6".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "PDF_4x8".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "PDF_A4".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "PDF_A6".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "ZPLII".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.InstantTransactionCreateRequest == null && result.TransactionCreateRequest == null && matchesUnionBranch0 && !matchesUnionBranch1) result.TransactionCreateRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest(), parseNode);
+            if (result.InstantTransactionCreateRequest == null && result.TransactionCreateRequest == null && matchesUnionBranch1 && !matchesUnionBranch0) result.InstantTransactionCreateRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest(), parseNode);
+            if (result.InstantTransactionCreateRequest == null && result.TransactionCreateRequest == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,13 +83,20 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (InstantTransactionCreateRequest == null && TransactionCreateRequest == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (InstantTransactionCreateRequest != null && TransactionCreateRequest == null) { if (InstantTransactionCreateRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, InstantTransactionCreateRequest); return; }
+            if (TransactionCreateRequest != null && InstantTransactionCreateRequest == null) { if (TransactionCreateRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TransactionCreateRequest); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(InstantTransactionCreateRequest != null)
             {
+                if (InstantTransactionCreateRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.InstantTransactionCreateRequest>(null, InstantTransactionCreateRequest);
             }
             else if(TransactionCreateRequest != null)
             {
+                if (TransactionCreateRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TransactionCreateRequest>(null, TransactionCreateRequest);
             }
         }

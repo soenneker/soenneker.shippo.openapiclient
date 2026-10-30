@@ -13313,27 +13313,23 @@
       },
       "WebhookPayload": {
         "title": "Webhook Payload",
-        "required": [
-          "event"
-        ],
         "oneOf": [
           {
-            "$ref": "#/components/schemas/WebhookPayloadTrack"
+            "$ref": "#/components/schemas/WebhookPayloadOneOf1"
           },
           {
-            "$ref": "#/components/schemas/WebhookPayloadBatch"
+            "$ref": "#/components/schemas/WebhookPayloadOneOf2"
           },
           {
-            "$ref": "#/components/schemas/WebhookPayloadTransaction"
+            "$ref": "#/components/schemas/WebhookPayloadOneOf3"
           }
         ],
-        "properties": {
-          "event": {
-            "type": "string"
-          }
-        },
         "description": "The payload is the body of the POST request Shippo sends to the URL specified at the time of webhook registration.",
-        "discriminator": {
+        "x-tags": [
+          "Webhooks"
+        ],
+        "x-speakeasy-include": true,
+        "x-client-original-discriminator": {
           "propertyName": "event",
           "mapping": {
             "track_updated": "#/components/schemas/WebhookPayloadTrack",
@@ -13342,11 +13338,7 @@
             "transaction_created": "#/components/schemas/WebhookPayloadTransaction",
             "transaction_updated": "#/components/schemas/WebhookPayloadTransaction"
           }
-        },
-        "x-tags": [
-          "Webhooks"
-        ],
-        "x-speakeasy-include": true
+        }
       },
       "CarriersEnum": {
         "enum": [
@@ -20056,9 +20048,6 @@
         }
       },
       "RegisterCarrierAccountRequest": {
-        "required": [
-          "carrier"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/CarrierAccountCanadaPostCreateRequest"
@@ -20109,12 +20098,7 @@
             "$ref": "#/components/schemas/CarrierAccountRoyalMailSfCreateRequest"
           }
         ],
-        "properties": {
-          "carrier": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "carrier",
           "mapping": {
             "canada_post": "#/components/schemas/CarrierAccountCanadaPostCreateRequest",
@@ -21478,6 +21462,85 @@
             }
           ]
         }
+      },
+      "WebhookPayloadOneOf1": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "allOf": [
+              {
+                "description": "Type of event that triggered the webhook.",
+                "$ref": "#/components/schemas/WebhookEventTypeEnum"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "test": {
+            "type": "boolean",
+            "description": "Determines whether the webhook is a test webhook or not."
+          },
+          "data": {
+            "$ref": "#/components/schemas/Track"
+          }
+        },
+        "required": [
+          "event"
+        ]
+      },
+      "WebhookPayloadOneOf2": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "allOf": [
+              {
+                "description": "Type of event that triggered the webhook.",
+                "$ref": "#/components/schemas/WebhookEventTypeEnum"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "test": {
+            "type": "boolean",
+            "description": "Determines whether the webhook is a test webhook or not."
+          },
+          "data": {
+            "type": "string",
+            "description": "A string containing the batch object ID, of the form \u0027batch {batchId} (created|processing complete)\u0027."
+          }
+        },
+        "required": [
+          "event"
+        ]
+      },
+      "WebhookPayloadOneOf3": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "allOf": [
+              {
+                "description": "Type of event that triggered the webhook.",
+                "$ref": "#/components/schemas/WebhookEventTypeEnum"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "test": {
+            "type": "boolean",
+            "description": "Determines whether the webhook is a test webhook or not."
+          },
+          "data": {
+            "$ref": "#/components/schemas/Transaction"
+          }
+        },
+        "required": [
+          "event"
+        ]
       }
     },
     "responses": {

@@ -12,7 +12,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UserParcelTemplateCreateRequest : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateWithCarrierTemplateCreateRequest"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,13 +46,18 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             var result = new global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateCreateRequest();
             if("UserParcelTemplateWithCarrierTemplateCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UserParcelTemplateWithCarrierTemplateCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateWithCarrierTemplateCreateRequest();
+                
             }
             else if("UserParcelTemplateWithoutCarrierTemplateCreateRequest".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UserParcelTemplateWithoutCarrierTemplateCreateRequest = new global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateWithoutCarrierTemplateCreateRequest();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("name") != null && parseNode.GetChildNode("length") != null && parseNode.GetChildNode("width") != null && parseNode.GetChildNode("height") != null && parseNode.GetChildNode("distance_unit") != null && (parseNode.GetChildNode("distance_unit")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("cm".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "in".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "ft".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "m".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "mm".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "yd".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("weight_unit") == null || (parseNode.GetChildNode("weight_unit")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag6 && ("g".Equals(optionalTag6.GetValue(), global::System.StringComparison.Ordinal) || "kg".Equals(optionalTag6.GetValue(), global::System.StringComparison.Ordinal) || "lb".Equals(optionalTag6.GetValue(), global::System.StringComparison.Ordinal) || "oz".Equals(optionalTag6.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.UserParcelTemplateWithCarrierTemplateCreateRequest == null && result.UserParcelTemplateWithoutCarrierTemplateCreateRequest == null && matchesUnionBranch0) result.UserParcelTemplateWithoutCarrierTemplateCreateRequest = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateWithoutCarrierTemplateCreateRequest(), parseNode);
+            if (result.UserParcelTemplateWithCarrierTemplateCreateRequest == null && result.UserParcelTemplateWithoutCarrierTemplateCreateRequest == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,13 +81,20 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (UserParcelTemplateWithCarrierTemplateCreateRequest == null && UserParcelTemplateWithoutCarrierTemplateCreateRequest == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (UserParcelTemplateWithCarrierTemplateCreateRequest != null && UserParcelTemplateWithoutCarrierTemplateCreateRequest == null) { if (UserParcelTemplateWithCarrierTemplateCreateRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserParcelTemplateWithCarrierTemplateCreateRequest); return; }
+            if (UserParcelTemplateWithoutCarrierTemplateCreateRequest != null && UserParcelTemplateWithCarrierTemplateCreateRequest == null) { if (UserParcelTemplateWithoutCarrierTemplateCreateRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UserParcelTemplateWithoutCarrierTemplateCreateRequest); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(UserParcelTemplateWithCarrierTemplateCreateRequest != null)
             {
+                if (UserParcelTemplateWithCarrierTemplateCreateRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateWithCarrierTemplateCreateRequest>(null, UserParcelTemplateWithCarrierTemplateCreateRequest);
             }
             else if(UserParcelTemplateWithoutCarrierTemplateCreateRequest != null)
             {
+                if (UserParcelTemplateWithoutCarrierTemplateCreateRequest is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UserParcelTemplateWithoutCarrierTemplateCreateRequest>(null, UserParcelTemplateWithoutCarrierTemplateCreateRequest);
             }
         }

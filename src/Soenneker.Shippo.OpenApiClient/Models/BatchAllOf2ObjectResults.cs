@@ -12,17 +12,32 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchAllOf2ObjectResults : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("creation_failed") is { } nullNodeCreationFailed && nullNodeCreationFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationFailed = null;
+            if (parseNode.GetChildNode("creation_succeeded") is { } nullNodeCreationSucceeded && nullNodeCreationSucceeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationSucceeded = null;
+            if (parseNode.GetChildNode("purchase_failed") is { } nullNodePurchaseFailed && nullNodePurchaseFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseFailed = null;
+            if (parseNode.GetChildNode("purchase_succeeded") is { } nullNodePurchaseSucceeded && nullNodePurchaseSucceeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseSucceeded = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The creation_failed property</summary>
-        public long? CreationFailed { get; set; }
+        public long? CreationFailed { get => _explicitNullValueCreationFailed; set { _explicitNullValueCreationFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_failed"); else _explicitNullProperties?.Remove("creation_failed"); } }
+        private long? _explicitNullValueCreationFailed = default!;
         /// <summary>The creation_succeeded property</summary>
-        public long? CreationSucceeded { get; set; }
+        public long? CreationSucceeded { get => _explicitNullValueCreationSucceeded; set { _explicitNullValueCreationSucceeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_succeeded"); else _explicitNullProperties?.Remove("creation_succeeded"); } }
+        private long? _explicitNullValueCreationSucceeded = default!;
         /// <summary>The purchase_failed property</summary>
-        public long? PurchaseFailed { get; set; }
+        public long? PurchaseFailed { get => _explicitNullValuePurchaseFailed; set { _explicitNullValuePurchaseFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_failed"); else _explicitNullProperties?.Remove("purchase_failed"); } }
+        private long? _explicitNullValuePurchaseFailed = default!;
         /// <summary>The purchase_succeeded property</summary>
-        public long? PurchaseSucceeded { get; set; }
+        public long? PurchaseSucceeded { get => _explicitNullValuePurchaseSucceeded; set { _explicitNullValuePurchaseSucceeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_succeeded"); else _explicitNullProperties?.Remove("purchase_succeeded"); } }
+        private long? _explicitNullValuePurchaseSucceeded = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults"/> and sets the default values.
         /// </summary>
@@ -38,7 +53,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.BatchAllOf2ObjectResults(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,6 +80,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteLongValue("creation_succeeded", CreationSucceeded);
             writer.WriteLongValue("purchase_failed", PurchaseFailed);
             writer.WriteLongValue("purchase_succeeded", PurchaseSucceeded);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

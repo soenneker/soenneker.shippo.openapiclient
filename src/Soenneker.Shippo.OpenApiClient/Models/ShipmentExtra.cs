@@ -12,351 +12,505 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShipmentExtra : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accounts_receivable_customer_account") is { } nullNodeAccountsReceivableCustomerAccount && nullNodeAccountsReceivableCustomerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountsReceivableCustomerAccount = null;
+            if (parseNode.GetChildNode("alcohol") is { } nullNodeAlcohol && nullNodeAlcohol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alcohol = null;
+            if (parseNode.GetChildNode("ancillary_endorsement") is { } nullNodeAncillaryEndorsement && nullNodeAncillaryEndorsement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AncillaryEndorsement = null;
+            if (parseNode.GetChildNode("appropriation_number") is { } nullNodeAppropriationNumber && nullNodeAppropriationNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppropriationNumber = null;
+            if (parseNode.GetChildNode("authority_to_leave") is { } nullNodeAuthorityToLeave && nullNodeAuthorityToLeave.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorityToLeave = null;
+            if (parseNode.GetChildNode("billing") is { } nullNodeBilling && nullNodeBilling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Billing = null;
+            if (parseNode.GetChildNode("bill_of_lading_number") is { } nullNodeBillOfLadingNumber && nullNodeBillOfLadingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillOfLadingNumber = null;
+            if (parseNode.GetChildNode("bypass_address_validation") is { } nullNodeBypassAddressValidation && nullNodeBypassAddressValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BypassAddressValidation = null;
+            if (parseNode.GetChildNode("carbon_neutral") is { } nullNodeCarbonNeutral && nullNodeCarbonNeutral.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarbonNeutral = null;
+            if (parseNode.GetChildNode("carrier_hub_id") is { } nullNodeCarrierHubId && nullNodeCarrierHubId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierHubId = null;
+            if (parseNode.GetChildNode("carrier_hub_travel_time") is { } nullNodeCarrierHubTravelTime && nullNodeCarrierHubTravelTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierHubTravelTime = null;
+            if (parseNode.GetChildNode("COD") is { } nullNodeCOD && nullNodeCOD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) COD = null;
+            if (parseNode.GetChildNode("cod_number") is { } nullNodeCodNumber && nullNodeCodNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodNumber = null;
+            if (parseNode.GetChildNode("container_type") is { } nullNodeContainerType && nullNodeContainerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerType = null;
+            if (parseNode.GetChildNode("critical_pull_time") is { } nullNodeCriticalPullTime && nullNodeCriticalPullTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CriticalPullTime = null;
+            if (parseNode.GetChildNode("customer_branch") is { } nullNodeCustomerBranch && nullNodeCustomerBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerBranch = null;
+            if (parseNode.GetChildNode("customer_reference") is { } nullNodeCustomerReference && nullNodeCustomerReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerReference = null;
+            if (parseNode.GetChildNode("dangerous_goods") is { } nullNodeDangerousGoods && nullNodeDangerousGoods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DangerousGoods = null;
+            if (parseNode.GetChildNode("dangerous_goods_code") is { } nullNodeDangerousGoodsCode && nullNodeDangerousGoodsCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DangerousGoodsCode = null;
+            if (parseNode.GetChildNode("dealer_order_number") is { } nullNodeDealerOrderNumber && nullNodeDealerOrderNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DealerOrderNumber = null;
+            if (parseNode.GetChildNode("delivery_instructions") is { } nullNodeDeliveryInstructions && nullNodeDeliveryInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryInstructions = null;
+            if (parseNode.GetChildNode("dept_number") is { } nullNodeDeptNumber && nullNodeDeptNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeptNumber = null;
+            if (parseNode.GetChildNode("dry_ice") is { } nullNodeDryIce && nullNodeDryIce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DryIce = null;
+            if (parseNode.GetChildNode("fda_product_code") is { } nullNodeFdaProductCode && nullNodeFdaProductCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FdaProductCode = null;
+            if (parseNode.GetChildNode("fulfillment_center") is { } nullNodeFulfillmentCenter && nullNodeFulfillmentCenter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FulfillmentCenter = null;
+            if (parseNode.GetChildNode("healthcare_handling") is { } nullNodeHealthcareHandling && nullNodeHealthcareHandling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HealthcareHandling = null;
+            if (parseNode.GetChildNode("insurance") is { } nullNodeInsurance && nullNodeInsurance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Insurance = null;
+            if (parseNode.GetChildNode("invoice_number") is { } nullNodeInvoiceNumber && nullNodeInvoiceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceNumber = null;
+            if (parseNode.GetChildNode("is_return") is { } nullNodeIsReturn && nullNodeIsReturn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReturn = null;
+            if (parseNode.GetChildNode("lasership_attrs") is { } nullNodeLasershipAttrs && nullNodeLasershipAttrs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LasershipAttrs = null;
+            if (parseNode.GetChildNode("lasership_declared_value") is { } nullNodeLasershipDeclaredValue && nullNodeLasershipDeclaredValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LasershipDeclaredValue = null;
+            if (parseNode.GetChildNode("manifest_number") is { } nullNodeManifestNumber && nullNodeManifestNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManifestNumber = null;
+            if (parseNode.GetChildNode("model_number") is { } nullNodeModelNumber && nullNodeModelNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelNumber = null;
+            if (parseNode.GetChildNode("part_number") is { } nullNodePartNumber && nullNodePartNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PartNumber = null;
+            if (parseNode.GetChildNode("po_number") is { } nullNodePoNumber && nullNodePoNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoNumber = null;
+            if (parseNode.GetChildNode("preferred_delivery_timeframe") is { } nullNodePreferredDeliveryTimeframe && nullNodePreferredDeliveryTimeframe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredDeliveryTimeframe = null;
+            if (parseNode.GetChildNode("premium") is { } nullNodePremium && nullNodePremium.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Premium = null;
+            if (parseNode.GetChildNode("production_code") is { } nullNodeProductionCode && nullNodeProductionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductionCode = null;
+            if (parseNode.GetChildNode("purchase_request_number") is { } nullNodePurchaseRequestNumber && nullNodePurchaseRequestNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseRequestNumber = null;
+            if (parseNode.GetChildNode("qr_code_requested") is { } nullNodeQrCodeRequested && nullNodeQrCodeRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QrCodeRequested = null;
+            if (parseNode.GetChildNode("reference_1") is { } nullNodeReference1 && nullNodeReference1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference1 = null;
+            if (parseNode.GetChildNode("reference_2") is { } nullNodeReference2 && nullNodeReference2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference2 = null;
+            if (parseNode.GetChildNode("reference_3") is { } nullNodeReference3 && nullNodeReference3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference3 = null;
+            if (parseNode.GetChildNode("reference_4") is { } nullNodeReference4 && nullNodeReference4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reference4 = null;
+            if (parseNode.GetChildNode("request_retail_rates") is { } nullNodeRequestRetailRates && nullNodeRequestRetailRates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestRetailRates = null;
+            if (parseNode.GetChildNode("return_service_type") is { } nullNodeReturnServiceType && nullNodeReturnServiceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnServiceType = null;
+            if (parseNode.GetChildNode("rma_number") is { } nullNodeRmaNumber && nullNodeRmaNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RmaNumber = null;
+            if (parseNode.GetChildNode("salesperson_number") is { } nullNodeSalespersonNumber && nullNodeSalespersonNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalespersonNumber = null;
+            if (parseNode.GetChildNode("saturday_delivery") is { } nullNodeSaturdayDelivery && nullNodeSaturdayDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturdayDelivery = null;
+            if (parseNode.GetChildNode("serial_number") is { } nullNodeSerialNumber && nullNodeSerialNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SerialNumber = null;
+            if (parseNode.GetChildNode("signature_confirmation") is { } nullNodeSignatureConfirmation && nullNodeSignatureConfirmation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureConfirmation = null;
+            if (parseNode.GetChildNode("store_number") is { } nullNodeStoreNumber && nullNodeStoreNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreNumber = null;
+            if (parseNode.GetChildNode("transaction_reference_number") is { } nullNodeTransactionReferenceNumber && nullNodeTransactionReferenceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransactionReferenceNumber = null;
+            if (parseNode.GetChildNode("usmca_eligible") is { } nullNodeUsmcaEligible && nullNodeUsmcaEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsmcaEligible = null;
+        }
+
         /// <summary>The accounts_receivable_customer_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? AccountsReceivableCustomerAccount { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? AccountsReceivableCustomerAccount { get => _explicitNullValueAccountsReceivableCustomerAccount; set { _explicitNullValueAccountsReceivableCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts_receivable_customer_account"); else _explicitNullProperties?.Remove("accounts_receivable_customer_account"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueAccountsReceivableCustomerAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields AccountsReceivableCustomerAccount { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields AccountsReceivableCustomerAccount { get => _explicitNullValueAccountsReceivableCustomerAccount; set { _explicitNullValueAccountsReceivableCustomerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts_receivable_customer_account"); else _explicitNullProperties?.Remove("accounts_receivable_customer_account"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueAccountsReceivableCustomerAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates that a shipment contains Alcohol (Fedex and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.Alcohol? Alcohol { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Alcohol? Alcohol { get => _explicitNullValueAlcohol; set { _explicitNullValueAlcohol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alcohol"); else _explicitNullProperties?.Remove("alcohol"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.Alcohol? _explicitNullValueAlcohol = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.Alcohol Alcohol { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Alcohol Alcohol { get => _explicitNullValueAlcohol; set { _explicitNullValueAlcohol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alcohol"); else _explicitNullProperties?.Remove("alcohol"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.Alcohol _explicitNullValueAlcohol = default!;
 #endif
         /// <summary>Specify an ancillary service endorsement to provide the USPS with instructions on how to handle undeliverable-as-addressed pieces (DHL eCommerce only).</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraAncillaryEndorsement? AncillaryEndorsement { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraAncillaryEndorsement? AncillaryEndorsement { get => _explicitNullValueAncillaryEndorsement; set { _explicitNullValueAncillaryEndorsement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ancillary_endorsement"); else _explicitNullProperties?.Remove("ancillary_endorsement"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraAncillaryEndorsement? _explicitNullValueAncillaryEndorsement = default!;
         /// <summary>The appropriation_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? AppropriationNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? AppropriationNumber { get => _explicitNullValueAppropriationNumber; set { _explicitNullValueAppropriationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appropriation_number"); else _explicitNullProperties?.Remove("appropriation_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueAppropriationNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields AppropriationNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields AppropriationNumber { get => _explicitNullValueAppropriationNumber; set { _explicitNullValueAppropriationNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appropriation_number"); else _explicitNullProperties?.Remove("appropriation_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueAppropriationNumber = default!;
 #endif
         /// <summary>Request `true` to give carrier permission to leave the parcel in a safe place if no one answers the door (where supported). When set to `false`, if no one is available to receive the item, the parcel will not be left (*surcharges may be applicable).</summary>
-        public bool? AuthorityToLeave { get; set; }
+        public bool? AuthorityToLeave { get => _explicitNullValueAuthorityToLeave; set { _explicitNullValueAuthorityToLeave = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authority_to_leave"); else _explicitNullProperties?.Remove("authority_to_leave"); } }
+        private bool? _explicitNullValueAuthorityToLeave = default!;
         /// <summary>Specify billing details (UPS, FedEx, and DHL Germany only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.Billing? Billing { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Billing? Billing { get => _explicitNullValueBilling; set { _explicitNullValueBilling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing"); else _explicitNullProperties?.Remove("billing"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.Billing? _explicitNullValueBilling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.Billing Billing { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Billing Billing { get => _explicitNullValueBilling; set { _explicitNullValueBilling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing"); else _explicitNullProperties?.Remove("billing"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.Billing _explicitNullValueBilling = default!;
 #endif
         /// <summary>The bill_of_lading_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? BillOfLadingNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? BillOfLadingNumber { get => _explicitNullValueBillOfLadingNumber; set { _explicitNullValueBillOfLadingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bill_of_lading_number"); else _explicitNullProperties?.Remove("bill_of_lading_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueBillOfLadingNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields BillOfLadingNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields BillOfLadingNumber { get => _explicitNullValueBillOfLadingNumber; set { _explicitNullValueBillOfLadingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bill_of_lading_number"); else _explicitNullProperties?.Remove("bill_of_lading_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueBillOfLadingNumber = default!;
 #endif
         /// <summary>Bypasses address validation (USPS, UPS, &amp; LaserShip only).</summary>
-        public bool? BypassAddressValidation { get; set; }
+        public bool? BypassAddressValidation { get => _explicitNullValueBypassAddressValidation; set { _explicitNullValueBypassAddressValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bypass_address_validation"); else _explicitNullProperties?.Remove("bypass_address_validation"); } }
+        private bool? _explicitNullValueBypassAddressValidation = default!;
         /// <summary>Request carbon offsets by passing true (UPS only).</summary>
-        public bool? CarbonNeutral { get; set; }
+        public bool? CarbonNeutral { get => _explicitNullValueCarbonNeutral; set { _explicitNullValueCarbonNeutral = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carbon_neutral"); else _explicitNullProperties?.Remove("carbon_neutral"); } }
+        private bool? _explicitNullValueCarbonNeutral = default!;
         /// <summary>Identifies the carrier injection site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CarrierHubId { get; set; }
+        public string? CarrierHubId { get => _explicitNullValueCarrierHubId; set { _explicitNullValueCarrierHubId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_hub_id"); else _explicitNullProperties?.Remove("carrier_hub_id"); } }
+        private string? _explicitNullValueCarrierHubId = default!;
 #nullable restore
 #else
-        public string CarrierHubId { get; set; }
+        public string CarrierHubId { get => _explicitNullValueCarrierHubId; set { _explicitNullValueCarrierHubId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_hub_id"); else _explicitNullProperties?.Remove("carrier_hub_id"); } }
+        private string _explicitNullValueCarrierHubId = default!;
 #endif
         /// <summary>Travel time in hours from fulfillment center to carrier injection site.</summary>
-        public int? CarrierHubTravelTime { get; set; }
+        public int? CarrierHubTravelTime { get => _explicitNullValueCarrierHubTravelTime; set { _explicitNullValueCarrierHubTravelTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_hub_travel_time"); else _explicitNullProperties?.Remove("carrier_hub_travel_time"); } }
+        private int? _explicitNullValueCarrierHubTravelTime = default!;
         /// <summary>Specify collection on delivery details (UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.Cod? COD { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Cod? COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.Cod? _explicitNullValueCOD = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.Cod COD { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Cod COD { get => _explicitNullValueCOD; set { _explicitNullValueCOD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("COD"); else _explicitNullProperties?.Remove("COD"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.Cod _explicitNullValueCOD = default!;
 #endif
         /// <summary>The cod_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? CodNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? CodNumber { get => _explicitNullValueCodNumber; set { _explicitNullValueCodNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cod_number"); else _explicitNullProperties?.Remove("cod_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueCodNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields CodNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields CodNumber { get => _explicitNullValueCodNumber; set { _explicitNullValueCodNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cod_number"); else _explicitNullProperties?.Remove("cod_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueCodNumber = default!;
 #endif
         /// <summary>Specify container type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainerType { get; set; }
+        public string? ContainerType { get => _explicitNullValueContainerType; set { _explicitNullValueContainerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_type"); else _explicitNullProperties?.Remove("container_type"); } }
+        private string? _explicitNullValueContainerType = default!;
 #nullable restore
 #else
-        public string ContainerType { get; set; }
+        public string ContainerType { get => _explicitNullValueContainerType; set { _explicitNullValueContainerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_type"); else _explicitNullProperties?.Remove("container_type"); } }
+        private string _explicitNullValueContainerType = default!;
 #endif
         /// <summary>Carrier arrival time to pickup packages from the fulfillment center.UTC format: `%Y-%m-%dT%H:%M:%SZ`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CriticalPullTime { get; set; }
+        public string? CriticalPullTime { get => _explicitNullValueCriticalPullTime; set { _explicitNullValueCriticalPullTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("critical_pull_time"); else _explicitNullProperties?.Remove("critical_pull_time"); } }
+        private string? _explicitNullValueCriticalPullTime = default!;
 #nullable restore
 #else
-        public string CriticalPullTime { get; set; }
+        public string CriticalPullTime { get => _explicitNullValueCriticalPullTime; set { _explicitNullValueCriticalPullTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("critical_pull_time"); else _explicitNullProperties?.Remove("critical_pull_time"); } }
+        private string _explicitNullValueCriticalPullTime = default!;
 #endif
         /// <summary>Specify customer branch (Lasership only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerBranch { get; set; }
+        public string? CustomerBranch { get => _explicitNullValueCustomerBranch; set { _explicitNullValueCustomerBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_branch"); else _explicitNullProperties?.Remove("customer_branch"); } }
+        private string? _explicitNullValueCustomerBranch = default!;
 #nullable restore
 #else
-        public string CustomerBranch { get; set; }
+        public string CustomerBranch { get => _explicitNullValueCustomerBranch; set { _explicitNullValueCustomerBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_branch"); else _explicitNullProperties?.Remove("customer_branch"); } }
+        private string _explicitNullValueCustomerBranch = default!;
 #endif
         /// <summary>Specify the reference field on the label (FedEx and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference? CustomerReference { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference? CustomerReference { get => _explicitNullValueCustomerReference; set { _explicitNullValueCustomerReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_reference"); else _explicitNullProperties?.Remove("customer_reference"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference? _explicitNullValueCustomerReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference CustomerReference { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference CustomerReference { get => _explicitNullValueCustomerReference; set { _explicitNullValueCustomerReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_reference"); else _explicitNullProperties?.Remove("customer_reference"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.CustomerReference _explicitNullValueCustomerReference = default!;
 #endif
         /// <summary>Container for specifying the presence of dangerous materials. This is specific to USPS, and if any contents are provided, only certain USPS service levels will be eligible. For more information, see our [guide on hazardous or dangerous materials shipping](https://docs.goshippo.com/docs/shipments/hazmat/).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject? DangerousGoods { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject? DangerousGoods { get => _explicitNullValueDangerousGoods; set { _explicitNullValueDangerousGoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dangerous_goods"); else _explicitNullProperties?.Remove("dangerous_goods"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject? _explicitNullValueDangerousGoods = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject DangerousGoods { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject DangerousGoods { get => _explicitNullValueDangerousGoods; set { _explicitNullValueDangerousGoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dangerous_goods"); else _explicitNullProperties?.Remove("dangerous_goods"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.DangerousGoodsObject _explicitNullValueDangerousGoods = default!;
 #endif
         /// <summary>Dangerous Goods Code (DHL eCommerce only). See [Category Codes](https://api-legacy.dhlecs.com/docs/v2/appendix.html#dangerous-goods)</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraDangerousGoodsCode? DangerousGoodsCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraDangerousGoodsCode? DangerousGoodsCode { get => _explicitNullValueDangerousGoodsCode; set { _explicitNullValueDangerousGoodsCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dangerous_goods_code"); else _explicitNullProperties?.Remove("dangerous_goods_code"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraDangerousGoodsCode? _explicitNullValueDangerousGoodsCode = default!;
         /// <summary>The dealer_order_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? DealerOrderNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? DealerOrderNumber { get => _explicitNullValueDealerOrderNumber; set { _explicitNullValueDealerOrderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealer_order_number"); else _explicitNullProperties?.Remove("dealer_order_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueDealerOrderNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields DealerOrderNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields DealerOrderNumber { get => _explicitNullValueDealerOrderNumber; set { _explicitNullValueDealerOrderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dealer_order_number"); else _explicitNullProperties?.Remove("dealer_order_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueDealerOrderNumber = default!;
 #endif
         /// <summary>Specify delivery instructions. Up to 500 characters (Purolator accepts up to 30 characters). (FedEx, OnTrac and Purolator only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeliveryInstructions { get; set; }
+        public string? DeliveryInstructions { get => _explicitNullValueDeliveryInstructions; set { _explicitNullValueDeliveryInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_instructions"); else _explicitNullProperties?.Remove("delivery_instructions"); } }
+        private string? _explicitNullValueDeliveryInstructions = default!;
 #nullable restore
 #else
-        public string DeliveryInstructions { get; set; }
+        public string DeliveryInstructions { get => _explicitNullValueDeliveryInstructions; set { _explicitNullValueDeliveryInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_instructions"); else _explicitNullProperties?.Remove("delivery_instructions"); } }
+        private string _explicitNullValueDeliveryInstructions = default!;
 #endif
         /// <summary>Specify the department number field on the label (FedEx and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber? DeptNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber? DeptNumber { get => _explicitNullValueDeptNumber; set { _explicitNullValueDeptNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dept_number"); else _explicitNullProperties?.Remove("dept_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber? _explicitNullValueDeptNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber DeptNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber DeptNumber { get => _explicitNullValueDeptNumber; set { _explicitNullValueDeptNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dept_number"); else _explicitNullProperties?.Remove("dept_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.DepartmentNumber _explicitNullValueDeptNumber = default!;
 #endif
         /// <summary>Specify that the package contains Dry Ice (FedEx, Veho, and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.DryIce? DryIce { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DryIce? DryIce { get => _explicitNullValueDryIce; set { _explicitNullValueDryIce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dry_ice"); else _explicitNullProperties?.Remove("dry_ice"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.DryIce? _explicitNullValueDryIce = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.DryIce DryIce { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.DryIce DryIce { get => _explicitNullValueDryIce; set { _explicitNullValueDryIce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dry_ice"); else _explicitNullProperties?.Remove("dry_ice"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.DryIce _explicitNullValueDryIce = default!;
 #endif
         /// <summary>The fda_product_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? FdaProductCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? FdaProductCode { get => _explicitNullValueFdaProductCode; set { _explicitNullValueFdaProductCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fda_product_code"); else _explicitNullProperties?.Remove("fda_product_code"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueFdaProductCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields FdaProductCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields FdaProductCode { get => _explicitNullValueFdaProductCode; set { _explicitNullValueFdaProductCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fda_product_code"); else _explicitNullProperties?.Remove("fda_product_code"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueFdaProductCode = default!;
 #endif
         /// <summary>The fulfilment center where the package originates from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FulfillmentCenter { get; set; }
+        public string? FulfillmentCenter { get => _explicitNullValueFulfillmentCenter; set { _explicitNullValueFulfillmentCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillment_center"); else _explicitNullProperties?.Remove("fulfillment_center"); } }
+        private string? _explicitNullValueFulfillmentCenter = default!;
 #nullable restore
 #else
-        public string FulfillmentCenter { get; set; }
+        public string FulfillmentCenter { get => _explicitNullValueFulfillmentCenter; set { _explicitNullValueFulfillmentCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfillment_center"); else _explicitNullProperties?.Remove("fulfillment_center"); } }
+        private string _explicitNullValueFulfillmentCenter = default!;
 #endif
         /// <summary>Requests the carrier&apos;s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier&apos;sregular service level token.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| Purolator | Maps to Health Care+. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling? HealthcareHandling { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling? HealthcareHandling { get => _explicitNullValueHealthcareHandling; set { _explicitNullValueHealthcareHandling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("healthcare_handling"); else _explicitNullProperties?.Remove("healthcare_handling"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling? _explicitNullValueHealthcareHandling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling HealthcareHandling { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling HealthcareHandling { get => _explicitNullValueHealthcareHandling; set { _explicitNullValueHealthcareHandling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("healthcare_handling"); else _explicitNullProperties?.Remove("healthcare_handling"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.HealthcareHandling _explicitNullValueHealthcareHandling = default!;
 #endif
         /// <summary>To add 3rd party insurance powered by [XCover](https://docs.goshippo.com/docs/shipments/shippinginsurance/), specify `amount`, `content`, and `currency`. Alternatively, you can choose carrier provided insurance by additionally specifying `provider` (UPS, FedEx and OnTrac only).If you do not want to add insurance to your shipment, do not set these parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.Insurance? Insurance { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Insurance? Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insurance"); else _explicitNullProperties?.Remove("insurance"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.Insurance? _explicitNullValueInsurance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.Insurance Insurance { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.Insurance Insurance { get => _explicitNullValueInsurance; set { _explicitNullValueInsurance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insurance"); else _explicitNullProperties?.Remove("insurance"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.Insurance _explicitNullValueInsurance = default!;
 #endif
         /// <summary>Specify the invoice number field on the label (FedEx and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber? InvoiceNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber? InvoiceNumber { get => _explicitNullValueInvoiceNumber; set { _explicitNullValueInvoiceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_number"); else _explicitNullProperties?.Remove("invoice_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber? _explicitNullValueInvoiceNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber InvoiceNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber InvoiceNumber { get => _explicitNullValueInvoiceNumber; set { _explicitNullValueInvoiceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice_number"); else _explicitNullProperties?.Remove("invoice_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.InvoiceNumber _explicitNullValueInvoiceNumber = default!;
 #endif
         /// <summary>This field specifies if it is a scan-based return shipment. See the [Create a return shipment](https://docs.goshippo.com/docs/shipments/returns/) section for more details.</summary>
-        public bool? IsReturn { get; set; }
+        public bool? IsReturn { get => _explicitNullValueIsReturn; set { _explicitNullValueIsReturn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_return"); else _explicitNullProperties?.Remove("is_return"); } }
+        private bool? _explicitNullValueIsReturn = default!;
         /// <summary>Specify Lasership Attributes (Lasership only). Multiple options accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraLasershipAttributesEnum?>? LasershipAttrs { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraLasershipAttributesEnum?>? LasershipAttrs { get => _explicitNullValueLasershipAttrs; set { _explicitNullValueLasershipAttrs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lasership_attrs"); else _explicitNullProperties?.Remove("lasership_attrs"); } }
+        private List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraLasershipAttributesEnum?>? _explicitNullValueLasershipAttrs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraLasershipAttributesEnum?> LasershipAttrs { get; set; }
+        public List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraLasershipAttributesEnum?> LasershipAttrs { get => _explicitNullValueLasershipAttrs; set { _explicitNullValueLasershipAttrs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lasership_attrs"); else _explicitNullProperties?.Remove("lasership_attrs"); } }
+        private List<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraLasershipAttributesEnum?> _explicitNullValueLasershipAttrs = default!;
 #endif
         /// <summary>Declared value (Lasership only). Defaults to `50.00`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LasershipDeclaredValue { get; set; }
+        public string? LasershipDeclaredValue { get => _explicitNullValueLasershipDeclaredValue; set { _explicitNullValueLasershipDeclaredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lasership_declared_value"); else _explicitNullProperties?.Remove("lasership_declared_value"); } }
+        private string? _explicitNullValueLasershipDeclaredValue = default!;
 #nullable restore
 #else
-        public string LasershipDeclaredValue { get; set; }
+        public string LasershipDeclaredValue { get => _explicitNullValueLasershipDeclaredValue; set { _explicitNullValueLasershipDeclaredValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lasership_declared_value"); else _explicitNullProperties?.Remove("lasership_declared_value"); } }
+        private string _explicitNullValueLasershipDeclaredValue = default!;
 #endif
         /// <summary>The manifest_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ManifestNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifest_number"); else _explicitNullProperties?.Remove("manifest_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueManifestNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ManifestNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ManifestNumber { get => _explicitNullValueManifestNumber; set { _explicitNullValueManifestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manifest_number"); else _explicitNullProperties?.Remove("manifest_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueManifestNumber = default!;
 #endif
         /// <summary>The model_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ModelNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ModelNumber { get => _explicitNullValueModelNumber; set { _explicitNullValueModelNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_number"); else _explicitNullProperties?.Remove("model_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueModelNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ModelNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ModelNumber { get => _explicitNullValueModelNumber; set { _explicitNullValueModelNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_number"); else _explicitNullProperties?.Remove("model_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueModelNumber = default!;
 #endif
         /// <summary>The part_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? PartNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? PartNumber { get => _explicitNullValuePartNumber; set { _explicitNullValuePartNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("part_number"); else _explicitNullProperties?.Remove("part_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValuePartNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields PartNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields PartNumber { get => _explicitNullValuePartNumber; set { _explicitNullValuePartNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("part_number"); else _explicitNullProperties?.Remove("part_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValuePartNumber = default!;
 #endif
         /// <summary>Specify the PO number field on the label (FedEx and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.PoNumber? PoNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.PoNumber? PoNumber { get => _explicitNullValuePoNumber; set { _explicitNullValuePoNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("po_number"); else _explicitNullProperties?.Remove("po_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.PoNumber? _explicitNullValuePoNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.PoNumber PoNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.PoNumber PoNumber { get => _explicitNullValuePoNumber; set { _explicitNullValuePoNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("po_number"); else _explicitNullProperties?.Remove("po_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.PoNumber _explicitNullValuePoNumber = default!;
 #endif
         /// <summary>Required for DHL Germany Paket Sameday. Designates a desired timeframe for delivery. Format is `HHMMHHMM`</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraPreferredDeliveryTimeframe? PreferredDeliveryTimeframe { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraPreferredDeliveryTimeframe? PreferredDeliveryTimeframe { get => _explicitNullValuePreferredDeliveryTimeframe; set { _explicitNullValuePreferredDeliveryTimeframe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferred_delivery_timeframe"); else _explicitNullProperties?.Remove("preferred_delivery_timeframe"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraPreferredDeliveryTimeframe? _explicitNullValuePreferredDeliveryTimeframe = default!;
         /// <summary>Add premium service to a shipment (DHL Germany international shipments only).</summary>
-        public bool? Premium { get; set; }
+        public bool? Premium { get => _explicitNullValuePremium; set { _explicitNullValuePremium = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium"); else _explicitNullProperties?.Remove("premium"); } }
+        private bool? _explicitNullValuePremium = default!;
         /// <summary>The production_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ProductionCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? ProductionCode { get => _explicitNullValueProductionCode; set { _explicitNullValueProductionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("production_code"); else _explicitNullProperties?.Remove("production_code"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueProductionCode = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ProductionCode { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields ProductionCode { get => _explicitNullValueProductionCode; set { _explicitNullValueProductionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("production_code"); else _explicitNullProperties?.Remove("production_code"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueProductionCode = default!;
 #endif
         /// <summary>The purchase_request_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? PurchaseRequestNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? PurchaseRequestNumber { get => _explicitNullValuePurchaseRequestNumber; set { _explicitNullValuePurchaseRequestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_request_number"); else _explicitNullProperties?.Remove("purchase_request_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValuePurchaseRequestNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields PurchaseRequestNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields PurchaseRequestNumber { get => _explicitNullValuePurchaseRequestNumber; set { _explicitNullValuePurchaseRequestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_request_number"); else _explicitNullProperties?.Remove("purchase_request_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValuePurchaseRequestNumber = default!;
 #endif
         /// <summary>Request a QR code for a given transaction when creating a shipping label (USPS domestic and Evri UK only).</summary>
-        public bool? QrCodeRequested { get; set; }
+        public bool? QrCodeRequested { get => _explicitNullValueQrCodeRequested; set { _explicitNullValueQrCodeRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qr_code_requested"); else _explicitNullProperties?.Remove("qr_code_requested"); } }
+        private bool? _explicitNullValueQrCodeRequested = default!;
         /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) || Purolator | Max 25 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference1 { get; set; }
+        public string? Reference1 { get => _explicitNullValueReference1; set { _explicitNullValueReference1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_1"); else _explicitNullProperties?.Remove("reference_1"); } }
+        private string? _explicitNullValueReference1 = default!;
 #nullable restore
 #else
-        public string Reference1 { get; set; }
+        public string Reference1 { get => _explicitNullValueReference1; set { _explicitNullValueReference1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_1"); else _explicitNullProperties?.Remove("reference_1"); } }
+        private string _explicitNullValueReference1 = default!;
 #endif
         /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters. For DHL eCommerce, this field can be used for billing reference.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 characters || Purolator | Max 25 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference2 { get; set; }
+        public string? Reference2 { get => _explicitNullValueReference2; set { _explicitNullValueReference2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_2"); else _explicitNullProperties?.Remove("reference_2"); } }
+        private string? _explicitNullValueReference2 = default!;
 #nullable restore
 #else
-        public string Reference2 { get; set; }
+        public string Reference2 { get => _explicitNullValueReference2; set { _explicitNullValueReference2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_2"); else _explicitNullProperties?.Remove("reference_2"); } }
+        private string _explicitNullValueReference2 = default!;
 #endif
         /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| Purolator | Max 25 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference3 { get; set; }
+        public string? Reference3 { get => _explicitNullValueReference3; set { _explicitNullValueReference3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_3"); else _explicitNullProperties?.Remove("reference_3"); } }
+        private string? _explicitNullValueReference3 = default!;
 #nullable restore
 #else
-        public string Reference3 { get; set; }
+        public string Reference3 { get => _explicitNullValueReference3; set { _explicitNullValueReference3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_3"); else _explicitNullProperties?.Remove("reference_3"); } }
+        private string _explicitNullValueReference3 = default!;
 #endif
         /// <summary>Optional text to be printed on the shipping label if supported by carrier. Up to 50 characters.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| Purolator | Max 25 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reference4 { get; set; }
+        public string? Reference4 { get => _explicitNullValueReference4; set { _explicitNullValueReference4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_4"); else _explicitNullProperties?.Remove("reference_4"); } }
+        private string? _explicitNullValueReference4 = default!;
 #nullable restore
 #else
-        public string Reference4 { get; set; }
+        public string Reference4 { get => _explicitNullValueReference4; set { _explicitNullValueReference4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_4"); else _explicitNullProperties?.Remove("reference_4"); } }
+        private string _explicitNullValueReference4 = default!;
 #endif
         /// <summary>Returns retail rates instead of account-based rates (UPS and FedEx only).</summary>
-        public bool? RequestRetailRates { get; set; }
+        public bool? RequestRetailRates { get => _explicitNullValueRequestRetailRates; set { _explicitNullValueRequestRetailRates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_retail_rates"); else _explicitNullProperties?.Remove("request_retail_rates"); } }
+        private bool? _explicitNullValueRequestRetailRates = default!;
         /// <summary>Request additional return option for return shipments (UPS and Lasership only).</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType? ReturnServiceType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType? ReturnServiceType { get => _explicitNullValueReturnServiceType; set { _explicitNullValueReturnServiceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_service_type"); else _explicitNullProperties?.Remove("return_service_type"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraReturnServiceType? _explicitNullValueReturnServiceType = default!;
         /// <summary>Specify the RMA number field on the label (FedEx and UPS only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber? RmaNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber? RmaNumber { get => _explicitNullValueRmaNumber; set { _explicitNullValueRmaNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rma_number"); else _explicitNullProperties?.Remove("rma_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber? _explicitNullValueRmaNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber RmaNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber RmaNumber { get => _explicitNullValueRmaNumber; set { _explicitNullValueRmaNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rma_number"); else _explicitNullProperties?.Remove("rma_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.RmaNumber _explicitNullValueRmaNumber = default!;
 #endif
         /// <summary>The salesperson_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? SalespersonNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? SalespersonNumber { get => _explicitNullValueSalespersonNumber; set { _explicitNullValueSalespersonNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesperson_number"); else _explicitNullProperties?.Remove("salesperson_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueSalespersonNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields SalespersonNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields SalespersonNumber { get => _explicitNullValueSalespersonNumber; set { _explicitNullValueSalespersonNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesperson_number"); else _explicitNullProperties?.Remove("salesperson_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueSalespersonNumber = default!;
 #endif
         /// <summary>Marks shipment as to be delivered on a Saturday.</summary>
-        public bool? SaturdayDelivery { get; set; }
+        public bool? SaturdayDelivery { get => _explicitNullValueSaturdayDelivery; set { _explicitNullValueSaturdayDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturday_delivery"); else _explicitNullProperties?.Remove("saturday_delivery"); } }
+        private bool? _explicitNullValueSaturdayDelivery = default!;
         /// <summary>The serial_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? SerialNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? SerialNumber { get => _explicitNullValueSerialNumber; set { _explicitNullValueSerialNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serial_number"); else _explicitNullProperties?.Remove("serial_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueSerialNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields SerialNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields SerialNumber { get => _explicitNullValueSerialNumber; set { _explicitNullValueSerialNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serial_number"); else _explicitNullProperties?.Remove("serial_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueSerialNumber = default!;
 #endif
         /// <summary>Request standard or adult signature confirmation. You can alternatively request Certified Mail (USPS only) or Indirect signature (FedEx only) or Carrier Confirmation (Deutsche Post only).</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraSignatureConfirmation? SignatureConfirmation { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraSignatureConfirmation? SignatureConfirmation { get => _explicitNullValueSignatureConfirmation; set { _explicitNullValueSignatureConfirmation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_confirmation"); else _explicitNullProperties?.Remove("signature_confirmation"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtraSignatureConfirmation? _explicitNullValueSignatureConfirmation = default!;
         /// <summary>The store_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? StoreNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? StoreNumber { get => _explicitNullValueStoreNumber; set { _explicitNullValueStoreNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_number"); else _explicitNullProperties?.Remove("store_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueStoreNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields StoreNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields StoreNumber { get => _explicitNullValueStoreNumber; set { _explicitNullValueStoreNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_number"); else _explicitNullProperties?.Remove("store_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueStoreNumber = default!;
 #endif
         /// <summary>The transaction_reference_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? TransactionReferenceNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? TransactionReferenceNumber { get => _explicitNullValueTransactionReferenceNumber; set { _explicitNullValueTransactionReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_reference_number"); else _explicitNullProperties?.Remove("transaction_reference_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields? _explicitNullValueTransactionReferenceNumber = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields TransactionReferenceNumber { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields TransactionReferenceNumber { get => _explicitNullValueTransactionReferenceNumber; set { _explicitNullValueTransactionReferenceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transaction_reference_number"); else _explicitNullProperties?.Remove("transaction_reference_number"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields _explicitNullValueTransactionReferenceNumber = default!;
 #endif
         /// <summary>UPS only. Request USMCA (United States-Mexico-Canada Agreement) preferential tariff treatment. When enabled, it includes the USMCA eligibility declaration in customs documentation.Supported routes and value limits:- USA/Canada → Mexico: ≤ $1,000 USD- Canada/Mexico → USA: ≤ $2,500 USD  - USA/Mexico → Canada: ≤ $3,300 CADOnly for declaration-only shipments, full USMCA - FormType 04 (Certificate of Origin) is not supported.</summary>
-        public bool? UsmcaEligible { get; set; }
+        public bool? UsmcaEligible { get => _explicitNullValueUsmcaEligible; set { _explicitNullValueUsmcaEligible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usmca_eligible"); else _explicitNullProperties?.Remove("usmca_eligible"); } }
+        private bool? _explicitNullValueUsmcaEligible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra"/> and sets the default values.
         /// </summary>
@@ -372,7 +526,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -499,6 +653,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("store_number", StoreNumber);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>("transaction_reference_number", TransactionReferenceNumber);
             writer.WriteBoolValue("usmca_eligible", UsmcaEligible);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

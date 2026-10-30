@@ -12,28 +12,45 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Location : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("building_location_type") is { } nullNodeBuildingLocationType && nullNodeBuildingLocationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildingLocationType = null;
+            if (parseNode.GetChildNode("building_type") is { } nullNodeBuildingType && nullNodeBuildingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildingType = null;
+            if (parseNode.GetChildNode("instructions") is { } nullNodeInstructions && nullNodeInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instructions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The pickup address, which includes your name, company name, street address, city, state, zip code, country, phone number, and email address (strings). Special characters should not be included in any address element, especially name, company, and email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest? Address { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest Address { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest _explicitNullValueAddress = default!;
 #endif
         /// <summary>Where your parcels will be available for pickup. &quot;Security Deck&quot; and &quot;Shipping Dock&quot; are only supported for DHL Express.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingLocationType? BuildingLocationType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingLocationType? BuildingLocationType { get => _explicitNullValueBuildingLocationType; set { _explicitNullValueBuildingLocationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("building_location_type"); else _explicitNullProperties?.Remove("building_location_type"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingLocationType? _explicitNullValueBuildingLocationType = default!;
         /// <summary>The type of building where the pickup is located.</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingType? BuildingType { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingType? BuildingType { get => _explicitNullValueBuildingType; set { _explicitNullValueBuildingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("building_type"); else _explicitNullProperties?.Remove("building_type"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingType? _explicitNullValueBuildingType = default!;
         /// <summary>Pickup instructions for the courier. This is a mandatory field if the building_location_type is &quot;Other&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Instructions { get; set; }
+        public string? Instructions { get => _explicitNullValueInstructions; set { _explicitNullValueInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instructions"); else _explicitNullProperties?.Remove("instructions"); } }
+        private string? _explicitNullValueInstructions = default!;
 #nullable restore
 #else
-        public string Instructions { get; set; }
+        public string Instructions { get => _explicitNullValueInstructions; set { _explicitNullValueInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instructions"); else _explicitNullProperties?.Remove("instructions"); } }
+        private string _explicitNullValueInstructions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Location"/> and sets the default values.
@@ -50,7 +67,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.Location CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.Location();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.Location(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +94,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingLocationType>("building_location_type", BuildingLocationType);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingType>("building_type", BuildingType);
             writer.WriteStringValue("instructions", Instructions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -13,110 +13,159 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FedExConnectExistingOwnAccountParameters : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("first_name") is { } nullNodeFirstName && nullNodeFirstName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstName = null;
+            if (parseNode.GetChildNode("from_address_city") is { } nullNodeFromAddressCity && nullNodeFromAddressCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromAddressCity = null;
+            if (parseNode.GetChildNode("from_address_country_iso2") is { } nullNodeFromAddressCountryIso2 && nullNodeFromAddressCountryIso2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromAddressCountryIso2 = null;
+            if (parseNode.GetChildNode("from_address_st") is { } nullNodeFromAddressSt && nullNodeFromAddressSt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromAddressSt = null;
+            if (parseNode.GetChildNode("from_address_state") is { } nullNodeFromAddressState && nullNodeFromAddressState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromAddressState = null;
+            if (parseNode.GetChildNode("from_address_zip") is { } nullNodeFromAddressZip && nullNodeFromAddressZip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromAddressZip = null;
+            if (parseNode.GetChildNode("last_name") is { } nullNodeLastName && nullNodeLastName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastName = null;
+            if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("use_multi_factor_registration") is { } nullNodeUseMultiFactorRegistration && nullNodeUseMultiFactorRegistration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseMultiFactorRegistration = null;
+            if (parseNode.GetChildNode("verification_invoice_amount") is { } nullNodeVerificationInvoiceAmount && nullNodeVerificationInvoiceAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationInvoiceAmount = null;
+            if (parseNode.GetChildNode("verification_invoice_currency") is { } nullNodeVerificationInvoiceCurrency && nullNodeVerificationInvoiceCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationInvoiceCurrency = null;
+            if (parseNode.GetChildNode("verification_invoice_date") is { } nullNodeVerificationInvoiceDate && nullNodeVerificationInvoiceDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationInvoiceDate = null;
+            if (parseNode.GetChildNode("verification_invoice_number") is { } nullNodeVerificationInvoiceNumber && nullNodeVerificationInvoiceNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationInvoiceNumber = null;
+            if (parseNode.GetChildNode("verification_option") is { } nullNodeVerificationOption && nullNodeVerificationOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationOption = null;
+            if (parseNode.GetChildNode("verification_pin") is { } nullNodeVerificationPin && nullNodeVerificationPin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationPin = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>First name of the account holder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstName { get; set; }
+        public string? FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string? _explicitNullValueFirstName = default!;
 #nullable restore
 #else
-        public string FirstName { get; set; }
+        public string FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_name"); else _explicitNullProperties?.Remove("first_name"); } }
+        private string _explicitNullValueFirstName = default!;
 #endif
         /// <summary>City of the account holder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromAddressCity { get; set; }
+        public string? FromAddressCity { get => _explicitNullValueFromAddressCity; set { _explicitNullValueFromAddressCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_city"); else _explicitNullProperties?.Remove("from_address_city"); } }
+        private string? _explicitNullValueFromAddressCity = default!;
 #nullable restore
 #else
-        public string FromAddressCity { get; set; }
+        public string FromAddressCity { get => _explicitNullValueFromAddressCity; set { _explicitNullValueFromAddressCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_city"); else _explicitNullProperties?.Remove("from_address_city"); } }
+        private string _explicitNullValueFromAddressCity = default!;
 #endif
         /// <summary>Country of the account holder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromAddressCountryIso2 { get; set; }
+        public string? FromAddressCountryIso2 { get => _explicitNullValueFromAddressCountryIso2; set { _explicitNullValueFromAddressCountryIso2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_country_iso2"); else _explicitNullProperties?.Remove("from_address_country_iso2"); } }
+        private string? _explicitNullValueFromAddressCountryIso2 = default!;
 #nullable restore
 #else
-        public string FromAddressCountryIso2 { get; set; }
+        public string FromAddressCountryIso2 { get => _explicitNullValueFromAddressCountryIso2; set { _explicitNullValueFromAddressCountryIso2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_country_iso2"); else _explicitNullProperties?.Remove("from_address_country_iso2"); } }
+        private string _explicitNullValueFromAddressCountryIso2 = default!;
 #endif
         /// <summary>Street address of the account holder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromAddressSt { get; set; }
+        public string? FromAddressSt { get => _explicitNullValueFromAddressSt; set { _explicitNullValueFromAddressSt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_st"); else _explicitNullProperties?.Remove("from_address_st"); } }
+        private string? _explicitNullValueFromAddressSt = default!;
 #nullable restore
 #else
-        public string FromAddressSt { get; set; }
+        public string FromAddressSt { get => _explicitNullValueFromAddressSt; set { _explicitNullValueFromAddressSt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_st"); else _explicitNullProperties?.Remove("from_address_st"); } }
+        private string _explicitNullValueFromAddressSt = default!;
 #endif
         /// <summary>State of the account holder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromAddressState { get; set; }
+        public string? FromAddressState { get => _explicitNullValueFromAddressState; set { _explicitNullValueFromAddressState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_state"); else _explicitNullProperties?.Remove("from_address_state"); } }
+        private string? _explicitNullValueFromAddressState = default!;
 #nullable restore
 #else
-        public string FromAddressState { get; set; }
+        public string FromAddressState { get => _explicitNullValueFromAddressState; set { _explicitNullValueFromAddressState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_state"); else _explicitNullProperties?.Remove("from_address_state"); } }
+        private string _explicitNullValueFromAddressState = default!;
 #endif
         /// <summary>Zip code of the account holder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromAddressZip { get; set; }
+        public string? FromAddressZip { get => _explicitNullValueFromAddressZip; set { _explicitNullValueFromAddressZip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_zip"); else _explicitNullProperties?.Remove("from_address_zip"); } }
+        private string? _explicitNullValueFromAddressZip = default!;
 #nullable restore
 #else
-        public string FromAddressZip { get; set; }
+        public string FromAddressZip { get => _explicitNullValueFromAddressZip; set { _explicitNullValueFromAddressZip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_address_zip"); else _explicitNullProperties?.Remove("from_address_zip"); } }
+        private string _explicitNullValueFromAddressZip = default!;
 #endif
         /// <summary>Last name of the account holder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastName { get; set; }
+        public string? LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name"); else _explicitNullProperties?.Remove("last_name"); } }
+        private string? _explicitNullValueLastName = default!;
 #nullable restore
 #else
-        public string LastName { get; set; }
+        public string LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_name"); else _explicitNullProperties?.Remove("last_name"); } }
+        private string _explicitNullValueLastName = default!;
 #endif
         /// <summary>Phone number of the account holder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get; set; }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>Must be true. FedEx accounts are registered using the multi-factor registration workflow.</summary>
-        public bool? UseMultiFactorRegistration { get; set; }
+        public bool? UseMultiFactorRegistration { get => _explicitNullValueUseMultiFactorRegistration; set { _explicitNullValueUseMultiFactorRegistration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_multi_factor_registration"); else _explicitNullProperties?.Remove("use_multi_factor_registration"); } }
+        private bool? _explicitNullValueUseMultiFactorRegistration = default!;
         /// <summary>(optional) The invoice amount to verify the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationInvoiceAmount { get; set; }
+        public string? VerificationInvoiceAmount { get => _explicitNullValueVerificationInvoiceAmount; set { _explicitNullValueVerificationInvoiceAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_invoice_amount"); else _explicitNullProperties?.Remove("verification_invoice_amount"); } }
+        private string? _explicitNullValueVerificationInvoiceAmount = default!;
 #nullable restore
 #else
-        public string VerificationInvoiceAmount { get; set; }
+        public string VerificationInvoiceAmount { get => _explicitNullValueVerificationInvoiceAmount; set { _explicitNullValueVerificationInvoiceAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_invoice_amount"); else _explicitNullProperties?.Remove("verification_invoice_amount"); } }
+        private string _explicitNullValueVerificationInvoiceAmount = default!;
 #endif
         /// <summary>(optional) The invoice currency to verify the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationInvoiceCurrency { get; set; }
+        public string? VerificationInvoiceCurrency { get => _explicitNullValueVerificationInvoiceCurrency; set { _explicitNullValueVerificationInvoiceCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_invoice_currency"); else _explicitNullProperties?.Remove("verification_invoice_currency"); } }
+        private string? _explicitNullValueVerificationInvoiceCurrency = default!;
 #nullable restore
 #else
-        public string VerificationInvoiceCurrency { get; set; }
+        public string VerificationInvoiceCurrency { get => _explicitNullValueVerificationInvoiceCurrency; set { _explicitNullValueVerificationInvoiceCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_invoice_currency"); else _explicitNullProperties?.Remove("verification_invoice_currency"); } }
+        private string _explicitNullValueVerificationInvoiceCurrency = default!;
 #endif
         /// <summary>(optional) The invoice date to verify the account. In the format `YYYY-MM-DD`.</summary>
-        public Date? VerificationInvoiceDate { get; set; }
+        public Date? VerificationInvoiceDate { get => _explicitNullValueVerificationInvoiceDate; set { _explicitNullValueVerificationInvoiceDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_invoice_date"); else _explicitNullProperties?.Remove("verification_invoice_date"); } }
+        private Date? _explicitNullValueVerificationInvoiceDate = default!;
         /// <summary>(optional) The invoice number to verify the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationInvoiceNumber { get; set; }
+        public string? VerificationInvoiceNumber { get => _explicitNullValueVerificationInvoiceNumber; set { _explicitNullValueVerificationInvoiceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_invoice_number"); else _explicitNullProperties?.Remove("verification_invoice_number"); } }
+        private string? _explicitNullValueVerificationInvoiceNumber = default!;
 #nullable restore
 #else
-        public string VerificationInvoiceNumber { get; set; }
+        public string VerificationInvoiceNumber { get => _explicitNullValueVerificationInvoiceNumber; set { _explicitNullValueVerificationInvoiceNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_invoice_number"); else _explicitNullProperties?.Remove("verification_invoice_number"); } }
+        private string _explicitNullValueVerificationInvoiceNumber = default!;
 #endif
         /// <summary>Determines the verification option to use for the account registration (Enum: SMS, EMAIL, CALL, INVOICE).</summary>
-        public global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParametersVerificationOption? VerificationOption { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParametersVerificationOption? VerificationOption { get => _explicitNullValueVerificationOption; set { _explicitNullValueVerificationOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_option"); else _explicitNullProperties?.Remove("verification_option"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParametersVerificationOption? _explicitNullValueVerificationOption = default!;
         /// <summary>(optional) The PIN to verify the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerificationPin { get; set; }
+        public string? VerificationPin { get => _explicitNullValueVerificationPin; set { _explicitNullValueVerificationPin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_pin"); else _explicitNullProperties?.Remove("verification_pin"); } }
+        private string? _explicitNullValueVerificationPin = default!;
 #nullable restore
 #else
-        public string VerificationPin { get; set; }
+        public string VerificationPin { get => _explicitNullValueVerificationPin; set { _explicitNullValueVerificationPin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_pin"); else _explicitNullProperties?.Remove("verification_pin"); } }
+        private string _explicitNullValueVerificationPin = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters"/> and sets the default values.
@@ -133,7 +182,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParameters(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -182,6 +231,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("verification_invoice_number", VerificationInvoiceNumber);
             writer.WriteEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.FedExConnectExistingOwnAccountParametersVerificationOption>("verification_option", VerificationOption);
             writer.WriteStringValue("verification_pin", VerificationPin);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

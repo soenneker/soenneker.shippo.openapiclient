@@ -12,25 +12,40 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsConnectExistingOwnAccountStreamlinedParameters : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_number") is { } nullNodeAccountNumber && nullNodeAccountNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountNumber = null;
+            if (parseNode.GetChildNode("billing_address_country_iso2") is { } nullNodeBillingAddressCountryIso2 && nullNodeBillingAddressCountryIso2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAddressCountryIso2 = null;
+            if (parseNode.GetChildNode("ups_agreements") is { } nullNodeUpsAgreements && nullNodeUpsAgreements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpsAgreements = null;
+        }
+
         /// <summary>The UPS account number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountNumber { get; set; }
+        public string? AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
+        private string? _explicitNullValueAccountNumber = default!;
 #nullable restore
 #else
-        public string AccountNumber { get; set; }
+        public string AccountNumber { get => _explicitNullValueAccountNumber; set { _explicitNullValueAccountNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_number"); else _explicitNullProperties?.Remove("account_number"); } }
+        private string _explicitNullValueAccountNumber = default!;
 #endif
         /// <summary>Two-letter ISO 3166-1 country code of the billing address on the UPS account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingAddressCountryIso2 { get; set; }
+        public string? BillingAddressCountryIso2 { get => _explicitNullValueBillingAddressCountryIso2; set { _explicitNullValueBillingAddressCountryIso2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address_country_iso2"); else _explicitNullProperties?.Remove("billing_address_country_iso2"); } }
+        private string? _explicitNullValueBillingAddressCountryIso2 = default!;
 #nullable restore
 #else
-        public string BillingAddressCountryIso2 { get; set; }
+        public string BillingAddressCountryIso2 { get => _explicitNullValueBillingAddressCountryIso2; set { _explicitNullValueBillingAddressCountryIso2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing_address_country_iso2"); else _explicitNullProperties?.Remove("billing_address_country_iso2"); } }
+        private string _explicitNullValueBillingAddressCountryIso2 = default!;
 #endif
         /// <summary>Whether the user agrees to the UPS terms and conditions or not. Error 400 will be returned if passed in as false</summary>
-        public bool? UpsAgreements { get; set; }
+        public bool? UpsAgreements { get => _explicitNullValueUpsAgreements; set { _explicitNullValueUpsAgreements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ups_agreements"); else _explicitNullProperties?.Remove("ups_agreements"); } }
+        private bool? _explicitNullValueUpsAgreements = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,7 +54,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.UpsConnectExistingOwnAccountStreamlinedParameters(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +78,8 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_number", AccountNumber);
             writer.WriteStringValue("billing_address_country_iso2", BillingAddressCountryIso2);
-            writer.WriteBoolValue("ups_agreements", UpsAgreements);
+            writer.WriteBoolValue("ups_agreements", UpsAgreements);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

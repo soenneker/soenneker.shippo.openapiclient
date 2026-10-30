@@ -56,6 +56,8 @@ namespace Soenneker.Shippo.OpenApiClient.Carrier_accounts.Item.Signin.Initiate
                 { "400", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin401Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Shippo.OpenApiClient.Models.InitiateOAuth2Signin404Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

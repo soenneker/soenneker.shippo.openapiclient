@@ -11,82 +11,118 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ShipmentCreateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("address_from") is { } nullNodeAddressFrom && nullNodeAddressFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressFrom = null;
+            if (parseNode.GetChildNode("address_return") is { } nullNodeAddressReturn && nullNodeAddressReturn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressReturn = null;
+            if (parseNode.GetChildNode("address_to") is { } nullNodeAddressTo && nullNodeAddressTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressTo = null;
+            if (parseNode.GetChildNode("async") is { } nullNodeAsync && nullNodeAsync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Async = null;
+            if (parseNode.GetChildNode("carrier_accounts") is { } nullNodeCarrierAccounts && nullNodeCarrierAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarrierAccounts = null;
+            if (parseNode.GetChildNode("customs_declaration") is { } nullNodeCustomsDeclaration && nullNodeCustomsDeclaration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomsDeclaration = null;
+            if (parseNode.GetChildNode("extra") is { } nullNodeExtra && nullNodeExtra.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extra = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("parcels") is { } nullNodeParcels && nullNodeParcels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parcels = null;
+            if (parseNode.GetChildNode("shipment_date") is { } nullNodeShipmentDate && nullNodeShipmentDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShipmentDate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFrom? AddressFrom { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFrom? AddressFrom { get => _explicitNullValueAddressFrom; set { _explicitNullValueAddressFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_from"); else _explicitNullProperties?.Remove("address_from"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFrom? _explicitNullValueAddressFrom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFrom AddressFrom { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFrom AddressFrom { get => _explicitNullValueAddressFrom; set { _explicitNullValueAddressFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_from"); else _explicitNullProperties?.Remove("address_from"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressFrom _explicitNullValueAddressFrom = default!;
 #endif
         /// <summary>The address_return property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressReturn? AddressReturn { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressReturn? AddressReturn { get => _explicitNullValueAddressReturn; set { _explicitNullValueAddressReturn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_return"); else _explicitNullProperties?.Remove("address_return"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressReturn? _explicitNullValueAddressReturn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressReturn AddressReturn { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressReturn AddressReturn { get => _explicitNullValueAddressReturn; set { _explicitNullValueAddressReturn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_return"); else _explicitNullProperties?.Remove("address_return"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressReturn _explicitNullValueAddressReturn = default!;
 #endif
         /// <summary>The address_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressTo? AddressTo { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressTo? AddressTo { get => _explicitNullValueAddressTo; set { _explicitNullValueAddressTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_to"); else _explicitNullProperties?.Remove("address_to"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressTo? _explicitNullValueAddressTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressTo AddressTo { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressTo AddressTo { get => _explicitNullValueAddressTo; set { _explicitNullValueAddressTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_to"); else _explicitNullProperties?.Remove("address_to"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2AddressTo _explicitNullValueAddressTo = default!;
 #endif
         /// <summary>The async property</summary>
-        public bool? Async { get; set; }
+        public bool? Async { get => _explicitNullValueAsync; set { _explicitNullValueAsync = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async"); else _explicitNullProperties?.Remove("async"); } }
+        private bool? _explicitNullValueAsync = default!;
         /// <summary>List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) `object_id`s used to filter the returned rates.  If set, only rates from these carriers will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CarrierAccounts { get; set; }
+        public List<string>? CarrierAccounts { get => _explicitNullValueCarrierAccounts; set { _explicitNullValueCarrierAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_accounts"); else _explicitNullProperties?.Remove("carrier_accounts"); } }
+        private List<string>? _explicitNullValueCarrierAccounts = default!;
 #nullable restore
 #else
-        public List<string> CarrierAccounts { get; set; }
+        public List<string> CarrierAccounts { get => _explicitNullValueCarrierAccounts; set { _explicitNullValueCarrierAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_accounts"); else _explicitNullProperties?.Remove("carrier_accounts"); } }
+        private List<string> _explicitNullValueCarrierAccounts = default!;
 #endif
         /// <summary>The customs_declaration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration? CustomsDeclaration { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration? CustomsDeclaration { get => _explicitNullValueCustomsDeclaration; set { _explicitNullValueCustomsDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customs_declaration"); else _explicitNullProperties?.Remove("customs_declaration"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration? _explicitNullValueCustomsDeclaration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration CustomsDeclaration { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration CustomsDeclaration { get => _explicitNullValueCustomsDeclaration; set { _explicitNullValueCustomsDeclaration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customs_declaration"); else _explicitNullProperties?.Remove("customs_declaration"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration _explicitNullValueCustomsDeclaration = default!;
 #endif
         /// <summary>An object holding optional extra services to be requested.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra? Extra { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra? Extra { get => _explicitNullValueExtra; set { _explicitNullValueExtra = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra"); else _explicitNullProperties?.Remove("extra"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra? _explicitNullValueExtra = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra Extra { get; set; }
+        public global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra Extra { get => _explicitNullValueExtra; set { _explicitNullValueExtra = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra"); else _explicitNullProperties?.Remove("extra"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra _explicitNullValueExtra = default!;
 #endif
         /// <summary>A string of up to 100 characters that can be filled with any additional information you want to attach to the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Metadata { get; set; }
+        public string? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private string? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public string Metadata { get; set; }
+        public string Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private string _explicitNullValueMetadata = default!;
 #endif
         /// <summary>List of parcels to be shipped.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 items |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Parcels { get; set; }
+        public List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>? Parcels { get => _explicitNullValueParcels; set { _explicitNullValueParcels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcels"); else _explicitNullProperties?.Remove("parcels"); } }
+        private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>? _explicitNullValueParcels = default!;
 #nullable restore
 #else
-        public List<string> Parcels { get; set; }
+        public List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> Parcels { get => _explicitNullValueParcels; set { _explicitNullValueParcels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parcels"); else _explicitNullProperties?.Remove("parcels"); } }
+        private List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode> _explicitNullValueParcels = default!;
 #endif
         /// <summary>Date the shipment will be tendered to the carrier. Must be in the format `2014-01-18T00:35:03.463Z`.Defaults to current date and time if no value is provided. Please note that some carriers require this value to be in the future, on a working day, or similar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShipmentDate { get; set; }
+        public string? ShipmentDate { get => _explicitNullValueShipmentDate; set { _explicitNullValueShipmentDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment_date"); else _explicitNullProperties?.Remove("shipment_date"); } }
+        private string? _explicitNullValueShipmentDate = default!;
 #nullable restore
 #else
-        public string ShipmentDate { get; set; }
+        public string ShipmentDate { get => _explicitNullValueShipmentDate; set { _explicitNullValueShipmentDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment_date"); else _explicitNullProperties?.Remove("shipment_date"); } }
+        private string _explicitNullValueShipmentDate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest"/> and sets the default values.
@@ -103,7 +139,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -121,7 +157,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "customs_declaration", n => { CustomsDeclaration = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration.CreateFromDiscriminatorValue); } },
                 { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
-                { "parcels", n => { Parcels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "parcels", n => { Parcels = n.GetCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shipment_date", n => { ShipmentDate = n.GetStringValue(); } },
             };
         }
@@ -140,8 +176,9 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentCreateRequestAllOf2CustomsDeclaration>("customs_declaration", CustomsDeclaration);
             writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ShipmentExtra>("extra", Extra);
             writer.WriteStringValue("metadata", Metadata);
-            writer.WriteCollectionOfPrimitiveValues<string>("parcels", Parcels);
+            writer.WriteCollectionOfObjectValues<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("parcels", Parcels);
             writer.WriteStringValue("shipment_date", ShipmentDate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

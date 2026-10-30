@@ -12,48 +12,70 @@ namespace Soenneker.Shippo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomsInvoicedCharges : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("other_fees") is { } nullNodeOtherFees && nullNodeOtherFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OtherFees = null;
+            if (parseNode.GetChildNode("total_duties") is { } nullNodeTotalDuties && nullNodeTotalDuties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalDuties = null;
+            if (parseNode.GetChildNode("total_shipping") is { } nullNodeTotalShipping && nullNodeTotalShipping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalShipping = null;
+            if (parseNode.GetChildNode("total_taxes") is { } nullNodeTotalTaxes && nullNodeTotalTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTaxes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Currency for the invoiced charges amounts incurred on the end consumer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Other fees paid by the buyer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OtherFees { get; set; }
+        public string? OtherFees { get => _explicitNullValueOtherFees; set { _explicitNullValueOtherFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_fees"); else _explicitNullProperties?.Remove("other_fees"); } }
+        private string? _explicitNullValueOtherFees = default!;
 #nullable restore
 #else
-        public string OtherFees { get; set; }
+        public string OtherFees { get => _explicitNullValueOtherFees; set { _explicitNullValueOtherFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("other_fees"); else _explicitNullProperties?.Remove("other_fees"); } }
+        private string _explicitNullValueOtherFees = default!;
 #endif
         /// <summary>Total duties paid by the buyer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalDuties { get; set; }
+        public string? TotalDuties { get => _explicitNullValueTotalDuties; set { _explicitNullValueTotalDuties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_duties"); else _explicitNullProperties?.Remove("total_duties"); } }
+        private string? _explicitNullValueTotalDuties = default!;
 #nullable restore
 #else
-        public string TotalDuties { get; set; }
+        public string TotalDuties { get => _explicitNullValueTotalDuties; set { _explicitNullValueTotalDuties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_duties"); else _explicitNullProperties?.Remove("total_duties"); } }
+        private string _explicitNullValueTotalDuties = default!;
 #endif
         /// <summary>Total shipping paid by the buyer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalShipping { get; set; }
+        public string? TotalShipping { get => _explicitNullValueTotalShipping; set { _explicitNullValueTotalShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_shipping"); else _explicitNullProperties?.Remove("total_shipping"); } }
+        private string? _explicitNullValueTotalShipping = default!;
 #nullable restore
 #else
-        public string TotalShipping { get; set; }
+        public string TotalShipping { get => _explicitNullValueTotalShipping; set { _explicitNullValueTotalShipping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_shipping"); else _explicitNullProperties?.Remove("total_shipping"); } }
+        private string _explicitNullValueTotalShipping = default!;
 #endif
         /// <summary>Total taxes paid by the buyer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalTaxes { get; set; }
+        public string? TotalTaxes { get => _explicitNullValueTotalTaxes; set { _explicitNullValueTotalTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_taxes"); else _explicitNullProperties?.Remove("total_taxes"); } }
+        private string? _explicitNullValueTotalTaxes = default!;
 #nullable restore
 #else
-        public string TotalTaxes { get; set; }
+        public string TotalTaxes { get => _explicitNullValueTotalTaxes; set { _explicitNullValueTotalTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_taxes"); else _explicitNullProperties?.Remove("total_taxes"); } }
+        private string _explicitNullValueTotalTaxes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Shippo.OpenApiClient.Models.CustomsInvoicedCharges"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public static global::Soenneker.Shippo.OpenApiClient.Models.CustomsInvoicedCharges CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Shippo.OpenApiClient.Models.CustomsInvoicedCharges();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.CustomsInvoicedCharges(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteStringValue("total_duties", TotalDuties);
             writer.WriteStringValue("total_shipping", TotalShipping);
             writer.WriteStringValue("total_taxes", TotalTaxes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
