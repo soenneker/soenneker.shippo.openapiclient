@@ -123,6 +123,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Address",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Address"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -339,6 +350,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Batch",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Batch"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -572,6 +594,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Batch",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Batch"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "x-codeSamples": [
@@ -922,6 +955,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Carrier account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarrierAccount"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -1282,6 +1326,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Carrier account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarrierAccount"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -1491,6 +1546,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Customs declaration",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomsDeclaration"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -1707,6 +1773,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Customs item",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomsItem"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -2256,6 +2333,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Manifest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Manifest"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -2503,6 +2591,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Order",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -2865,6 +2964,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Parcel",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Parcel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -3009,6 +3119,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Pickup",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pickup"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -3153,6 +3274,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Refund",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Refund"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "servers": [
@@ -3427,6 +3559,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Service group",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceGroup"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -3727,6 +3870,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Shipment",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Shipment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -4377,6 +4531,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Created transaction",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Transaction"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -4924,6 +5089,17 @@
           "400": {
             "description": "Bad request",
             "$ref": "#/components/responses/badRequestResponse"
+          },
+          "200": {
+            "description": "Shippo account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShippoAccount"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
@@ -5108,6 +5284,17 @@
           "201": {
             "description": "Webhook created successfully",
             "$ref": "#/components/responses/webhookResponse"
+          },
+          "200": {
+            "description": "Webhook",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Webhook"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-codeSamples": [
