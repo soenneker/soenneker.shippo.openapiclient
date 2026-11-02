@@ -21948,7 +21948,6 @@ components:
             - $ref: '#/components/schemas/ConnectExistingOwnAccountParameters'
             - $ref: '#/components/schemas/FedExConnectExistingOwnAccountParameters'
             - $ref: '#/components/schemas/UPSConnectExistingOwnAccountParameters'
-            - $ref: '#/components/schemas/UPSConnectExistingOwnAccountStreamlinedParameters'
       required:
         - carrier
         - account_id

@@ -7530,7 +7530,7 @@
             "example": "FEDEX Account"
           },
           "parameters": {
-            "$ref": "#/components/schemas/CarrierAccountBaseParameters"
+            "$ref": "#/components/schemas/ConnectExistingOwnAccountRequestParameters"
           },
           "test": {
             "type": "boolean",
@@ -13301,6 +13301,23 @@
           }
         }
       },
+      "ConnectExistingOwnAccountRequestParameters": {
+        "oneOf": [
+          {
+            "title": "Account parameters",
+            "description": "An array of additional parameters for the account, such as e.g. password or token. Please check our \n[carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n"
+          },
+          {
+            "$ref": "#/components/schemas/FedExConnectExistingOwnAccountParameters"
+          },
+          {
+            "$ref": "#/components/schemas/UpsConnectExistingOwnAccountParameters"
+          },
+          {
+            "$ref": "#/components/schemas/UpsConnectExistingOwnAccountStreamlinedParameters"
+          }
+        ]
+      },
       "ShipmentExtraReturnServiceType": {
         "type": "string",
         "description": "Request additional return option for return shipments (UPS and Lasership only).",
@@ -13398,9 +13415,6 @@
           },
           {
             "$ref": "#/components/schemas/UpsConnectExistingOwnAccountParameters"
-          },
-          {
-            "$ref": "#/components/schemas/UpsConnectExistingOwnAccountStreamlinedParameters"
           }
         ]
       },
@@ -22247,23 +22261,6 @@
         }
       },
       "description": "Array of [BatchShipment](/shippoapi/public-api/batches/batchshipment) objects. \nThe response keeps the same order as in the request array."
-    },
-    "ConnectExistingOwnAccountRequestParameters": {
-      "oneOf": [
-        {
-          "title": "Account parameters",
-          "description": "An array of additional parameters for the account, such as e.g. password or token. Please check our \n[carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n"
-        },
-        {
-          "$ref": "#/components/schemas/FedExConnectExistingOwnAccountParameters"
-        },
-        {
-          "$ref": "#/components/schemas/UpsConnectExistingOwnAccountParameters"
-        },
-        {
-          "$ref": "#/components/schemas/UpsConnectExistingOwnAccountStreamlinedParameters"
-        }
-      ]
     },
     "CustomsDeclarationAllOf2": {
       "required": [

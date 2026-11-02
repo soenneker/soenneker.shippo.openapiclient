@@ -69,12 +69,12 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
-        private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters? _explicitNullValueParameters = default!;
+        public global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters? _explicitNullValueParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
-        private global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters _explicitNullValueParameters = default!;
+        public global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; AdditionalData?.Remove("parameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        private global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters _explicitNullValueParameters = default!;
 #endif
         /// <summary>The test property</summary>
         public bool? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; AdditionalData?.Remove("test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
@@ -108,7 +108,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "carrier", n => { Carrier = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters>(global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters.CreateFromDiscriminatorValue); } },
+                { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters>(global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters.CreateFromDiscriminatorValue); } },
                 { "test", n => { Test = n.GetBoolValue(); } },
             };
         }
@@ -123,7 +123,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("carrier", Carrier);
             writer.WriteStringValue("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.CarrierAccountBaseParameters>("parameters", Parameters);
+            writer.WriteObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ConnectExistingOwnAccountRequestParameters>("parameters", Parameters);
             writer.WriteBoolValue("test", Test);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
