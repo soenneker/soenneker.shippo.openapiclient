@@ -54,11 +54,429 @@ namespace Soenneker.Shippo.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("length") && shapeMembers1.ContainsKey("width") && shapeMembers1.ContainsKey("height") && shapeMembers1.ContainsKey("distance_unit") && shapeMembers1.ContainsKey("weight") && shapeMembers1.ContainsKey("mass_unit") && (!shapeMembers1.ContainsKey("extra") || (((shapeMembers1["extra"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers1["extra"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject2 || (shapeObject2.GetValue() is var shapeMembers3 && ((!shapeMembers3.ContainsKey("COD") || (((shapeMembers3["COD"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers3["COD"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject4 || (shapeObject4.GetValue() is var shapeMembers5 && ((!shapeMembers5.ContainsKey("amount") || (((shapeMembers5["amount"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers5.ContainsKey("currency") || (((shapeMembers5["currency"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers5.ContainsKey("payment_method") || (((shapeMembers5["payment_method"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers5["payment_method"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal10 && "SECURED_FUNDS".Equals(literal10.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers5["payment_method"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal11 && "CASH".Equals(literal11.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers5["payment_method"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal12 && "ANY".Equals(literal12.GetValue(), global::System.StringComparison.Ordinal)))))))))) && (!shapeMembers3.ContainsKey("insurance") || (((shapeMembers3["insurance"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (shapeMembers3["insurance"] is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject15 || (shapeObject15.GetValue() is var shapeMembers16 && ((!shapeMembers16.ContainsKey("amount") || (((shapeMembers16["amount"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers16.ContainsKey("content") || (((shapeMembers16["content"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers16.ContainsKey("currency") || (((shapeMembers16["currency"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers16.ContainsKey("provider") || (((shapeMembers16["provider"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers16["provider"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal23 && "FEDEX".Equals(literal23.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers16["provider"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal24 && "UPS".Equals(literal24.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers16["provider"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal25 && "ONTRAC".Equals(literal25.GetValue(), global::System.StringComparison.Ordinal)))))))))) && (!shapeMembers3.ContainsKey("reference_1") || (((shapeMembers3["reference_1"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers3.ContainsKey("reference_2") || (((shapeMembers3["reference_2"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))))))))) && (!shapeMembers1.ContainsKey("metadata") || (((shapeMembers1["metadata"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("mass_unit") || (((shapeMembers1["mass_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["mass_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal34 && "g".Equals(literal34.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["mass_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal35 && "kg".Equals(literal35.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["mass_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal36 && "lb".Equals(literal36.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["mass_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal37 && "oz".Equals(literal37.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("weight") || (((shapeMembers1["weight"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("distance_unit") || (((shapeMembers1["distance_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["distance_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal42 && "cm".Equals(literal42.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["distance_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal43 && "in".Equals(literal43.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["distance_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal44 && "ft".Equals(literal44.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["distance_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal45 && "m".Equals(literal45.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["distance_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal46 && "mm".Equals(literal46.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["distance_unit"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal47 && "yd".Equals(literal47.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("height") || (((shapeMembers1["height"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("length") || (((shapeMembers1["length"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("width") || (((shapeMembers1["width"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("object_created") || (((shapeMembers1["object_created"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("object_id") || (((shapeMembers1["object_id"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("object_owner") || (((shapeMembers1["object_owner"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("object_state") || (((shapeMembers1["object_state"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["object_state"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal62 && "VALID".Equals(literal62.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("object_updated") || (((shapeMembers1["object_updated"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)))) && (!shapeMembers1.ContainsKey("template") || (((shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal67 && "FedEx_Box_10kg".Equals(literal67.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal68 && "FedEx_Box_25kg".Equals(literal68.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal69 && "FedEx_Box_Extra_Large_1".Equals(literal69.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal70 && "FedEx_Box_Extra_Large_2".Equals(literal70.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal71 && "FedEx_Box_Large_1".Equals(literal71.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal72 && "FedEx_Box_Large_2".Equals(literal72.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal73 && "FedEx_Box_Medium_1".Equals(literal73.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal74 && "FedEx_Box_Medium_2".Equals(literal74.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal75 && "FedEx_Box_Small_1".Equals(literal75.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal76 && "FedEx_Box_Small_2".Equals(literal76.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal77 && "FedEx_Envelope".Equals(literal77.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal78 && "FedEx_Padded_Pak".Equals(literal78.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal79 && "FedEx_Pak_1".Equals(literal79.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal80 && "FedEx_Pak_2".Equals(literal80.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal81 && "FedEx_Tube".Equals(literal81.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal82 && "FedEx_XL_Pak".Equals(literal82.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal83 && "UPS_Box_10kg".Equals(literal83.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal84 && "UPS_Box_25kg".Equals(literal84.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal85 && "UPS_Express_Box".Equals(literal85.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal86 && "UPS_Express_Box_Large".Equals(literal86.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal87 && "UPS_Express_Box_Medium".Equals(literal87.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal88 && "UPS_Express_Box_Small".Equals(literal88.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal89 && "UPS_Express_Envelope".Equals(literal89.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal90 && "UPS_Express_Hard_Pak".Equals(literal90.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal91 && "UPS_Express_Legal_Envelope".Equals(literal91.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal92 && "UPS_Express_Pak".Equals(literal92.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal93 && "UPS_Express_Tube".Equals(literal93.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal94 && "UPS_Laboratory_Pak".Equals(literal94.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal95 && "UPS_MI_BPM".Equals(literal95.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal96 && "UPS_MI_BPM_Flat".Equals(literal96.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal97 && "UPS_MI_BPM_Parcel".Equals(literal97.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal98 && "UPS_MI_First_Class".Equals(literal98.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal99 && "UPS_MI_Flat".Equals(literal99.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal100 && "UPS_MI_Irregular".Equals(literal100.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal101 && "UPS_MI_Machinable".Equals(literal101.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal102 && "UPS_MI_MEDIA_MAIL".Equals(literal102.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal103 && "UPS_MI_Parcel_Post".Equals(literal103.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal104 && "UPS_MI_Priority".Equals(literal104.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal105 && "UPS_MI_Standard_Flat".Equals(literal105.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal106 && "UPS_Pad_Pak".Equals(literal106.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal107 && "UPS_Pallet".Equals(literal107.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal108 && "USPS_FlatRateCardboardEnvelope".Equals(literal108.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal109 && "USPS_FlatRateEnvelope".Equals(literal109.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal110 && "USPS_FlatRateGiftCardEnvelope".Equals(literal110.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal111 && "USPS_FlatRateLegalEnvelope".Equals(literal111.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal112 && "USPS_FlatRatePaddedEnvelope".Equals(literal112.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal113 && "USPS_FlatRateWindowEnvelope".Equals(literal113.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal114 && "USPS_IrregularParcel".Equals(literal114.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal115 && "USPS_LargeFlatRateBoardGameBox".Equals(literal115.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal116 && "USPS_LargeFlatRateBox".Equals(literal116.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal117 && "USPS_APOFlatRateBox".Equals(literal117.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal118 && "USPS_LargeVideoFlatRateBox".Equals(literal118.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal119 && "USPS_MediumFlatRateBox1".Equals(literal119.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal120 && "USPS_MediumFlatRateBox2".Equals(literal120.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal121 && "USPS_RegionalRateBoxA1".Equals(literal121.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal122 && "USPS_RegionalRateBoxA2".Equals(literal122.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal123 && "USPS_RegionalRateBoxB1".Equals(literal123.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal124 && "USPS_RegionalRateBoxB2".Equals(literal124.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal125 && "USPS_SmallFlatRateBox".Equals(literal125.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal126 && "USPS_SmallFlatRateEnvelope".Equals(literal126.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal127 && "USPS_SoftPack".Equals(literal127.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal128 && "DHLeC_Irregular".Equals(literal128.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal129 && "DHLeC_SM_Flats".Equals(literal129.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal130 && "DPD_UK_Express_Pak".Equals(literal130.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal131 && "Fastway_Australia_Satchel_A2".Equals(literal131.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal132 && "Fastway_Australia_Satchel_A3".Equals(literal132.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal133 && "Fastway_Australia_Satchel_A4".Equals(literal133.GetValue(), global::System.StringComparison.Ordinal)) || (shapeMembers1["template"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal134 && "Fastway_Australia_Satchel_A5".Equals(literal134.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("test") || (((shapeMembers1["test"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean)))))))))();
+            bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? ((global::System.Func<bool?>)(() => { int remaining = 10000;
+bool IsNumber(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node) => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal;
+int StringLength(string text) { int count = 0; for (int i = 0; i < text.Length; i++, count++) if (char.IsHighSurrogate(text[i]) && i + 1 < text.Length && char.IsLowSurrogate(text[i + 1])) i++; return count; }
+bool? All(params bool?[] values) { bool? result = true; foreach (var item in values) result &= item; return result; }
+bool? Any(params bool?[] values) { bool? result = false; foreach (var item in values) result |= item; return result; }
+bool? One(params bool?[] values) { int matches = 0; bool unknown = false; foreach (var item in values) { if (item == true) matches++; if (item == null) unknown = true; } return matches > 1 ? false : unknown ? null : matches == 1; }
+decimal? Number(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node) {
+    try { return node switch {
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger n => n.GetValue(),
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong n => n.GetValue(),
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat n => (decimal)n.GetValue(),
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble n => (decimal)n.GetValue(),
+        global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal n => n.GetValue(), _ => null }; }
+    catch (global::System.OverflowException) { return null; }
+}
+bool? MatchSchema0(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject))();
+if (result == false) return false;
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+result &= ((global::System.Func<bool?>)(() => fields.ContainsKey("length")))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => fields.ContainsKey("width")))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => fields.ContainsKey("height")))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => fields.ContainsKey("distance_unit")))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => fields.ContainsKey("weight")))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => fields.ContainsKey("mass_unit")))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("extra") ? (bool?)true : MatchSchema1(fields["extra"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("metadata") ? (bool?)true : MatchSchema2(fields["metadata"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("mass_unit") ? (bool?)true : MatchSchema3(fields["mass_unit"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("weight") ? (bool?)true : MatchSchema4(fields["weight"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("distance_unit") ? (bool?)true : MatchSchema5(fields["distance_unit"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("height") ? (bool?)true : MatchSchema6(fields["height"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("length") ? (bool?)true : MatchSchema7(fields["length"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("width") ? (bool?)true : MatchSchema8(fields["width"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("object_created") ? (bool?)true : MatchSchema9(fields["object_created"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("object_id") ? (bool?)true : MatchSchema10(fields["object_id"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("object_owner") ? (bool?)true : MatchSchema11(fields["object_owner"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("object_state") ? (bool?)true : MatchSchema12(fields["object_state"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("object_updated") ? (bool?)true : MatchSchema13(fields["object_updated"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("template") ? (bool?)true : MatchSchema14(fields["template"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("test") ? (bool?)true : MatchSchema15(fields["test"], depth + 1)))();
+if (result == false) return false;
+}
+return result;
+}
+bool? MatchSchema1(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => MatchSchema16(node, depth + 1)))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema2(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema3(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => MatchSchema17(node, depth + 1)))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema4(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema5(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => MatchSchema18(node, depth + 1)))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema6(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema7(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema8(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema9(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema10(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema11(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema12(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+bool? enumMatch = false;
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "VALID".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+result &= ((global::System.Func<bool?>)(() => enumMatch))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema13(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema14(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => MatchSchema19(node, depth + 1)))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema15(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema16(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject))();
+if (result == false) return false;
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("COD") ? (bool?)true : MatchSchema20(fields["COD"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("insurance") ? (bool?)true : MatchSchema21(fields["insurance"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("reference_1") ? (bool?)true : MatchSchema22(fields["reference_1"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("reference_2") ? (bool?)true : MatchSchema23(fields["reference_2"], depth + 1)))();
+if (result == false) return false;
+}
+return result;
+}
+bool? MatchSchema17(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+bool? enumMatch = false;
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "g".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "kg".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "lb".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "oz".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+result &= ((global::System.Func<bool?>)(() => enumMatch))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema18(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+bool? enumMatch = false;
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "cm".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "in".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "ft".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "m".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "mm".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "yd".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+result &= ((global::System.Func<bool?>)(() => enumMatch))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema19(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+bool? enumMatch = false;
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_10kg".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_25kg".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_Extra_Large_1".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_Extra_Large_2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_Large_1".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_Large_2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_Medium_1".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_Medium_2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_Small_1".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Box_Small_2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Envelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Padded_Pak".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Pak_1".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Pak_2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_Tube".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FedEx_XL_Pak".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Box_10kg".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Box_25kg".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Box".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Box_Large".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Box_Medium".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Box_Small".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Envelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Hard_Pak".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Legal_Envelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Pak".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Express_Tube".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Laboratory_Pak".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_BPM".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_BPM_Flat".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_BPM_Parcel".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_First_Class".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_Flat".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_Irregular".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_Machinable".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_MEDIA_MAIL".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_Parcel_Post".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_Priority".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_MI_Standard_Flat".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Pad_Pak".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS_Pallet".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_FlatRateCardboardEnvelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_FlatRateEnvelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_FlatRateGiftCardEnvelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_FlatRateLegalEnvelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_FlatRatePaddedEnvelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_FlatRateWindowEnvelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_IrregularParcel".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_LargeFlatRateBoardGameBox".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_LargeFlatRateBox".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_APOFlatRateBox".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_LargeVideoFlatRateBox".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_MediumFlatRateBox1".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_MediumFlatRateBox2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_RegionalRateBoxA1".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_RegionalRateBoxA2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_RegionalRateBoxB1".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_RegionalRateBoxB2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_SmallFlatRateBox".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_SmallFlatRateEnvelope".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "USPS_SoftPack".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "DHLeC_Irregular".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "DHLeC_SM_Flats".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "DPD_UK_Express_Pak".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "Fastway_Australia_Satchel_A2".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "Fastway_Australia_Satchel_A3".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "Fastway_Australia_Satchel_A4".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "Fastway_Australia_Satchel_A5".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+result &= ((global::System.Func<bool?>)(() => enumMatch))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema20(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject))();
+if (result == false) return false;
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("amount") ? (bool?)true : MatchSchema24(fields["amount"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("currency") ? (bool?)true : MatchSchema25(fields["currency"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("payment_method") ? (bool?)true : MatchSchema26(fields["payment_method"], depth + 1)))();
+if (result == false) return false;
+}
+return result;
+}
+bool? MatchSchema21(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => MatchSchema27(node, depth + 1)))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema22(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text || StringLength(text.GetValue()) <= 50m))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema23(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => node is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text || StringLength(text.GetValue()) <= 50m))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema24(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema25(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema26(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+bool? enumMatch = false;
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "SECURED_FUNDS".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "CASH".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "ANY".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+result &= ((global::System.Func<bool?>)(() => enumMatch))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema27(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject))();
+if (result == false) return false;
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("amount") ? (bool?)true : MatchSchema28(fields["amount"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("content") ? (bool?)true : MatchSchema29(fields["content"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("currency") ? (bool?)true : MatchSchema30(fields["currency"], depth + 1)))();
+if (result == false) return false;
+result &= ((global::System.Func<bool?>)(() => !fields.ContainsKey("provider") ? (bool?)true : MatchSchema31(fields["provider"], depth + 1)))();
+if (result == false) return false;
+}
+return result;
+}
+bool? MatchSchema28(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema29(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema30(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+return result;
+}
+bool? MatchSchema31(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result &= ((global::System.Func<bool?>)(() => node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString))();
+if (result == false) return false;
+bool? enumMatch = false;
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "FEDEX".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "UPS".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+enumMatch |= ((global::System.Func<bool?>)(() => (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString text && "ONTRAC".Equals(text.GetValue(), global::System.StringComparison.Ordinal))))();
+result &= ((global::System.Func<bool?>)(() => enumMatch))();
+if (result == false) return false;
+return result;
+}
+return MatchSchema0(unionPayload, 0); }))() : (bool?)false;
             int matchingUnionBranches = 0;
-            if (matchesUnionBranch0) matchingUnionBranches++;
+            if (matchesUnionBranch0 != false) matchingUnionBranches++;
             bool noSelectedUnionBranch = result.Parcel == null && result.String == null;
-            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.Parcel = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.Parcel(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.Parcel = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Shippo.OpenApiClient.Models.Parcel(), parseNode);
             if (result.Parcel == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
