@@ -2,7 +2,7 @@
   "descriptionHash": "E141B275382B96DEDF5078322DA4B3B900D76E33CDE03BB28E40A536ABA2BED507C74DE83C692189D0FF70B899B66616FF042D267600643F35C2908108AA4C3D",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.37.0",
+  "kiotaVersion": "1.38.0",
   "clientClassName": "ShippoOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Shippo.OpenApiClient",
