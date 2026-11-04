@@ -34,7 +34,7 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions.Item
         {
         }
         /// <summary>
-        /// Returns an existing transaction using an object ID.
+        /// Returns an existing transaction using an object ID.Each call returns a new `label_url` with a new expiration time. Use this endpoint to get a new `label_url` when the `Expires` value on the current `label_url` is in the past. Send one call for each transaction.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Shippo.OpenApiClient.Models.Transaction"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Shippo.OpenApiClient.Transactions.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Shippo.OpenApiClient.Models.Transaction>(requestInfo, global::Soenneker.Shippo.OpenApiClient.Models.Transaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns an existing transaction using an object ID.
+        /// Returns an existing transaction using an object ID.Each call returns a new `label_url` with a new expiration time. Use this endpoint to get a new `label_url` when the `Expires` value on the current `label_url` is in the past. Send one call for each transaction.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

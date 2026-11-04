@@ -15494,7 +15494,10 @@ paths:
             }
   '/transactions/{TransactionId}':
     get:
-      description: Returns an existing transaction using an object ID.
+      description: >-
+        Returns an existing transaction using an object ID.
+
+        Each call returns a new `label_url` with a new expiration time. Use this endpoint to get a new `label_url` when the `Expires` value on the current `label_url` is in the past. Send one call for each transaction.
       operationId: GetTransaction
       parameters:
         - description: Object ID of the transaction to update
@@ -21368,6 +21371,12 @@ components:
             A URL pointing directly to the label in the format you've set in your settings.
 
             A value will only be returned if the Transactions has been processed successfully.
+
+            The URL expires. The `Expires` query parameter gives the expiration time as a Unix timestamp in seconds.
+            Before you download the label, compare `Expires` with the current time.
+            If `Expires` is in the past, call `GET /transactions/{TransactionId}` to get a new `label_url`.
+            If the `Expires` value on the new `label_url` is also in the past, the label file is no longer available.
+            This occurs for labels created more than one year ago. Do not retry.
         messages:
           $ref: '#/components/schemas/ResponseMessageList'
         metadata:

@@ -4914,7 +4914,7 @@
           "Transactions"
         ],
         "summary": "Retrieve a shipping label",
-        "description": "Returns an existing transaction using an object ID.",
+        "description": "Returns an existing transaction using an object ID.\nEach call returns a new \u0060label_url\u0060 with a new expiration time. Use this endpoint to get a new \u0060label_url\u0060 when the \u0060Expires\u0060 value on the current \u0060label_url\u0060 is in the past. Send one call for each transaction.",
         "operationId": "GetTransaction",
         "parameters": [
           {
@@ -10826,7 +10826,7 @@
           },
           "label_url": {
             "type": "string",
-            "description": "A URL pointing directly to the label in the format you\u0027ve set in your settings.\nA value will only be returned if the Transactions has been processed successfully.",
+            "description": "A URL pointing directly to the label in the format you\u0027ve set in your settings.\nA value will only be returned if the Transactions has been processed successfully.\nThe URL expires. The \u0060Expires\u0060 query parameter gives the expiration time as a Unix timestamp in seconds. Before you download the label, compare \u0060Expires\u0060 with the current time. If \u0060Expires\u0060 is in the past, call \u0060GET /transactions/{TransactionId}\u0060 to get a new \u0060label_url\u0060. If the \u0060Expires\u0060 value on the new \u0060label_url\u0060 is also in the past, the label file is no longer available. This occurs for labels created more than one year ago. Do not retry.",
             "example": "https://shippo-delivery.s3.amazonaws.com/70ae8117ee1749e393f249d5b77c45e0.pdf?Signature=vDw1ltcyGveVR1OQoUDdzC43BY8%3D\u0026Expires=1437093830\u0026AWSAccessKeyId=AKIAJTHP3LLFMYAWALIA"
           },
           "messages": {
