@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Used for some Service Levels to link to the more &quot;generic&quot; version of this Service Level - for example, if this Service Level is a variation specific to shipments to Europe(&quot;ups_saver_eu&quot;), the &quot;parent&quot; is the fully generic version (&quot;ups_saver&quot;). Helpful when displaying Service Levels to users. Has the same structure of the servicelevel - &quot;name&quot;, &quot;token&quot;, &quot;terms&quot;, and &quot;extended_token&quot;, or it is otherwise null.
+    /// Used for some Service Levels to link to the more &quot;generic&quot; version of this Service Level - for example, if this Service Level is a variation specific to shipments to Europe (&quot;ups_saver_eu&quot;), the &quot;parent&quot; is the fully generic version (&quot;ups_saver&quot;). Helpful when displaying Service Levels to users. Has the same structure as the servicelevel - &quot;name&quot;, &quot;token&quot;, &quot;terms&quot;, and &quot;extended_token&quot;, or it is otherwise null.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ServiceLevelWithParentAllOf2ParentServicelevel : IAdditionalDataHolder, IParsable

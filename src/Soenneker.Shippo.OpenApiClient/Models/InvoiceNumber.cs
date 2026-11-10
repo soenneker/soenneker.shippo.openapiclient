@@ -41,7 +41,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Order UPS reference fields are printed on ZPL labels. For UPS shipments, if you choose to set `ref_sort` for one reference, you must set `ref_sort` for all other supported UPS references using unique integers.</summary>
         public int? RefSort { get => _explicitNullValueRefSort; set { _explicitNullValueRefSort = value; AdditionalData?.Remove("ref_sort"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ref_sort"); else _explicitNullProperties?.Remove("ref_sort"); } }
         private int? _explicitNullValueRefSort = default!;
-        /// <summary>Optional text to be printed on the shipping label for invoice number. Up to 40 characters. Ifprovided, this will be used on the label instead of shipment.customs_declaration.invoice.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 characters |</summary>
+        /// <summary>Optional text to be printed on the shipping label for invoice number. Up to 40 characters. If provided, this will be used on the label instead of shipment.customs_declaration.invoice.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 30 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// Requests the carrier&apos;s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier&apos;sregular service level token.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| Purolator | Maps to Health Care+. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |
+    /// Requests the carrier&apos;s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier&apos;s regular service level token.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| Purolator | Maps to Health Care+. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class HealthcareHandling : IAdditionalDataHolder, IParsable

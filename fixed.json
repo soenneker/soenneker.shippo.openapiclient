@@ -2672,7 +2672,7 @@
           {
             "name": "start_date",
             "in": "query",
-            "description": "Filter orders created after the input date and time (ISO 8601 UTC format).  This is based on the \n\u0060placed_at\u0060 field, meaning when the order has been placed, not when the order object was created.",
+            "description": "Filter orders created after the input date and time (ISO 8601 UTC format). This is based on the \u0060placed_at\u0060 field, meaning when the order has been placed, not when the order object was created.",
             "schema": {
               "type": "string"
             }
@@ -2680,7 +2680,7 @@
           {
             "name": "end_date",
             "in": "query",
-            "description": "Filter orders created before the input date and time (ISO 8601 UTC format).  This is based on the \n\u0060placed_at\u0060 field, meaning when the order has been placed, not when the order object was created.",
+            "description": "Filter orders created before the input date and time (ISO 8601 UTC format). This is based on the \u0060placed_at\u0060 field, meaning when the order has been placed, not when the order object was created.",
             "schema": {
               "type": "string"
             }
@@ -5970,19 +5970,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -5993,7 +5993,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -6118,19 +6118,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -6141,7 +6141,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -6264,19 +6264,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -6287,7 +6287,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -6410,19 +6410,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -6433,7 +6433,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -6556,19 +6556,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -6579,7 +6579,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -6648,19 +6648,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -6671,7 +6671,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -6741,19 +6741,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -6764,7 +6764,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -6839,19 +6839,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -6862,7 +6862,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -6935,19 +6935,19 @@
           "city": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+            "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
             "example": "San Francisco"
           },
           "state": {
             "maxLength": 100,
             "type": "string",
-            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+            "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
             "example": "CA"
           },
           "zip": {
             "maxLength": 20,
             "type": "string",
-            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+            "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
             "example": "94117"
           },
           "country": {
@@ -6958,7 +6958,7 @@
           "phone": {
             "maxLength": 50,
             "type": "string",
-            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+            "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
             "example": "\u002B1 555 341 9393"
           },
           "email": {
@@ -7548,7 +7548,7 @@
           "value": {
             "maxLength": 40,
             "type": "string",
-            "description": "Optional text to be printed on the shipping label for customer reference. Up to 40 characters. If\nthis is provided, reference_1 will be ignored.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) |"
+            "description": "Optional text to be printed on the shipping label for customer reference. Up to 40 characters. If this is provided, reference_1 will be ignored.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 40 characters (Express services); Max 30 characters (Ground services) |"
           },
           "ref_sort": {
             "type": "integer",
@@ -8400,7 +8400,7 @@
             "description": "Set to \u0060true\u0060 to request the carrier\u0027s healthcare handling program for this shipment."
           }
         },
-        "description": "Requests the carrier\u0027s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier\u0027s\nregular service level token.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| Purolator | Maps to Health Care\u002B. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |"
+        "description": "Requests the carrier\u0027s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier\u0027s regular service level token.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| Purolator | Maps to Health Care\u002B. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |"
       },
       "LiveRate": {
         "title": "Live Rate",
@@ -9328,7 +9328,7 @@
           "value": {
             "maxLength": 40,
             "type": "string",
-            "description": "Optional text to be printed on the shipping label for PO number. Up to 40 characters. If\nthis is provided, reference_2 will be ignored.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 30 characters |"
+            "description": "Optional text to be printed on the shipping label for PO number. Up to 40 characters. If this is provided, reference_2 will be ignored.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 30 characters |"
           },
           "ref_sort": {
             "type": "integer",
@@ -10166,7 +10166,7 @@
             "description": "The fulfilment center where the package originates from."
           },
           "healthcare_handling": {
-            "description": "Requests the carrier\u0027s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier\u0027s\nregular service level token.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| Purolator | Maps to Health Care\u002B. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |",
+            "description": "Requests the carrier\u0027s healthcare handling program, where the carrier offers one. The rate returned keeps the carrier\u0027s regular service level token.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| Purolator | Maps to Health Care\u002B. Domestic Express services only (Express, Express 9AM, Express 10:30AM, Express Evening). Available to Purolator-approved accounts only. |",
             "$ref": "#/components/schemas/HealthcareHandling"
           },
           "insurance": {
@@ -10360,7 +10360,7 @@
           "value": {
             "maxLength": 40,
             "type": "string",
-            "description": "Optional text to be printed on the shipping label for invoice number. Up to 40 characters. If\nprovided, this will be used on the label instead of shipment.customs_declaration.invoice.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 30 characters |"
+            "description": "Optional text to be printed on the shipping label for invoice number. Up to 40 characters. If provided, this will be used on the label instead of shipment.customs_declaration.invoice.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 30 characters |"
           },
           "ref_sort": {
             "type": "integer",
@@ -13305,7 +13305,7 @@
         "oneOf": [
           {
             "title": "Account parameters",
-            "description": "An array of additional parameters for the account, such as e.g. password or token. Please check our \n[carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n"
+            "description": "An array of additional parameters for the account, such as password or token. Please check our [carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) for the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n"
           },
           {
             "$ref": "#/components/schemas/FedExConnectExistingOwnAccountParameters"
@@ -13408,7 +13408,7 @@
         "oneOf": [
           {
             "title": "Account parameters",
-            "description": "An array of additional parameters for the account, such as e.g. password or token. Please check our \n[carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n"
+            "description": "An array of additional parameters for the account, such as password or token. Please check our [carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) for the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n"
           },
           {
             "$ref": "#/components/schemas/FedExConnectExistingOwnAccountParameters"
@@ -13452,7 +13452,7 @@
             "description": "Unique, extended version of the Service Level \u0022token\u0022.\nGuaranteed to be unique across all Service Levels, and may help offer insight into the specific Service Level it describes."
           }
         },
-        "description": "Used for some Service Levels to link to the more \u0022generic\u0022 version of this Service Level - for example, \nif this Service Level is a variation specific to shipments to Europe(\u0022ups_saver_eu\u0022), the \u0022parent\u0022 is \nthe fully generic version (\u0022ups_saver\u0022). Helpful when displaying Service Levels to users. Has the same \nstructure of the servicelevel - \u0022name\u0022, \u0022token\u0022, \u0022terms\u0022, and \u0022extended_token\u0022, or it is otherwise null."
+        "description": "Used for some Service Levels to link to the more \u0022generic\u0022 version of this Service Level - for example, if this Service Level is a variation specific to shipments to Europe (\u0022ups_saver_eu\u0022), the \u0022parent\u0022 is the fully generic version (\u0022ups_saver\u0022). Helpful when displaying Service Levels to users. Has the same structure as the servicelevel - \u0022name\u0022, \u0022token\u0022, \u0022terms\u0022, and \u0022extended_token\u0022, or it is otherwise null."
       },
       "ShipmentCreateRequestAllOf2AddressFrom": {
         "oneOf": [
@@ -16505,19 +16505,19 @@
         "city": {
           "maxLength": 100,
           "type": "string",
-          "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state\nor a ZIP code (see below), if known, it will yield more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
+          "description": "**required for purchase**\n\nName of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.\nPlease bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Max 35 characters |",
           "example": "San Francisco"
         },
         "state": {
           "maxLength": 100,
           "type": "string",
-          "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some\ncountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers\nonly accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
+          "description": "**required for purchase for some countries**\n\nState/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |",
           "example": "CA"
         },
         "zip": {
           "maxLength": 20,
           "type": "string",
-          "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more\naccurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
+          "description": "**required for purchase**\n\nPostal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Max 10 characters |",
           "example": "94117"
         },
         "country": {
@@ -16528,7 +16528,7 @@
         "phone": {
           "maxLength": 50,
           "type": "string",
-          "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This\nincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
+          "description": "Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.\n\n**Carrier-Specific Constraints:**\n| Carrier | Constraints |\n|:---|:---|\n| FedEx | Required; Min 1, max 15 characters |\n| USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |",
           "example": "\u002B1 555 341 9393"
         },
         "email": {
@@ -17529,7 +17529,7 @@
     },
     "ConnectExistingOwnAccountParameters": {
       "title": "Account parameters",
-      "description": "An array of additional parameters for the account, such as e.g. password or token. Please check our \n[carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) \nfor the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n"
+      "description": "An array of additional parameters for the account, such as password or token. Please check our [carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) for the parameters per carrier.\nTo protect account information, this field will be masked in any API response.\nIn the case of masked fields, they should be handled carefully.\n\nFields also must consider: \n- Not providing a *fields* in parameters will not result in a change to any configured value \n- Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value \n- Providing *field* with null will clear the configured value \n- Providing *field* with any other value will change the configured value and may affect the behavior of the account.\n"
     },
     "LineItemBase": {
       "type": "object",

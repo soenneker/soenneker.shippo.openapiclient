@@ -9573,16 +9573,14 @@ paths:
           schema:
             $ref: '#/components/schemas/OrderShopAppEnum'
         - description: |-
-            Filter orders created after the input date and time (ISO 8601 UTC format).  This is based on the 
-            `placed_at` field, meaning when the order has been placed, not when the order object was created.
+            Filter orders created after the input date and time (ISO 8601 UTC format). This is based on the `placed_at` field, meaning when the order has been placed, not when the order object was created.
           in: query
           name: start_date
           required: false
           schema:
             type: string
         - description: |-
-            Filter orders created before the input date and time (ISO 8601 UTC format).  This is based on the 
-            `placed_at` field, meaning when the order has been placed, not when the order object was created.
+            Filter orders created before the input date and time (ISO 8601 UTC format). This is based on the `placed_at` field, meaning when the order has been placed, not when the order object was created.
           in: query
           name: end_date
           required: false
@@ -18069,8 +18067,7 @@ components:
             **required for purchase**
 
             Name of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.
-            Please bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state
-            or a ZIP code (see below), if known, it will yield more accurate results.
+            Please bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.
 
             **Carrier-Specific Constraints:**
             | Carrier | Constraints |
@@ -18083,9 +18080,7 @@ components:
           description: |-
             **required for purchase for some countries**
 
-            State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some
-            countries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers
-            only accept two or three character state abbreviations.
+            State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.
 
             **Carrier-Specific Constraints:**
             | Carrier | Constraints |
@@ -18098,8 +18093,7 @@ components:
           description: |-
             **required for purchase**
 
-            Postal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield more
-            accurate Rates.
+            Postal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.
 
             **Carrier-Specific Constraints:**
             | Carrier | Constraints |
@@ -18124,8 +18118,7 @@ components:
           type: string
           maxLength: 50
           description: |-
-            Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This
-            increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.
+            Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.
 
             **Carrier-Specific Constraints:**
             | Carrier | Constraints |
@@ -18859,8 +18852,7 @@ components:
           type: string
           maxLength: 40
           description: |-
-            Optional text to be printed on the shipping label for customer reference. Up to 40 characters. If
-            this is provided, reference_1 will be ignored.
+            Optional text to be printed on the shipping label for customer reference. Up to 40 characters. If this is provided, reference_1 will be ignored.
 
             **Carrier-Specific Constraints:**
             | Carrier | Constraints |
@@ -19437,8 +19429,7 @@ components:
       type: object
     HealthcareHandling:
       description: |-
-        Requests the carrier's healthcare handling program, where the carrier offers one. The rate returned keeps the carrier's
-        regular service level token.
+        Requests the carrier's healthcare handling program, where the carrier offers one. The rate returned keeps the carrier's regular service level token.
 
         **Carrier-Specific Constraints:**
         | Carrier | Constraints |
@@ -20087,8 +20078,7 @@ components:
           type: string
           maxLength: 40
           description: |-
-            Optional text to be printed on the shipping label for PO number. Up to 40 characters. If
-            this is provided, reference_2 will be ignored.
+            Optional text to be printed on the shipping label for PO number. Up to 40 characters. If this is provided, reference_2 will be ignored.
 
             **Carrier-Specific Constraints:**
             | Carrier | Constraints |
@@ -20526,10 +20516,7 @@ components:
               allOf:
                 - $ref: '#/components/schemas/ServiceLevel'
                 - description: |-
-                    Used for some Service Levels to link to the more "generic" version of this Service Level - for example, 
-                    if this Service Level is a variation specific to shipments to Europe("ups_saver_eu"), the "parent" is 
-                    the fully generic version ("ups_saver"). Helpful when displaying Service Levels to users. Has the same 
-                    structure of the servicelevel - "name", "token", "terms", and "extended_token", or it is otherwise null.
+                    Used for some Service Levels to link to the more "generic" version of this Service Level - for example, if this Service Level is a variation specific to shipments to Europe ("ups_saver_eu"), the "parent" is the fully generic version ("ups_saver"). Helpful when displaying Service Levels to users. Has the same structure as the servicelevel - "name", "token", "terms", and "extended_token", or it is otherwise null.
     ShipmentBase:
       properties:
         extra:
@@ -20975,9 +20962,7 @@ components:
     ConnectExistingOwnAccountParameters:
       title: Account parameters
       description: |
-        An array of additional parameters for the account, such as e.g. password or token. Please check our 
-        [carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) 
-        for the parameters per carrier.
+        An array of additional parameters for the account, such as password or token. Please check our [carrier accounts guide](https://docs.goshippo.com/docs/carriers/carrieraccounts/) for the parameters per carrier.
         To protect account information, this field will be masked in any API response.
         In the case of masked fields, they should be handled carefully.
 
@@ -21029,8 +21014,7 @@ components:
           type: string
           maxLength: 40
           description: |-
-            Optional text to be printed on the shipping label for invoice number. Up to 40 characters. If
-            provided, this will be used on the label instead of shipment.customs_declaration.invoice.
+            Optional text to be printed on the shipping label for invoice number. Up to 40 characters. If provided, this will be used on the label instead of shipment.customs_declaration.invoice.
 
             **Carrier-Specific Constraints:**
             | Carrier | Constraints |

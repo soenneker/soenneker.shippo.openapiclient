@@ -52,7 +52,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>**required for purchase**Name of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.Please bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a stateor a ZIP code (see below), if known, it will yield more accurate results.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Max 35 characters |</summary>
+        /// <summary>**required for purchase**Name of a city. When creating a Quote Address, sending a city is optional but will yield more accurate Rates.Please bear in mind that city names may be ambiguous (there are 34 Springfields in the US). Pass in a state or a ZIP code (see below), if known, to get more accurate results.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Max 35 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? City { get => _explicitNullValueCity; set { _explicitNullValueCity = value; AdditionalData?.Remove("city"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("city"); else _explicitNullProperties?.Remove("city"); } }
@@ -115,7 +115,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. Thisincreases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Min 1, max 15 characters || USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |</summary>
+        /// <summary>Addresses containing a phone number allow carriers to call the recipient when delivering the Parcel. This increases the probability of delivery and helps to avoid accessorial charges after a Parcel has been shipped.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required; Min 1, max 15 characters || USPS | Sender phone required for shipments during label purchase; Min 8, max 15 digits |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
@@ -125,7 +125,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
         private string _explicitNullValuePhone = default!;
 #endif
-        /// <summary>**required for purchase for some countries**State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for somecountries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriersonly accept two or three character state abbreviations.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |</summary>
+        /// <summary>**required for purchase for some countries**State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Required if country requires state; Max 2 characters for US, CA, PR |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
@@ -178,7 +178,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The validate property</summary>
         public bool? Validate { get => _explicitNullValueValidate; set { _explicitNullValueValidate = value; AdditionalData?.Remove("validate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validate"); else _explicitNullProperties?.Remove("validate"); } }
         private bool? _explicitNullValueValidate = default!;
-        /// <summary>**required for purchase**Postal code of an Address. When creating a Quote Addresses, sending a ZIP is optional but will yield moreaccurate Rates.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 10 characters |</summary>
+        /// <summary>**required for purchase**Postal code of an Address. When creating a Quote Address, sending a ZIP is optional but will yield more accurate Rates.**Carrier-Specific Constraints:**| Carrier | Constraints ||:---|:---|| FedEx | Max 10 characters |</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Zip { get => _explicitNullValueZip; set { _explicitNullValueZip = value; AdditionalData?.Remove("zip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zip"); else _explicitNullProperties?.Remove("zip"); } }

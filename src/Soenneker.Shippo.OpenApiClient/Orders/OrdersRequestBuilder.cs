@@ -154,7 +154,7 @@ namespace Soenneker.Shippo.OpenApiClient.Orders
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class OrdersRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter orders created before the input date and time (ISO 8601 UTC format).  This is based on the `placed_at` field, meaning when the order has been placed, not when the order object was created.</summary>
+            /// <summary>Filter orders created before the input date and time (ISO 8601 UTC format). This is based on the `placed_at` field, meaning when the order has been placed, not when the order object was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("end_date")]
@@ -183,7 +183,7 @@ namespace Soenneker.Shippo.OpenApiClient.Orders
             /// <summary>Filter orders by shop app</summary>
             [QueryParameter("shop_app")]
             public global::Soenneker.Shippo.OpenApiClient.Models.OrderShopAppEnum? ShopApp { get; set; }
-            /// <summary>Filter orders created after the input date and time (ISO 8601 UTC format).  This is based on the `placed_at` field, meaning when the order has been placed, not when the order object was created.</summary>
+            /// <summary>Filter orders created after the input date and time (ISO 8601 UTC format). This is based on the `placed_at` field, meaning when the order has been placed, not when the order object was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("start_date")]
