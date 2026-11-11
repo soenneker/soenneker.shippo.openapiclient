@@ -64,7 +64,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ShipmentDate { get => _explicitNullValueShipmentDate; set { _explicitNullValueShipmentDate = value; AdditionalData?.Remove("shipment_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shipment_date"); else _explicitNullProperties?.Remove("shipment_date"); } }
         private string _explicitNullValueShipmentDate = default!;
 #endif
-        /// <summary>IDs transactions to use. If you set this to null or not send this parameter, Shippo will automatically assign all applicable transactions.</summary>
+        /// <summary>IDs of the transactions to use. If you set this to null or don&apos;t send this parameter, Shippo will automatically assign all applicable transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Transactions { get => _explicitNullValueTransactions; set { _explicitNullValueTransactions = value; AdditionalData?.Remove("transactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactions"); else _explicitNullProperties?.Remove("transactions"); } }

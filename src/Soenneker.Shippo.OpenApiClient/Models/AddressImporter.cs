@@ -111,7 +111,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
         private string _explicitNullValuePhone = default!;
 #endif
-        /// <summary>**required for purchase for some countries**State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.</summary>
+        /// <summary>**required for purchase for some countries**State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }

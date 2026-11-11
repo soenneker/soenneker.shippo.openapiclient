@@ -122,7 +122,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Indicates the status of the manifest.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.ManifestStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.ManifestStatus? _explicitNullValueStatus = default!;
-        /// <summary>IDs transactions to use. If you set this to null or not send this parameter, Shippo will automatically assign all applicable transactions.</summary>
+        /// <summary>IDs of the transactions to use. If you set this to null or don&apos;t send this parameter, Shippo will automatically assign all applicable transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Transactions { get => _explicitNullValueTransactions; set { _explicitNullValueTransactions = value; AdditionalData?.Remove("transactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transactions"); else _explicitNullProperties?.Remove("transactions"); } }

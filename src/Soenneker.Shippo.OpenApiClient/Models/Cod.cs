@@ -48,7 +48,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; AdditionalData?.Remove("currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
         private string _explicitNullValueCurrency = default!;
 #endif
-        /// <summary>Secured funds include money orders, certified cheques and others (see [UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details).If no payment_method inputted the value defaults to &quot;ANY&quot;.)</summary>
+        /// <summary>Secured funds include money orders, certified cheques and others (see [UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details).If no `payment_method` is provided, the value defaults to &quot;ANY&quot;.</summary>
         public global::Soenneker.Shippo.OpenApiClient.Models.CodPaymentMethod? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; AdditionalData?.Remove("payment_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_method"); else _explicitNullProperties?.Remove("payment_method"); } }
         private global::Soenneker.Shippo.OpenApiClient.Models.CodPaymentMethod? _explicitNullValuePaymentMethod = default!;
         /// <summary>

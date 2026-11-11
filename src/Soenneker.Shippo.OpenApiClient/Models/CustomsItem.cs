@@ -86,7 +86,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>Marks the item as belonging to an EU-exempt product category. Exempt items do not need product identifiers on shipments that meet the EU product identifier conditions (EU destination, non-EU origin, MERCHANDISE contents, recipient not a business).</summary>
         public bool? EuExemptCategory { get => _explicitNullValueEuExemptCategory; set { _explicitNullValueEuExemptCategory = value; AdditionalData?.Remove("eu_exempt_category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eu_exempt_category"); else _explicitNullProperties?.Remove("eu_exempt_category"); } }
         private bool? _explicitNullValueEuExemptCategory = default!;
-        /// <summary>HS code of the item, which is required by some carriers. If `tariff_number` is not provided, `hs_code` will be used.  If both `hs_code` and `tariff_number` are provided, `tariff_number` will be used. 50 character limit.</summary>
+        /// <summary>HS code of the item, which is required by some carriers. If `tariff_number` is not provided, `hs_code` will be used. If both `hs_code` and `tariff_number` are provided, `tariff_number` will be used. 50 character limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HsCode { get => _explicitNullValueHsCode; set { _explicitNullValueHsCode = value; AdditionalData?.Remove("hs_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hs_code"); else _explicitNullProperties?.Remove("hs_code"); } }
@@ -178,7 +178,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string OriginCountry { get => _explicitNullValueOriginCountry; set { _explicitNullValueOriginCountry = value; AdditionalData?.Remove("origin_country"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin_country"); else _explicitNullProperties?.Remove("origin_country"); } }
         private string _explicitNullValueOriginCountry = default!;
 #endif
-        /// <summary>Quantity of this item in the shipment you send.  Must be greater than 0.</summary>
+        /// <summary>Quantity of this item in the shipment you send. Must be greater than 0.</summary>
         public long? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private long? _explicitNullValueQuantity = default!;
         /// <summary>SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers accept fewer and reject longer values at label purchase. Required together with `manufacturer_code` on every non-exempt item when the shipment meets the EU product identifier conditions; some carriers also use it outside the EU.</summary>
@@ -214,7 +214,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string ValueAmount { get => _explicitNullValueValueAmount; set { _explicitNullValueValueAmount = value; AdditionalData?.Remove("value_amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_amount"); else _explicitNullProperties?.Remove("value_amount"); } }
         private string _explicitNullValueValueAmount = default!;
 #endif
-        /// <summary>Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g.  `USD` or `EUR`.</summary>
+        /// <summary>Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php) currency codes are used, e.g. `USD` or `EUR`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ValueCurrency { get => _explicitNullValueValueCurrency; set { _explicitNullValueValueCurrency = value; AdditionalData?.Remove("value_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_currency"); else _explicitNullProperties?.Remove("value_currency"); } }

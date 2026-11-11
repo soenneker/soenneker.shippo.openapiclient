@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Shippo.OpenApiClient.Models
 {
     /// <summary>
-    /// The batch shipment object is a wrapper around a shipment object, which include shipment-specific information for batch processing.Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or by through the `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint
+    /// The batch shipment object is a wrapper around a shipment object, which includes shipment-specific information for batch processing.Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or through the `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchShipment : IAdditionalDataHolder, IParsable

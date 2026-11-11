@@ -74,7 +74,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <summary>The async property</summary>
         public bool? Async { get => _explicitNullValueAsync; set { _explicitNullValueAsync = value; AdditionalData?.Remove("async"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("async"); else _explicitNullProperties?.Remove("async"); } }
         private bool? _explicitNullValueAsync = default!;
-        /// <summary>List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) `object_id`s used to filter the returned rates.  If set, only rates from these carriers will be returned.</summary>
+        /// <summary>List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) `object_id`s used to filter the returned rates. If set, only rates from these carriers will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CarrierAccounts { get => _explicitNullValueCarrierAccounts; set { _explicitNullValueCarrierAccounts = value; AdditionalData?.Remove("carrier_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carrier_accounts"); else _explicitNullProperties?.Remove("carrier_accounts"); } }

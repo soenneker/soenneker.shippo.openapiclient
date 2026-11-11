@@ -101,7 +101,7 @@ tags:
     description: >-
       A manifest is a single-page document with a barcode that carriers can scan to accept all packages into transit without the need to scan each item individually.
 
-      They are close-outs of shipping labels of a certain day. Some carriers require manifests to  process the shipments.
+      They are close-outs of shipping labels of a certain day. Some carriers require manifests to process the shipments.
 
   - name: Carrier Accounts
     description: |-
@@ -118,7 +118,7 @@ tags:
       If you purchased your shipping label through Shippo, you can also get all the tracking details of your Shipment 
       from the [Transaction](/shippoapi/public-api/transactions) object.
       <br><br></p>
-      A tracking status of a package is an indication of current location of a package in the supply chain. For example,  sorting, warehousing, or out for delivery. Use the tracking status object to track the location of your shipments.
+      A tracking status of a package is an indication of current location of a package in the supply chain. For example, sorting, warehousing, or out for delivery. Use the tracking status object to track the location of your shipments.
 
       When using your [Test](https://docs.goshippo.com/docs/guides_general/authentication/) token for tracking, you need to use Shippo's 
       predefined tokens for testing different tracking statuses. You can find more information in our 
@@ -127,7 +127,7 @@ tags:
 
   - name: Batches
     description: |-
-      A batch is a technique for creating multiple labels at once. Use the  batch object to create and purchase many shipments in two API calls. After creating the batch, retrieve the batch to verify that all shipments are valid. You can add and remove shipments after you have created the batch. When all shipments are valid you can purchase the batch and retrieve all the shipping labels.
+      A batch is a technique for creating multiple labels at once. Use the batch object to create and purchase many shipments in two API calls. After creating the batch, retrieve the batch to verify that all shipments are valid. You can add and remove shipments after you have created the batch. When all shipments are valid you can purchase the batch and retrieve all the shipping labels.
 
   - name: Orders
     x-displayName: Orders (beta)
@@ -5251,7 +5251,7 @@ paths:
         Once you send a POST request to the purchase endpoint the batch status will change to `PURCHASING`.
 
         When all the shipments are purchased, the status will change to `PURCHASED` and you will receive a
-        `batch_purchased` webhook indicating that the batch has been purchased
+        `batch_purchased` webhook indicating that the batch has been purchased.
       operationId: PurchaseBatch
       parameters:
         - description: Object ID of the batch
@@ -15754,7 +15754,7 @@ paths:
       description: |-
         Creates a new user parcel template.
 
-        You can choose to create a parcel template using a preset carrier template as a starting point, or you can create an entirely custom one. To use a preset carrier template, pass in a unique template token from [this list](/shippoapi/public-api/parcel-templates) plus the weight fields (**weight** and **weight_unit**). Otherwise, omit the template field and pass the other fields, for the weight, length, height, and depth, as well as their units."
+        You can choose to create a parcel template using a preset carrier template as a starting point, or you can create an entirely custom one. To use a preset carrier template, pass in a unique template token from [this list](/shippoapi/public-api/parcel-templates) plus the weight fields (**weight** and **weight_unit**). Otherwise, omit the template field and pass the other fields, for the weight, length, height, and depth, as well as their units.
       operationId: CreateUserParcelTemplate
       parameters:
         - $ref: '#/components/parameters/ShippoApiVersionHeader'
@@ -18313,7 +18313,7 @@ components:
           description: |-
             **required for purchase for some countries**
 
-            State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.
+            State/Province values are required for shipments from/to the US, AU, and CA. UPS requires province for some countries (i.e. Ireland). To receive more accurate quotes, passing this field is recommended. Most carriers only accept two or three character state abbreviations.
           example: 'CA'
           type: string
         zip:
@@ -18659,9 +18659,9 @@ components:
       x-tags:
         - Batches
       description: |-
-        The batch shipment object is a wrapper around a shipment object, which include shipment-specific information for batch processing.
+        The batch shipment object is a wrapper around a shipment object, which includes shipment-specific information for batch processing.
 
-        Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or by through the `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint
+        Note: batch shipments can only be created on the batch endpoint, either when creating a batch object or through the `/batches/{BATCH_OBJECT_ID}/add_shipments` endpoint.
       allOf:
         - $ref: '#/components/schemas/BatchShipmentBase'
         - properties:
@@ -18759,7 +18759,7 @@ components:
             Secured funds include money orders, certified cheques and others (see
             [UPS](https://www.ups.com/content/us/en/shipping/time/service/value_added/cod.html) for details).
 
-            If no payment_method inputted the value defaults to "ANY".)
+            If no `payment_method` is provided, the value defaults to "ANY".
           enum:
             - SECURED_FUNDS
             - CASH
@@ -19249,7 +19249,7 @@ components:
           example: 20
           format: int64
           type: integer
-          description: Quantity of this item in the shipment you send.  Must be greater than 0.
+          description: Quantity of this item in the shipment you send. Must be greater than 0.
         sku_code:
           description: >-
             SKU or merchant-assigned product code of the item. Up to 100 characters; some carriers
@@ -19259,7 +19259,7 @@ components:
           example: 'HM-123'
           type: string
         hs_code:
-          description: HS code of the item, which is required by some carriers. If `tariff_number` is not provided, `hs_code` will be used.  If both `hs_code` and `tariff_number` are provided, `tariff_number` will be used. 50 character limit.
+          description: HS code of the item, which is required by some carriers. If `tariff_number` is not provided, `hs_code` will be used. If both `hs_code` and `tariff_number` are provided, `tariff_number` will be used. 50 character limit.
           example: '0901.21'
           type: string
         tariff_number:
@@ -19274,7 +19274,7 @@ components:
           type: string
           description: >-
             Currency used for value_amount. The [official ISO 4217](http://www.xe.com/iso4217.php)
-            currency codes are used, e.g.  `USD` or `EUR`.
+            currency codes are used, e.g. `USD` or `EUR`.
       required:
         - description
         - quantity
@@ -19532,7 +19532,7 @@ components:
             type: string
           type: array
           description: >-
-            IDs transactions to use. If you set this to null or not send this parameter,
+            IDs of the transactions to use. If you set this to null or don't send this parameter,
             Shippo will automatically assign all applicable transactions.
       required:
         - carrier_account
@@ -20661,7 +20661,7 @@ components:
               type: array
               description: >-
                 List of [Carrier Accounts](/shippoapi/public-api/carrier-accounts) `object_id`s used to filter
-                the returned rates.  If set, only rates from these carriers will be returned.
+                the returned rates. If set, only rates from these carriers will be returned.
               example: ['065a4a8c10d24a34ab932163a1b87f52', '73f706f4bdb94b54a337563840ce52b0']
             parcels:
               type: array
@@ -20967,7 +20967,7 @@ components:
         In the case of masked fields, they should be handled carefully.
 
         Fields also must consider: 
-        - Not providing a *fields* in parameters will not result in a change to any configured value 
+        - Not providing a *field* in parameters will not result in a change to any configured value 
         - Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value 
         - Providing *field* with null will clear the configured value 
         - Providing *field* with any other value will change the configured value and may affect the behavior of the account.
@@ -21515,7 +21515,7 @@ components:
                 Service level name, e.g. `Priority Mail` or `FedEx Ground®`.
 
                 A service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard),
-                along with other properties.  These names vary depending on the provider.
+                along with other properties. These names vary depending on the provider.
 
                 See [Service Levels](/shippoapi/public-api/service-levels).
               example: 'Priority Mail'
@@ -21682,7 +21682,7 @@ components:
         In the case of masked fields, they should be handled carefully.
 
         Fields also must consider: 
-        - Not providing a *fields* in parameters will not result in a change to any configured value 
+        - Not providing a *field* in parameters will not result in a change to any configured value 
         - Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value 
         - Providing *field* with null will clear the configured value 
         - Providing *field* with any other value will change the configured value and may affect the behavior of the account.
@@ -21760,13 +21760,13 @@ components:
     UPSConnectExistingOwnAccountParameters:
       title: UPS account parameters (full)
       description: |-
-        An array of additional parameters for the account, such as e.g. password or token.
+        An array of additional parameters for the account, such as password or token.
         Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for the parameters per carrier.
         To protect account information, this field will be masked in any API response.
         In the case of masked fields, they should be handled carefully.
 
         Fields also must consider: 
-        - Not providing a *fields* in parameters will not result in a change to any configured value 
+        - Not providing a *field* in parameters will not result in a change to any configured value 
         - Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value 
         - Providing *field* with null will clear the configured value 
         - Providing *field* with any other value will change the configured value and may affect the behavior of the account.
@@ -21890,7 +21890,7 @@ components:
         In the case of masked fields, they should be handled carefully.
 
         Fields also must consider: 
-        - Not providing a *fields* in parameters will not result in a change to any configured value 
+        - Not providing a *field* in parameters will not result in a change to any configured value 
         - Providing a value in a *masked field* with ****** (exactly 6 asterisks) will not change the configured value 
         - Providing *field* with null will clear the configured value 
         - Providing *field* with any other value will change the configured value and may affect the behavior of the account.
@@ -21933,7 +21933,7 @@ components:
           example: 'usps'
           type: string
           description: >-
-            Carrier token, see [Carriers](/shippoapi/public-api/carriers)
+            Carrier token, see [Carriers](/shippoapi/public-api/carriers).
 
             Please check the [carrier accounts tutorial](https://docs.goshippo.com/docs/carriers/carrieraccounts/) page for all supported carriers.
         parameters:

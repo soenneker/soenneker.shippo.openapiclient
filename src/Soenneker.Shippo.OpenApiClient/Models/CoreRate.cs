@@ -109,7 +109,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         public string Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
         private string _explicitNullValueProvider = default!;
 #endif
-        /// <summary>Service level name, e.g. `Priority Mail` or `FedEx Ground®`.A service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties.  These names vary depending on the provider.See [Service Levels](/shippoapi/public-api/service-levels).</summary>
+        /// <summary>Service level name, e.g. `Priority Mail` or `FedEx Ground®`.A service level commonly defines the transit time of a Shipment (e.g., Express vs. Standard), along with other properties. These names vary depending on the provider.See [Service Levels](/shippoapi/public-api/service-levels).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServicelevelName { get => _explicitNullValueServicelevelName; set { _explicitNullValueServicelevelName = value; AdditionalData?.Remove("servicelevel_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("servicelevel_name"); else _explicitNullProperties?.Remove("servicelevel_name"); } }
