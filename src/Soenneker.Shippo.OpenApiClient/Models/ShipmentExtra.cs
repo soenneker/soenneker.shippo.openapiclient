@@ -588,7 +588,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(54)
             {
                 { "accounts_receivable_customer_account", n => { AccountsReceivableCustomerAccount = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields>(global::Soenneker.Shippo.OpenApiClient.Models.UpsReferenceFields.CreateFromDiscriminatorValue); } },
                 { "alcohol", n => { Alcohol = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.Alcohol>(global::Soenneker.Shippo.OpenApiClient.Models.Alcohol.CreateFromDiscriminatorValue); } },

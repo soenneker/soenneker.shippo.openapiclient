@@ -90,7 +90,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra.CreateFromDiscriminatorValue); } },
                 { "mass_unit", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.WeightUnitEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMassUnit = default; _explicitNullProperties?.Remove("mass_unit"); AdditionalData["mass_unit"] = unknown; } else { MassUnit = parsed; AdditionalData.Remove("mass_unit"); } } },

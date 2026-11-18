@@ -79,7 +79,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest>(global::Soenneker.Shippo.OpenApiClient.Models.AddressPickupCompleteCreateRequest.CreateFromDiscriminatorValue); } },
                 { "building_location_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LocationBuildingLocationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBuildingLocationType = default; _explicitNullProperties?.Remove("building_location_type"); AdditionalData["building_location_type"] = unknown; } else { BuildingLocationType = parsed; AdditionalData.Remove("building_location_type"); } } },

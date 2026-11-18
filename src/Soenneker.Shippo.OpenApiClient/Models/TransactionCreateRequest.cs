@@ -91,7 +91,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "async", n => { Async = n.GetBoolValue(); } },
                 { "label_file_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.LabelFileTypeEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLabelFileType = default; _explicitNullProperties?.Remove("label_file_type"); AdditionalData["label_file_type"] = unknown; } else { LabelFileType = parsed; AdditionalData.Remove("label_file_type"); } } },

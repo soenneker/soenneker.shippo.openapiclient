@@ -113,7 +113,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "location", n => { Location = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusLocation>(global::Soenneker.Shippo.OpenApiClient.Models.TrackingStatusLocation.CreateFromDiscriminatorValue); } },
                 { "object_created", n => { ObjectCreated = n.GetDateTimeOffsetValue(); } },

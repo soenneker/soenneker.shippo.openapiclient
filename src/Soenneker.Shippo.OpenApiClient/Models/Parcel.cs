@@ -175,7 +175,7 @@ namespace Soenneker.Shippo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "distance_unit", n => { var parsed = n.GetEnumValue<global::Soenneker.Shippo.OpenApiClient.Models.DistanceUnitEnum>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDistanceUnit = default; _explicitNullProperties?.Remove("distance_unit"); AdditionalData["distance_unit"] = unknown; } else { DistanceUnit = parsed; AdditionalData.Remove("distance_unit"); } } },
                 { "extra", n => { Extra = n.GetObjectValue<global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra>(global::Soenneker.Shippo.OpenApiClient.Models.ParcelExtra.CreateFromDiscriminatorValue); } },
