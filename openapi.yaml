@@ -2839,6 +2839,8 @@ paths:
 
         Batch shipments are displayed 100 at a time. You can iterate through each page using the `?page=` query parameter. You can also filter based on batch shipment status, for example, by passing a query param like `?object_results=creation_failed`.
 
+        Use this endpoint to get new `label_url` values when the `Expires` value on the current URLs is in the past. Send one call for each batch. If the batch `object_created` is more than one year ago, this endpoint does not return new URLs.
+
         For more details on filtering results, see our guide on [filtering](https://docs.goshippo.com/docs/api_concepts/filtering/).
       operationId: GetBatch
       parameters:
@@ -15495,7 +15497,7 @@ paths:
       description: >-
         Returns an existing transaction using an object ID.
 
-        Each call returns a new `label_url` with a new expiration time. Use this endpoint to get a new `label_url` when the `Expires` value on the current `label_url` is in the past. Send one call for each transaction.
+        Each call returns a new `label_url` with a new expiration time. Use this endpoint to get a new `label_url` when the `Expires` value on the current `label_url` is in the past. Send one call for each transaction. If the transaction `object_created` is more than one year ago, this endpoint does not return a new `label_url`.
       operationId: GetTransaction
       parameters:
         - description: Object ID of the transaction to update
@@ -18548,7 +18550,16 @@ components:
             batch_shipments:
               $ref: '#/components/schemas/BatchShipmentPaginatedList'
             label_url:
-              description: An array of URLs each pointing to a merged file of 100 labels each
+              description: |-
+                An array of URLs each pointing to a merged file of 100 labels each.
+                Each file is a PDF file or a ZIP file. The `label_filetype` of the batch and the label formats in the batch set the file type.
+                The file extension in the URL path (`.pdf` or `.zip`) gives the file type.
+
+                Each URL expires. The `Expires` query parameter gives the expiration time as a Unix timestamp in seconds.
+                Before you download a file, compare `Expires` with the current time.
+                If `Expires` is in the past, read the `object_created` value of the batch.
+                If `object_created` is more than one year ago, the file is no longer available. Do not call `GET /batches/{BatchId}`.
+                If `object_created` is less than one year ago, call `GET /batches/{BatchId}` to get new `label_url` values.
               items:
                 type: string
               type: array
@@ -21358,9 +21369,9 @@ components:
 
             The URL expires. The `Expires` query parameter gives the expiration time as a Unix timestamp in seconds.
             Before you download the label, compare `Expires` with the current time.
-            If `Expires` is in the past, call `GET /transactions/{TransactionId}` to get a new `label_url`.
-            If the `Expires` value on the new `label_url` is also in the past, the label file is no longer available.
-            This occurs for labels created more than one year ago. Do not retry.
+            If `Expires` is in the past, read the `object_created` value of the transaction.
+            If `object_created` is more than one year ago, the label file is no longer available. Do not call `GET /transactions/{TransactionId}`.
+            If `object_created` is less than one year ago, call `GET /transactions/{TransactionId}` to get a new `label_url`.
         messages:
           $ref: '#/components/schemas/ResponseMessageList'
         metadata:
